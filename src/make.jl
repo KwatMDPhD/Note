@@ -1,11 +1,15 @@
 """
 Make a package repository.
+
+# Arguments
+
+  - `pk`: package name
 """
 @cast function make(pk::String)::String
 
-    println("Making :bento: :octocat: ", pk)
+    println("Making ", pk)
 
-    cp(joinpath(get_root_path(), "TemplatePkgRepository.jl", ""), pk)
+    cp(get_template_path(), pk)
 
     return pk
 

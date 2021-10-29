@@ -4,6 +4,8 @@ using Comonicon
 
 include("get_root_path.jl")
 
+include("get_template_path.jl")
+
 include("make.jl")
 
 include("check.jl")
