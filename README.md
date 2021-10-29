@@ -20,7 +20,7 @@ julia --project deps/build.jl
 
 :point_up: commands install `pkgr` into `~/.julia/bin`.
 
-If have not already, add it to the path by:
+If have not already, add it to the path:
 
 ```sh
 PATH=~/.julia/bin:$PATH
