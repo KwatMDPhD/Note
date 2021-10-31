@@ -1,5 +1,6 @@
 .git
 README.md
 Project.toml
+Manifest.toml
 src
 runtests.jl

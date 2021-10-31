@@ -1,6 +1,6 @@
 name = "PkgRepository"
 uuid = "ee7f7801-48cc-40da-98c9-e39305ba84b2"
-authors = ["KwatME <kwat.me@icloud.com>"]
+authors = ["KwatMDPhD <kwat.me@icloud.com>"]
 version = "0.1.0"
 
 [deps]
