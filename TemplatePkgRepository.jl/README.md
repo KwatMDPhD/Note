@@ -22,7 +22,7 @@ function2()
 
 ## Howdy :wave: :cowboy_hat_face:
 
-To report a bug, request a feature, or leave a comment (about anything related to this repository), just [submit an issue](https://github.com/KwatMDPhD/TemplatePkgRepository.jl/issues/new/choose).
+To report a bug, request a feature, or leave a comment (about anything related to this repository), just [submit an issue](https://github.com/GIT_USER_NAME/TemplatePkgRepository.jl/issues/new/choose).
 
 ---
 

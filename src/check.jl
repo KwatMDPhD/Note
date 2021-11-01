@@ -31,3 +31,5 @@ Check a package repository.
     return nothing
 
 end
+
+export check

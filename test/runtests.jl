@@ -1,6 +1,12 @@
-using PkgRepository: make, check
+using PkgRepository
 
-pk = joinpath(homedir(), "Downloads", "MyPackage")
+get_root_path()
+
+get_template_path()
+
+get_git_user_information()
+
+pk = joinpath(homedir(), "Downloads", "TestPackage")
 
 if isdir(pk)
 
