@@ -2,16 +2,24 @@
 
 Work with julia package repository :bento: :octocat:
 
-## Make a julia package repository (for GitHub)
+## Use
+
+### Make a julia package repository (for GitHub)
 
 ```sh
 pkgr make MyPackage
 ```
 
+### Check if a package repository has everything
+
+```sh
+pkgr check MyPackage
+```
+
 ## Install
 
 ```sh
-git clone https://github.com/KwatME/PkgRepository.jl &&
+git clone https://github.com/KwatMDPhD/PkgRepository.jl &&
 
 cd PkgRepository.jl &&
 
