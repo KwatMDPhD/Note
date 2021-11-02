@@ -1,13 +1,10 @@
 name = "PkgRepository"
-uuid = "63cd5914-34c6-4c73-bccc-fa14824c6dbc"
+uuid = "6e9eb9ce-f817-4692-8dd7-d65aae283181"
 authors = ["KwatMDPhD <kwat.me@icloud.com>"]
 version = "0.1.0"
 
 [deps]
-Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
-UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
-TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"
-
-[compat]
-julia = "1.6"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
+UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"

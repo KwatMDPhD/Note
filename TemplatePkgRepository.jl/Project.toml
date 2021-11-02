@@ -1,10 +1,7 @@
 name = "TemplatePkgRepository"
-uuid = "401efb67-669b-4d45-acd1-f1d2d02aae59"
+uuid = "052eee82-3830-4b8f-a8f2-be0e62f45d89"
 authors = ["GIT_USER_NAME <GIT_USER_EMAIL>"]
 version = "0.1.0"
 
 [deps]
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
-
-[compat]
-julia = "1.6"
