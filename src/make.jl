@@ -1,3 +1,5 @@
+using UUIDs: uuid4
+
 """
 Make a package repository.
 
@@ -23,6 +25,7 @@ Make a package repository.
         "TemplatePkgRepository" => na,
         "GIT_USER_NAME" => us,
         "GIT_USER_EMAIL" => em,
+        "UUID" => uuid4(),
     )
 
         run(`find $pk -type f -exec sed -i "" "s/$be/$af/g" "{}" +`)
