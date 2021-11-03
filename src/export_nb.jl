@@ -1,5 +1,5 @@
 """
-Export test/runtests ipynb to test/runtests jl and README md
+Export `test/runtests ipynb` to `test/runtests jl` and `README md`
 
 # Arguments
 

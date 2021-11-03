@@ -1,5 +1,5 @@
 """
-Check package repository
+Check if a package repository has all requirements
 
 # Arguments
 
@@ -25,7 +25,7 @@ Check package repository
 
         if !isfile(pa)
 
-            error("Missing ", pa)
+            error("missing ", pa)
 
         end
 

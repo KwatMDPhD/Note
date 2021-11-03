@@ -1,5 +1,3 @@
-using TOML: parsefile
-
 function error_project_toml(pk::String)::Nothing
 
     ke_ = keys(read_project_toml(pk))

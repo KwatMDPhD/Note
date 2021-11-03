@@ -1,7 +1,5 @@
-using UUIDs: uuid4
-
 """
-Make package repository
+Make a julia package repository (for GitHub)
 
 # Arguments
 
@@ -11,9 +9,11 @@ Make package repository
 
     pk = make_absolute(pk)
 
-    if !endswith(pk, ".jl")
+    ex = ".jl"
 
-        error("package repository name does not end with .jl")
+    if !endswith(pr, ex)
+
+        error("package repository name does not end with ", ex)
 
     end
 
