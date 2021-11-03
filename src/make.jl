@@ -1,7 +1,7 @@
 using UUIDs: uuid4
 
 """
-Make a package repository
+Make package repository
 
 # Arguments
 
@@ -9,13 +9,17 @@ Make a package repository
 """
 @cast function make(pk::String)::Nothing
 
+    if !endswith(pk, ".jl")
+
+        error("package repository name does not end with .jl")
+
+    end
+
     println("Making ", pk)
 
-    te = get_template_path()
+    cp(get_template_path(), pk)
 
-    run(`cp -r $te $pk`)
-
-    na = splitdir(pk)[2]
+    na = splitext(splitdir(pk)[2])[1]
 
     run(`mv $pk/src/TemplatePkgRepository.jl $pk/src/$na.jl`)
 

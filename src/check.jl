@@ -1,5 +1,5 @@
 """
-Check a package repository
+Check package repository
 
 # Arguments
 
@@ -9,26 +9,27 @@ Check a package repository
 
     println("Cheking ", pk)
 
-    error_project_toml(pk)
+    for sp_ in [
+        ["README.md"],
+        [".gitignore"],
+        ["LICENSE"],
+        ["Project.toml"],
+        ["src", string(read_project_toml(pk)["name"], ".jl")],
+        ["test", "runtests.ipynb"],
+        ["test", "runtests.jl"],
+    ]
 
-    ex = joinpath(get_root_path(), "diff_exclude")
+        pa = joinpath(pk, sp_...)
 
-    te = get_template_path()
+        if !isfile(pa)
 
-    for li in
-        readlines(ignorestatus(`diff --recursive --exclude-from $ex $te $pk`))
-
-        if any(startswith(li, st) for st in ["Only in ", "diff "])
-
-            println()
-
-            println("="^80)
+            error("Missing ", pa)
 
         end
 
-        println(li)
-
     end
+
+    error_project_toml(pk)
 
     return nothing
 

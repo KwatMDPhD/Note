@@ -2,15 +2,13 @@ using TOML: parsefile
 
 function error_project_toml(pk::String)::Nothing
 
-    to = parsefile(joinpath(pk, "Project.toml"))
-
-    ke_ = keys(to)
+    ke_ = keys(read_project_toml(pk))
 
     for re in ["name", "uuid", "version", "authors", "deps"]
 
         if !(re in ke_)
 
-            error(to, " is missing ", re)
+            error(pk, " Project.toml is missing ", re)
 
         end
 
