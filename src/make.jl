@@ -11,7 +11,7 @@ Make a julia package repository (for GitHub)
 
     ex = ".jl"
 
-    if !endswith(pr, ex)
+    if !endswith(pk, ex)
 
         error("package repository name does not end with ", ex)
 
