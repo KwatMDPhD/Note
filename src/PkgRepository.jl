@@ -9,6 +9,10 @@ include("get_template_path.jl")
 
 include("get_git_user_information.jl")
 
+
+#
+include("make_absolute.jl")
+
 #
 include("read_project_toml.jl")
 

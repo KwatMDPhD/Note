@@ -1,11 +1,13 @@
 """
-Export test/runtests,ipynb to test/runtests.jl and README.md
+Export test/runtests ipynb to test/runtests jl and README md
 
 # Arguments
 
   - `pk`: package path
 """
 @cast function export_nb(pk::String)::Nothing
+
+    pk = make_absolute(pk)
 
     nb = joinpath(pk, "test", "runtests.ipynb")
 

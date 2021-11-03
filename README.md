@@ -7,13 +7,19 @@ Work with julia package repository :bento: :octocat:
 ### Make a julia package repository (for GitHub)
 
 ```sh
-pkgr make MyPackage
+pkgr make path/to/MyPackage.jl
 ```
 
 ### Check if a package repository has everything
 
 ```sh
-pkgr check MyPackage
+pkgr check path/to/MyPackage.jl
+```
+
+### Export `test/runtests.ipynb` to `test/runtests.jl` and `README.md`
+
+```sh
+pkgr export-nb path/to/MyPackage.jl
 ```
 
 ## Install

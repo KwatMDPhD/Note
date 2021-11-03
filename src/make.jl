@@ -9,6 +9,8 @@ Make package repository
 """
 @cast function make(pk::String)::Nothing
 
+    pk = make_absolute(pk)
+
     if !endswith(pk, ".jl")
 
         error("package repository name does not end with .jl")

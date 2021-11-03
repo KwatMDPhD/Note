@@ -7,6 +7,8 @@ Check package repository
 """
 @cast function check(pk::String)::Nothing
 
+    pk = make_absolute(pk)
+
     println("Cheking ", pk)
 
     for sp_ in [
