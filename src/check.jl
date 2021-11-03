@@ -1,13 +1,15 @@
 """
-Check a package repository.
+Check a package repository
 
 # Arguments
 
-  - `pk`: package name
+  - `pk`: package path
 """
 @cast function check(pk::String)::Nothing
 
     println("Cheking ", pk)
+
+    error_project_toml(pk)
 
     ex = joinpath(get_root_path(), "diff_exclude")
 

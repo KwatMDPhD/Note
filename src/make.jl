@@ -1,13 +1,13 @@
 using UUIDs: uuid4
 
 """
-Make a package repository.
+Make a package repository
 
 # Arguments
 
-  - `pk`: package name
+  - `pk`: package path
 """
-@cast function make(pk::String)::String
+@cast function make(pk::String)::Nothing
 
     println("Making ", pk)
 
@@ -32,7 +32,7 @@ Make a package repository.
 
     end
 
-    return pk
+    return nothing
 
 end
 

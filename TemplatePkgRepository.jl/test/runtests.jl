@@ -11,6 +11,7 @@ mkdir(TE)
 println("Made ", TE, ".")
 
 using Revise
+using BenchmarkTools
 
 using TemplatePkgRepository
 
