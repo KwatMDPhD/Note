@@ -10,7 +10,7 @@ Work with julia package repository :bento: :octocat:
 pkgr make path/to/MyPackage.jl
 ```
 
-### Check if a package repository has everything
+### Check if a package repository has all requirements
 
 ```sh
 pkgr check path/to/MyPackage.jl
