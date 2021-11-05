@@ -1,37 +1,36 @@
 """
-Check if a package repository has all requirements
+Check if a julia package repository has all of the requirements
 
 # Arguments
 
-  - `pk`: package path
+  - `pa`: package path
 """
-@cast function check(pk::String)::Nothing
+@cast function check(pa::String)::Nothing
 
-    pk = make_absolute(pk)
+    pa = make_absolute(pa)
 
-    println("Cheking ", pk)
+    println("Checking ", pa)
 
-    for sp_ in [
-        ["README.md"],
-        [".gitignore"],
-        ["LICENSE"],
-        ["Project.toml"],
-        ["src", string(read_project_toml(pk)["name"], ".jl")],
-        ["test", "runtests.ipynb"],
-        ["test", "runtests.jl"],
-    ]
+    error_extension(pa, EXTENSION)
 
-        pa = joinpath(pk, sp_...)
+    na = get_file_name_without_extension(pa)
 
-        if !isfile(pa)
+    error_missing_path(
+        pa,
+        [
+            ".gitignore",
+            "README.md",
+            "LICENSE",
+            "Project.toml",
+            "src",
+            joinpath("src", string(na, EXTENSION)),
+            "test",
+            "test/runtests.ipynb",
+            "test/runtests.jl",
+        ],
+    )
 
-            error("missing ", pa)
-
-        end
-
-    end
-
-    error_project_toml(pk)
+    error_project_toml(pa, na)
 
     return nothing
 

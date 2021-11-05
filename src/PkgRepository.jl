@@ -1,22 +1,20 @@
 module PkgRepository
 
+using Comonicon: @cast, @main
 using TOML: parsefile
 using UUIDs: uuid4
-using Comonicon: @main, @cast
+
+using PathExtension:
+    error_extension,
+    error_missing_path,
+    get_file_name_without_extension,
+    make_absolute,
+    move,
+    replace_text
+
+EXTENSION = ".jl"
 
 #
-include("get_root_path.jl")
-
-include("get_template_path.jl")
-
-include("get_git_user_information.jl")
-
-#
-include("make_absolute.jl")
-
-#
-include("read_project_toml.jl")
-
 include("error_project_toml.jl")
 
 #

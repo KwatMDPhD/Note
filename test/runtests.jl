@@ -15,17 +15,7 @@ using BenchmarkTools
 
 using PkgRepository
 
-get_root_path()
-
-get_template_path()
-
-get_git_user_information()
-
-pk = get_root_path()
-
-read_project_toml(pk)
-
-error_project_toml(pk)
+using PathExtension
 
 pk = joinpath(TE, "TestPackage")
 
@@ -42,6 +32,18 @@ end
 pk = string(pk, ".jl")
 
 make(pk)
+
+try
+
+    error_project_toml(pk, "Garp")
+
+catch er
+
+    er
+
+end
+
+error_project_toml(pk, get_file_name_without_extension(pk))
 
 check(pk)
 

@@ -1,4 +1,4 @@
-name = "TemplatePkgRepository"
+name = "TEMPLATE"
 uuid = "033e1703-1880-4940-9ddc-745bff01a2ac"
 authors = ["GIT_USER_NAME <GIT_USER_EMAIL>"]
 version = "0.1.0"

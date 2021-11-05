@@ -1,4 +1,4 @@
-TE = joinpath(homedir(), "Downloads", "TemplatePkgRepository.test", "")
+TE = joinpath(homedir(), "Downloads", "TEMPLATE.test", "")
 
 if isdir(TE)
 
@@ -13,7 +13,7 @@ println("Made ", TE, ".")
 using Revise
 using BenchmarkTools
 
-using TemplatePkgRepository
+using TEMPLATE
 
 rm(TE; recursive = true)
 

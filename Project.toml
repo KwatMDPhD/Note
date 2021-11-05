@@ -6,6 +6,8 @@ version = "0.1.0"
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"
+PathExtension = "7c11ae63-6a62-451d-8387-4dfdec5677ae"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+VectorExtension = "5dc7f3b2-d000-489c-bcc0-daa77f8356fb"

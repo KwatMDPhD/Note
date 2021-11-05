@@ -3,17 +3,17 @@ Export `test/runtests ipynb` to `test/runtests jl` and `README md`
 
 # Arguments
 
-  - `pk`: package path
+  - `pa`: package path
 """
-@cast function export_nb(pk::String)::Nothing
+@cast function export_nb(pa::String)::Nothing
 
-    pk = make_absolute(pk)
+    pa = make_absolute(pa)
 
-    nb = joinpath(pk, "test", "runtests.ipynb")
+    nb = joinpath(pa, "test", "runtests.ipynb")
 
     println("Exporting ", nb)
 
-    run(`jupyter nbconvert --no-prompt --to script $nb`)
+    run(`jupyter-nbconvert --no-prompt --to script --log-level 0 $nb`)
 
     return nothing
 

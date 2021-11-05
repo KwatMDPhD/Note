@@ -3,40 +3,38 @@ Make a julia package repository (for GitHub)
 
 # Arguments
 
-  - `pk`: package path
+  - `pa`: package path
 """
-@cast function make(pk::String)::Nothing
+@cast function make(pa::String)::Nothing
 
-    pk = make_absolute(pk)
+    pa = make_absolute(pa)
 
-    ex = ".jl"
+    println("Making ", pa)
 
-    if !endswith(pk, ex)
+    error_extension(pa, EXTENSION)
 
-        error("package repository name does not end with ", ex)
+    te = string("Template", EXTENSION)
 
-    end
+    cp(joinpath(dirname(@__DIR__), te, ""), pa)
 
-    println("Making ", pk)
+    na = get_file_name_without_extension(pa)
 
-    cp(get_template_path(), pk)
+    move(joinpath(pa, "src", te), joinpath(pa, "src", string(na, EXTENSION)))
 
-    na = splitext(splitdir(pk)[2])[1]
-
-    run(`mv $pk/src/TemplatePkgRepository.jl $pk/src/$na.jl`)
-
-    us, em = get_git_user_information()
-
-    for (be, af) in Dict(
-        "TemplatePkgRepository" => na,
-        "GIT_USER_NAME" => us,
-        "GIT_USER_EMAIL" => em,
-        "63cd5914-34c6-4c73-bccc-fa14824c6dbc" => uuid4(),
+    us, em = (
+        string(rstrip(read(`git config user.$ke`, String), '\n')) for
+        ke in ("name", "email")
     )
 
-        run(`find $pk -type f -exec sed -i "" "s/$be/$af/g" "{}" +`)
-
-    end
+    replace_text(
+        pa,
+        Dict(
+            "TEMPLATE" => na,
+            "GIT_USER_NAME" => us,
+            "GIT_USER_EMAIL" => em,
+            "033e1703-1880-4940-9ddc-745bff01a2ac" => string(uuid4()),
+        ),
+    )
 
     return nothing
 

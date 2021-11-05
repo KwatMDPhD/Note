@@ -1,14 +1,32 @@
-function error_project_toml(pk::String)::Nothing
+function error_project_toml(pa::String, na::String)::Nothing
 
-    ke_ = keys(read_project_toml(pk))
+    println("Checking Project.toml")
+
+    di = parsefile(joinpath(pa, "Project.toml"))
+
+    ke_ = keys(di)
+
+    mi_ = Vector{String}()
 
     for re in ["name", "uuid", "version", "authors", "deps"]
 
         if !(re in ke_)
 
-            error(pk, " Project.toml is missing ", re)
+            push!(re, mi_)
 
         end
+
+    end
+
+    if 0 < length(mi_)
+
+        error("missing ", mi_)
+
+    end
+
+    if di["name"] != na
+
+        error("name is not ", na)
 
     end
 
