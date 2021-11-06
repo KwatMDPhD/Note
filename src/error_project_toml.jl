@@ -12,7 +12,7 @@ function error_project_toml(pa::String, na::String)::Nothing
 
         if !(re in ke_)
 
-            push!(re, mi_)
+            push!(mi_, re)
 
         end
 
