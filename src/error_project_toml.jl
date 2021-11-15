@@ -2,7 +2,7 @@ function error_project_toml(pa::String, na::String)::Nothing
 
     println("Checking Project.toml")
 
-    di = parsefile(joinpath(pa, "Project.toml"))
+    di = TOML.parsefile(joinpath(pa, "Project.toml"))
 
     ke_ = keys(di)
 

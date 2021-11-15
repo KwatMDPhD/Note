@@ -1,16 +1,10 @@
 module PkgRepository
 
-using Comonicon: @cast, @main
-using TOML: parsefile
-using UUIDs: uuid4
+using Comonicon
+using TOML
+using UUIDs
 
-using PathExtension:
-    error_extension,
-    error_missing_path,
-    get_file_name_without_extension,
-    make_absolute,
-    move,
-    replace_text
+using PathExtension
 
 EXTENSION = ".jl"
 
