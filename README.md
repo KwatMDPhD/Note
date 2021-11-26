@@ -1,6 +1,6 @@
 # PkgRepository.jl
 
-Command line interface for `julia package repository` :bento: :octocat:
+Command line interface for working with `julia package repository` :bento: :octocat:
 
 ## Use
 
@@ -10,13 +10,13 @@ Command line interface for `julia package repository` :bento: :octocat:
 pkgr make path/to/MyPackage.jl
 ```
 
-### Check if a julia package repository has all the requirements
+### Check if a julia package repository has all requirements
 
 ```sh
 pkgr check path/to/MyPackage.jl
 ```
 
-### Export `test/runtests.ipynb` to `test/runtests.jl` (and `README.md` [coming soon...])
+### Export `test/runtests.ipynb` to `test/runtests.jl` and `README.md`
 
 ```sh
 pkgr export-nb path/to/MyPackage.jl
