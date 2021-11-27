@@ -96,13 +96,9 @@ Check if a julia package repository has all of the requirements
         ["LICENSE", ""],
     ]
 
-        pr1 = separate(pa, pa2, de)[1]
+        st = string(separate(pa, pa2, de)[1], separate(TEMPLATE, pa2, de)[2])
 
-        println(pr1)
-
-        su2 = separate(TEMPLATE, pa2, de)[2]
-
-        write(joinpath(pa, pa2), StringExtension.replace(string(pr1, su2), pa_))
+        write(joinpath(pa, pa2), StringExtension.replace(st, pa_))
 
     end
 
