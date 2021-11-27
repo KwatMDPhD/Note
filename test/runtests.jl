@@ -35,7 +35,7 @@ make(pk)
 
 try
 
-    error_project_toml(pk, "Garp")
+    PkgRepository.error_project_toml(pk, "Garp")
 
 catch er
 
@@ -43,7 +43,9 @@ catch er
 
 end
 
-error_project_toml(pk, get_file_name_without_extension(pk))
+PkgRepository.error_project_toml(pk, get_file_name_without_extension(pk))
+
+PkgRepository.separate
 
 check(pk)
 
