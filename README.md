@@ -1,16 +1,16 @@
 # PkgRepository.jl
 
-Command-line interface for working with `julia package repository` (`.jl`) :bento: :octocat:
+Command-line interface for working with `Julia package repository` (`.jl`) :bento: :octocat:
 
 ## Use
 
-### Make a julia package repository (for GitHub)
+### Make a Julia package repository (for GitHub)
 
 ```sh
 pkgr make path/to/MyPackage.jl
 ```
 
-### Check if a julia package repository has all requirements
+### Check if a Julia package repository has all requirements
 
 ```sh
 pkgr check path/to/MyPackage.jl
