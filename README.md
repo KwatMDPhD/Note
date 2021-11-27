@@ -1,6 +1,6 @@
 # PkgRepository.jl
 
-Command line interface for working with `julia package repository` :bento: :octocat:
+Command-line interface for working with `julia package repository` (`.jl`) :bento: :octocat:
 
 ## Use
 
