@@ -13,15 +13,15 @@ println("Made ", TE, ".")
 using Revise
 using BenchmarkTools
 
-using PkgRepository
-
 using PathExtension
+
+using PkgRepository
 
 pk = joinpath(TE, "TestPackage")
 
 try
 
-    make(pk)
+    PkgRepository.make(pk)
 
 catch er
 
@@ -31,25 +31,11 @@ end
 
 pk = string(pk, ".jl")
 
-make(pk)
+PkgRepository.make(pk)
 
-try
+PkgRepository.enforce(pk)
 
-    PkgRepository.error_project_toml(pk, "Garp")
-
-catch er
-
-    er
-
-end
-
-PkgRepository.error_project_toml(pk, get_file_name_without_extension(pk))
-
-PkgRepository.separate
-
-check(pk)
-
-export_nb(pk)
+PkgRepository.export_nb(pk)
 
 rm(TE; recursive = true)
 

@@ -4,16 +4,16 @@ Command-line interface for working with `Julia package repository` (`.jl`) :bent
 
 ## Use
 
-### Make a Julia package repository (for GitHub)
+### Make a `julia package repository` (`.jl`)
 
 ```sh
 pkgr make path/to/MyPackage.jl
 ```
 
-### Check if a Julia package repository has all requirements
+### Enforce `julia package repository` (`.jl`) structure
 
 ```sh
-pkgr check path/to/MyPackage.jl
+pkgr enforce path/to/MyPackage.jl
 ```
 
 ### Export `test/runtests.ipynb` to `test/runtests.jl` and `README.md`

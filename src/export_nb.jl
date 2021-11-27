@@ -1,5 +1,5 @@
 """
-Export `test/runtests ipynb` to `test/runtests jl` and `README md`
+Export `test/runtests,ipynb` to `test/runtests,jl` and `README,md`
 
 # Arguments
 
@@ -7,7 +7,7 @@ Export `test/runtests ipynb` to `test/runtests jl` and `README md`
 """
 @cast function export_nb(pa::String)::Nothing
 
-    pa = make_absolute(pa)
+    pa = PathExtension.make_absolute(pa)
 
     nb = joinpath(pa, "test", "runtests.ipynb")
 
@@ -18,5 +18,3 @@ Export `test/runtests ipynb` to `test/runtests jl` and `README md`
     return nothing
 
 end
-
-export export_nb

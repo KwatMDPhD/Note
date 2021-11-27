@@ -1,5 +1,5 @@
 """
-Make a julia package repository (for GitHub)
+Make a `julia package repository` (`.jl`)
 
 # Arguments
 
@@ -7,32 +7,24 @@ Make a julia package repository (for GitHub)
 """
 @cast function make(pa::String)::Nothing
 
-    pa = make_absolute(pa)
+    pa = PathExtension.make_absolute(pa)
 
     println("Making ", pa)
 
-    error_extension(pa, EXTENSION)
+    PathExtension.error_extension(pa, get_extension())
 
-    cp(TEMPLATE, pa)
+    te = get_template_path()
+
+    cp(te, pa)
 
     sr = joinpath(pa, "src")
 
-    na = splitdir(pa)[2]
+    jl = splitdir(pa)[2]
 
-    move(joinpath(sr, splitdir(TEMPLATE)[2]), joinpath(sr, na))
+    PathExtension.move(joinpath(sr, splitdir(te)[2]), joinpath(sr, jl))
 
-    replace_text(
-        pa,
-        Dict(
-            "TEMPLATE" => splitext(na)[1],
-            "GIT_USER_NAME" => GIT_CONFIG["name"],
-            "GIT_USER_EMAIL" => GIT_CONFIG["email"],
-            "033e1703-1880-4940-9ddc-745bff01a2ac" => string(uuid4()),
-        ),
-    )
+    PathExtension.sed_recursively(pa, get_replacement(splitext(jl)[1]))
 
     return nothing
 
 end
-
-export make

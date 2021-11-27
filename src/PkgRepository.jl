@@ -5,25 +5,21 @@ using TOML
 using UUIDs
 
 using PathExtension
-using StringExtension
 
-EXTENSION = ".jl"
+include("get_extension.jl")
 
-TEMPLATE = joinpath(dirname(@__DIR__), string("Template", EXTENSION))
+include("get_template_path.jl")
 
-GIT_CONFIG = Dict(
-    ke => string(rstrip(read(`git config user.$ke`, String), '\n')) for
-    ke in ["name", "email"]
-)
+include("get_replacement.jl")
 
 include("make.jl")
 
-include("check.jl")
+include("enforce.jl")
 
 include("export_nb.jl")
 
 """
-Command line interface for julia package repository :bento: :octocat:
+Command-line interface for working with `Julia package repository` (`.jl`) :bento:
 """
 @main
 
