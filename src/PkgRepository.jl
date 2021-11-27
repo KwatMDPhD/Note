@@ -5,13 +5,17 @@ using TOML
 using UUIDs
 
 using PathExtension
+using StringExtension
 
 EXTENSION = ".jl"
 
-#
-include("error_project_toml.jl")
+TEMPLATE = joinpath(dirname(@__DIR__), string("Template", EXTENSION))
 
-#
+GIT_CONFIG = Dict(
+    ke => string(rstrip(read(`git config user.$ke`, String), '\n')) for
+    ke in ["name", "email"]
+)
+
 include("make.jl")
 
 include("check.jl")

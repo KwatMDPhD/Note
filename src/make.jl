@@ -13,25 +13,20 @@ Make a julia package repository (for GitHub)
 
     error_extension(pa, EXTENSION)
 
-    te = string("Template", EXTENSION)
+    cp(TEMPLATE, pa)
 
-    cp(joinpath(dirname(@__DIR__), te, ""), pa)
+    sr = joinpath(pa, "src")
 
-    na = get_file_name_without_extension(pa)
+    na = splitdir(pa)[2]
 
-    move(joinpath(pa, "src", te), joinpath(pa, "src", string(na, EXTENSION)))
-
-    us, em = (
-        string(rstrip(read(`git config user.$ke`, String), '\n')) for
-        ke in ("name", "email")
-    )
+    move(joinpath(sr, splitdir(TEMPLATE)[2]), joinpath(sr, na))
 
     replace_text(
         pa,
         Dict(
-            "TEMPLATE" => na,
-            "GIT_USER_NAME" => us,
-            "GIT_USER_EMAIL" => em,
+            "TEMPLATE" => splitext(na)[1],
+            "GIT_USER_NAME" => GIT_CONFIG["name"],
+            "GIT_USER_EMAIL" => GIT_CONFIG["email"],
             "033e1703-1880-4940-9ddc-745bff01a2ac" => string(uuid4()),
         ),
     )
