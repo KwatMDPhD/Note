@@ -58,4 +58,4 @@ To report a bug, request a feature, or leave a comment, just [submit an issue](h
 
 ---
 
-Made with https://github.com/KwatMDPhD/PkgRepository.jl
+_Powered by https://github.com/KwatMDPhD/PkgRepository.jl_
