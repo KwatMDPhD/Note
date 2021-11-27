@@ -7,19 +7,19 @@ Command-line interface for working with `Julia package repository` (`.jl`) :bent
 ### Make a `julia package repository` (`.jl`)
 
 ```sh
-pkgr make path/to/MyPackage.jl
+pkgr make /path/to/MyPackage.jl
 ```
 
 ### Enforce `julia package repository` (`.jl`) structure
 
 ```sh
-pkgr enforce path/to/MyPackage.jl
+pkgr enforce /path/to/MyPackage.jl
 ```
 
-### Export `test/runtests.ipynb` to `test/runtests.jl` and `README.md`
+### Export `./test/runtests.ipynb` to `./test/runtests.jl` and `./README.md`
 
 ```sh
-pkgr export-nb path/to/MyPackage.jl
+pkgr export-nb /path/to/MyPackage.jl
 ```
 
 ## Install
@@ -29,7 +29,7 @@ git clone https://github.com/KwatMDPhD/PkgRepository.jl &&
 
 cd PkgRepository.jl &&
 
-julia --project deps/build.jl
+julia --project ./deps/build.jl
 ```
 
 :point_up: commands install `pkgr` into `~/.julia/bin`.
