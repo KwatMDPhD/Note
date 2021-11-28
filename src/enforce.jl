@@ -34,6 +34,12 @@ Enforce `julia package repository` (`.jl`) structure
 
     ti = splitext(jl)[1]
 
+    if ti == "TEMPLATE"
+
+        return nothing
+
+    end
+
     re_ = get_replacement(ti)
 
     for (su, de) in [
