@@ -16,7 +16,7 @@ pkgr make path/to/MyPackage.jl
 pkgr enforce path/to/MyPackage.jl
 ```
 
-### Export `test/runtests.ipynb` to `test/runtests.jl` and `README.md`
+### Export `test/runtests.ipynb` to `test/runtests.jl`
 
 ```sh
 pkgr export-nb path/to/MyPackage.jl
