@@ -34,7 +34,7 @@ julia --project deps/build.jl
 
 :point_up: commands install `pkgr` into `~/.julia/bin`.
 
-If not already, add the `bin` to the path by adding :point_down: to the profile (`~/.zshrc`, `~/.bashrc`, ...):
+If not already, add the `bin` to the path by adding :point_down: to the profile (`~/.zshrc`, `~/.bashrc`, ...)
 
 ```sh
 PATH=~/.julia/bin:$PATH
@@ -42,7 +42,7 @@ PATH=~/.julia/bin:$PATH
 
 Start a new shell to load the updated profile.
 
-Test installation:
+Test installation
 
 ```sh
 pkgr -h
