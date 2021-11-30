@@ -1,4 +1,4 @@
-function get_replacement(ti::String)::Vector{Pair{String, String}}
+function get_replacement(ti::String)::Vector{Pair{String,String}}
 
     gi_ = [
         string(rstrip(read(`git config user.$ke`, String), '\n')) for

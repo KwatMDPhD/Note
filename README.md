@@ -29,6 +29,8 @@ git clone https://github.com/KwatMDPhD/PkgRepository.jl &&
 
 cd PkgRepository.jl &&
 
+julia --project --eval "using Pkg; Pkg.instantiate()" &&
+
 julia --project deps/build.jl
 ```
 
