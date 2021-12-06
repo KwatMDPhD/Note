@@ -152,7 +152,7 @@ version = "2.1.2"
 
 [[deps.PathExtension]]
 deps = ["BenchmarkTools", "Revise", "StringExtension", "VectorExtension"]
-git-tree-sha1 = "144312d4dda0be7996bcb0a18f6ec4ff3f2f342a"
+git-tree-sha1 = "7cab1ba5112d42c46dbf635841d80042a6c7c836"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/PathExtension.jl"
 uuid = "7c11ae63-6a62-451d-8387-4dfdec5677ae"
@@ -221,7 +221,7 @@ uuid = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
 [[deps.StringExtension]]
 deps = ["BenchmarkTools", "Revise", "VectorExtension"]
-git-tree-sha1 = "64f38de75d3853ae6c21f3a1ce270db3a62a7828"
+git-tree-sha1 = "4ca6ff85dfbd34c3f9b76486b3ec42e4d6b66079"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/StringExtension.jl"
 uuid = "e56870c1-e945-4548-a787-b524e22fcae8"
