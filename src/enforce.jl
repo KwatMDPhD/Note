@@ -49,27 +49,7 @@ Enforce `julia package repository` (`.jl`) structure
         ["test/runtests.ipynb", [1, 2, 1]],
     ]
 
-        println(su)
-
-        pa1 = joinpath(te, su)
-
-        pa2 = joinpath(pa, su)
-
-        st1 = read(pa1, String)
-
-        st2 = read(pa2, String)
-
-        if length(id_) == 0
-
-            st = st1
-
-        else
-
-            st = StringExtension.transplant(st1, st2, "---", id_)
-
-        end
-
-        write(pa2, StringExtension.replace(st, re_))
+        transplant(joinpath(te, su), joinpath(pa, su), "---", id_)
 
     end
 

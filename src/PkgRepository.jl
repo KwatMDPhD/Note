@@ -7,16 +7,21 @@ using UUIDs
 using PathExtension
 using StringExtension
 
+#
 include("get_extension.jl")
 
 include("get_template_path.jl")
 
 include("get_replacement.jl")
 
+include("transplant.jl")
+
+#
 include("make.jl")
 
 include("enforce.jl")
 
+#
 include("export_nb.jl")
 
 """
