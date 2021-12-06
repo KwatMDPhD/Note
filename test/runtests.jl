@@ -1,4 +1,4 @@
-TE = joinpath(homedir(), "Downloads", "PkgRepository.test", "")
+TE = joinpath(tempdir(), "PkgRepository.test", "")
 
 if isdir(TE)
 
@@ -8,7 +8,7 @@ end
 
 mkdir(TE)
 
-println("Made ", TE, ".")
+println("Made ", TE)
 
 using Revise
 using BenchmarkTools
@@ -39,4 +39,4 @@ PkgRepository.export_nb(pk)
 
 rm(TE; recursive = true)
 
-println("Removed ", TE, ".")
+println("Removed ", TE)

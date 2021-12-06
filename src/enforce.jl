@@ -43,12 +43,13 @@ Enforce `julia package repository` (`.jl`) structure
     re_ = get_replacement(ti)
 
     for (su, id_) in [
-        #[".gitignore", [1, 1, 2]],
-        [".gitignore", []],
+        [".gitignore", [1, 1, 2]],
         ["README.md", [2, 1, 1]],
         ["LICENSE", []],
         ["test/runtests.ipynb", [1, 2, 1]],
     ]
+
+        println(su)
 
         pa1 = joinpath(te, su)
 
