@@ -42,10 +42,33 @@ Enforce `julia package repository` (`.jl`) structure
 
     re_ = get_replacement(ti)
 
-    for (su, de) in
-        [[".gitignore", string("# ", "="^78)], ["README.md", "---"], ["LICENSE", ""]]
+    for (su, id_) in [
+        #[".gitignore", [1, 1, 2]],
+        [".gitignore", []],
+        ["README.md", [2, 1, 1]],
+        ["LICENSE", []],
+        ["test/runtests.ipynb", [1, 2, 1]],
+    ]
 
-        PathExtension.merge(joinpath(pa, su), joinpath(te, su), de, re_)
+        pa1 = joinpath(te, su)
+
+        pa2 = joinpath(pa, su)
+
+        st1 = read(pa1, String)
+
+        st2 = read(pa2, String)
+
+        if length(id_) == 0
+
+            st = st1
+
+        else
+
+            st = StringExtension.transplant(st1, st2, "---", id_)
+
+        end
+
+        write(pa2, StringExtension.replace(st, re_))
 
     end
 

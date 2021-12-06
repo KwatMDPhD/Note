@@ -5,6 +5,7 @@ using TOML
 using UUIDs
 
 using PathExtension
+using StringExtension
 
 include("get_extension.jl")
 
