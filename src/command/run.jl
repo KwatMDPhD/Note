@@ -22,9 +22,9 @@ Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
 
     Pkg.activate(pa)
 
-    Pkg.instantiate()
-
     Pkg.update()
+
+    Pkg.instantiate()
 
     if !sk
 
