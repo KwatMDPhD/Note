@@ -237,7 +237,7 @@ uuid = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 
 [[deps.TemplateExtension]]
 deps = ["BenchmarkTools", "Revise", "StringExtension", "UUIDs", "VectorExtension"]
-git-tree-sha1 = "196ed3fbd180aba3d5ccfebf8124c2b045070f0a"
+git-tree-sha1 = "e98313edac1ff2a8dcfbce089cf78935d216e8a1"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/TemplateExtension.jl"
 uuid = "817b9ba7-9bcf-4fee-a3ef-e2b6f93e2810"
