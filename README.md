@@ -4,22 +4,22 @@ Command-line interface for working with `Julia package repository` (`.jl`) :bent
 
 ## Use
 
-### Make a `julia package repository` (`.jl`)
+Make a `julia package` (`.jl`)
 
 ```sh
 pkgr make path/to/MyPackage.jl
 ```
 
-### Enforce `julia package repository` (`.jl`) structure
+### Check `julia package` (`.jl`) structure and update as needed
 
 ```sh
-pkgr enforce path/to/MyPackage.jl
+pkgr check path/to/MyPackage.jl
 ```
 
-### Export `test/runtests.ipynb` to `test/runtests.jl`
+### Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
 
 ```sh
-pkgr export-nb path/to/MyPackage.jl
+pkgr run path/to/MyPackage.jl
 ```
 
 ## Install

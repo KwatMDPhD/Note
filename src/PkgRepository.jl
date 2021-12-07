@@ -1,31 +1,24 @@
 module PkgRepository
 
 using Comonicon
+using Pkg
 using TOML
-using UUIDs
 
 using PathExtension
-using StringExtension
+using TemplateExtension
 
-#
-include("get_extension.jl")
+EXTENSION = ".jl"
 
-include("get_template_path.jl")
+TEMPLATE = joinpath(dirname(@__DIR__), string("TEMPLATE", EXTENSION))
 
-include("get_replacement.jl")
+include("command/make.jl")
 
-include("transplant.jl")
+include("command/check.jl")
 
-#
-include("make.jl")
-
-include("enforce.jl")
-
-#
-include("export_nb.jl")
+include("command/run.jl")
 
 """
-Command-line interface for working with `Julia package repository` (`.jl`) :bento:
+Command-line interface for working with `Julia package` (`.jl`) :bento:
 """
 @main
 

@@ -17,7 +17,7 @@ using PathExtension
 
 using PkgRepository
 
-pk = joinpath(TE, "TestPackage")
+pk = joinpath(TE, "APackage")
 
 try
 
@@ -33,9 +33,9 @@ pk = string(pk, ".jl")
 
 PkgRepository.make(pk)
 
-PkgRepository.enforce(pk)
+PkgRepository.check(pk)
 
-PkgRepository.export_nb(pk)
+PkgRepository.run(pk)
 
 rm(TE; recursive = true)
 
