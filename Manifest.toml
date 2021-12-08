@@ -152,7 +152,7 @@ version = "2.1.2"
 
 [[deps.PathExtension]]
 deps = ["BenchmarkTools", "Revise", "StringExtension", "VectorExtension"]
-git-tree-sha1 = "25bfd7513ce5a77e3f626ee17d748d3512bd14d8"
+git-tree-sha1 = "786ba3c71f90b6cd7c738c8964e9c76ecc13defe"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/PathExtension.jl"
 uuid = "7c11ae63-6a62-451d-8387-4dfdec5677ae"
@@ -221,7 +221,7 @@ uuid = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 
 [[deps.StringExtension]]
 deps = ["BenchmarkTools", "Revise", "VectorExtension"]
-git-tree-sha1 = "4f05bfbb0f7b1ae9325e7fe14aa64f43b2898aff"
+git-tree-sha1 = "b9d6a64aa99cd17c41b2ce1f893d69f03ea08e91"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/StringExtension.jl"
 uuid = "e56870c1-e945-4548-a787-b524e22fcae8"
@@ -237,7 +237,7 @@ uuid = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 
 [[deps.TemplateExtension]]
 deps = ["BenchmarkTools", "Revise", "StringExtension", "UUIDs", "VectorExtension"]
-git-tree-sha1 = "b6fbdd055465919201e4f3f9bf7b0392dea2a90e"
+git-tree-sha1 = "ceb3f1bd6ae6acbab0074f8241a805398dbb9529"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/TemplateExtension.jl"
 uuid = "817b9ba7-9bcf-4fee-a3ef-e2b6f93e2810"
@@ -252,7 +252,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
 [[deps.VectorExtension]]
 deps = ["BenchmarkTools", "Revise"]
-git-tree-sha1 = "145044314e88b1f1c2739018f94d0db0f27c3a25"
+git-tree-sha1 = "b05e91561339bc606880d6f01fe315fe4cd1af65"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/VectorExtension.jl"
 uuid = "5dc7f3b2-d000-489c-bcc0-daa77f8356fb"
