@@ -21,21 +21,19 @@ Check `julia package` (`.jl`) structure and update as needed
 
     end
 
-    #PathExtension.error_missing_path(TEMPLATE, pa)
-
     re_ = TemplateExtension.get_replacement(ti)
 
-    for (su, id_) in [
-        TemplateExtension.get_transplant()
-        ("test/runtests.ipynb", [1, 2, 1])
-    ]
+    TemplateExtension.error_missing(TEMPLATE, pa; re_ = re_)
+
+    for (su, id_) in
+        [TemplateExtension.get_transplant(), ("test/runtests.ipynb", [1, 2, 1])]
 
         TemplateExtension.transplant(
             joinpath(TEMPLATE, su),
             joinpath(pa, su),
             "---",
             id_,
-            ti,
+            re_,
         )
 
     end
