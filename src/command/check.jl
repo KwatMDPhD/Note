@@ -17,6 +17,8 @@ Check `julia package` (`.jl`) structure and update as needed
 
     if ti == PathExtension.get_file_name_without_extension(TEMPLATE)
 
+        println("Skipping")
+
         return nothing
 
     end
