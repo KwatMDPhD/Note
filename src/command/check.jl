@@ -28,7 +28,7 @@ Check `julia package` (`.jl`) structure and update as needed
     TemplateExtension.error_missing(TEMPLATE, pa; re_ = re_)
 
     for (su, id_) in
-        [TemplateExtension.get_transplant(), ("test/runtests.ipynb", [1, 2, 1])]
+        [TemplateExtension.get_transplant(); ("test/runtests.ipynb", [1, 2, 1])]
 
         TemplateExtension.transplant(
             joinpath(TEMPLATE, su),
