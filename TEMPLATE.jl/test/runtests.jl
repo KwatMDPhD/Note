@@ -1,4 +1,4 @@
-TE = joinpath(homedir(), "Downloads", "TEMPLATE.test", "")
+TE = joinpath(tempdir(), "TEMPLATE.test", "")
 
 if isdir(TE)
 
@@ -8,7 +8,7 @@ end
 
 mkdir(TE)
 
-println("Made ", TE, ".")
+println("Made ", TE)
 
 using Revise
 using BenchmarkTools
@@ -17,4 +17,4 @@ using TEMPLATE
 
 rm(TE; recursive = true)
 
-println("Removed ", TE, ".")
+println("Removed ", TE)
