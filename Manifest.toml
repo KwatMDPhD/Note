@@ -152,7 +152,7 @@ version = "2.1.2"
 
 [[deps.PathExtension]]
 deps = ["BenchmarkTools", "Revise", "StringExtension", "VectorExtension"]
-git-tree-sha1 = "82deed69ae31c8e0e1dea5766348b1e499606096"
+git-tree-sha1 = "de42dd87af1e5aa17b5087fb8813b4b43564d45c"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/PathExtension.jl"
 uuid = "7c11ae63-6a62-451d-8387-4dfdec5677ae"
@@ -237,7 +237,7 @@ uuid = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 
 [[deps.TemplateExtension]]
 deps = ["BenchmarkTools", "Revise", "StringExtension", "UUIDs", "VectorExtension"]
-git-tree-sha1 = "0a64ed029f996dbc2a9f1a7b51790f8a989a0caa"
+git-tree-sha1 = "5155da16b9a60fce3602d9499d6352f1ef870a82"
 repo-rev = "main"
 repo-url = "https://github.com/KwatMDPhD/TemplateExtension.jl"
 uuid = "817b9ba7-9bcf-4fee-a3ef-e2b6f93e2810"
