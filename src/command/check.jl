@@ -5,56 +5,39 @@ Check `julia package` (`.jl`) structure and update as needed
 
   - `pa`: path
 """
-@cast function check(pa::String)::Nothing
+@cast function check(pa)
 
-    pa = PathExtension.make_absolute(pa)
+    pa = make_absolute(pa)
 
     println("Checking ", pa)
 
-    PathExtension.error_extension(pa, EXTENSION)
+    error_extension(pa, EXTENSION)
 
-    ti = PathExtension.get_file_name_without_extension(pa)
+    ti = remove_extension(pa)
 
-    if ti == PathExtension.get_file_name_without_extension(TEMPLATE)
+    if ti == remove_extension(TEMPLATE)
 
         println("Skipping")
 
-        return nothing
+        return
 
     end
 
-    re_ = TemplateExtension.get_replacement(ti)
+    re_ = plan_replacement(ti)
 
-    TemplateExtension.error_missing(TEMPLATE, pa; re_ = re_)
+    error_missing(TEMPLATE, pa; re_ = re_)
 
-    for (su, id_) in
-        [TemplateExtension.get_transplant(); ("test/runtests.ipynb", [1, 2, 1])]
+    for (su, id_) in [plan_transplant(); ("test/runtests.ipynb", [1, 2, 1])]
 
-        TemplateExtension.transplant(
-            joinpath(TEMPLATE, su),
-            joinpath(pa, su),
-            "---",
-            id_,
-            re_,
-        )
+        transplant(joinpath(TEMPLATE, su), joinpath(pa, su), "---", id_, re_ = re_)
 
     end
 
-    ke_va = TOML.parsefile(joinpath(pa, "Project.toml"))
+    ke_va = read(joinpath(pa, "Project.toml"))
 
-    ke_ = Vector{String}()
+    ke_ = [ke for ke in ["name", "uuid", "version", "authors"] if !haskey(ke_va, ke)]
 
-    for ke in ["name", "uuid", "version", "authors", "deps"]
-
-        if !haskey(ke_va, ke)
-
-            push!(ke_, ke)
-
-        end
-
-    end
-
-    if 0 < length(ke_)
+    if !isempty(ke_)
 
         error("missing ", ke_)
 
@@ -65,7 +48,5 @@ Check `julia package` (`.jl`) structure and update as needed
         error("name is not ", ti)
 
     end
-
-    return nothing
 
 end

@@ -5,13 +5,13 @@ Make a `julia package` (`.jl`)
 
   - `pa`: path
 """
-@cast function make(pa::String)::Nothing
+@cast function make(pa)
 
-    pa = PathExtension.make_absolute(pa)
+    pa = make_absolute(pa)
 
     println("Making ", pa)
 
-    PathExtension.error_extension(pa, EXTENSION)
+    error_extension(pa, EXTENSION)
 
     cp(TEMPLATE, pa)
 
@@ -19,12 +19,10 @@ Make a `julia package` (`.jl`)
 
     jl = splitdir(pa)[2]
 
-    PathExtension.move(joinpath(sr, splitdir(TEMPLATE)[2]), joinpath(sr, jl))
+    move(joinpath(sr, splitdir(TEMPLATE)[2]), joinpath(sr, jl))
 
-    ti = PathExtension.get_file_name_without_extension(pa)
+    ti = remove_extension(pa)
 
-    PathExtension.sed_recursively(pa, TemplateExtension.get_replacement(ti))
-
-    return nothing
+    sed_recursively(pa, plan_replacement(ti))
 
 end

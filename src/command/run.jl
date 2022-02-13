@@ -8,17 +8,16 @@ Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
 # Flags
 
   - `--sk`: skip running
-
 """
-@cast function run(pa::String; sk::Bool = false)::Nothing
+@cast function run(pa; sk::Bool = false)
 
-    pa = PathExtension.make_absolute(pa)
+    pa = make_absolute(pa)
 
     println("Running ", pa)
 
     nb = joinpath(pa, "test", "runtests.ipynb")
 
-    Base.run(`jupyter-nbconvert --no-prompt --to script --log-level 0 $nb`)
+    Base.run(`jupyter-nbconvert --to script --log-level 0 $nb`)
 
     Pkg.activate(pa)
 
@@ -31,7 +30,5 @@ Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
         Pkg.test()
 
     end
-
-    return nothing
 
 end

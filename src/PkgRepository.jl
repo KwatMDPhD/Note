@@ -2,10 +2,11 @@ module PkgRepository
 
 using Comonicon
 using Pkg
-using TOML
 
-using PathExtension
-using TemplateExtension
+using OnePiece.extension.dict: read
+using OnePiece.extension.path:
+    error_extension, make_absolute, move, remove_extension, sed_recursively
+using OnePiece.templating: error_missing, plan_replacement, plan_transplant, transplant
 
 EXTENSION = ".jl"
 

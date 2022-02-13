@@ -1,20 +1,21 @@
-TE = joinpath(tempdir(), "TEMPLATE.test", "")
+TE = joinpath(tempdir(), "TEMPLATE.test")
 
 if isdir(TE)
 
-    rm(TE; recursive = true)
+    rm(TE, recursive = true)
+
+    println("Removed ", TE, ".")
 
 end
 
 mkdir(TE)
 
-println("Made ", TE)
+println("Made ", TE, ".")
 
-using Revise
-using BenchmarkTools
+if isdir(TE)
 
-using TEMPLATE
+    rm(TE, recursive = true)
 
-rm(TE; recursive = true)
+    println("Removed ", TE, ".")
 
-println("Removed ", TE)
+end

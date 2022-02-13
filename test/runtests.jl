@@ -1,19 +1,16 @@
-TE = joinpath(tempdir(), "PkgRepository.test", "")
+TE = joinpath(tempdir(), "PkgRepository.test")
 
 if isdir(TE)
 
-    rm(TE; recursive = true)
+    rm(TE, recursive = true)
+
+    println("Removed ", TE, ".")
 
 end
 
 mkdir(TE)
 
-println("Made ", TE)
-
-using Revise
-using BenchmarkTools
-
-using PathExtension
+println("Made ", TE, ".")
 
 using PkgRepository
 
@@ -37,6 +34,10 @@ PkgRepository.check(pk)
 
 PkgRepository.run(pk)
 
-rm(TE; recursive = true)
+if isdir(TE)
 
-println("Removed ", TE)
+    rm(TE, recursive = true)
+
+    println("Removed ", TE, ".")
+
+end
