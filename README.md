@@ -6,25 +6,25 @@ Command-line interface for working with `Julia package repository` (`.jl`) :bent
 
 Make a `julia package` (`.jl`)
 
-```sh
+```bash
 pkgr make path/to/MyPackage.jl
 ```
 
 ### Check `julia package` (`.jl`) structure and update as needed
 
-```sh
+```bash
 pkgr check path/to/MyPackage.jl
 ```
 
 ### Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
 
-```sh
+```bash
 pkgr run path/to/MyPackage.jl
 ```
 
 ## Install
 
-```sh
+```bash
 git clone https://github.com/KwatMDPhD/PkgRepository.jl &&
 
 cd PkgRepository.jl &&
@@ -36,9 +36,9 @@ julia --project deps/build.jl
 
 :point_up: commands install `pkgr` into `~/.julia/bin`.
 
-If not already, add the `bin` to the path by adding :point_down: to the profile (`~/.zshrc`, `~/.bashrc`, ...)
+If not already, add the `bin` to the path by adding :point_down: to the profile (`~/.zshrc`, `~/.rc`, ...)
 
-```sh
+```bash
 PATH=~/.julia/bin:$PATH
 ```
 
@@ -46,7 +46,7 @@ Start a new shell to load the updated profile.
 
 Test installation
 
-```sh
+```bash
 pkgr -h
 ```
 
