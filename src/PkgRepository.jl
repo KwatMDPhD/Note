@@ -1,16 +1,16 @@
 module PkgRepository
 
 using Comonicon
+
+using OnePiece
+
 using Pkg
 
-using OnePiece.extension.dict: read
-using OnePiece.extension.path:
-    error_extension, make_absolute, move, remove_extension, sed_recursively
-using OnePiece.templating: error_missing, plan_replacement, plan_transplant, transplant
+include("templating/_.jl")
 
 EXTENSION = ".jl"
 
-TEMPLATE = joinpath(dirname(@__DIR__), string("TEMPLATE", EXTENSION))
+TEMPLATE = joinpath(dirname(@__DIR__), "TEMPLATE$EXTENSION")
 
 include("command/make.jl")
 

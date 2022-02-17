@@ -3,26 +3,25 @@ Make a `julia package` (`.jl`)
 
 # Arguments
 
-  - `pa`: path
+  - `path`:
 """
-@cast function make(pa)
+@cast function make(path)
 
-    pa = make_absolute(pa)
+    pa = OnePiece.path.make_absolute(path)
 
-    println("Making ", pa)
+    println("Making $pa")
 
-    error_extension(pa, EXTENSION)
+    OnePiece.path.error_extension(pa, EXTENSION)
 
     cp(TEMPLATE, pa)
 
     sr = joinpath(pa, "src")
 
-    jl = splitdir(pa)[2]
+    OnePiece.path.move(joinpath(sr, basename(TEMPLATE)), joinpath(sr, basename(pa)))
 
-    move(joinpath(sr, splitdir(TEMPLATE)[2]), joinpath(sr, jl))
-
-    ti = remove_extension(pa)
-
-    sed_recursively(pa, plan_replacement(ti))
+    OnePiece.path.sed_recursively(
+        pa,
+        templating.plan_replacement(OnePiece.path.remove_extension(pa)),
+    )
 
 end

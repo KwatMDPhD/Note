@@ -3,29 +3,23 @@ Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
 
 # Arguments
 
-  - `pa`: path
+  - `path`:
 
 # Flags
 
-  - `--sk`: skip running
+  - `--skip-run`:
 """
-@cast function run(pa; sk::Bool = false)
+@cast function run(path; skip_run::Bool = false)
 
-    pa = make_absolute(pa)
+    pa = OnePiece.path.make_absolute(path)
 
-    println("Running ", pa)
-
-    nb = joinpath(pa, "test", "runtests.ipynb")
-
-    Base.run(`jupyter-nbconvert --to script --log-level 0 $nb`)
+    println("Running $pa")
 
     Pkg.activate(pa)
 
     Pkg.update()
 
-    Pkg.instantiate()
-
-    if !sk
+    if !skip_run
 
         Pkg.test()
 
