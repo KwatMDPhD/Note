@@ -7,33 +7,15 @@ Check `julia package` (`.jl`) structure and update as needed
 """
 @cast function check(path)
 
-    pa = OnePiece.path.make_absolute(path)
+    pa = make_absolute(path, EXTENSION)
 
-    println("Checking $pa")
+    check_templating(pa, TEMPLATE, [], [])
 
-    OnePiece.path.error_extension(pa, EXTENSION)
+    to = joinpath(pa, "Project.toml")
 
-    ti = OnePiece.path.remove_extension(pa)
+    println("Checking $to")
 
-    if ti == OnePiece.path.remove_extension(TEMPLATE)
-
-        println("Skipping")
-
-        return
-
-    end
-
-    re_ = templating.plan_replacement(ti)
-
-    templating.error_missing(TEMPLATE, pa, re_ = re_)
-
-    for (su, id_) in templating.plan_transplant()
-
-        templating.transplant(joinpath(TEMPLATE, su), joinpath(pa, su), "---", id_, re_ = re_)
-
-    end
-
-    ke_va = OnePiece.dict.read(joinpath(pa, "Project.toml"))
+    ke_va = OnePiece.dict.read(to)
 
     ke_ = [ke for ke in ["name", "uuid", "version", "authors"] if !haskey(ke_va, ke)]
 
@@ -42,6 +24,8 @@ Check `julia package` (`.jl`) structure and update as needed
         error("missing $(join(ke_, " "))")
 
     end
+
+    ti = OnePiece.path.remove_extension(pa)
 
     if ke_va["name"] != ti
 

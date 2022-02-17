@@ -1,5 +1,5 @@
 """
-Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
+Run `Pkg.test()`
 
 # Arguments
 
@@ -11,13 +11,11 @@ Export `test/runtests.ipynb` to `test/runtests.jl` and run `Pkg.test()`
 """
 @cast function run(path; skip_run::Bool = false)
 
-    pa = OnePiece.path.make_absolute(path)
+    pa = make_absolute(path, EXTENSION)
+
+    pkg_update(pa)
 
     println("Running $pa")
-
-    Pkg.activate(pa)
-
-    Pkg.update()
 
     if !skip_run
 

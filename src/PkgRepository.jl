@@ -6,11 +6,21 @@ using OnePiece
 
 using Pkg
 
-include("templating/_.jl")
+using UUIDs
 
 EXTENSION = ".jl"
 
 TEMPLATE = joinpath(dirname(@__DIR__), "TEMPLATE$EXTENSION")
+
+include("templating/make_absolute.jl")
+
+include("templating/plan_replacement.jl")
+
+include("templating/copy_sed.jl")
+
+include("templating/check_templating.jl")
+
+include("templating/pkg_update.jl")
 
 include("command/make.jl")
 
