@@ -4,6 +4,8 @@ function pkg_update(pa)
 
     Pkg.activate(pa)
 
+    Pkg.instantiate()
+
     Pkg.update()
 
     Pkg.gc()
