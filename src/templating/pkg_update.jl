@@ -6,4 +6,6 @@ function pkg_update(pa)
 
     Pkg.update()
 
+    Pkg.gc()
+
 end
