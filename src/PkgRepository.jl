@@ -1,11 +1,8 @@
 module PkgRepository
 
 using Comonicon
-
 using OnePiece
-
 using Pkg
-
 using UUIDs
 
 EXTENSION = ".jl"
