@@ -46,8 +46,24 @@ function check_templating(pa, te, ig_, tr_)
 
     end
 
-    for (su, id_) in
-        vcat([(".gitignore", [1, 1, 1, 2]), ("README.md", [2, 1, 1]), ("LICENSE", [])], tr_)
+    for (su, de, id_) in vcat(
+        [
+            (
+                ".gitignore",
+                "# ----------------------------------------------------------------------------------------------- #",
+                [1, 1, 1, 2],
+            ),
+            ("README.md", "---", [2, 1, 1]),
+            ("LICENSE", "", []),
+        ],
+        tr_,
+    )
+
+        println(su)
+
+        println(de)
+
+        println(id_)
 
         pa1 = joinpath(te, su)
 
@@ -57,13 +73,13 @@ function check_templating(pa, te, ig_, tr_)
 
         st2 = read(pa2, String)
 
-        if isempty(id_)
+        if isempty(de)
 
             st = st1
 
         else
 
-            st = OnePiece.string.transplant(st1, st2, "---", id_)
+            st = OnePiece.string.transplant(st1, st2, de, id_)
 
         end
 
