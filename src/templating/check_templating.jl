@@ -59,12 +59,6 @@ function check_templating(pa, te, ig_, tr_)
         tr_,
     )
 
-        println(su)
-
-        println(de)
-
-        println(id_)
-
         pa1 = joinpath(te, su)
 
         pa2 = joinpath(pa, su)
@@ -83,9 +77,15 @@ function check_templating(pa, te, ig_, tr_)
 
         end
 
-        println("Transplanting $pa2")
+        st3 = replace(st, re_...)
 
-        write(pa2, replace(st, re_...))
+        if st2 != st3
+
+            println("Transplanting $pa2")
+
+            write(pa2, st3)
+
+        end
 
     end
 
