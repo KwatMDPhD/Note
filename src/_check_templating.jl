@@ -60,6 +60,8 @@ function _check_templating(pa, te, ig_, tr_)
         tr_,
     )
 
+        println("Checking $su")
+
         pa1 = joinpath(te, su)
 
         pa2 = joinpath(pa, su)

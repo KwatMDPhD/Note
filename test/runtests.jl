@@ -8,6 +8,7 @@ end
 
 mkdir(TE)
 
+#using Revise
 using Kata
 
 pk = joinpath(TE, "APackage")
