@@ -1,4 +1,4 @@
-function pkg_update(pa)
+function _pkg_update(pa)
 
     println("Updating $pa")
 

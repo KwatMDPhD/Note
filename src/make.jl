@@ -1,5 +1,5 @@
 """
-Make a `julia package` (`.jl`)
+Make from a template.
 
 # Arguments
 
@@ -7,9 +7,9 @@ Make a `julia package` (`.jl`)
 """
 @cast function make(path)
 
-    pa = make_absolute(path, EXTENSION)
+    pa = _ready(path, EXTENSION)
 
-    copy_sed(pa, TEMPLATE)
+    _copy_sed(TEMPLATE, pa)
 
     sr = joinpath(pa, "src")
 

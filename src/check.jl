@@ -1,5 +1,5 @@
 """
-Check `julia package` (`.jl`) structure and update as needed
+Ensure structure.
 
 # Arguments
 
@@ -7,9 +7,9 @@ Check `julia package` (`.jl`) structure and update as needed
 """
 @cast function check(path)
 
-    pa = make_absolute(path, EXTENSION)
+    pa = _ready(path, EXTENSION)
 
-    check_templating(pa, TEMPLATE, [], [])
+    _check_templating(pa, TEMPLATE, [], [])
 
     to = joinpath(pa, "Project.toml")
 
@@ -21,7 +21,7 @@ Check `julia package` (`.jl`) structure and update as needed
 
     if !isempty(ke_)
 
-        error("missing $(join(ke_, " "))")
+        error("Missing $(join(ke_, " ")).")
 
     end
 
@@ -29,7 +29,7 @@ Check `julia package` (`.jl`) structure and update as needed
 
     if ke_va["name"] != ti
 
-        error("name is not $ti")
+        error("Name is not $ti.")
 
     end
 

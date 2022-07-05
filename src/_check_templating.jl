@@ -1,4 +1,4 @@
-function check_templating(pa, te, ig_, tr_)
+function _check_templating(pa, te, ig_, tr_)
 
     println("Checking $pa")
 
@@ -6,15 +6,15 @@ function check_templating(pa, te, ig_, tr_)
 
     if ti == OnePiece.path.remove_extension(te)
 
-        println("Skipping")
+        println("Skip.")
 
         return
 
     end
 
-    re_ = plan_replacement(ti)
-
     mi_ = []
+
+    re_ = _plan_replacement(ti)
 
     for (ro, di_, fi_) in walkdir(te)
 
@@ -42,7 +42,7 @@ function check_templating(pa, te, ig_, tr_)
 
     if !isempty(mi_)
 
-        error("missing expected $(join(mi_, " "))")
+        error("Missing $(join(mi_, " ")).")
 
     end
 
@@ -53,8 +53,9 @@ function check_templating(pa, te, ig_, tr_)
                 "# ----------------------------------------------------------------------------------------------- #",
                 [1, 1, 1, 2],
             ),
-            ("README.md", "---", [2, 1, 1]),
+            ("README.md", "---", [2, 1]),
             ("LICENSE", "", []),
+            ("test/runtests.ipynb", "\"---\"", [1, 2, 1]),
         ],
         tr_,
     )

@@ -1,27 +1,20 @@
-# ----------------------------------------------------------------------------------------------- #
-TE = joinpath(tempdir(), "PkgRepository.test")
+TE = joinpath(tempdir(), "Kata.test")
 
 if isdir(TE)
 
     rm(TE, recursive = true)
 
-    println("Removed $TE.")
-
 end
 
 mkdir(TE)
 
-println("Made $TE.")
+using Kata
 
-# ----------------------------------------------------------------------------------------------- #
-using PkgRepository
-
-# ----------------------------------------------------------------------------------------------- #
 pk = joinpath(TE, "APackage")
 
 try
 
-    PkgRepository.make(pk)
+    Kata.make(pk)
 
 catch er
 
@@ -29,19 +22,14 @@ catch er
 
 end
 
-pk = "$pk$(PkgRepository.EXTENSION)"
+pk = "$pk$(Kata.EXTENSION)"
 
-PkgRepository.make(pk)
+Kata.make(pk)
 
-PkgRepository.check(pk)
+Kata.check(pk)
 
-PkgRepository.run(pk)
+for sk in [true, false]
 
-# ----------------------------------------------------------------------------------------------- #
-if isdir(TE)
-
-    rm(TE, recursive = true)
-
-    println("Removed $TE.")
+    Kata.run(pk, skip_run = sk)
 
 end

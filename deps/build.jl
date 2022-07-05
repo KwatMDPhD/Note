@@ -1,3 +1,3 @@
-using PkgRepository
+using Kata
 
-PkgRepository.comonicon_install()
+Kata.comonicon_install()

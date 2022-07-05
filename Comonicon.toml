@@ -1,4 +1,4 @@
-name = "pkgr"
+name = "kata"
 
 [install]
 completion=true

@@ -1,4 +1,4 @@
-function make_absolute(pa, ex)
+function _ready(pa, ex)
 
     pa = OnePiece.path.make_absolute(pa)
 
