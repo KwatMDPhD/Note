@@ -1,15 +1,15 @@
 """
-Ensure structure.
+Format based on a template.
 
 # Arguments
 
   - `path`:
 """
-@cast function check(path)
+@cast function format(path)
 
     pa = _ready(path, EXTENSION)
 
-    _check_templating(pa, TEMPLATE, [], [])
+    _template(pa, TEMPLATE, [], [])
 
     to = joinpath(pa, "Project.toml")
 

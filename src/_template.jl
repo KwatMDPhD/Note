@@ -1,4 +1,4 @@
-function _check_templating(pa, te, ig_, tr_)
+function _template(pa, te, ig_, tr_)
 
     println("Checking $pa")
 

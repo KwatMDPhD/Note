@@ -1,5 +1,5 @@
 """
-Update, make `runtests.jl`, and run `Pkg.test()`.
+Update and run.
 
 # Arguments
 
