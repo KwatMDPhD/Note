@@ -1,5 +1,5 @@
 """
-Update and run.
+Update, convert `runtests.ipynb` to `jl`, and run `Pkg.test()`.
 
 # Arguments
 
@@ -11,20 +11,43 @@ Update and run.
 """
 @cast function run(path; skip_run::Bool = false)
 
-    pa = _ready(path, EXTENSION)
+    #
 
-    _pkg_update(pa)
+    pa = OnePiece.path.make_absolute(path)
+
+    ex = splitext(pa)[2]
+
+    te = "$TEMPLAT$ex"
+
+    #
+
+    println("Updating")
+
+    Pkg.activate(pa)
+
+    Pkg.instantiate()
+
+    Pkg.update()
+
+    #
+
+    println("Converting `runtests.jl`")
 
     Base.run(
         `jupyter-nbconvert --log-level 40 --to script $(joinpath(pa, "test", "runtests.ipynb"))`,
     )
 
-    if !skip_run
+    #
+    if skip_run
 
-        println("Running $pa")
-
-        Pkg.test()
+        return
 
     end
+
+    #
+
+    println("Testing")
+
+    Pkg.test()
 
 end

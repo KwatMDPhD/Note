@@ -1,6 +1,6 @@
 # Kata.jl
 
-Do something :blush:
+Command-line interface for working with templates :bento:
 
 ---
 

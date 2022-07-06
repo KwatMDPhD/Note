@@ -5,19 +5,11 @@ using OnePiece
 using Pkg
 using UUIDs
 
-EXTENSION = ".jl"
-
-TEMPLATE = joinpath(dirname(@__DIR__), "TEMPLATE$EXTENSION")
-
-include("_copy_sed.jl")
-
-include("_pkg_update.jl")
+TEMPLAT = joinpath(dirname(@__DIR__), "TEMPLATE")
 
 include("_plan_replacement.jl")
 
-include("_ready.jl")
-
-include("_template.jl")
+include("_title.jl")
 
 include("format.jl")
 
