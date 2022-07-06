@@ -15,10 +15,6 @@ Update, convert `runtests.ipynb` to `jl`, and run `Pkg.test()`.
 
     pa = OnePiece.path.make_absolute(path)
 
-    ex = splitext(pa)[2]
-
-    te = "$TEMPLAT$ex"
-
     #
 
     println("Updating")

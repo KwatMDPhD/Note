@@ -7,7 +7,7 @@ using OnePiece
 using Pkg
 using UUIDs
 
-TEMPLAT = joinpath(dirname(@__DIR__), "TEMPLATE")
+TEMPLAT = joinpath(dirname(@__DIR__), "TEMPLAT") * "E"
 
 include("_plan_replacement.jl")
 
