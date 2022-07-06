@@ -1,5 +1,7 @@
 module Kata
 
+# ----------------------------------------------------------------------------------------------- #
+
 using Comonicon
 using OnePiece
 using Pkg
@@ -21,5 +23,7 @@ include("run.jl")
 Command-line interface for working with templates :bento:
 """
 @main
+
+# ----------------------------------------------------------------------------------------------- #
 
 end

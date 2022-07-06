@@ -67,7 +67,7 @@ Format based on a template.
         (".gitignore", se, [1, 1, 1, 2]),
         ("README.md", "---", [2, 1]),
         ("LICENSE", "", []),
-        (joinpath("src", "TEMPLATE.jl"), se, [1, 1, 2]),
+        (joinpath("src", "TEMPLATE.jl"), se, [1, 2, 1]),
         (joinpath("test", "runtests.ipynb"), "\"---\"", [1, 2, 1]),
     ]
 
