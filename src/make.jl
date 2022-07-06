@@ -8,6 +8,7 @@ Make from a template.
 @cast function make(path)
 
     #
+
     pa = OnePiece.path.make_absolute(path)
 
     ex = splitext(pa)[2]
@@ -15,11 +16,13 @@ Make from a template.
     te = "$TEMPLAT$ex"
 
     #
+
     println("Copying")
 
     cp(te, pa)
 
     #
+
     println("`sed`ing")
 
     ti = _title(pa)
@@ -27,6 +30,7 @@ Make from a template.
     OnePiece.path.sed_recursively(pa, _plan_replacement(ti))
 
     #
+
     println("Renaming src/Title.jl")
 
     sr = joinpath(pa, "src")
