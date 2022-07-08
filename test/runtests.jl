@@ -24,18 +24,3 @@ run(`tree -a $pr`)
 Kata.format(pr)
 
 Kata.run(pr)
-
-for pa in [
-    "~/craft/OnePiece.jl",
-    "~/craft/GSEA.jl",
-    "~/craft/Kata.jl",
-    "~/craft/Clean.jl",
-    "~/craft/pro/HumanGenes.pro",
-    "~/craft/pro/NeuralPopulations.pro",
-]
-
-    Kata.format(pa)
-
-    Kata.run(pa, skip = true)
-
-end

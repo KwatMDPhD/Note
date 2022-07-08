@@ -65,7 +65,7 @@ Format based on a template.
 
     #
 
-    println("Transplanting")
+    println("Checking transplant")
 
     se = "# $("-" ^ 95) #"
 
