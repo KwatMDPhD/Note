@@ -7,9 +7,9 @@ Update, convert `runtests.ipynb` to `jl`, and run `Pkg.test()`.
 
 # Flags
 
-  - `--skip-run`:
+  - `--skip`:
 """
-@cast function run(path; skip_run::Bool = false)
+@cast function run(path; skip::Bool = false)
 
     #
 
@@ -34,13 +34,12 @@ Update, convert `runtests.ipynb` to `jl`, and run `Pkg.test()`.
     )
 
     #
-    if skip_run
+
+    if skip
 
         return
 
     end
-
-    #
 
     println("Testing")
 

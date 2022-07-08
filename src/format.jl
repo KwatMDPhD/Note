@@ -37,6 +37,12 @@ Format based on a template.
 
         for na in vcat(di_, fi_)
 
+            if na == "1.make_something.ipynb"
+
+                continue
+
+            end
+
             na = replace(na, re_...)
 
             ex = joinpath(replace(ro, te => pa), na)
