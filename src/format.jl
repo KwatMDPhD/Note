@@ -1,5 +1,5 @@
 """
-Format based on a template.
+Check missing and transplant.
 
 # Arguments
 
@@ -7,41 +7,21 @@ Format based on a template.
 """
 @cast function format(path)
 
-    #
-
     pa = OnePiece.path.make_absolute(path)
 
     ex = splitext(pa)[2]
 
     te = "$TEMPLAT$ex"
 
-    #
-
-    ti = _title(pa)
-
-    if ti == _title(te)
-
-        return
-
-    end
-
-    #
-
     println("Checking missing")
 
     mi_ = []
 
-    re_ = _plan_replacement(ti)
+    re_ = _plan_replacement(pa)
 
     for (ro, di_, fi_) in walkdir(te)
 
         for na in vcat(di_, fi_)
-
-            if na == "1.make_something.ipynb"
-
-                continue
-
-            end
 
             na = replace(na, re_...)
 
@@ -63,19 +43,12 @@ Format based on a template.
 
     end
 
-    #
-
     println("Checking transplant")
 
-    se = "# $("-" ^ 95) #"
+    lo = "# $("-" ^ 95) #"
 
-    for (su, de, wh_) in [
-        (".gitignore", se, [1, 1, 1, 2]),
-        ("README.md", "---", [2, 1]),
-        ("LICENSE", "", []),
-        (joinpath("src", "TEMPLATE.jl"), se, [1, 2, 1]),
-        (joinpath("test", "runtests.ipynb"), "\"---\"", [1, 2, 1]),
-    ]
+    for (su, de, wh_) in
+        [(".gitignore", lo, [1, 2]), ("README.md", "---", [2, 1]), ("LICENSE", "", [])]
 
         pa1 = joinpath(te, su)
 
@@ -104,28 +77,6 @@ Format based on a template.
             write(pa2, st3)
 
         end
-
-    end
-
-    #
-
-    println("Checking toml")
-
-    to = joinpath(pa, "Project.toml")
-
-    ke_va = OnePiece.dict.read(to)
-
-    ke_ = [ke for ke in ["name", "uuid", "version", "authors"] if !haskey(ke_va, ke)]
-
-    if !isempty(ke_)
-
-        error("Missing $(join(ke_, " ")).")
-
-    end
-
-    if ke_va["name"] != ti
-
-        error("Name is not $ti.")
 
     end
 

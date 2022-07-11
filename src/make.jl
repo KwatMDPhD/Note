@@ -1,5 +1,5 @@
 """
-Make from a template.
+Copy from a template and recursively `rename` and `sed`.
 
 # Arguments
 
@@ -7,34 +7,22 @@ Make from a template.
 """
 @cast function make(path)
 
-    #
-
     pa = OnePiece.path.make_absolute(path)
 
     ex = splitext(pa)[2]
 
-    te = "$TEMPLAT$ex"
+    println("`cp`ing")
 
-    #
+    cp("$TEMPLAT$ex", pa)
 
-    println("Copying")
+    re_ = _plan_replacement(pa)
 
-    cp(te, pa)
+    println("`rename`ing")
 
-    #
+    OnePiece.path.rename_recursively(pa, re_)
 
     println("`sed`ing")
 
-    ti = _title(pa)
-
-    OnePiece.path.sed_recursively(pa, _plan_replacement(ti))
-
-    #
-
-    println("Renaming src/Title.jl")
-
-    sr = joinpath(pa, "src")
-
-    OnePiece.path.move(joinpath(sr, "TEMPLATE.jl"), joinpath(sr, "$ti.jl"))
+    OnePiece.path.sed_recursively(pa, re_)
 
 end
