@@ -1,19 +1,21 @@
 using OnePiece
 
-pr = joinpath(dirname(@__DIR__), "kata.json")
+ka = joinpath(dirname(@__DIR__), "Kata.json")
 
-if islink(pr)
+if islink(ka)
 
-    pr = readlink(pr)
+    ka = readlink(ka)
+
+end
+
+RO = dirname(ka)
+
+KA = OnePiece.dict.read(ka)
+
+for (ke, va) in KA
+
+    KA[ke] = replace(va, r"^\./" => RO)
 
 end
 
-RO = dirname(pr)
-
-SE = OnePiece.dict.read(pr)
-
-for (ke, va) in SE
-
-    SE[ke] = replace(va, r"^\./" => RO)
-
-end
+# ----------------------------------------------------------------------------------------------- #

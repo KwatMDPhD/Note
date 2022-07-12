@@ -5,22 +5,26 @@ TE = OnePiece.path.make_temporary("Kata.test")
 
 wh = joinpath(TE, "What")
 
-jl = "$wh.jl"
+pa = "$wh.jl"
 
-Kata.make(jl)
+Kata.make(pa)
 
-run(`tree -a $jl`)
+run(`tree -a $pa`)
 
-Kata.format(jl)
+Kata.format(pa)
 
-Kata.run(jl)
+Kata.call(pa, "update")
 
-pr = "$wh.pro"
+Kata.call(pa, "run")
 
-Kata.make(pr)
+pa = "$wh.pro"
 
-run(`tree -a $pr`)
+Kata.make(pa)
 
-Kata.format(pr)
+run(`tree -a $pa`)
 
-Kata.run(pr)
+Kata.format(pa)
+
+Kata.call(pa, "update")
+
+Kata.call(pa, "run")

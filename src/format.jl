@@ -25,11 +25,11 @@ Check missing and transplant.
 
             na = replace(na, re_...)
 
-            ex = joinpath(replace(ro, te => pa), na)
+            ch = joinpath(replace(ro, te => pa), na)
 
-            if !ispath(ex)
+            if !ispath(ch)
 
-                push!(mi_, ex)
+                push!(mi_, ch)
 
             end
 
@@ -47,8 +47,15 @@ Check missing and transplant.
 
     lo = "# $("-" ^ 95) #"
 
-    for (su, de, wh_) in
-        [(".gitignore", lo, [1, 2]), ("README.md", "---", [2, 1]), ("LICENSE", "", [])]
+    tr_ = [(".gitignore", lo, [1, 2]), ("README.md", "---", [2, 1]), ("LICENSE", "", [])]
+
+    if ex == ".pro"
+
+        push!(tr_, ("code/_.jl", lo, [1, 2]))
+
+    end
+
+    for (su, de, wh_) in tr_
 
         pa1 = joinpath(te, su)
 

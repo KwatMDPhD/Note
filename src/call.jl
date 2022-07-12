@@ -12,6 +12,8 @@ Call a `Kata.json` command.
 
     cd(pa)
 
-    run(`$(OnePiece.dict.read(joinpath(pa, "Kata.json"))[command])`)
+    co = OnePiece.dict.read(joinpath(pa, "Kata.json"))[command]
+
+    run(`sh -c $co`)
 
 end
