@@ -1,6 +1,6 @@
 # Kata.jl
 
-Command-line interface for working with templates :bento:
+Command-line program for working with templates :bento:
 
 `.jl` template makes a `julia` package that is lean and uses `.ipynb` for testing and examples.
 
