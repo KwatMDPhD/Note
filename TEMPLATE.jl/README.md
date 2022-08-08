@@ -1,7 +1,3 @@
-# TEMPLATE.jl
-
-Do something :blush:
-
 ---
 
 ## :wave: :cowboy_hat_face: Howdy

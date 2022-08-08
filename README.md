@@ -1,7 +1,3 @@
-# Kata.jl
-
-Command-line program for working with templates :bento:
-
 `.jl` template makes a `julia` package that is lean and uses `.ipynb` for testing and examples.
 
 `.pro` template makes a `julia` package for an informatics project.
