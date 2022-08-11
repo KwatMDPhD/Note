@@ -49,12 +49,6 @@ Check missing and transplant.
 
     tr_ = [(".gitignore", lo, [1, 2]), ("README.md", "---", [2, 1]), ("LICENSE", "", [])]
 
-    if ex == ".pro"
-
-        push!(tr_, ("code/_.jl", lo, [1, 2]))
-
-    end
-
     for (su, de, wh_) in tr_
 
         pa1 = joinpath(te, su)
