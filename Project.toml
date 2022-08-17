@@ -1,7 +1,7 @@
 name = "Kata"
 uuid = "b1bf3a08-85ea-42c4-9d3d-993f577bbb34"
 authors = ["KwatMDPhD <kwat.me@icloud.com>"]
-version = "0.11.0"
+version = "0.12.0"
 
 [deps]
 Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"

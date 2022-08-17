@@ -7,13 +7,9 @@ using UUIDs
 
 TEMPLAT = joinpath(dirname(@__DIR__), "TEMPLAT") * "E"
 
-include("_plan_replacement.jl")
+include("_include_neighbor.jl")
 
-include("call.jl")
-
-include("format.jl")
-
-include("make.jl")
+_include_neighbor(@__FILE__)
 
 """
 Command-line interface for working with templates :bento:

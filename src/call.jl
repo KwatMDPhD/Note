@@ -3,12 +3,11 @@ Call a `Kata.json` command.
 
 # Arguments
 
-  - `path`:
   - `command`:
 """
-@cast function call(path, command)
+@cast function call(command)
 
-    pa = OnePiece.path.make_absolute(path)
+    pa = pwd()
 
     cd(pa)
 

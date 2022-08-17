@@ -1,13 +1,9 @@
 """
 Check missing and transplant.
-
-# Arguments
-
-  - `path`:
 """
-@cast function format(path)
+@cast function format()
 
-    pa = OnePiece.path.make_absolute(path)
+    pa = pwd()
 
     ex = splitext(pa)[2]
 

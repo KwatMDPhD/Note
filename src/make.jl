@@ -3,11 +3,11 @@ Copy from a template and recursively `rename` and `sed`.
 
 # Arguments
 
-  - `path`:
+  - `name`:
 """
-@cast function make(path)
+@cast function make(name)
 
-    pa = OnePiece.path.make_absolute(path)
+    pa = joinpath(pwd(), name)
 
     ex = splitext(pa)[2]
 
