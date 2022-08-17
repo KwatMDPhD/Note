@@ -1,30 +1,27 @@
 using Kata
+
 using OnePiece
 
-TE = OnePiece.path.make_temporary("Kata.test")
+te = OnePiece.path.make_temporary("Kata.test")
 
-wh = joinpath(TE, "What")
+for ex in [".jl", ".pro"]
 
-pa = "$wh.jl"
+    wh = "What$ex"
 
-Kata.make(pa)
+    cd(te)
 
-run(`tree -a $pa`)
+    Kata.make(wh)
 
-Kata.format(pa)
+    run(`tree -a`)
 
-Kata.call(pa, "update")
+    cd(wh)
 
-Kata.call(pa, "run")
+    Kata.format()
 
-pa = "$wh.pro"
+    for co in ["update", "run"]
 
-Kata.make(pa)
+        Kata.call(co)
 
-run(`tree -a $pa`)
+    end
 
-Kata.format(pa)
-
-Kata.call(pa, "update")
-
-Kata.call(pa, "run")
+end
