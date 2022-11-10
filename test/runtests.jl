@@ -2,9 +2,9 @@ using Kata
 
 using OnePiece
 
-te = OnePiece.path.make_temporary("Kata.test")
+te = OnePiece.Path.make_temporary("Kata.test")
 
-for ex in [".jl", ".pro"]
+for ex in (".jl", ".pro")
 
     wh = "What$ex"
 
@@ -18,7 +18,7 @@ for ex in [".jl", ".pro"]
 
     Kata.format()
 
-    for co in ["update", "run"]
+    for co in ("update", "run")
 
         Kata.call(co)
 

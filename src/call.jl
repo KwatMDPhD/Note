@@ -7,12 +7,10 @@ Call a `Kata.json` command.
 """
 @cast function call(command)
 
-    pa = pwd()
+    wo = pwd()
 
-    cd(pa)
+    cd(wo)
 
-    co = OnePiece.dict.read(joinpath(pa, "Kata.json"))[command]
-
-    run(`sh -c $co`)
+    run(`sh -c $(OnePiece.Dict.read(joinpath(wo, "Kata.json"))[command])`)
 
 end

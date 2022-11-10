@@ -1,18 +1,17 @@
 module Kata
 
-using Comonicon
+using Comonicon: @cast, @main
+
+using UUIDs: uuid4
+
 using OnePiece
-using Pkg
-using UUIDs
 
-TEMPLAT = joinpath(dirname(@__DIR__), "TEMPLAT") * "E"
+include("_include.jl")
 
-include("_include_neighbor.jl")
-
-_include_neighbor(@__FILE__)
+@_include()
 
 """
-Command-line interface for working with templates :bento:
+Command-line program for working with practical, minimal templates 🍱
 """
 @main
 
