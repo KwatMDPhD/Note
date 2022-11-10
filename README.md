@@ -1,4 +1,6 @@
-`.jl` template makes a `julia` package that is lean and uses `.ipynb` for testing and examples.
+Command-line program for working with practical, minimal templates 🍱
+
+`.jl` template makes a `julia` package that uses `.ipynb` for testing and examples.
 
 `.pro` template makes a `julia` package for an informatics project.
 
@@ -6,14 +8,16 @@
 
 ```bash
 kata make BigMama.jl
+
+cd BigMama.jl
 ```
 
 ```bash
-kata format BigMama.jl
+kata call run
 ```
 
 ```bash
-kata run BigMama.jl
+kata format
 ```
 
 These commands work on also `.pro`s.
