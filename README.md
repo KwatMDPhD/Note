@@ -34,9 +34,9 @@ julia --project --eval "using Pkg; Pkg.instantiate()" &&
 julia --project deps/build.jl
 ```
 
-:point_up: commands install `kata` into `~/.julia/bin`.
+☝️ commands install `kata` into `~/.julia/bin`.
 
-If not already, add the `bin` to the path by adding :point_down: to the profile (`~/.zshrc`, `~/.rc`, ...)
+If not already, add the `bin` to the path by adding 👇 to the profile (`~/.zshrc`, `~/.rc`, ...)
 
 ```bash
 PATH=~/.julia/bin:$PATH
@@ -50,7 +50,7 @@ Test installation
 kata --version
 ```
 
-:tada:
+🎉
 
 ---
 
