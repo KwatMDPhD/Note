@@ -1,5 +1,5 @@
 """
-Check missing and transplant.
+Check missing and (if necessary) transplant.
 """
 @cast function format()
 
