@@ -1,5 +1,5 @@
 module TEMPLATE
 
-using OnePiece
-
 end
+
+using OnePiece

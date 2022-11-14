@@ -22,6 +22,12 @@ Check missing and (if necessary) transplant.
 
         for na in vcat(di_, fi_)
 
+            if na == "1.do_something.ipynb"
+
+                continue
+
+            end
+
             ch = joinpath(replace(ro, te => wo), replace(na, re_...))
 
             if !ispath(ch)
