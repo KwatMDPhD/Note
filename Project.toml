@@ -1,11 +1,11 @@
 name = "Kata"
 uuid = "b1bf3a08-85ea-42c4-9d3d-993f577bbb34"
 authors = ["KwatMDPhD <kwat.me@icloud.com>"]
-version = "2022.11.14"
+version = "0.11.22"
 
 [deps]
+BioinformaticsCore = "1fe83854-81c0-42f7-afc9-71ba9af673ca"
 Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"
 IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
-OnePiece = "1fe83854-81c0-42f7-afc9-71ba9af673ca"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
