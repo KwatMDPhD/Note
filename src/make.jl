@@ -23,11 +23,11 @@ Copy from a template and recursively `rename` and `sed`.
     #
     println("`rename`ing")
 
-    OnePiece.Path.rename_recursively(pa, re_)
+    BioinformaticsCore.Path.rename_recursively(pa, re_)
 
     #
     println("`sed`ing")
 
-    OnePiece.Path.sed_recursively(pa, re_)
+    BioinformaticsCore.Path.sed_recursively(pa, re_)
 
 end

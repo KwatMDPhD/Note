@@ -11,6 +11,6 @@ Call a `Kata.json` command.
 
     cd(wo)
 
-    run(`sh -c $(OnePiece.Dict.read(joinpath(wo, "Kata.json"))[command])`)
+    run(`sh -c $(BioinformaticsCore.Dict.read(joinpath(wo, "Kata.json"))[command])`)
 
 end

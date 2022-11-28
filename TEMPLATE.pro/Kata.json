@@ -1,4 +1,4 @@
 {
   "update": "julia --project --eval 'using Pkg; Pkg.instantiate(); Pkg.update()'",
-  "run": "julia --project --eval 'using OnePiece; OnePiece.IPYNB.run(\"code\", ())'"
+  "run": "julia --project --eval 'using BioinformaticsCore; BioinformaticsCore.IPYNB.run(\"code\", ())'"
 }

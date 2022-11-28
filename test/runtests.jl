@@ -1,8 +1,8 @@
 using Kata
 
-using OnePiece
+using BioinformaticsCore
 
-te = OnePiece.Path.make_temporary("Kata.test")
+te = BioinformaticsCore.Path.make_temporary("Kata.test")
 
 for ex in (".jl", ".pro")
 
