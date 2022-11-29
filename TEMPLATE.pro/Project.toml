@@ -4,4 +4,4 @@ authors = ["GIT_USER_NAME <GIT_USER_EMAIL>"]
 version = "2022.11.10"
 
 [deps]
-BioinformaticsCore = "1fe83854-81c0-42f7-afc9-71ba9af673ca"
+BioLab = "1fe83854-81c0-42f7-afc9-71ba9af673ca"

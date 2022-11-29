@@ -4,7 +4,7 @@ using Comonicon: @cast, @main
 
 using UUIDs: uuid4
 
-using BioinformaticsCore
+using BioLab
 
 include("_include.jl")
 

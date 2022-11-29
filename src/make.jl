@@ -23,11 +23,11 @@ Copy from a template and recursively `rename` and `sed`.
     #
     println("`rename`ing")
 
-    BioinformaticsCore.Path.rename_recursively(pa, re_)
+    BioLab.Path.rename_recursively(pa, re_)
 
     #
     println("`sed`ing")
 
-    BioinformaticsCore.Path.sed_recursively(pa, re_)
+    BioLab.Path.sed_recursively(pa, re_)
 
 end

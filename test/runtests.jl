@@ -1,8 +1,8 @@
 using Kata
 
-using BioinformaticsCore
+using BioLab
 
-te = BioinformaticsCore.Path.make_temporary("Kata.test")
+te = BioLab.Path.make_temporary("Kata.test")
 
 for ex in (".jl", ".pro")
 

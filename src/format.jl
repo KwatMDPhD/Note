@@ -72,7 +72,7 @@ Check missing and (if necessary) transplant.
 
         else
 
-            st = BioinformaticsCore.String.transplant(st1, st2, de, id_)
+            st = BioLab.String.transplant(st1, st2, de, id_)
 
         end
 

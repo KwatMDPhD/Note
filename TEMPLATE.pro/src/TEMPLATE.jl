@@ -2,4 +2,4 @@ module TEMPLATE
 
 end
 
-using BioinformaticsCore
+using BioLab
