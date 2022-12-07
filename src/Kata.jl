@@ -6,9 +6,7 @@ using UUIDs: uuid4
 
 using BioLab
 
-include("_include.jl")
-
-@_include()
+BioLab.@include
 
 """
 Command-line program for working with practical, minimal templates 🍱
