@@ -10,7 +10,7 @@ TE = joinpath(dirname(@__DIR__), "TEMPLATE")
 
 function _plan_replacement(pa)
 
-    na, em = (rstrip(read(`git config user.$ke`, String), '\n') for ke in ("name", "email"))
+    na, em = (rstrip(read(`git config user.$ke`, String)) for ke in ("name", "email"))
 
     (
         "TEMPLATE" => splitext(basename(pa))[1],
@@ -30,28 +30,23 @@ Copy from a template and recursively `rename` and `sed`.
 """
 @cast function make(name)
 
-    #
     pa = joinpath(pwd(), name)
 
     ex = splitext(pa)[2]
 
-    #
-    println("`cp`ing")
+    println("🪞 `cp`ing")
 
     cp("$TE$ex", pa)
 
-    #
-    re_ = _plan_replacement(pa)
+    pa_ = _plan_replacement(pa)
 
-    #
-    println("`rename`ing")
+    println("📛 `rename`ing")
 
-    BioLab.Path.rename_recursively(pa, re_)
+    BioLab.Path.rename_recursively(pa, pa_)
 
-    #
-    println("`sed`ing")
+    println("📝 `sed`ing")
 
-    BioLab.Path.sed_recursively(pa, re_)
+    BioLab.Path.sed_recursively(pa, pa_)
 
 end
 
@@ -60,20 +55,17 @@ Check missing and (if necessary) transplant.
 """
 @cast function format()
 
-    #
     wo = pwd()
 
     ex = splitext(wo)[2]
 
     te = "$TE$ex"
 
-    #
-    re_ = _plan_replacement(wo)
+    pa_ = _plan_replacement(wo)
 
-    #
-    println("Checking missing")
+    println("🔭 Checking missing")
 
-    mi_ = []
+    mi_ = Vector{String}()
 
     for (ro, di_, fi_) in walkdir(te)
 
@@ -85,7 +77,7 @@ Check missing and (if necessary) transplant.
 
             end
 
-            ch = joinpath(replace(ro, te => wo), replace(na, re_...))
+            ch = joinpath(replace(ro, te => wo), replace(na, pa_...))
 
             if !ispath(ch)
 
@@ -97,32 +89,28 @@ Check missing and (if necessary) transplant.
 
     end
 
-    #
     if !isempty(mi_)
 
-        error("Missing $(join(mi_, " ")).")
+        error("🫥 Missing $(join(mi_, ' ')).")
 
     end
 
-    #
-    println("Checking transplant")
+    println("🔬 Checking transplant")
 
-    lo = "# $("-" ^ 95) #"
+    lo = "# $('-' ^ 95) #"
 
+    # TODO: Rename `su`.
     for (su, de, id_) in
         ((".gitignore", lo, (1, 2)), ("README.md", "---", (2, 1)), ("LICENSE", "", ()))
 
-        #
         pa1 = joinpath(te, su)
 
-        pa2 = joinpath(wo, replace(su, re_...))
+        pa2 = joinpath(wo, replace(su, pa_...))
 
-        #
         st1 = read(pa1, String)
 
         st2 = read(pa2, String)
 
-        #
         if isempty(de)
 
             st = st1
@@ -133,12 +121,11 @@ Check missing and (if necessary) transplant.
 
         end
 
-        #
-        st3 = replace(st, re_...)
+        st3 = replace(st, pa_...)
 
         if st2 != st3
 
-            println("Transplanting $pa2")
+            println("🍢 Transplanting $pa2")
 
             write(pa2, st3)
 
