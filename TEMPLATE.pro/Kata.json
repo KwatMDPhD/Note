@@ -1,4 +1,4 @@
 {
   "update": "cd code && julia --project --eval 'using Pkg; Pkg.instantiate(); Pkg.update()'",
-  "run": "cd code && julia --project --eval 'using BioLab; BioLab.IPYNB.run(\".\", ())'"
+  "run": "cd code && julia --project --eval 'using BioLab; BioLab.IPYNB.run(@__DIR__, ())'"
 }
