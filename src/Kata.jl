@@ -12,7 +12,7 @@ function _plan_replacement(pa)
 
     na, em = (rstrip(read(`git config user.$ke`, String)) for ke in ("name", "email"))
 
-    (
+    return (
         "TEMPLATE" => splitext(basename(pa))[1],
         "GIT_USER_NAME" => na,
         "GIT_USER_EMAIL" => em,
@@ -47,6 +47,8 @@ Copy from a template and recursively `rename` and `sed`.
     println("📝 `sed`ing")
 
     BioLab.Path.sed_recursively(pa, pa_)
+
+    return nothing
 
 end
 
@@ -133,6 +135,8 @@ Check missing and (if necessary) transplant.
 
     end
 
+    return nothing
+
 end
 
 """
@@ -149,6 +153,8 @@ Call a `Kata.json` command.
     cd(wo)
 
     run(`sh -c $(BioLab.Dict.read(joinpath(wo, "Kata.json"))[command])`)
+
+    return nothing
 
 end
 
