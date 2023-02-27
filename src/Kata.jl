@@ -101,13 +101,12 @@ Check missing and (if necessary) transplant.
 
     lo = "# $('-' ^ 95) #"
 
-    # TODO: Rename `su`.
-    for (su, de, id_) in
+    for (fi, de, id_) in
         ((".gitignore", lo, (1, 2)), ("README.md", "---", (2, 1)), ("LICENSE", "", ()))
 
-        pa1 = joinpath(te, su)
+        pa1 = joinpath(te, fi)
 
-        pa2 = joinpath(wo, replace(su, pa_...))
+        pa2 = joinpath(wo, replace(fi, pa_...))
 
         st1 = read(pa1, String)
 

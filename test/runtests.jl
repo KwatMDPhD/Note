@@ -6,7 +6,7 @@ te = BioLab.Path.make_temporary("Kata.test")
 
 for ex in (".jl", ".pro")
 
-    BioLab.String.print_header(ex)
+    BioLab.print_header(ex)
 
     wh = "What$ex"
 
