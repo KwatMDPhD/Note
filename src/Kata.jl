@@ -101,8 +101,15 @@ Check missing and (if necessary) transplant.
 
     lo = "# $('-' ^ 95) #"
 
-    for (fi, de, id_) in
-        ((".gitignore", lo, (1, 2)), ("README.md", "---", (2, 1)), ("LICENSE", "", ()))
+    ho_ = [(".gitignore", lo, (1, 2)), ("README.md", "---", (2, 1)), ("LICENSE", "", ())]
+
+    if ex == ".pro"
+
+        push!(ho_, (joinpath("code", "_.jl"), lo, (1, 2)))
+
+    end
+
+    for (fi, de, id_) in ho_
 
         pa1 = joinpath(te, fi)
 
