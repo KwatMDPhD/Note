@@ -1,3 +1,5 @@
+DO = joinpath(homedir(), "Downloads")
+
 PK = dirname(@__DIR__)
 
 IN = joinpath(PK, "input")
