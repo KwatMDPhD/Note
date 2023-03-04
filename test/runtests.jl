@@ -4,6 +4,8 @@ using BioLab
 
 using Kata
 
+# ----------------------------------------------------------------------------------------------- #
+
 te = BioLab.Path.make_temporary("Kata.test")
 
 for ex in (".jl", ".pro")
