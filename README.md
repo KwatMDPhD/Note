@@ -1,6 +1,6 @@
 Command-line program for working with practical, minimal templates 🍱
 
-`.jl` template makes a `julia` package that uses `.ipynb` for testing and examples.
+`.jl` template makes a `julia` package.
 
 `.pro` template makes a `julia` package for an informatics project.
 

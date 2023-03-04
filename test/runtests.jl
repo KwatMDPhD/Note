@@ -2,8 +2,6 @@ using Test
 
 using BioLab
 
-println(BioLab.JL)
-
 using Kata
 
 te = BioLab.Path.make_temporary("Kata.test")
