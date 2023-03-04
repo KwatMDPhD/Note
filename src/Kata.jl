@@ -73,7 +73,7 @@ Check missing and (if necessary) transplant.
 
         for na in vcat(di_, fi_)
 
-            if na in ("Manifest.toml", "1.do_something.ipynb")
+            if na in ("Manifest.toml", "1.do_something.jl", "2.do_another_thing.jl")
 
                 continue
 
