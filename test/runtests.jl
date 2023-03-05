@@ -6,7 +6,9 @@ using Kata
 
 # ----------------------------------------------------------------------------------------------- #
 
-te = BioLab.Path.make_temporary("Kata.test")
+te = joinpath(tempdir(), "Kata.test")
+
+BioLab.Path.reset(te)
 
 for ex in (".jl", ".pro")
 
