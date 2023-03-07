@@ -8,7 +8,7 @@ using Kata
 
 te = joinpath(tempdir(), "Kata.test")
 
-BioLab.Path.reset(te)
+BioLab.Path.empty(te)
 
 for ex in (".jl", ".pro")
 
