@@ -1,10 +1,10 @@
-DO = joinpath(homedir(), "Downloads")
+const DO = joinpath(homedir(), "Downloads")
 
-PK = dirname(@__DIR__)
+const PK = dirname(@__DIR__)
 
-IN = joinpath(PK, "input")
+const IN = joinpath(PK, "input")
 
-OU = joinpath(PK, "output")
+const OU = joinpath(PK, "output")
 
 # ----------------------------------------------------------------------------------------------- #
 
