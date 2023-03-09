@@ -1,4 +1,4 @@
-Command-line program for working with practical, minimal templates 🍱
+🍱 Command-line program for working with practical, minimal templates.
 
 `.jl` template makes a `julia` package.
 

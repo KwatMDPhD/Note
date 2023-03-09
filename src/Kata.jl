@@ -22,7 +22,7 @@ function _plan_replacement(pa)
 end
 
 """
-Copy from a template and recursively `rename` and `sed`.
+👯‍♀️ Copy from a template and recursively `rename` and `sed`.
 
 # Arguments
 
@@ -53,7 +53,7 @@ Copy from a template and recursively `rename` and `sed`.
 end
 
 """
-Check missing and (if necessary) transplant.
+🕵️ Check missing and (if necessary) transplant.
 """
 @cast function format()
 
@@ -73,7 +73,7 @@ Check missing and (if necessary) transplant.
 
         for na in vcat(di_, fi_)
 
-            if na in ("Manifest.toml", "1.do_something.jl", "2.do_another_thing.jl")
+            if na in ("Manifest.toml", "1.do_something.jl")
 
                 continue
 
@@ -146,7 +146,7 @@ Check missing and (if necessary) transplant.
 end
 
 """
-Call a `Kata.json` command.
+☎️ Call a `Kata.json` command.
 
 # Arguments
 
@@ -165,7 +165,7 @@ Call a `Kata.json` command.
 end
 
 """
-Command-line program for working with practical, minimal templates 🍱
+🍱 Command-line program for working with practical, minimal templates.
 """
 @main
 
