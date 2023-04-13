@@ -146,7 +146,7 @@ end
 end
 
 """
-☎️ Call a `Kata.json` command.
+☎️  Call a `Kata.json` command.
 
 # Arguments
 
@@ -166,6 +166,7 @@ end
 
 """
 🍱 Command-line program for working with practical, minimal templates.
+📍 Learn more at https://github.com/KwatMDPhD/Kata.jl.
 """
 @main
 
