@@ -65,7 +65,7 @@ end
 
     pa_ = _plan_replacement(wo)
 
-    println("🔭 Checking missing")
+    println("🕵️ Checking missing")
 
     mi_ = Vector{String}()
 
@@ -165,8 +165,7 @@ end
 end
 
 """
-🍱 Command-line program for working with practical, minimal templates.
-📍 Learn more at https://github.com/KwatMDPhD/Kata.jl.
+🍱 Command-line program for working with practical, minimal templates. 📍 Learn more at https://github.com/KwatMDPhD/Kata.jl.
 """
 @main
 
