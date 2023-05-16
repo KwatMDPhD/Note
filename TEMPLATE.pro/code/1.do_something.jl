@@ -2,4 +2,4 @@ include("_.jl")
 
 # ---- #
 
-println("⛏️ Doing something")
+println("⛏️  Doing something")
