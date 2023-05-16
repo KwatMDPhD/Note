@@ -53,7 +53,7 @@ end
 end
 
 """
-🕵️ Check missing and (if necessary) transplant.
+🕵️  Check missing and (if necessary) transplant.
 """
 @cast function format()
 
@@ -65,7 +65,7 @@ end
 
     pa_ = _plan_replacement(wo)
 
-    println("🕵️ Checking missing")
+    println("🕵️  Checking missing")
 
     mi_ = Vector{String}()
 
@@ -146,7 +146,7 @@ end
 end
 
 """
-☎️  Call a `Kata.json` command.
+☎️   Call a `Kata.json` command.
 
 # Arguments
 
