@@ -1,28 +1,33 @@
 module Kata
 
+using Base: _getch
 using Comonicon: @cast, @main
 
 using UUIDs: uuid4
 
 using BioLab
 
-TE = joinpath(dirname(@__DIR__), "TEMPLATE")
+const TE = joinpath(dirname(@__DIR__), "TEMPLATE")
+
+function _get_extension(pa)
+
+    splitext(pa)[2]
+
+end
 
 function _plan_replacement(pa)
 
     na, em = (rstrip(read(`git config user.$ke`, String)) for ke in ("name", "email"))
 
-    return (
-        "TEMPLATE" => splitext(basename(pa))[1],
-        "GIT_USER_NAME" => na,
-        "GIT_USER_EMAIL" => em,
-        "033e1703-1880-4940-9ddc-745bff01a2ac" => uuid4(),
-    )
+    "TEMPLATE" => splitext(basename(pa))[1],
+    "GIT_USER_NAME" => na,
+    "GIT_USER_EMAIL" => em,
+    "033e1703-1880-4940-9ddc-745bff01a2ac" => uuid4()
 
 end
 
 """
-👯‍♀️ Copy from a template and recursively `rename` and `sed`.
+Copy from a template and recursively `rename` and `sed`.
 
 # Arguments
 
@@ -32,48 +37,44 @@ end
 
     pa = joinpath(pwd(), name)
 
-    ex = splitext(pa)[2]
+    println("`cp`ing")
 
-    println("🪞 `cp`ing")
+    ex = _get_extension(pa)
 
     cp("$TE$ex", pa)
 
     pa_ = _plan_replacement(pa)
 
-    println("📛 `rename`ing")
+    println("`rename`ing")
 
     BioLab.Path.rename_recursively(pa, pa_)
 
-    println("📝 `sed`ing")
+    println("`sed`ing")
 
     BioLab.Path.sed_recursively(pa, pa_)
-
-    return nothing
 
 end
 
 """
-🕵️  Check missing and (if necessary) transplant.
+Check missing and (if necessary) transplant.
 """
 @cast function format()
 
     wo = pwd()
 
-    ex = splitext(wo)[2]
+    ex = _get_extension(wo)
 
     te = "$TE$ex"
 
     pa_ = _plan_replacement(wo)
 
-    println("🕵️  Checking missing")
-
-    mi_ = Vector{String}()
+    println("Checking missing")
 
     for (ro, di_, fi_) in walkdir(te)
 
         for na in vcat(di_, fi_)
 
-            if na in ("Manifest.toml", "1.do_something.jl")
+            if na == "1.do_something.jl"
 
                 continue
 
@@ -83,7 +84,7 @@ end
 
             if !ispath(ch)
 
-                push!(mi_, ch)
+                error(ch)
 
             end
 
@@ -91,13 +92,7 @@ end
 
     end
 
-    if !isempty(mi_)
-
-        error("🫥 Missing $(join(mi_, ' ')).")
-
-    end
-
-    println("🔬 Checking transplant")
+    println("Checking transplant")
 
     lo = "# $('-' ^ 95) #"
 
@@ -105,7 +100,10 @@ end
 
     if ex == ".pro"
 
-        push!(ho_, (joinpath("code", "_.jl"), lo, (1, 2)))
+        append!(
+            ho_,
+            [(joinpath("code", "_.jl"), lo, (1, 2)), (joinpath("code", "run.sh"), lo, (1, 2, 1))],
+        )
 
     end
 
@@ -119,7 +117,7 @@ end
 
         st2 = read(pa2, String)
 
-        if isempty(de)
+        if de == ""
 
             st = st1
 
@@ -133,7 +131,7 @@ end
 
         if st2 != st3
 
-            println("🍢 Transplanting $pa2")
+            println("Transplanting $pa2")
 
             write(pa2, st3)
 
@@ -141,12 +139,10 @@ end
 
     end
 
-    return nothing
-
 end
 
 """
-☎️   Call a `Kata.json` command.
+Call a `Kata.json` command.
 
 # Arguments
 
@@ -158,14 +154,14 @@ end
 
     cd(wo)
 
-    run(`sh -c $(BioLab.Dict.read(joinpath(wo, "Kata.json"))[command])`)
+    println("Calling $command")
 
-    return nothing
+    run(`sh -c $(BioLab.Dict.read(joinpath(wo, "Kata.json"))[command])`)
 
 end
 
 """
-🍱 Command-line program for working with practical, minimal templates. 📍 Learn more at https://github.com/KwatMDPhD/Kata.jl.
+Command-line program for working with practical, minimal templates. Learn more at https://github.com/KwatMDPhD/Kata.jl.
 """
 @main
 

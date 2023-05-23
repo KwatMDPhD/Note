@@ -4,7 +4,7 @@ using BioLab
 
 using Kata
 
-# --------------------------------------------- #
+# ---- #
 
 te = joinpath(tempdir(), "Kata.test")
 
@@ -19,7 +19,6 @@ for ex in (".jl", ".pro")
     cd(te)
 
     Kata.make(wh)
-
     # @code_warntype Kata.make(wh)
 
     run(`tree -a`)
@@ -27,13 +26,11 @@ for ex in (".jl", ".pro")
     cd(wh)
 
     Kata.format()
-
     # @code_warntype Kata.format()
 
     for co in ("update", "run")
 
         Kata.call(co)
-
         # @code_warntype Kata.call(co)
 
     end
