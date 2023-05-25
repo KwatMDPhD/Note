@@ -1,4 +1,9 @@
 {
-  "update": "julia --project --eval 'using Pkg; Pkg.update()'",
-  "run": "rm -rf output/* && cd code && julia --project run.jl"
+  "download": {
+    "input": "https://"
+  },
+  "call": {
+    "update": "julia --project --eval 'using Pkg; Pkg.update()'",
+    "run": "rm -rf output/* && cd code && julia --project run.jl"
+  }
 }

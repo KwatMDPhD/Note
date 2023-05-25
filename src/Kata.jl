@@ -140,7 +140,20 @@ And (if necessary) transplant the default texts from the template files.
 end
 
 """
-Call `kata.json` command.
+Download `kata.json.download`.
+"""
+@cast function download()
+
+    for (ke, va) in BioLab.Dict.read(joinpath(wo, "kata.json"))["download"]
+
+        println("Downloading $va onto $ke")
+
+    end
+
+end
+
+"""
+Call `kata.json.call` command.
 
 # Arguments
 
@@ -150,7 +163,7 @@ Call `kata.json` command.
 
     wo = pwd()
 
-    run(`sh -c $(BioLab.Dict.read(joinpath(wo, "kata.json"))[command])`)
+    run(`sh -c $(BioLab.Dict.read(joinpath(wo, "kata.json"))["call"][command])`)
 
 end
 
