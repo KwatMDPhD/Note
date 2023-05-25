@@ -2,4 +2,4 @@ using Test
 
 using TEMPLATE
 
-# --- #
+# ---- #

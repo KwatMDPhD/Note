@@ -10,27 +10,44 @@ te = joinpath(tempdir(), "Kata.test")
 
 BioLab.Path.empty(te)
 
+# ---- #
+
 for ex in (".jl", ".pro")
+
+    cd(te)
 
     BioLab.print_header(ex)
 
     wh = "What$ex"
 
-    cd(te)
+    println("make")
 
     Kata.make(wh)
+
     # @code_warntype Kata.make(wh)
 
-    run(`tree -a`)
+    try
+
+        run(`diff $(joinpath(pkgdir(Kata), "TEMPLATE$ex")) $wh`)
+
+    catch
+
+    end
 
     cd(wh)
 
+    println("format")
+
     Kata.format()
+
     # @code_warntype Kata.format()
 
     for co in ("update", "run")
 
+        println("run $co")
+
         Kata.call(co)
+
         # @code_warntype Kata.call(co)
 
     end

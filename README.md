@@ -1,26 +1,26 @@
-🍱 Command-line program for working with practical, minimal templates.
+Command-line program for working with GitHub-, Amazon-S3-backed julia packages (.jl) and projects (.pro).
 
-`.jl` template makes a `julia` package.
+`.jl` template makes a julia package.
 
-`.pro` template makes a `julia` package for an informatics project.
+`.pro` template makes a julia project.
 
 ## Use
 
 ```bash
-kata make BigMama.jl
+kata make Luffy.jl
 
-cd BigMama.jl
-```
-
-```bash
-kata call run
+cd Luffy.jl
 ```
 
 ```bash
 kata format
 ```
 
-These commands work on also `.pro`s.
+```bash
+kata call run
+```
+
+☝️ commands work on `.pro`s too.
 
 ## Install
 
@@ -36,13 +36,11 @@ julia --project deps/build.jl
 
 ☝️ commands install `kata` into `~/.julia/bin`.
 
-If not already, add the `bin` to the path by adding 👇 to the profile (`~/.zshrc`, `~/.rc`, ...)
+If not already, add the `bin` to the path by adding 👇 to the profile (like `~/.zprofile`) (and restart the shell.)
 
 ```bash
 PATH=~/.julia/bin:$PATH
 ```
-
-Start a new shell to load the updated profile.
 
 Test installation
 
@@ -53,9 +51,5 @@ kata --version
 🎉
 
 ---
-
-## 👋 🤠 Howdy
-
-To report a bug, request a feature, or leave a comment, just [submit an issue](https://github.com/KwatMDPhD/Kata.jl/issues/new/choose).
 
 Powered by https://github.com/KwatMDPhD/Kata.jl 🌝

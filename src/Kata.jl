@@ -1,6 +1,5 @@
 module Kata
 
-using Base: _getch
 using Comonicon: @cast, @main
 
 using UUIDs: uuid4
@@ -15,19 +14,23 @@ function _get_extension(pa)
 
 end
 
+function _get_git_config(ke)
+
+    readchomp(`git config user.$ke`)
+
+end
+
 function _plan_replacement(pa)
 
-    na, em = (rstrip(read(`git config user.$ke`, String)) for ke in ("name", "email"))
-
     "TEMPLATE" => splitext(basename(pa))[1],
-    "GIT_USER_NAME" => na,
-    "GIT_USER_EMAIL" => em,
+    "GIT_USER_NAME" => _get_git_config("name"),
+    "GIT_USER_EMAIL" => _get_git_config("email"),
     "033e1703-1880-4940-9ddc-745bff01a2ac" => uuid4()
 
 end
 
 """
-Copy from a template and recursively `rename` and `sed`.
+Copy from the template and recursively `rename` and `sed`.
 
 # Arguments
 
@@ -37,26 +40,19 @@ Copy from a template and recursively `rename` and `sed`.
 
     pa = joinpath(pwd(), name)
 
-    println("`cp`ing")
+    cp("$TE$(_get_extension(pa))", pa)
 
-    ex = _get_extension(pa)
+    re_ = _plan_replacement(pa)
 
-    cp("$TE$ex", pa)
+    BioLab.Path.rename_recursively(pa, re_)
 
-    pa_ = _plan_replacement(pa)
-
-    println("`rename`ing")
-
-    BioLab.Path.rename_recursively(pa, pa_)
-
-    println("`sed`ing")
-
-    BioLab.Path.sed_recursively(pa, pa_)
+    BioLab.Path.sed_recursively(pa, re_)
 
 end
 
 """
-Check missing and (if necessary) transplant.
+Error if there is any missing path.
+And (if necessary) transplant the default texts from the template files.
 """
 @cast function format()
 
@@ -66,25 +62,19 @@ Check missing and (if necessary) transplant.
 
     te = "$TE$ex"
 
-    pa_ = _plan_replacement(wo)
+    re_ = _plan_replacement(wo)
 
-    println("Checking missing")
+    mi_ = Vector{String}()
 
     for (ro, di_, fi_) in walkdir(te)
 
         for na in vcat(di_, fi_)
 
-            if na == "1.do_something.jl"
-
-                continue
-
-            end
-
-            ch = joinpath(replace(ro, te => wo), replace(na, pa_...))
+            ch = joinpath(replace(ro, te => wo), replace(na, re_...))
 
             if !ispath(ch)
 
-                error(ch)
+                push!(mi_, ch)
 
             end
 
@@ -92,42 +82,42 @@ Check missing and (if necessary) transplant.
 
     end
 
-    println("Checking transplant")
+    if !isempty(mi_)
+
+    error(mi_)
+
+    end
 
     lo = "# $('-' ^ 95) #"
 
-    ho_ = [(".gitignore", lo, (1, 2)), ("README.md", "---", (2, 1)), ("LICENSE", "", ())]
+    ho_ = [(".gitignore", lo, (1, 2)), ("README.md", "---", (2, 1)), ("LICENSE", "", ()), ("kata.json", "", ())]
 
     if ex == ".pro"
 
         append!(
             ho_,
-            [(joinpath("code", "_.jl"), lo, (1, 2)), (joinpath("code", "run.sh"), lo, (1, 2, 1))],
+            [(joinpath("code", "environment.jl"), lo, (1, 2)), (joinpath("code", "run.jl"), lo, (1, 2, 1))],
         )
 
     end
 
-    for (fi, de, id_) in ho_
+    for (rl, de, id_) in ho_
 
-        pa1 = joinpath(te, fi)
+        st1 = replace(read(joinpath(te, rl), String), re_...)
 
-        pa2 = joinpath(wo, replace(fi, pa_...))
-
-        st1 = read(pa1, String)
+        pa2 = joinpath(wo, rl)
 
         st2 = read(pa2, String)
 
         if de == ""
 
-            st = st1
+            st3 = st1
 
         else
 
-            st = BioLab.String.transplant(st1, st2, de, id_)
+            st3 = BioLab.String.transplant(st1, st2, de, id_)
 
         end
-
-        st3 = replace(st, pa_...)
 
         if st2 != st3
 
@@ -142,7 +132,7 @@ Check missing and (if necessary) transplant.
 end
 
 """
-Call a `Kata.json` command.
+Call `kata.json`'s command.
 
 # Arguments
 
@@ -152,16 +142,13 @@ Call a `Kata.json` command.
 
     wo = pwd()
 
-    cd(wo)
-
-    println("Calling $command")
-
-    run(`sh -c $(BioLab.Dict.read(joinpath(wo, "Kata.json"))[command])`)
+    run(`sh -c $(BioLab.Dict.read(joinpath(wo, "kata.json"))[command])`)
 
 end
 
 """
-Command-line program for working with practical, minimal templates. Learn more at https://github.com/KwatMDPhD/Kata.jl.
+Command-line program for working with GitHub-, Amazon-S3-backed julia packages (.jl) and projects (.pro).
+Learn more at https://github.com/KwatMDPhD/Kata.jl.
 """
 @main
 

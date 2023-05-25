@@ -1,12 +1,7 @@
-# Kata .pro.
+const PR = dirname(@__DIR__)
 
-.DS_Store
+const IN = joinpath(PR, "input")
 
-input/*
-
-output/*
-
-!**/.keep
+const OU = joinpath(PR, "output")
 
 # ----------------------------------------------------------------------------------------------- #
-
