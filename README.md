@@ -1,26 +1,51 @@
 Command-line program for working with GitHub-, Amazon-S3-backed julia packages (.jl) and projects (.pro).
 
-`.jl` template makes a julia package.
-
-`.pro` template makes a julia project.
-
 ## Use
 
-```bash
-kata make Luffy.jl
+### `kata.json`
 
-cd Luffy.jl
+```json
+{
+  "download": {
+    "data": "https://",
+    "input": "https://"
+  },
+  "call": {
+    "update": "julia --project --eval 'using Pkg; Pkg.update()'",
+    "run": "julia --project --eval 'using Pkg; Pkg.test()'"
+  }
+}
 ```
+
+Commands are the same for `.jl`s and `.pro`s.
+
+Make a `.pro`
+
+```bash
+kata make MyProject.pro
+```
+
+Enforce `kata` format
 
 ```bash
 kata format
 ```
 
+Download `kata.json.download`
+
+```bash
+kata download
+```
+
+Call `kata.json.call` command
+
+```bash
+kata call update
+```
+
 ```bash
 kata call run
 ```
-
-☝️ commands work on `.pro`s too.
 
 ## Install
 
@@ -34,9 +59,7 @@ julia --project --eval "using Pkg; Pkg.instantiate()" &&
 julia --project deps/build.jl
 ```
 
-☝️ commands install `kata` into `~/.julia/bin`.
-
-If not already, add the `bin` to the path by adding 👇 to the profile (like `~/.zprofile`) (and restart the shell.)
+☝️ commands install `kata` into `~/.julia/bin`. If not already, add it to the path
 
 ```bash
 PATH=~/.julia/bin:$PATH

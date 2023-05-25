@@ -84,19 +84,27 @@ And (if necessary) transplant the default texts from the template files.
 
     if !isempty(mi_)
 
-    error(mi_)
+        error(mi_)
 
     end
 
     lo = "# $('-' ^ 95) #"
 
-    ho_ = [(".gitignore", lo, (1, 2)), ("README.md", "---", (2, 1)), ("LICENSE", "", ()), ("kata.json", "", ())]
+    ho_ = [
+        (".gitignore", lo, (1, 2)),
+        ("README.md", "---", (2, 1)),
+        ("LICENSE", "", ()),
+        ("kata.json", "", ()),
+    ]
 
     if ex == ".pro"
 
         append!(
             ho_,
-            [(joinpath("code", "environment.jl"), lo, (1, 2)), (joinpath("code", "run.jl"), lo, (1, 2, 1))],
+            [
+                (joinpath("code", "environment.jl"), lo, (1, 2)),
+                (joinpath("code", "run.jl"), lo, (1, 2, 1)),
+            ],
         )
 
     end
@@ -132,7 +140,7 @@ And (if necessary) transplant the default texts from the template files.
 end
 
 """
-Call `kata.json`'s command.
+Call `kata.json` command.
 
 # Arguments
 
