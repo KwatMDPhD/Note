@@ -1,14 +1,24 @@
 using Test
 
-using BioLab
+using Aqua
 
 using Kata
 
 # ---- #
 
+Aqua.test_all(Kata; ambiguities = false)
+
+Aqua.test_ambiguities(Kata)
+
+# ----------------------------------------------------------------------------------------------- #
+
+using BioLab
+
+# ---- #
+
 te = joinpath(tempdir(), "Kata.test")
 
-BioLab.Path.empty(te)
+BioLab.Path.reset(te)
 
 # ---- #
 
@@ -24,8 +34,6 @@ for ex in (".jl", ".pro")
 
     Kata.make(wh)
 
-    # @code_warntype Kata.make(wh)
-
     try
 
         run(`diff $(joinpath(pkgdir(Kata), "TEMPLATE$ex")) $wh`)
@@ -40,15 +48,11 @@ for ex in (".jl", ".pro")
 
     Kata.format()
 
-    # @code_warntype Kata.format()
-
     for co in ("update", "run")
 
         println("run $co")
 
         Kata.call(co)
-
-        # @code_warntype Kata.call(co)
 
     end
 
