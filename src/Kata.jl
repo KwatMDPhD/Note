@@ -29,6 +29,12 @@ function _plan_replacement(pa)
 
 end
 
+function _read_kata_json()
+
+    BioLab.Dict.read(joinpath(pwd(), "kata.json"))
+
+end
+
 """
 Copy from the template and recursively `rename` and `sed`.
 
@@ -144,9 +150,19 @@ Download `kata.json.download`.
 """
 @cast function download()
 
-    for (ke, va) in BioLab.Dict.read(joinpath(wo, "kata.json"))["download"]
+    for (ke, va) in _read_kata_json()["download"]
 
-        println("Downloading $va onto $ke")
+        pa = joinpath(pwd(), ke)
+
+        if isempty(_get_extension(va))
+
+            run(`aws s3 sync $va $pa`)
+
+        else
+
+            run(`aws s3 cp $va $pa`)
+
+        end
 
     end
 
@@ -161,9 +177,7 @@ Call `kata.json.call` command.
 """
 @cast function call(command)
 
-    wo = pwd()
-
-    run(`sh -c $(BioLab.Dict.read(joinpath(wo, "kata.json"))["call"][command])`)
+    run(`sh -c $(_read_kata_json()["call"][command])`)
 
 end
 

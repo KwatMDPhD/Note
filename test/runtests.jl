@@ -48,6 +48,26 @@ for ex in (".jl", ".pro")
 
     Kata.format()
 
+    println("download")
+
+    Kata.download()
+
+    for (ke, va) in Kata._read_kata_json()["download"]
+
+        if isempty(Kata._get_extension(ke))
+
+            @test !isempty(readdir(ke))
+
+        else
+
+            @test isfile(ke)
+
+        end
+
+    end
+
+    # @code_warntype Kata.format()
+
     for co in ("update", "run")
 
         println("run $co")
