@@ -97,13 +97,17 @@ And (if necessary) transplant the default texts from the template files.
     lo = "# $('-' ^ 95) #"
 
     ho_ = [
-        (".gitignore", lo, (1, 2)),
-        ("README.md", "---", (2, 1)),
         ("LICENSE", "", ()),
         ("kata.json", "", ()),
+        ("README.md", "---", (2, 1)),
+        (".gitignore", lo, (1, 2)),
     ]
 
-    if ex == ".pro"
+    if ex == ".jl"
+
+        push!(ho_, (joinpath("test", "runtests.jl"), lo, (1, 2)))
+
+    elseif ex == ".pro"
 
         append!(
             ho_,
