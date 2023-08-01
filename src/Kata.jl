@@ -6,6 +6,23 @@ using UUIDs: uuid4
 
 using BioLab
 
+function transplant(st1, st2, de, id_)
+
+    sp1_ = split(st1, de)
+
+    sp2_ = split(st2, de)
+
+    if length(sp1_) != length(sp2_)
+
+        error("Split lengths differ.")
+
+    end
+
+    join((ifelse(id == 1, sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
+
+end
+
+
 const TE = joinpath(dirname(@__DIR__), "TEMPLATE")
 
 function _get_extension(pa)
@@ -35,6 +52,26 @@ function _read_kata_json()
 
 end
 
+function rename(di, beaf_)
+
+    for (be, af) in beaf_
+
+        run(pipeline(`find $di -print0`, `xargs -0 rename --subst-all $be $af`))
+
+    end
+
+end
+
+function sed(di, beaf_)
+
+    for (be, af) in beaf_
+
+        run(pipeline(`find $di -type f -print0`, `xargs -0 sed -i "" "s/$be/$af/g"`))
+
+    end
+
+end
+
 """
 Copy from the template and recursively `rename` and `sed`.
 
@@ -50,9 +87,9 @@ Copy from the template and recursively `rename` and `sed`.
 
     re_ = _plan_replacement(pa)
 
-    BioLab.Path.rename_recursively(pa, re_)
+    rename(pa, re_)
 
-    BioLab.Path.sed_recursively(pa, re_)
+    sed(pa, re_)
 
 end
 
@@ -186,8 +223,7 @@ Call `kata.json.call` command.
 end
 
 """
-Command-line program for working with GitHub-, Amazon-S3-backed julia packages (.jl) and projects (.pro).
-Learn more at https://github.com/KwatMDPhD/Kata.jl.
+Command-line program for working with GitHub-, Amazon-S3-backed julia packages (.jl) and projects (.pro). Learn more at https://github.com/KwatMDPhD/Kata.jl.
 """
 @main
 

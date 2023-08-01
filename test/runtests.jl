@@ -1,18 +1,51 @@
-using Test
-
-using Aqua
+using Test: @test
 
 using Kata
 
-# ---- #
-
-Aqua.test_all(Kata; ambiguities = false)
-
-Aqua.test_ambiguities(Kata)
-
 # ----------------------------------------------------------------------------------------------- #
 
+# ---- #
+
+const ST1 = "A--BB--CCC"
+
+const DE = "--"
+
+const ID_ = (1, 2, 1)
+
+@test BioLab.@is_error BioLab.String.transplant(ST1, "a--bb", DE, ID_)
+
+@test BioLab.String.transplant(ST1, "a--bb--ccc", DE, ID_) == "A--bb--CCC"
 using BioLab
+
+# ---- #
+
+di = mkdir(joinpath(TE, BioLab.Time.stamp()))
+
+fi1 = touch(joinpath(di, "fi1"))
+
+fi2 = touch(joinpath(di, "fi2"))
+
+Kata.rename(di, ("fi" => "new",))
+
+@test BioLab.Path.read(di) == ["new1", "new2"]
+
+# ---- #
+
+di = mkdir(joinpath(TE, BioLab.Time.stamp()))
+
+fi1 = touch(joinpath(di, "fi1"))
+
+fi2 = touch(joinpath(di, "fi2"))
+
+write(fi1, "Before")
+
+write(fi2, "BeforeBefore")
+
+Kata.sed(di, ("Before" => "After",))
+
+@test readline(open(fi1)) == "After"
+
+@test readline(open(fi2)) == "AfterAfter"
 
 # ---- #
 

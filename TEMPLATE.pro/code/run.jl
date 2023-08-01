@@ -1,17 +1,15 @@
-print("Start time = ")
+ti = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
 
-run(`date +"%Y.%m.%d %H.%M.%S"`)
+@info "Started on $ti."
 
-# ----------------------------------------------------------------------------------------------- #
-
-include("environment.jl")
-
-# ---- #
-
-println("Doing something")
+run(`rm -rf ../output/"*"`)
 
 # ----------------------------------------------------------------------------------------------- #
 
-print("End time = ")
+@info "Doing something"
 
-run(`date +"%Y.%m.%d %H.%M.%S"`)
+# ----------------------------------------------------------------------------------------------- #
+
+ti = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
+
+@info "Ended on $ti."
