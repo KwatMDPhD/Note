@@ -6,25 +6,6 @@ using UUIDs: uuid4
 
 using BioLab
 
-function transplant(st1, st2, de, id_)
-
-    sp1_ = split(st1, de)
-
-    sp2_ = split(st2, de)
-
-    if length(sp1_) != length(sp2_)
-
-        error("Split lengths differ.")
-
-    end
-
-    join((ifelse(id == 1, sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
-
-end
-
-
-const TE = joinpath(dirname(@__DIR__), "TEMPLATE")
-
 function _get_extension(pa)
 
     splitext(pa)[2]
@@ -43,12 +24,6 @@ function _plan_replacement(pa)
     "GIT_USER_NAME" => _get_git_config("name"),
     "GIT_USER_EMAIL" => _get_git_config("email"),
     "033e1703-1880-4940-9ddc-745bff01a2ac" => uuid4()
-
-end
-
-function _read_kata_json()
-
-    BioLab.Dict.read(joinpath(pwd(), "kata.json"))
 
 end
 
@@ -71,6 +46,34 @@ function sed(di, beaf_)
     end
 
 end
+
+function _transplant(st1, st2, de, id_)
+
+    sp1_ = split(st1, de)
+
+    sp2_ = split(st2, de)
+
+    if length(sp1_) != length(sp2_)
+
+        error("Split lengths differ.")
+
+    end
+
+    join((ifelse(id == 1, sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
+
+end
+
+
+const TE = joinpath(dirname(@__DIR__), "TEMPLATE")
+
+
+
+function _read_kata_json()
+
+    BioLab.Dict.read(joinpath(pwd(), "kata.json"))
+
+end
+
 
 """
 Copy from the template and recursively `rename` and `sed`.
@@ -170,7 +173,7 @@ And (if necessary) transplant the default texts from the template files.
 
         else
 
-            st3 = BioLab.String.transplant(st1, st2, de, id_)
+            st3 = _transplant(st1, st2, de, id_)
 
         end
 
