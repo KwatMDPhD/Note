@@ -2,9 +2,9 @@ ti = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
 
 @info "Started on $ti."
 
-run(`rm -rf ../output/"*"`)
-
 # ----------------------------------------------------------------------------------------------- #
+
+run(`rm -rf ../output/"*"`)
 
 @info "Doing something"
 
