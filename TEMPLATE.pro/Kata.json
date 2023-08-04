@@ -2,6 +2,6 @@
   "download": {},
   "call": {
     "update": "julia --project --eval 'using Pkg; Pkg.update()'",
-    "run": "cd code && julia --project run.jl"
+    "run": "julia --project code/run.jl"
   }
 }

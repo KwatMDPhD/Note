@@ -1,4 +1,4 @@
-Command-line program for working with GitHub-, Amazon-S3-backed julia packages (.jl) and projects (.pro) 🥋.
+Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (.jl) and projects (.pro) 🥋.
 
 ## Install
 
@@ -23,6 +23,10 @@ Test installation
 ```bash
 kata --version
 ```
+
+Get AWS cli
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 🎉
 

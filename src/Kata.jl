@@ -6,6 +6,14 @@ using UUIDs: uuid4
 
 using BioLab
 
+const TE = joinpath(dirname(@__DIR__), "TEMPLATE")
+
+function _read_kata_json()
+
+    BioLab.Dict.read(joinpath(pwd(), "kata.json"))
+
+end
+
 function _get_extension(pa)
 
     splitext(pa)[2]
@@ -23,11 +31,11 @@ function _plan_replacement(pa)
     "TEMPLATE" => splitext(basename(pa))[1],
     "GIT_USER_NAME" => _get_git_config("name"),
     "GIT_USER_EMAIL" => _get_git_config("email"),
-    "033e1703-1880-4940-9ddc-745bff01a2ac" => uuid4()
+    "033e1703-1880-4940-9ddc-745bff01a2ac" => string(uuid4())
 
 end
 
-function rename(di, beaf_)
+function _rename(di, beaf_)
 
     for (be, af) in beaf_
 
@@ -37,11 +45,11 @@ function rename(di, beaf_)
 
 end
 
-function sed(di, beaf_)
+function _sed(di, beaf_)
 
     for (be, af) in beaf_
 
-        run(pipeline(`find $di -type f -print0`, `xargs -0 sed -i "" "s/$be/$af/g"`))
+        run(pipeline(`find $di -type f -print0`, `xargs -0 sed -i '' "s/$be/$af/g"`))
 
     end
 
@@ -63,18 +71,6 @@ function _transplant(st1, st2, de, id_)
 
 end
 
-
-const TE = joinpath(dirname(@__DIR__), "TEMPLATE")
-
-
-
-function _read_kata_json()
-
-    BioLab.Dict.read(joinpath(pwd(), "kata.json"))
-
-end
-
-
 """
 Copy from the template and recursively `rename` and `sed`.
 
@@ -90,9 +86,9 @@ Copy from the template and recursively `rename` and `sed`.
 
     re_ = _plan_replacement(pa)
 
-    rename(pa, re_)
+    _rename(pa, re_)
 
-    sed(pa, re_)
+    _sed(pa, re_)
 
 end
 
@@ -136,12 +132,7 @@ And (if necessary) transplant the default texts from the template files.
 
     lo = "# $('-' ^ 95) #"
 
-    ho_ = [
-        ("LICENSE", "", ()),
-        ("kata.json", "", ()),
-        ("README.md", "---", (2, 1)),
-        (".gitignore", lo, (1, 2)),
-    ]
+    ho_ = [("LICENSE", "", ()), ("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
 
     if ex == ".jl"
 
