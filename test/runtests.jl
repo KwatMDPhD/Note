@@ -1,76 +1,42 @@
 using Test: @test
 
-using BioLab
-
 using Kata
 
 # ---- #
 
 # ----------------------------------------------------------------------------------------------- #
 
-function _reset_dir(di)
-
-    rm(di; force = true, recursive = true)
-
-    mkdir(di)
-
-end
+using BioLab
 
 # ---- #
 
-const TE = joinpath(tempdir(), "Kata")
-
-_reset_dir(TE)
+const TERS = BioLab.Path.make_directory(joinpath(BioLab.TE, "Kata_rename_sed"))
 
 # ---- #
 
-const JS = Kata._read_kata_json()
+touch(joinpath(TERS, "th1"))
 
-@test JS["call"]["run"] == "julia --project --eval 'using Pkg; Pkg.test()'"
+touch(joinpath(TERS, "th2"))
 
-# ---- #
+Kata._rename(TERS, ("th" => "new",))
 
-@test Kata._get_extension(@__DIR__) == ".jl"
-
-# ---- #
-
-@test occursin(".com", Kata._get_git_config("email"))
+@test BioLab.Path.read(TERS) == ["new1", "new2"]
 
 # ---- #
 
-const REJL = Kata._plan_replacement("~/Downloads/TestKata.jl")
+const FI1 = touch(joinpath(TERS, "fi1"))
 
-const REPR = Kata._plan_replacement("~/Downloads/TestKata.pro")
-
-@test get(Dict(REJL[1]), "TEMPLATE", 0) == get(Dict(REPR[1]), "TEMPLATE", 0) == "TestKata"
-
-# ---- #
-
-_reset_dir(TE)
-
-const TH1 = touch(joinpath(TE, "th1"))
-
-const TH2 = touch(joinpath(TE, "th2"))
-
-Kata._rename(TE, ("th" => "new",))
-
-@test BioLab.Path.read(TE) == ["new1", "new2"]
-
-# ---- #
-
-const FI1 = touch(joinpath(TE, "fi1"))
-
-const FI2 = touch(joinpath(TE, "fi2"))
+const FI2 = touch(joinpath(TERS, "fi2"))
 
 write(FI1, "Before")
 
 write(FI2, "BeforeBefore")
 
-Kata._sed(TE, ("Before" => "After",))
+Kata._sed(TERS, ("Before" => "After",))
 
-@test readline(open(FI1)) == "After"
+@test readline(FI1) == "After"
 
-@test readline(open(FI2)) == "AfterAfter"
+@test readline(FI2) == "AfterAfter"
 
 # ---- #
 
@@ -86,32 +52,61 @@ const ID_ = (1, 2, 1)
 
 # ---- #
 
-_reset_dir(TE)
+const BA = "What.extension"
 
-KA = Dict(
-    "download" => [
-        "data/test" => "s3://guardiome-data/clinvar",
-        "data/test.vcf" => "s3://guardiome-data/snpEff/variants_head_ann.vcf",
-    ],
-    "call" => [
-        "update" => "julia --project --eval 'using Pkg; Pkg.update()'",
-        "run" => "julia --project --eval 'using Pkg; Pkg.test()'",
-    ],
+for pa in (joinpath(@__DIR__, BA), BA, joinpath("s3://path/to", BA))
+
+    @test Kata._get_extension(pa) == "extension"
+
+end
+
+# ---- #
+
+@test contains(Kata._get_git_config("email"), '@')
+
+# ---- #
+
+const EX_ = ("jl", "pro")
+
+# ---- #
+
+for ex in EX_
+
+    @test Kata._plan_replacement("/path/to/What.$ex")[1] == ("TEMPLATE" => "What")
+
+end
+
+# ---- #
+
+const TE = BioLab.Path.make_directory(joinpath(BioLab.TE, "Kata"))
+
+# TODO: Use public files.
+const RE_UR = Dict(
+    "data/test" => "s3://guardiome-data/clinvar",
+    "data/test.vcf" => "s3://guardiome-data/snpEff/variants_head_ann.vcf",
 )
 
-for ex in (".jl", ".pro")
+for ex in EX_
 
     cd(TE)
 
     @info ex
 
-    wh = "What$ex"
+    wh = "What.$ex"
+
+    if isdir(wh)
+
+        rm(wh; recursive = true, force = true)
+
+    end
 
     Kata.make(wh)
 
     try
 
-        run(`diff $(joinpath(pkgdir(Kata), "TEMPLATE$ex")) $wh`)
+        te = joinpath(dirname(@__DIR__), "TEMPLATE.$ex")
+
+        run(`diff $te $wh`)
 
     catch
 
@@ -121,19 +116,28 @@ for ex in (".jl", ".pro")
 
     Kata.format()
 
-    BioLab.Dict.write(joinpath(TE, wh, "Kata.json"), KA)
+    @test Kata._read_json(pwd())["download"] == Dict()
 
-    Kata.download()
+    if basename(homedir()) == "kate"
 
-    for (ke, va) in Kata._read_kata_json()["downlaod"]
+        BioLab.Dict.write(
+            "Kata.json",
+            merge(BioLab.Dict.read("Kata.json"), Dict("download" => RE_UR)),
+        )
 
-        if isempty(Kata._get_extension(ke))
+        Kata.download()
 
-            @test !isempty(readdir(ke))
+        for re in keys(RE_UR)
 
-        else
+            if isempty(Kata._get_extension(re))
 
-            @test isfile(ke)
+                @test !isempty(readdir(re))
+
+            else
+
+                @test isfile(re)
+
+            end
 
         end
 

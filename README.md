@@ -24,7 +24,7 @@ Test installation
 kata --version
 ```
 
-Get AWS cli
+Get AWS Command Line Interface
 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 

@@ -6,17 +6,11 @@ using UUIDs: uuid4
 
 using BioLab
 
-const TE = joinpath(dirname(@__DIR__), "TEMPLATE")
-
-function _read_kata_json()
-
-    BioLab.Dict.read(joinpath(pwd(), "kata.json"))
-
-end
+const PR = joinpath(dirname(@__DIR__), "TEMPLATE")
 
 function _get_extension(pa)
 
-    splitext(pa)[2]
+    chop(splitext(pa)[2]; head = 1, tail = 0)
 
 end
 
@@ -55,21 +49,7 @@ function _sed(di, beaf_)
 
 end
 
-function _transplant(st1, st2, de, id_)
-
-    sp1_ = split(st1, de)
-
-    sp2_ = split(st2, de)
-
-    if length(sp1_) != length(sp2_)
-
-        error("Split lengths differ.")
-
-    end
-
-    join((ifelse(id == 1, sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
-
-end
+# TODO: Decide where.
 
 """
 Copy from the template and recursively `rename` and `sed`.
@@ -82,19 +62,36 @@ Copy from the template and recursively `rename` and `sed`.
 
     pa = joinpath(pwd(), name)
 
-    cp("$TE$(_get_extension(pa))", pa)
+    ex = _get_extension(pa)
 
-    re_ = _plan_replacement(pa)
+    cp("$PR.$ex", pa)
 
-    _rename(pa, re_)
+    beaf_ = _plan_replacement(pa)
 
-    _sed(pa, re_)
+    _rename(pa, beaf_)
+
+    _sed(pa, beaf_)
+
+end
+
+function _transplant(st1, st2, de, id_)
+
+    sp1_ = split(st1, de)
+
+    sp2_ = split(st2, de)
+
+    if length(sp1_) != length(sp2_)
+
+        error("Split lengths differ.")
+
+    end
+
+    join((ifelse(isone(id), sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
 
 end
 
 """
-Error if there is any missing path.
-And (if necessary) transplant the default texts from the template files.
+Error if there is any missing path. And (if necessary) transplant the default texts from the template files.
 """
 @cast function format()
 
@@ -102,9 +99,9 @@ And (if necessary) transplant the default texts from the template files.
 
     ex = _get_extension(wo)
 
-    te = "$TE$ex"
+    te = "$PR.$ex"
 
-    re_ = _plan_replacement(wo)
+    beaf_ = _plan_replacement(wo)
 
     mi_ = Vector{String}()
 
@@ -112,11 +109,11 @@ And (if necessary) transplant the default texts from the template files.
 
         for na in vcat(di_, fi_)
 
-            ch = joinpath(replace(ro, te => wo), replace(na, re_...))
+            pa = joinpath(replace(ro, te => wo), replace(na, beaf_...))
 
-            if !ispath(ch)
+            if !ispath(pa)
 
-                push!(mi_, ch)
+                push!(mi_, pa)
 
             end
 
@@ -134,31 +131,31 @@ And (if necessary) transplant the default texts from the template files.
 
     ho_ = [("LICENSE", "", ()), ("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
 
-    if ex == ".jl"
+    if ex == "jl"
 
         push!(ho_, (joinpath("test", "runtests.jl"), lo, (1, 2)))
 
-    elseif ex == ".pro"
+    elseif ex == "pro"
 
         append!(
             ho_,
-            [
+            (
                 (joinpath("code", "environment.jl"), lo, (1, 2)),
                 (joinpath("code", "run.jl"), lo, (1, 2, 1)),
-            ],
+            ),
         )
 
     end
 
-    for (rl, de, id_) in ho_
+    for (re, de, id_) in ho_
 
-        st1 = replace(read(joinpath(te, rl), String), re_...)
+        st1 = replace(read(joinpath(te, re), String), beaf_...)
 
-        pa2 = joinpath(wo, rl)
+        pa2 = joinpath(wo, re)
 
         st2 = read(pa2, String)
 
-        if de == ""
+        if isempty(de)
 
             st3 = st1
 
@@ -170,7 +167,7 @@ And (if necessary) transplant the default texts from the template files.
 
         if st2 != st3
 
-            println("Transplanting $pa2")
+            @info "Transplanting $pa2"
 
             write(pa2, st3)
 
@@ -180,31 +177,39 @@ And (if necessary) transplant the default texts from the template files.
 
 end
 
+function _read_json(di)
+
+    BioLab.Dict.read(joinpath(di, "Kata.json"))
+
+end
+
 """
-Download `kata.json.download`.
+Download `Kata.json.download`.
 """
 @cast function download()
 
-    for (ke, va) in _read_kata_json()["download"]
+    wo = pwd()
 
-        pa = joinpath(pwd(), ke)
+    for (re, ur) in _read_json(wo)["download"]
 
-        if isempty(_get_extension(va))
+        if isempty(_get_extension(ur))
 
-            run(`aws s3 sync $va $pa`)
+            co = "sync"
 
         else
 
-            run(`aws s3 cp $va $pa`)
+            co = "cp"
 
         end
+
+        run(`aws s3 $co $ur $re`)
 
     end
 
 end
 
 """
-Call `kata.json.call` command.
+Call `Kata.json.call` command.
 
 # Arguments
 
@@ -212,12 +217,12 @@ Call `kata.json.call` command.
 """
 @cast function call(command)
 
-    run(`sh -c $(_read_kata_json()["call"][command])`)
+    run(`sh -c $(_read_json(pwd())["call"][command])`)
 
 end
 
 """
-Command-line program for working with GitHub-, Amazon-S3-backed julia packages (.jl) and projects (.pro). Learn more at https://github.com/KwatMDPhD/Kata.jl.
+Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (.jl) and projects (.pro). Learn more at https://github.com/KwatMDPhD/Kata.jl.
 """
 @main
 
