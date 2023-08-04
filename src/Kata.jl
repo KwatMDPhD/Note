@@ -103,8 +103,6 @@ Error if there is any missing path. And (if necessary) transplant the default te
 
     beaf_ = _plan_replacement(wo)
 
-    mi_ = Vector{String}()
-
     for (ro, di_, fi_) in walkdir(te)
 
         for na in vcat(di_, fi_)
@@ -113,7 +111,7 @@ Error if there is any missing path. And (if necessary) transplant the default te
 
             if !ispath(pa)
 
-                push!(mi_, pa)
+                error("Missing $pa.")
 
             end
 
@@ -121,9 +119,15 @@ Error if there is any missing path. And (if necessary) transplant the default te
 
     end
 
-    if !isempty(mi_)
+    ke_va = _read_json(wo)
 
-        error(mi_)
+    for ke in ("download", "call")
+
+        if !haskey(ke_va, ke)
+
+            error("Missing Kata.json.$ke.")
+
+        end
 
     end
 
