@@ -10,7 +10,7 @@ using BioLab
 
 # ---- #
 
-const TERS = BioLab.Path.make_directory(joinpath(BioLab.TE, "Kata_rename_sed"))
+const TERS = BioLab.Path.remake_directory(joinpath(BioLab.TE, "rename_sed"))
 
 # ---- #
 
@@ -78,7 +78,7 @@ end
 
 # ---- #
 
-const TE = BioLab.Path.make_directory(joinpath(BioLab.TE, "Kata"))
+const TE = BioLab.Path.remake_directory(joinpath(BioLab.TE, "Kata"))
 
 # TODO: Use public files.
 const RE_UR = Dict(
