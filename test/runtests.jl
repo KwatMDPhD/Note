@@ -90,7 +90,7 @@ for ex in EX_
 
     cd(TE)
 
-    @info ex
+    @info "Testing $ex"
 
     wh = "What.$ex"
 
