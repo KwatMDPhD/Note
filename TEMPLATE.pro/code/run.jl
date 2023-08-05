@@ -1,6 +1,6 @@
-ti = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
+ST = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
 
-@info "Started on $ti."
+@info "Started on $ST."
 
 # ----------------------------------------------------------------------------------------------- #
 
@@ -8,6 +8,6 @@ ti = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
 
 # ----------------------------------------------------------------------------------------------- #
 
-ti = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
+EN = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
 
-@info "Ended on $ti."
+@info "Ended on $EN."

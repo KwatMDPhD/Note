@@ -49,8 +49,6 @@ function _sed(di, beaf_)
 
 end
 
-# TODO: Decide where.
-
 """
 Copy from the template and recursively `rename` and `sed`.
 
@@ -221,7 +219,9 @@ Call `Kata.json.call` command.
 """
 @cast function call(command)
 
-    run(`sh -c $(_read_json(pwd())["call"][command])`)
+    co = _read_json(pwd())["call"][command]
+
+    run(`sh -c $co`)
 
 end
 
