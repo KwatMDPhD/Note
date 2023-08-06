@@ -10,29 +10,29 @@ using BioLab
 
 # ---- #
 
-const TERS = BioLab.Path.remake_directory(joinpath(BioLab.TE, "rename_sed"))
+const TE = BioLab.Path.remake_directory(joinpath(BioLab.TE, "Kata"))
 
 # ---- #
 
-touch(joinpath(TERS, "th1"))
+touch(joinpath(TE, "th1"))
 
-touch(joinpath(TERS, "th2"))
+touch(joinpath(TE, "th2"))
 
-Kata._rename(TERS, ("th" => "new",))
+Kata._rename(TE, ("th" => "new",))
 
-@test BioLab.Path.read(TERS) == ["new1", "new2"]
+@test BioLab.Path.read(TE) == ["new1", "new2"]
 
 # ---- #
 
-const FI1 = touch(joinpath(TERS, "fi1"))
+const FI1 = touch(joinpath(TE, "fi1"))
 
-const FI2 = touch(joinpath(TERS, "fi2"))
+const FI2 = touch(joinpath(TE, "fi2"))
 
 write(FI1, "Before")
 
 write(FI2, "BeforeBefore")
 
-Kata._sed(TERS, ("Before" => "After",))
+Kata._sed(TE, ("Before" => "After",))
 
 @test readline(FI1) == "After"
 
@@ -77,8 +77,6 @@ for ex in EX_
 end
 
 # ---- #
-
-const TE = BioLab.Path.remake_directory(joinpath(BioLab.TE, "Kata"))
 
 # TODO: Use public files.
 const RE_UR = Dict(
@@ -131,7 +129,7 @@ for ex in EX_
 
             if isempty(Kata._get_extension(re))
 
-                @test !isempty(readdir(re))
+                @test !isempty(BioLab.Path.read(re))
 
             else
 
