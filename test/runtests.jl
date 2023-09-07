@@ -94,7 +94,7 @@ for ex in EX_
 
     if isdir(wh)
 
-        rm(wh; recursive = true, force = true)
+        BioLab.Path.remove(wh; recursive = true, force = true)
 
     end
 
