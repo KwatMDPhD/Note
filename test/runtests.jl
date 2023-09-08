@@ -1,8 +1,14 @@
+using Aqua: test_all, test_ambiguities
+
 using Test: @test
 
 using Kata
 
 # ---- #
+
+test_all(Kata; ambiguities = false)
+
+test_ambiguities(Kata)
 
 # ----------------------------------------------------------------------------------------------- #
 
