@@ -1,13 +1,13 @@
-ST = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
-
-@info "Started on $ST."
+@info "Started on $$(readchomp(`date +" % Y .% m .% d % H .% M .% S"`))."
 
 # ----------------------------------------------------------------------------------------------- #
 
-@info "Doing something"
+for jl in ("1_make_something_people_want.jl",)
+
+    run(`julia --project $jl`)
+
+end
 
 # ----------------------------------------------------------------------------------------------- #
 
-EN = readchomp(`date +"%Y.%m.%d %H.%M.%S"`)
-
-@info "Ended on $EN."
+@info "Ended on $(readchomp(`date +"%Y.%m.%d %H.%M.%S"`))."
