@@ -1,4 +1,3 @@
-#TODO: Try using Kata: comonicon_install
-using Kata
+using Kata: comonicon_install
 
-Kata.comonicon_install()
+comonicon_install()
