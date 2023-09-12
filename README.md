@@ -6,7 +6,7 @@ Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (
 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
-#### 2. Download this repository
+#### 2. Download
 
 ```bash
 git clone https://github.com/KwatMDPhD/Kata.jl
@@ -26,7 +26,7 @@ julia --project --eval "using Pkg; Pkg.instantiate()"
 julia --project deps/build.jl
 ```
 
-#### 5. Add to the path
+#### 5. Path
 
 ```bash
 PATH=~/.julia/bin:$PATH

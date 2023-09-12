@@ -10,7 +10,15 @@ const PR = joinpath(dirname(@__DIR__), "TEMPLATE")
 
 function _get_extension(pa)
 
-    chop(splitext(pa)[2]; head = 1, tail = 0)
+    ex = BioLab.Path.get_extension(pa)
+
+    if !(ex in ("jl", "pro"))
+
+        error("Extension $ex is not jl or pro.")
+
+    end
+
+    ex
 
 end
 
@@ -29,9 +37,9 @@ function _plan_replacement(pa)
 
 end
 
-function _rename(di, beaf_)
+function _rename(di, pa_)
 
-    for (be, af) in beaf_
+    for (be, af) in pa_
 
         run(pipeline(`find $di -print0`, `xargs -0 rename --subst-all $be $af`))
 
@@ -39,9 +47,9 @@ function _rename(di, beaf_)
 
 end
 
-function _sed(di, beaf_)
+function _sed(di, pa_)
 
-    for (be, af) in beaf_
+    for (be, af) in pa_
 
         run(pipeline(`find $di -type f -print0`, `xargs -0 sed -i '' "s/$be/$af/g"`))
 
@@ -50,7 +58,7 @@ function _sed(di, beaf_)
 end
 
 """
-Copy from the template and recursively `rename` and `sed`.
+Copy from the template and recursively rename and sed.
 
 # Arguments
 
@@ -58,17 +66,21 @@ Copy from the template and recursively `rename` and `sed`.
 """
 @cast function make(name)
 
-    pa = joinpath(pwd(), name)
+    pa = cp("$PR.$(_get_extension(name))", joinpath(pwd(), name))
 
-    ex = _get_extension(pa)
+    pa_ = _plan_replacement(name)
 
-    cp("$PR.$ex", pa)
+    _rename(pa, pa_)
 
-    beaf_ = _plan_replacement(pa)
+    _sed(pa, pa_)
 
-    _rename(pa, beaf_)
+    nothing
 
-    _sed(pa, beaf_)
+end
+
+function _read_json(di)
+
+    BioLab.Dict.read(joinpath(di, "Kata.json"), Dict{String, Any})
 
 end
 
@@ -89,7 +101,7 @@ function _transplant(st1, st2, de, id_)
 end
 
 """
-Error if there is any missing path. And (if necessary) transplant the default texts from the template files.
+Error if any paths are missing, and (if necessary) transplant the default texts from the template files."
 """
 @cast function format()
 
@@ -99,19 +111,19 @@ Error if there is any missing path. And (if necessary) transplant the default te
 
     te = "$PR.$ex"
 
-    beaf_ = _plan_replacement(wo)
+    pa_ = _plan_replacement(basename(wo))
 
     for (ro, di_, fi_) in walkdir(te)
 
         for na in vcat(di_, fi_)
 
-            pa = joinpath(replace(ro, te => wo), replace(na, beaf_...))
+            if ex == "pro" && na == "1_make_something_people_want.jl"
 
-            if !ispath(pa)
-
-                error("Missing $pa.")
+                continue
 
             end
+
+            BioLab.Error.error_missing(joinpath(replace(ro, te => wo), replace(na, pa_...)))
 
         end
 
@@ -123,13 +135,13 @@ Error if there is any missing path. And (if necessary) transplant the default te
 
         if !haskey(ke_va, ke)
 
-            error("Missing Kata.json.$ke.")
+            error("Kata.json.$ke is missing.")
 
         end
 
     end
 
-    lo = "# $('-' ^ 95) #"
+    lo = "# ----------------------------------------------------------------------------------------------- #"
 
     ho_ = [("LICENSE", "", ()), ("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
 
@@ -151,7 +163,7 @@ Error if there is any missing path. And (if necessary) transplant the default te
 
     for (re, de, id_) in ho_
 
-        st1 = replace(read(joinpath(te, re), String), beaf_...)
+        st1 = replace(read(joinpath(te, re), String), pa_...)
 
         pa2 = joinpath(wo, re)
 
@@ -179,14 +191,8 @@ Error if there is any missing path. And (if necessary) transplant the default te
 
 end
 
-function _read_json(di)
-
-    BioLab.Dict.read(joinpath(di, "Kata.json"))
-
-end
-
 """
-Download `Kata.json.download`.
+Download Kata.json.download.
 """
 @cast function download()
 
@@ -194,7 +200,7 @@ Download `Kata.json.download`.
 
     for (re, ur) in _read_json(wo)["download"]
 
-        if isempty(_get_extension(ur))
+        if isempty(BioLab.Path.get_extension(ur))
 
             co = "sync"
 
@@ -211,7 +217,7 @@ Download `Kata.json.download`.
 end
 
 """
-Call `Kata.json.call` command.
+Call Kata.json.call.command.
 
 # Arguments
 
@@ -219,9 +225,9 @@ Call `Kata.json.call` command.
 """
 @cast function call(command)
 
-    co = _read_json(pwd())["call"][command]
+    run(`sh -c $(_read_json(pwd())["call"][command])`)
 
-    run(`sh -c $co`)
+    nothing
 
 end
 

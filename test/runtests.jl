@@ -1,4 +1,4 @@
-#using Aqua: test_all, test_ambiguities
+using Aqua: test_all, test_ambiguities
 
 using Test: @test
 
@@ -6,9 +6,9 @@ using Kata
 
 # ---- #
 
-#test_all(Kata; ambiguities = false)
+test_all(Kata; ambiguities = false)
 
-#test_ambiguities(Kata)
+test_ambiguities(Kata)
 
 # ----------------------------------------------------------------------------------------------- #
 
@@ -17,6 +17,55 @@ using BioLab
 # ---- #
 
 const TE = BioLab.Path.remake_directory(joinpath(BioLab.TE, "Kata"))
+
+# ---- #
+
+@test isconst(Kata, :PR)
+
+# ---- #
+
+@test BioLab.Error.@is Kata._get_extension("Name.not_jl_or_pro")
+
+# ---- #
+
+const EX_ = ("jl", "pro")
+
+for ex in EX_
+
+    @test Kata._get_extension("Name.$ex") == ex
+
+end
+
+# ---- #
+
+@test contains(Kata._get_git_config("email"), '@')
+
+# ---- #
+
+const PR = "Prefix"
+
+for (pa1, pa2) in zip(
+    Kata._plan_replacement("$PR.extension1"),
+    Kata._plan_replacement("/path/to/$PR.extension2"),
+)
+
+    if pa1.first == "033e1703-1880-4940-9ddc-745bff01a2ac"
+
+        @test pa1.second != pa2.second
+
+    else
+
+        if pa1.first == "TEMPLATE"
+
+            @test pa1.second == PR
+
+        end
+
+        @test pa1.second == pa2.second
+
+    end
+
+end
 
 # ---- #
 
@@ -40,9 +89,9 @@ write(FI2, "BeforeBefore")
 
 Kata._sed(TE, ("Before" => "After",))
 
-@test readline(FI1) == "After"
+@test readline(FI1) === "After"
 
-@test readline(FI2) == "AfterAfter"
+@test readline(FI2) === "AfterAfter"
 
 # ---- #
 
@@ -52,35 +101,22 @@ const DE = "--"
 
 const ID_ = (1, 2, 1)
 
-@test BioLab.Error.@is_error Kata._transplant(ST1, "a--bb", DE, ID_)
-
-@test Kata._transplant(ST1, "a--bb--ccc", DE, ID_) == "A--bb--CCC"
+@test BioLab.Error.@is Kata._transplant(ST1, "a--bb", DE, ID_)
 
 # ---- #
 
-const BA = "What.extension"
-
-for pa in (joinpath(@__DIR__, BA), BA, joinpath("s3://path/to", BA))
-
-    @test Kata._get_extension(pa) == "extension"
-
-end
-
-# ---- #
-
-@test contains(Kata._get_git_config("email"), '@')
+@test Kata._read_json(dirname(@__DIR__)) == Dict(
+    "download" => Dict(),
+    "call" => Dict(
+        "update" => "julia --project --eval 'using Pkg; Pkg.update()'",
+        "run" => "julia --project --eval 'using Pkg; Pkg.test()'",
+        "build" => "rm -rf build && julia --project deps/build.jl app tarball",
+    ),
+)
 
 # ---- #
 
-const EX_ = ("jl", "pro")
-
-# ---- #
-
-for ex in EX_
-
-    @test Kata._plan_replacement("/path/to/What.$ex")[1] == ("TEMPLATE" => "What")
-
-end
+@test Kata._transplant(ST1, "a--bb--ccc", DE, ID_) === "A--bb--CCC"
 
 # ---- #
 
@@ -96,7 +132,7 @@ for ex in EX_
 
     @info "Testing $ex"
 
-    wh = "What.$ex"
+    wh = "$PR.$ex"
 
     if isdir(wh)
 
@@ -108,9 +144,7 @@ for ex in EX_
 
     try
 
-        te = joinpath(dirname(@__DIR__), "TEMPLATE.$ex")
-
-        run(`diff $te $wh`)
+        run(`diff $(joinpath(dirname(@__DIR__), "TEMPLATE.$ex")) $wh`)
 
     catch
 
@@ -120,8 +154,9 @@ for ex in EX_
 
     Kata.format()
 
-    @test Kata._read_json(pwd())["download"] == Dict()
+    @test Kata._read_json(pwd())["download"] == Dict{String, Any}()
 
+    # TODO
     if basename(homedir()) == "kate"
 
         BioLab.Dict.write(

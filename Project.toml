@@ -1,7 +1,7 @@
 name = "Kata"
 uuid = "b1bf3a08-85ea-42c4-9d3d-993f577bbb34"
 authors = ["KwatMDPhD <kwat.me@icloud.com>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 BioLab = "1fe83854-81c0-42f7-afc9-71ba9af673ca"
@@ -9,7 +9,7 @@ Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"
 UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 
 [compat]
-BioLab = "0.13"
+BioLab = "0.14"
 Comonicon = "1.0"
 julia = "1.9"
 
