@@ -10,6 +10,8 @@ test_all(Kata; ambiguities = false)
 
 test_ambiguities(Kata)
 
+# ---- #
+
 # ----------------------------------------------------------------------------------------------- #
 
 using BioLab

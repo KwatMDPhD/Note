@@ -14,7 +14,7 @@ function _get_extension(pa)
 
     if !(ex in ("jl", "pro"))
 
-        error("Extension $ex is not jl or pro.")
+        error("Extension \"$ex\" is not \"jl\" or \"pro\".")
 
     end
 
@@ -58,7 +58,7 @@ function _sed(di, pa_)
 end
 
 """
-Copy from the template and recursively rename and sed.
+Copy from the template and recursively `rename` and `sed`.
 
 # Arguments
 
@@ -135,7 +135,7 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
 
         if !haskey(ke_va, ke)
 
-            error("Kata.json.$ke is missing.")
+            error("`Kata.json.$ke` is missing.")
 
         end
 
@@ -192,7 +192,7 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
 end
 
 """
-Download Kata.json.download.
+Download `Kata.json.download`.
 """
 @cast function download()
 
@@ -217,7 +217,7 @@ Download Kata.json.download.
 end
 
 """
-Call Kata.json.call.command.
+Call `Kata.json.call.command`.
 
 # Arguments
 
@@ -232,7 +232,7 @@ Call Kata.json.call.command.
 end
 
 """
-Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (.jl) and projects (.pro). Learn more at https://github.com/KwatMDPhD/Kata.jl.
+Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (`.jl`) and projects (`.pro`). Learn more at https://github.com/KwatMDPhD/Kata.jl.
 """
 @main
 

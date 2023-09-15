@@ -1,8 +1,8 @@
-Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (.jl) and projects (.pro) 🥋
+Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (`.jl`) and projects (`.pro`) 🥋
 
 ## Install
 
-#### 1. Get AWS Command Line Interface
+#### 1. Get AWS Command-Line Interface
 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
