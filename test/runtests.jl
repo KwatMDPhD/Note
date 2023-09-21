@@ -112,7 +112,6 @@ const ID_ = (1, 2, 1)
     "call" => Dict(
         "update" => "julia --project --eval 'using Pkg; Pkg.update()'",
         "run" => "julia --project --eval 'using Pkg; Pkg.test()'",
-        "build" => "rm -rf build && julia --project deps/build.jl app tarball",
     ),
 )
 
