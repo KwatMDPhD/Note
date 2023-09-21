@@ -14,7 +14,7 @@ function _get_extension(pa)
 
     if !(ex in ("jl", "pro"))
 
-        error("Extension \"$ex\" is not \"jl\" or \"pro\".")
+        error("`$ex` is not `jl` or `pro`.")
 
     end
 
