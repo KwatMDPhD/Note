@@ -4,15 +4,15 @@ using Comonicon: @cast, @main
 
 using UUIDs: uuid4
 
-using BioLab
+using Nucleus
 
-const PR = joinpath(dirname(@__DIR__), "TEMPLATE")
+const _PR = joinpath(dirname(@__DIR__), "TEMPLATE")
 
 function _get_extension(pa)
 
-    ex = BioLab.Path.get_extension(pa)
+    ex = Nucleus.Path.get_extension(pa)
 
-    if !(ex in ("jl", "pro"))
+    if !(ex == "jl" || ex == "pro")
 
         error("`$ex` is not `jl` or `pro`.")
 
@@ -37,20 +37,22 @@ function _plan_replacement(pa)
 
 end
 
-function _rename(di, pa_)
+function _rename(di, beaf_)
 
-    for (be, af) in pa_
+    for (be, af) in beaf_
 
+        # TODO: Sync with rc.
         run(pipeline(`find $di -print0`, `xargs -0 rename --subst-all $be $af`))
 
     end
 
 end
 
-function _sed(di, pa_)
+function _sed(di, beaf_)
 
-    for (be, af) in pa_
+    for (be, af) in beaf_
 
+        # TODO: Sync with rc.
         run(pipeline(`find $di -type f -print0`, `xargs -0 sed -i '' "s/$be/$af/g"`))
 
     end
@@ -66,70 +68,51 @@ Copy from the template and recursively `rename` and `sed`.
 """
 @cast function make(name)
 
-    pa = cp("$PR.$(_get_extension(name))", joinpath(pwd(), name))
+    pa = cp("$_PR.$(_get_extension(name))", joinpath(pwd(), name))
 
-    pa_ = _plan_replacement(name)
+    beaf_ = _plan_replacement(name)
 
-    _rename(pa, pa_)
+    _rename(pa, beaf_)
 
-    _sed(pa, pa_)
-
-    nothing
+    _sed(pa, beaf_)
 
 end
 
 function _read_json(di)
 
-    BioLab.Dict.read(joinpath(di, "Kata.json"), Dict{String, Any})
+    Nucleus.Dict.read(joinpath(di, "Kata.json"), Dict{String, Any})
 
 end
 
-function _transplant(st1, st2, de, id_)
+function _error_missing(wo, ex, te, beaf_)
 
-    sp1_ = split(st1, de)
-
-    sp2_ = split(st2, de)
-
-    if length(sp1_) != length(sp2_)
-
-        error("Split lengths differ.")
-
-    end
-
-    join((ifelse(isone(id), sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
-
-end
-
-"""
-Error if any paths are missing, and (if necessary) transplant the default texts from the template files."
-"""
-@cast function format()
-
-    wo = pwd()
-
-    ex = _get_extension(wo)
-
-    te = "$PR.$ex"
-
-    pa_ = _plan_replacement(basename(wo))
+    n = lastindex(te)
 
     for (ro, di_, fi_) in walkdir(te)
 
-        for na in vcat(di_, fi_)
+        wot = "$wo$(view(ro, (n + 1):lastindex(ro)))"
 
-            if ex == "pro" && na == "1_make_something_people_want.jl"
+        for na_ in (di_, fi_)
 
-                continue
+            for na in na_
+
+                if ex == "pro" && na == "1_make_something_people_want.jl"
+
+                    continue
+
+                end
+
+                Nucleus.Error.error_missing(joinpath(wot, replace(na, beaf_...)))
 
             end
-
-            BioLab.Error.error_missing(joinpath(replace(ro, te => wo), replace(na, pa_...)))
 
         end
 
     end
 
-    ke_va = _read_json(wo)
+end
+
+function _error_missing(ke_va)
 
     for ke in ("download", "call")
 
@@ -140,6 +123,41 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
         end
 
     end
+
+end
+
+function _transplant(st1, st2, de, id_)
+
+    sp1_ = split(st1, de)
+
+    sp2_ = split(st2, de)
+
+    if lastindex(sp1_) != lastindex(sp2_)
+
+        error("Split lengths differ.")
+
+    end
+
+    join((ifelse(isone(id), sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
+
+end
+
+"""
+Error if any paths are missing, and (if necessary) transplant the default texts from the template files.
+"""
+@cast function format()
+
+    wo = pwd()
+
+    ex = _get_extension(wo)
+
+    te = "$_PR.$ex"
+
+    beaf_ = _plan_replacement(basename(wo))
+
+    _error_missing(wo, ex, te, beaf_)
+
+    _error_missing(_read_json(wo))
 
     lo = "# ----------------------------------------------------------------------------------------------- #"
 
@@ -163,7 +181,7 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
 
     for (re, de, id_) in ho_
 
-        st1 = replace(read(joinpath(te, re), String), pa_...)
+        st1 = replace(read(joinpath(te, re), String), beaf_...)
 
         pa2 = joinpath(wo, re)
 
@@ -200,7 +218,7 @@ Download `Kata.json.download`.
 
     for (re, ur) in _read_json(wo)["download"]
 
-        if isempty(BioLab.Path.get_extension(ur))
+        if isempty(Nucleus.Path.get_extension(ur))
 
             co = "sync"
 

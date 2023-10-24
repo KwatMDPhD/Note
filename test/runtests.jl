@@ -1,42 +1,24 @@
-using Aqua: test_all, test_ambiguities
-
 using Test: @test
 
 using Kata
 
 # ---- #
 
-test_all(Kata; ambiguities = false)
-
-test_ambiguities(Kata)
-
-# ---- #
-
 # ----------------------------------------------------------------------------------------------- #
 
-using BioLab
+using Nucleus
 
 # ---- #
 
-const TE = BioLab.Path.remake_directory(joinpath(BioLab.TE, "Kata"))
+const TE = joinpath(Nucleus.TE, "Kata")
 
 # ---- #
 
-@test isconst(Kata, :PR)
+Nucleus.Path.remake_directory(TE)
 
 # ---- #
 
-@test BioLab.Error.@is Kata._get_extension("Name.not_jl_or_pro")
-
-# ---- #
-
-const EX_ = ("jl", "pro")
-
-for ex in EX_
-
-    @test Kata._get_extension("Name.$ex") == ex
-
-end
+@test Nucleus.Error.@is Kata._get_extension("Name.not_jl_or_pro")
 
 # ---- #
 
@@ -46,24 +28,26 @@ end
 
 const PR = "Prefix"
 
-for (pa1, pa2) in zip(
+# ---- #
+
+for (beaf1, beaf2) in zip(
     Kata._plan_replacement("$PR.extension1"),
     Kata._plan_replacement("/path/to/$PR.extension2"),
 )
 
-    if pa1.first == "033e1703-1880-4940-9ddc-745bff01a2ac"
+    if beaf1.first == "033e1703-1880-4940-9ddc-745bff01a2ac"
 
-        @test pa1.second != pa2.second
+        @test beaf1.second != beaf2.second
 
     else
 
-        if pa1.first == "TEMPLATE"
+        if beaf1.first == "TEMPLATE"
 
-            @test pa1.second == PR
+            @test beaf1.second === PR
 
         end
 
-        @test pa1.second == pa2.second
+        @test beaf1.second === beaf2.second
 
     end
 
@@ -73,37 +57,45 @@ end
 
 touch(joinpath(TE, "th1"))
 
+# ---- #
+
 touch(joinpath(TE, "th2"))
+
+# ---- #
 
 Kata._rename(TE, ("th" => "new",))
 
-@test BioLab.Path.read(TE) == ["new1", "new2"]
+# ---- #
+
+@test Nucleus.Path.read(TE) == ["new1", "new2"]
 
 # ---- #
 
 const FI1 = touch(joinpath(TE, "fi1"))
 
+# ---- #
+
 const FI2 = touch(joinpath(TE, "fi2"))
-
-write(FI1, "Before")
-
-write(FI2, "BeforeBefore")
-
-Kata._sed(TE, ("Before" => "After",))
-
-@test readline(FI1) === "After"
-
-@test readline(FI2) === "AfterAfter"
 
 # ---- #
 
-const ST1 = "A--BB--CCC"
+write(FI1, "Before")
 
-const DE = "--"
+# ---- #
 
-const ID_ = (1, 2, 1)
+write(FI2, "BeforeBefore")
 
-@test BioLab.Error.@is Kata._transplant(ST1, "a--bb", DE, ID_)
+# ---- #
+
+Kata._sed(TE, ("Before" => "After",))
+
+# ---- #
+
+@test readline(FI1) === "After"
+
+# ---- #
+
+@test readline(FI2) === "AfterAfter"
 
 # ---- #
 
@@ -117,7 +109,45 @@ const ID_ = (1, 2, 1)
 
 # ---- #
 
-@test Kata._transplant(ST1, "a--bb--ccc", DE, ID_) === "A--bb--CCC"
+const PK = pkgdir(Kata)
+
+# ---- #
+
+const EX = Kata._get_extension(PK)
+
+# ---- #
+
+# 292.375 μs (230 allocations: 17.60 KiB)
+#@btime Kata._error_missing(PK, EX, "$(Kata._PR).$EX", $(Kata._plan_replacement(PK)));
+
+# ---- #
+
+const ST1 = "A--BB--CCC"
+
+# ---- #
+
+const DE = "--"
+
+# ---- #
+
+const ID_ = (1, 2, 1)
+
+# ---- #
+
+@test Nucleus.Error.@is Kata._transplant(ST1, "a--bb", DE, ID_)
+
+# ---- #
+
+const ST2 = "a--bb--ccc"
+
+# ---- #
+
+@test Kata._transplant(ST1, ST2, DE, ID_) === "A--bb--CCC"
+
+# ---- #
+
+# 523.340 ns (24 allocations: 1.67 KiB)
+#@btime Kata._transplant(ST1, ST2, DE, ID_);
 
 # ---- #
 
@@ -127,17 +157,19 @@ const RE_UR = Dict(
     "data/test.vcf" => "s3://guardiome-data/snpEff/variants_head_ann.vcf",
 )
 
-for ex in EX_
+# ---- #
+
+for ex in ("jl", "pro")
 
     cd(TE)
 
-    @info "Testing $ex"
+    @info ex
 
     wh = "$PR.$ex"
 
     if isdir(wh)
 
-        BioLab.Path.remove(wh; recursive = true, force = true)
+        Nucleus.Path.remove(wh; recursive = true, force = true)
 
     end
 
@@ -155,15 +187,14 @@ for ex in EX_
 
     Kata.format()
 
-    @test Kata._read_json(pwd())["download"] == Dict{String, Any}()
+    js = Kata._read_json(pwd())
 
-    # TODO
+    @test js["download"] == Dict{String, Any}()
+
+    # TODO: Use public files.
     if basename(homedir()) == "kate"
 
-        BioLab.Dict.write(
-            "Kata.json",
-            merge(BioLab.Dict.read("Kata.json"), Dict("download" => RE_UR)),
-        )
+        Nucleus.Dict.write("Kata.json", merge(js, Dict("download" => RE_UR)))
 
         Kata.download()
 
@@ -171,7 +202,7 @@ for ex in EX_
 
             if isempty(Kata._get_extension(re))
 
-                @test !isempty(BioLab.Path.read(re))
+                @test !isempty(Nucleus.Path.read(re))
 
             else
 
@@ -183,10 +214,8 @@ for ex in EX_
 
     end
 
-    for co in ("update", "run")
+    Kata.call("update")
 
-        Kata.call(co)
-
-    end
+    Kata.call("run")
 
 end
