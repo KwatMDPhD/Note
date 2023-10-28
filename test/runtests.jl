@@ -10,7 +10,7 @@ using Nucleus
 
 # ---- #
 
-const TE = joinpath(Nucleus.TE, "Kata")
+const TE = joinpath(tempdir(), "Kata")
 
 # ---- #
 
