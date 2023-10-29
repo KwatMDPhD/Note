@@ -117,7 +117,7 @@ const EX = Kata._get_extension(PK)
 
 # ---- #
 
-# 292.375 μs (230 allocations: 17.60 KiB)
+# 289.083 μs (230 allocations: 17.60 KiB)
 #@btime Kata._error_missing(PK, EX, "$(Kata._PR).$EX", $(Kata._plan_replacement(PK)));
 
 # ---- #
@@ -146,7 +146,7 @@ const ST2 = "a--bb--ccc"
 
 # ---- #
 
-# 523.340 ns (24 allocations: 1.67 KiB)
+# 501.083 ns (24 allocations: 1.67 KiB)
 #@btime Kata._transplant(ST1, ST2, DE, ID_);
 
 # ---- #

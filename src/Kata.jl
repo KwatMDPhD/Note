@@ -187,15 +187,7 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
 
         st2 = read(pa2, String)
 
-        if isempty(de)
-
-            st3 = st1
-
-        else
-
-            st3 = _transplant(st1, st2, de, id_)
-
-        end
+        st3 = isempty(de) ? st1 : _transplant(st1, st2, de, id_)
 
         if st2 != st3
 
@@ -218,17 +210,7 @@ Download `Kata.json.download`.
 
     for (re, ur) in _read_json(wo)["download"]
 
-        if isempty(Nucleus.Path.get_extension(ur))
-
-            co = "sync"
-
-        else
-
-            co = "cp"
-
-        end
-
-        run(`aws s3 $co $ur $re`)
+        run(`aws s3 $(isempty(Nucleus.Path.get_extension(ur)) ? "sync" : "cp") $ur $re`)
 
     end
 
