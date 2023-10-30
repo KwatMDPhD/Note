@@ -103,7 +103,7 @@ Kata._sed(TE, ("Before" => "After",))
     "download" => Dict(),
     "call" => Dict(
         "update" => "julia --project --eval 'using Pkg; Pkg.update()'",
-        "run" => "julia --project --eval 'using Pkg; Pkg.test()'",
+        "run" => "julia --project --eval 'using Kata; using Aqua: test_all, test_ambiguities; test_all(Kata; ambiguities = false); test_ambiguities(Kata); using Pkg; Pkg.test()'",
     ),
 )
 

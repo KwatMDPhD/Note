@@ -1,7 +1,7 @@
 name = "Kata"
 uuid = "b1bf3a08-85ea-42c4-9d3d-993f577bbb34"
 authors = ["KwatMDPhD <kwat.me@icloud.com>"]
-version = "0.2.1"
+version = "0.2.2"
 
 [deps]
 Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"
@@ -14,8 +14,9 @@ Nucleus = "0.15"
 julia = "1.9"
 
 [extras]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Pkg", "Test"]
+test = ["Aqua", "Pkg", "Test"]
