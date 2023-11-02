@@ -8,11 +8,7 @@ using Nucleus
 
 # ---- #
 
-const TE = joinpath(tempdir(), "Kata")
-
-# ---- #
-
-Nucleus.Path.remake_directory(TE)
+const TE = mkdir(joinpath(Nucleus.TE, "Kata"))
 
 # ---- #
 
