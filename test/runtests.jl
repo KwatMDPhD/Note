@@ -163,7 +163,7 @@ for ex in ("jl", "pro")
 
     if isdir(wh)
 
-        Nucleus.Path.remove(wh; recursive = true, force = true)
+        rm(wh; recursive = true, force = true)
 
     end
 
