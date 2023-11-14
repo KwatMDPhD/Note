@@ -52,7 +52,7 @@ function _sed(di, beaf_)
 
     for (be, af) in beaf_
 
-        run(pipeline(`find $di -type f -print0`, `xargs -0 sed -i "" "s/$be/$af/g"`))
+        run(pipeline(`find $di -type f -print0`, `xargs -0 perl -pi -e "s/$be/$af/g"`))
 
     end
 
