@@ -160,7 +160,7 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
 
     lo = "# ----------------------------------------------------------------------------------------------- #"
 
-    ho_ = [("LICENSE", "", ()), ("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
+    ho_ = [("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
 
     if ex == "jl"
 
