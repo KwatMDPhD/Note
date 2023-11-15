@@ -1,4 +1,4 @@
-🥋
+Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (.jl) and projects (.pro) 🥋
 
 ## Install
 
