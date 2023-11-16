@@ -3,14 +3,12 @@ uuid = "033e1703-1880-4940-9ddc-745bff01a2ac"
 authors = ["GIT_USER_NAME <GIT_USER_EMAIL>"]
 version = "0.1.0"
 
-[deps]
-
 [compat]
+Test = "1"
 julia = "1.9"
 
 [extras]
-Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Aqua", "Test"]
+test = ["Test"]
