@@ -160,7 +160,8 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
 
     lo = "# ----------------------------------------------------------------------------------------------- #"
 
-    ho_ = [("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
+    ho_::Vector{Tuple{String, String, Tuple{Vararg{Int64}}}} =
+        [("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
 
     if ex == "jl"
 
