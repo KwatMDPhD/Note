@@ -461,7 +461,7 @@ version = "0.4.0"
 deps = ["CSV", "Clustering", "CodecZlib", "ColorSchemes", "Colors", "DataFrames", "Dates", "Distances", "Distributions", "GZip", "JSON", "KernelDensity", "Mmap", "MultipleTesting", "NMF", "NonNegLeastSquares", "OrderedCollections", "Printf", "ProgressMeter", "Random", "Statistics", "StatsBase", "TOML", "Test", "XLSX"]
 path = "/Users/kwat/craft/jl/Nucleus.jl"
 uuid = "ef0d6b11-c3c3-4448-b7ee-336ac2b00706"
-version = "0.15.6"
+version = "0.15.7"
 
 [[deps.OffsetArrays]]
 deps = ["Adapt"]
