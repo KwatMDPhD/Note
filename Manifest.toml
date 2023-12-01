@@ -2,7 +2,7 @@
 
 julia_version = "1.9.4"
 manifest_format = "2.0"
-project_hash = "d14a7261e56fb47861c61c48b8ae80b884075dbd"
+project_hash = "d2b27c8a677a058d33af595060603e7a947dc249"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -458,8 +458,8 @@ uuid = "b7351bd1-99d9-5c5d-8786-f205a815c4d7"
 version = "0.4.0"
 
 [[deps.Nucleus]]
-deps = ["CSV", "Clustering", "CodecZlib", "ColorSchemes", "Colors", "DataFrames", "Dates", "Distances", "Distributions", "GZip", "JSON", "KernelDensity", "LinearAlgebra", "Mmap", "MultipleTesting", "NMF", "OrderedCollections", "Printf", "ProgressMeter", "Random", "Statistics", "StatsBase", "TOML", "XLSX"]
-path = "../Nucleus.jl"
+deps = ["CSV", "Clustering", "CodecZlib", "ColorSchemes", "Colors", "DataFrames", "Dates", "Distances", "Distributions", "GZip", "JSON", "KernelDensity", "Mmap", "MultipleTesting", "NMF", "NonNegLeastSquares", "OrderedCollections", "Printf", "ProgressMeter", "Random", "Statistics", "StatsBase", "TOML", "Test", "XLSX"]
+path = "/Users/kwat/craft/jl/Nucleus.jl"
 uuid = "ef0d6b11-c3c3-4448-b7ee-336ac2b00706"
 version = "0.15.6"
 
