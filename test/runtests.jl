@@ -104,7 +104,7 @@ Kata._sed(TE, ("Before" => "After",))
 
 # ---- #
 
-const PK = pkgdir(Kata)
+const PK = dirname(@__DIR__)
 
 # ---- #
 
