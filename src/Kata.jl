@@ -10,7 +10,7 @@ const _PR = joinpath(dirname(@__DIR__), "TEMPLATE")
 
 function _get_extension(pa)
 
-    ex = Nucleus.Path.get_extension(pa)
+    ex = splitext(pa)[2][2:end]
 
     if !(ex == "jl" || ex == "pro")
 
@@ -32,7 +32,6 @@ function _plan_replacement(pa)
 
     "TEMPLATE" => splitext(basename(pa))[1],
     "GIT_USER_NAME" => _get_git_config("name"),
-    "GIT_USER_EMAIL" => _get_git_config("email"),
     "033e1703-1880-4940-9ddc-745bff01a2ac" => string(uuid4())
 
 end
@@ -220,7 +219,7 @@ Download `Kata.json.download`.
 
     for (re, ur) in _read_json(wo)["download"]
 
-        run(`aws s3 $(isempty(Nucleus.Path.get_extension(ur)) ? "sync" : "cp") $ur $re`)
+        run(`aws s3 $(isempty(splitext(ur)[2]) ? "sync" : "cp") $ur $re`)
 
     end
 

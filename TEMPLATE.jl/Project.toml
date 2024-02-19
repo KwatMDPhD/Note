@@ -1,6 +1,6 @@
 name = "TEMPLATE"
 uuid = "033e1703-1880-4940-9ddc-745bff01a2ac"
-authors = ["GIT_USER_NAME <GIT_USER_EMAIL>"]
+authors = ["GIT_USER_NAME"]
 version = "0.1.0"
 
 [deps]
