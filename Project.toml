@@ -7,13 +7,10 @@ version = "0.2.8"
 Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"
 Nucleus = "ef0d6b11-c3c3-4448-b7ee-336ac2b00706"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 
-[compat]
-Comonicon = "1"
-Nucleus = "0"
-Pkg = "1"
-Test = "1"
-UUIDs = "1"
-julia = "1"
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
