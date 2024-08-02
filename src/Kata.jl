@@ -4,103 +4,59 @@ using Comonicon: @cast, @main
 
 using UUIDs: uuid4
 
-using Nucleus
+const _TE = pkgdir(@__MODULE__, "NAME.jl")
 
-const _PR = joinpath(dirname(@__DIR__), "TEMPLATE")
+function _plan_replacement(na)
 
-function _get_extension(pa)
-
-    ex = splitext(pa)[2][2:end]
-
-    if !(ex == "jl" || ex == "pro")
-
-        error("`$ex` is not `jl` or `pro`.")
-
-    end
-
-    ex
-
-end
-
-function _get_git_config(ke)
-
-    readchomp(`git config user.$ke`)
-
-end
-
-function _plan_replacement(pa)
-
-    "TEMPLATE" => splitext(basename(pa))[1],
-    "GIT_USER_NAME" => _get_git_config("name"),
-    "033e1703-1880-4940-9ddc-745bff01a2ac" => string(uuid4())
-
-end
-
-function _rename(di, beaf_)
-
-    for (be, af) in beaf_
-
-        # TODO: Sync with rc.
-        run(pipeline(`find $di -print0`, `xargs -0 rename --subst-all $be $af`))
-
-    end
-
-end
-
-function _sed(di, beaf_)
-
-    for (be, af) in beaf_
-
-        run(pipeline(`find $di -type f -print0`, `xargs -0 perl -pi -e "s/$be/$af/g"`))
-
-    end
+    return "NAME" => na[1:(end - 3)],
+    "e8386f20-3e60-497e-8358-52c6451f91c7" => string(uuid4()),
+    "AUTHOR" => readchomp(`git config user.name`)
 
 end
 
 """
-Copy from the template and recursively `rename` and `sed`.
+Make a new package.
 
 # Arguments
 
-  - `name`:
+  - `name`: PackageName.jl.
 """
 @cast function make(name)
 
-    pa = cp("$_PR.$(_get_extension(name))", joinpath(pwd(), name))
+    ma = cp(_TE, joinpath(pwd(), name))
 
-    beaf_ = _plan_replacement(name)
+    for (be, af) in _plan_replacement(name)
 
-    _rename(pa, beaf_)
+        run(pipeline(`find $ma -print0`, `xargs -0 rename --subst-all $be $af`))
 
-    _sed(pa, beaf_)
+        run(pipeline(`find $ma -type f -print0`, `xargs -0 perl -pi -e "s/$be/$af/g"`))
 
-end
-
-function _read_json(di)
-
-    Nucleus.Dict.read(joinpath(di, "Kata.json"), Dict{String, Any})
+    end
 
 end
 
-function _error_missing(wo, ex, te, beaf_)
+"""
+Error if any paths are missing and reset the default texts.
+"""
+@cast function format()
 
-    n = lastindex(te)
+    ma = pwd()
 
-    for (ro, di_, fi_) in walkdir(te)
+    nc = lastindex(_TE)
 
-        wot = "$wo$(view(ro, (n + 1):lastindex(ro)))"
+    re_ = _plan_replacement(basename(ma))
 
-        for na_ in (di_, fi_)
+    for (ro, di_, fi_) in walkdir(_TE)
 
-            for na in na_
+        mr = joinpath(ma, ro[(nc + 2):end])
 
-                if ex == "pro" && na == "1_make_something_people_want.jl"
+        for na_ in (fi_, di_), na in na_
 
-                    continue
+            mp = joinpath(mr, replace(na, re_...))
 
-                end
+            if !ispath(mp)
 
-                Nucleus.Error.error_missing(joinpath(wot, replace(na, beaf_...)))
+                error("Missing $mp.")
 
             end
 
@@ -108,101 +64,57 @@ function _error_missing(wo, ex, te, beaf_)
 
     end
 
-end
+    for pa in (".JuliaFormatter.toml",)
 
-function _error_missing(ke_va)
+        r1 = read(joinpath(_TE, pa))
 
-    for ke in ("download", "call")
+        p2 = joinpath(ma, pa)
 
-        if !haskey(ke_va, ke)
+        r2 = read(p2)
 
-            error("`Kata.json.$ke` is missing.")
+        if r1 != r2
+
+            @info "Resetting $p2"
+
+            write(p2, r1)
 
         end
 
     end
 
-end
+    for (pa, de, rs_) in (
+        ("README.md", "---", [false, true]),
+        (
+            ".gitignore",
+            "# ----------------------------------------------------------------------------------------------- #",
+            [true, false],
+        ),
+        (
+            joinpath("test", "runtests.jl"),
+            "# ----------------------------------------------------------------------------------------------- #",
+            [true, false],
+        ),
+    )
 
-function _transplant(st1, st2, de, id_)
+        r1_ = split(replace(read(joinpath(_TE, pa), String), re_...), de)
 
-    sp1_ = split(st1, de)
+        p2 = joinpath(ma, pa)
 
-    sp2_ = split(st2, de)
+        r2_ = split(read(p2, String), de)
 
-    if lastindex(sp1_) != lastindex(sp2_)
+        if lastindex(r1_) != lastindex(r2_)
 
-        error("Split lengths differ.")
+            error("Split lengths differ.")
 
-    end
+        end
 
-    join((ifelse(isone(id), sp1, sp2) for (id, sp1, sp2) in zip(id_, sp1_, sp2_)), de)
+        map!(ifelse, r1_, rs_, r1_, r2_)
 
-end
+        if r1_ != r2_
 
-"""
-Error if any paths are missing, and (if necessary) transplant the default texts from the template files.
+            @info "Transplanting $p2"
 
-# Flags
-
-  - `--kata`: Reset `Kata.json`.
-"""
-@cast function format(; kata::Bool = false)
-
-    wo = pwd()
-
-    ex = _get_extension(wo)
-
-    te = "$_PR.$ex"
-
-    beaf_ = _plan_replacement(basename(wo))
-
-    _error_missing(wo, ex, te, beaf_)
-
-    _error_missing(_read_json(wo))
-
-    lo = "# ----------------------------------------------------------------------------------------------- #"
-
-    ho_::Vector{Tuple{String, String, Tuple{Vararg{Int64}}}} =
-        [("README.md", "---", (2, 1)), (".gitignore", lo, (1, 2))]
-
-    if kata
-
-        push!(ho_, ("Kata.json", "", ()))
-
-    end
-
-    if ex == "jl"
-
-        push!(ho_, (joinpath("test", "runtests.jl"), lo, (1, 2)))
-
-    elseif ex == "pro"
-
-        append!(
-            ho_,
-            (
-                (joinpath("code", "environment.jl"), lo, (1, 2)),
-                (joinpath("code", "run.jl"), lo, (1, 2, 1)),
-            ),
-        )
-
-    end
-
-    for (re, de, id_) in ho_
-
-        st1 = replace(read(joinpath(te, re), String), beaf_...)
-
-        pa2 = joinpath(wo, re)
-
-        st2 = read(pa2, String)
-
-        st3 = isempty(de) ? st1 : _transplant(st1, st2, de, id_)
-
-        if st2 != st3
-
-            @info "Transplanting $pa2"
-
-            write(pa2, st3)
+            write(p2, join(r1_, de))
 
         end
 
@@ -211,37 +123,7 @@ Error if any paths are missing, and (if necessary) transplant the default texts 
 end
 
 """
-Download `Kata.json.download`.
-"""
-@cast function download()
-
-    wo = pwd()
-
-    for (re, ur) in _read_json(wo)["download"]
-
-        run(`aws s3 $(isempty(splitext(ur)[2]) ? "sync" : "cp") $ur $re`)
-
-    end
-
-end
-
-"""
-Call `Kata.json.call.command`.
-
-# Arguments
-
-  - `command`:
-"""
-@cast function call(command)
-
-    run(`sh -c $(_read_json(pwd())["call"][command])`)
-
-    nothing
-
-end
-
-"""
-Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (`.jl`) and projects (`.pro`). Learn more at https://github.com/KwatMDPhD/Kata.jl.
+Command-line program for templating.
 """
 @main
 

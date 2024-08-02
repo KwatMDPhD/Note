@@ -1,18 +1,14 @@
-Command-line program for working with GitHub-, Amazon-S3-backed Julia packages (.jl) and projects (.pro) 🥋
+Command-line program for templating 👯‍♀️
 
 ## Install
 
-#### 1. Get AWS Command-Line Interface
-
-https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-
-#### 2. Download
+#### 1 Download
 
 ```bash
 git clone https://github.com/KwatMDPhD/Kata.jl
 ```
 
-#### 3. Instantiate
+#### 2 Instantiate
 
 ```bash
 cd Kata.jl &&
@@ -20,19 +16,19 @@ cd Kata.jl &&
 julia --project --eval "using Pkg; Pkg.instantiate()"
 ```
 
-#### 4. Build
+#### 3 Build
 
 ```bash
 julia --project deps/build.jl
 ```
 
-#### 5. Path
+#### 4 Path
 
 ```bash
 PATH=~/.julia/bin:$PATH
 ```
 
-#### 6. Use
+#### 5 Use
 
 ```bash
 kata --help
@@ -42,4 +38,4 @@ kata --help
 
 ---
 
-Powered by https://github.com/KwatMDPhD/Kata.jl 🥋
+Made by https://github.com/KwatMDPhD/Kata.jl 🔴
