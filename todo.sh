@@ -1,4 +1,4 @@
-function rename-with-date() {
+function date() {
 
 	di=$(dirname $1)
 
