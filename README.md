@@ -1,4 +1,4 @@
-Command-line program for organizing ✨
+Command-line program for organizing file systems ✨
 
 ## Install
 
