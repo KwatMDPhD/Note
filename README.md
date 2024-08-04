@@ -1,4 +1,4 @@
-Command-line program for templating 👯‍♀️
+Command-line program for organizing ✨
 
 ## Install
 

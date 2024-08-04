@@ -4,7 +4,142 @@ using Comonicon: @cast, @main
 
 using UUIDs: uuid4
 
-const _TE = pkgdir(@__MODULE__, "NAME.jl")
+const _TE = pkgdir(Kata, "NAME.jl")
+
+"""
+Style file and directory names.
+
+# Arguments
+
+  - `how`: "title" | "lower"
+
+# Flags
+
+  - `--live`: Live.
+"""
+@cast function style(how; live::Bool = false)
+
+    fu = if how == "title"
+
+        pr -> titlecase(Base.replace(pr, '_' => ' '))
+
+    elseif how == "lower"
+
+        pr -> lowercase(Base.replace(pr, r"[^._0-9A-Za-z]" => '_'))
+
+    else
+
+        error("`how` is not \"title\" or \"lower\".")
+
+    end
+
+    for (ro, di_, fi_) in walkdir(pwd())
+
+        for fi in fi_
+
+            pr, ex = splitext(fi)
+
+            if !isempty(ex)
+
+                ex = lowercase(ex)
+
+                if ex == ".jpeg"
+
+                    ex = ".jpg"
+
+                end
+
+            end
+
+            if pr != "_"
+
+                pr = fu(pr)
+
+            end
+
+            f2 = "$pr$ex"
+
+            if fi != f2
+
+                @info "$fi => $f2."
+
+                if live
+
+                    pa = joinpath(ro, fi)
+
+                    p2 = joinpath(ro, f2)
+
+                    mv(if lowercase(fi) == lowercase(f2)
+
+                        mv(pa, "$(p2)_")
+
+                    else
+
+                        pa
+
+                    end, p2)
+
+                end
+
+            end
+
+        end
+
+    end
+
+end
+
+"""
+Rename file and directory names.
+
+# Arguments
+
+  - `before`:
+  - `after`:
+"""
+@cast function rename(before, after)
+
+    return run(pipeline(`find . -print0`, `xargs -0 rename --subst-all $before $after`))
+
+end
+
+"""
+Format .(web files).
+"""
+@cast function format_web()
+
+    return run(pipeline(
+        `find . -type f -size -1M -regex ".*\.(json|yaml|md|html|css|scss|js|jsx|ts|tsx)" -print0`,
+        `xargs -0 prettier --write`,
+    ))
+
+end
+
+"""
+Format .jl.
+"""
+@cast function format_jl()
+
+    return run(`julia --eval "using JuliaFormatter; format(\".\")"`)
+
+end
+
+"""
+Replace file contents.
+
+# Arguments
+
+  - `before`:
+  - `after`:
+"""
+@cast function replace(before, after)
+
+    return run(pipeline(
+        `rg --no-ignore --files-with-matches $before`,
+        `xargs sed -i "" "s/$before/$after/g"`,
+    ))
+
+end
 
 function _plan_replacement(na)
 
@@ -21,42 +156,48 @@ Make a new package.
 
   - `name`: PackageName.jl.
 """
-@cast function make(name)
+@cast function pack(name)
 
-    ma = cp(_TE, joinpath(pwd(), name))
+    wo = pwd()
+
+    ma = cp(_TE, joinpath(wo, name))
+
+    cd(ma)
 
     for (be, af) in _plan_replacement(name)
 
-        run(pipeline(`find $ma -print0`, `xargs -0 rename --subst-all $be $af`))
+        rename(be, af)
 
-        run(pipeline(`find $ma -type f -print0`, `xargs -0 perl -pi -e "s/$be/$af/g"`))
+        replace(be, af)
 
     end
+
+    return cd(wo)
 
 end
 
 """
-Error if any paths are missing and reset the default texts.
+Clean a package by checking and resetting the defaults.
 """
-@cast function format()
+@cast function repack()
 
     ma = pwd()
 
-    nc = lastindex(_TE)
-
     re_ = _plan_replacement(basename(ma))
+
+    nc = lastindex(_TE) + 2
 
     for (ro, di_, fi_) in walkdir(_TE)
 
-        mr = joinpath(ma, ro[(nc + 2):end])
+        mr = joinpath(ma, ro[nc:end])
 
         for na_ in (fi_, di_), na in na_
 
-            mp = joinpath(mr, replace(na, re_...))
+            mp = joinpath(mr, Base.replace(na, re_...))
 
             if !ispath(mp)
 
-                error("Missing $mp.")
+                error("$mp is missing.")
 
             end
 
@@ -96,7 +237,7 @@ Error if any paths are missing and reset the default texts.
         ),
     )
 
-        r1_ = split(replace(read(joinpath(_TE, pa), String), re_...), de)
+        r1_ = split(Base.replace(read(joinpath(_TE, pa), String), re_...), de)
 
         p2 = joinpath(ma, pa)
 
@@ -104,7 +245,7 @@ Error if any paths are missing and reset the default texts.
 
         if lastindex(r1_) != lastindex(r2_)
 
-            error("Split lengths differ.")
+            error("split lengths differ.")
 
         end
 
@@ -123,7 +264,7 @@ Error if any paths are missing and reset the default texts.
 end
 
 """
-Command-line program for templating.
+Command-line program for organizing.
 """
 @main
 
