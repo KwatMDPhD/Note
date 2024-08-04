@@ -1,0 +1,100 @@
+# =============================================================================================== #
+# Alias
+# ----------------------------------------------------------------------------------------------- #
+
+alias ls="ls -hG"
+
+alias ll="ls -l"
+
+alias la="ls -lA"
+
+alias lt="ls -ltr"
+
+alias tree="tree -h"
+
+alias du="du -h"
+
+alias grep="grep --color"
+
+alias rm="rm -i"
+
+alias mv="mv -i"
+
+alias cp="cp -i"
+
+alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
+
+alias find="find -E"
+
+alias ju="julia --project"
+
+alias ..="cd .."
+
+alias ...="cd ../.."
+
+# =============================================================================================== #
+# Function
+# ----------------------------------------------------------------------------------------------- #
+
+function extract() {
+
+	if [ -f $1 ]; then
+
+		case $1 in
+
+		*.tar.bz2) tar xvjf $1 ;;
+
+		*.tar.gz) tar xvzf $1 ;;
+
+		*.bz2) bzip2 -dk $1 ;;
+
+		*.rar) unrar x $1 ;;
+
+		*.gz) gunzip $1 ;;
+
+		*.bgz) bgzip $1 ;;
+
+		*.tar) tar xvf $1 ;;
+
+		*.tbz2) tar xvjf $1 ;;
+
+		*.tgz) tar xvzf $1 ;;
+
+		*.zip) unzip $1 ;;
+
+		*.Z) uncompress $1 ;;
+
+		*.7z) 7z x $1 ;;
+
+		*) printf "Failed to extract $1\n" ;;
+
+		esac
+
+	fi
+
+}
+
+# =============================================================================================== #
+# Style
+# ----------------------------------------------------------------------------------------------- #
+
+PROMPT="%B%~%b "
+
+RPROMPT=" %B%*%b"
+
+# =============================================================================================== #
+# Environment
+# ----------------------------------------------------------------------------------------------- #
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+PATH=~/.julia/bin:$PATH
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/kwat/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

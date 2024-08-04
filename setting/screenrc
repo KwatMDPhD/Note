@@ -1,0 +1,5 @@
+msgwait 0
+
+msgminwait 0
+
+defscrollback 1000000
