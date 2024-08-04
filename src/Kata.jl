@@ -2,6 +2,8 @@ module Kata
 
 using Comonicon: @cast, @main
 
+using JuliaFormatter: format
+
 using UUIDs: uuid4
 
 const _TE = pkgdir(Kata, "NAME.jl")
@@ -11,25 +13,25 @@ Style file and directory names.
 
 # Arguments
 
-  - `how`: "title" | "lower"
+  - `how`: "human" | "code".
 
 # Flags
 
-  - `--live`: Live.
+  - `--live`:
 """
 @cast function style(how; live::Bool = false)
 
-    fu = if how == "title"
+    fu = if how == "human"
 
         pr -> titlecase(Base.replace(pr, '_' => ' '))
 
-    elseif how == "lower"
+    elseif how == "code"
 
         pr -> lowercase(Base.replace(pr, r"[^._0-9A-Za-z]" => '_'))
 
     else
 
-        error("`how` is not \"title\" or \"lower\".")
+        error("`how` is not \"human\" | \"code\".")
 
     end
 
@@ -51,17 +53,11 @@ Style file and directory names.
 
             end
 
-            if pr != "_"
-
-                pr = fu(pr)
-
-            end
-
             f2 = "$pr$ex"
 
             if fi != f2
 
-                @info "$fi => $f2."
+                @info "$fi --> $f2."
 
                 if live
 
@@ -99,28 +95,9 @@ Rename file and directory names.
 """
 @cast function rename(before, after)
 
-    return run(pipeline(`find . -print0`, `xargs -0 rename --subst-all $before $after`))
+    run(pipeline(`find . -print0`, `xargs -0 rename --subst-all $before $after`))
 
-end
-
-"""
-Format .(web files).
-"""
-@cast function format_web()
-
-    return run(pipeline(
-        `find . -type f -size -1M -regex ".*\.(json|yaml|md|html|css|scss|js|jsx|ts|tsx)" -print0`,
-        `xargs -0 prettier --write`,
-    ))
-
-end
-
-"""
-Format .jl.
-"""
-@cast function format_jl()
-
-    return run(`julia --eval "using JuliaFormatter; format(\".\")"`)
+    return nothing
 
 end
 
@@ -134,10 +111,37 @@ Replace file contents.
 """
 @cast function replace(before, after)
 
-    return run(pipeline(
+    run(pipeline(
         `rg --no-ignore --files-with-matches $before`,
         `xargs sed -i "" "s/$before/$after/g"`,
     ))
+
+    return nothing
+
+end
+
+"""
+Format .(json|yaml|md|html|css|scss|js|jsx|ts|tsx).
+"""
+@cast function format_web()
+
+    run(pipeline(
+        `find -E . -type f -size -1M -regex ".*\.(json|yaml|md|html|css|scss|js|jsx|ts|tsx)" -print0`,
+        `xargs -0 prettier --write`,
+    ))
+
+    return nothing
+
+end
+
+"""
+Format .jl.
+"""
+@cast function format_jl()
+
+    format(".")
+
+    return nothing
 
 end
 
@@ -150,13 +154,13 @@ function _plan_replacement(na)
 end
 
 """
-Make a new package.
+Make a new package from the template.
 
 # Arguments
 
-  - `name`: PackageName.jl.
+  - `name`: TitleCase.jl.
 """
-@cast function pack(name)
+@cast function make(name)
 
     wo = pwd()
 
@@ -177,9 +181,9 @@ Make a new package.
 end
 
 """
-Clean a package by checking and resetting the defaults.
+Reset a package based on the template.
 """
-@cast function repack()
+@cast function reset()
 
     ma = pwd()
 
@@ -200,24 +204,6 @@ Clean a package by checking and resetting the defaults.
                 error("$mp is missing.")
 
             end
-
-        end
-
-    end
-
-    for pa in (".JuliaFormatter.toml",)
-
-        r1 = read(joinpath(_TE, pa))
-
-        p2 = joinpath(ma, pa)
-
-        r2 = read(p2)
-
-        if r1 != r2
-
-            @info "Resetting $p2"
-
-            write(p2, r1)
 
         end
 

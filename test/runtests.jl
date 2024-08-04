@@ -22,11 +22,11 @@ run(`open .`)
 
 # ---- #
 
-Kata.style("lower"; live = true)
+Kata.style("code"; live = true)
 
 # ---- #
 
-Kata.style("title"; live = true)
+Kata.style("human"; live = true)
 
 # ---- #
 
@@ -54,11 +54,11 @@ Kata.replace("Zz", "Yy")
 
 # ---- #
 
-const NA = "PackageName.jl"
+const NA = "TitleCase.jl"
 
 # ---- #
 
-Kata.pack(NA)
+Kata.make(NA)
 
 # ---- #
 
@@ -66,8 +66,7 @@ cd(NA)
 
 # ---- #
 
-for pa in
-    (".JuliaFormatter.toml", "README.md", ".gitignore", joinpath("test", "runtests.jl"))
+for pa in ("README.md", ".gitignore", joinpath("test", "runtests.jl"))
 
     #run(`vi $(joinpath(pwd(), pa))`)
 
@@ -75,7 +74,7 @@ end
 
 # ---- #
 
-Kata.repack()
+Kata.reset()
 
 # ---- #
 
@@ -84,3 +83,11 @@ activate(".")
 # ---- #
 
 test()
+
+# ---- #
+
+Kata.format_web()
+
+# ---- #
+
+Kata.format_jl()
