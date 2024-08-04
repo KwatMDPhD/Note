@@ -243,10 +243,11 @@ Shared with You > All > 👎
 Settings... > Profiles > Import `terminal/*`
 
 ```bash
-cp zshrc ~/.zshrc &&
+cp setting/zshrc ~/.zshrc &&
 
-cp vimrc ~/.vimrc
+cp setting/vimrc ~/.vimrc &&
 
+cp setting/screenrc ~/.screenrc
 ```
 
 ```vim
@@ -306,11 +307,11 @@ end
 ```bash
 mkdir -p ~/.julia/config &&
 
-cp startup.jl ~/.julia/config
+cp setting/startup.jl ~/.julia/config
 ```
 
 ```bash
-cp JuliaFormatter.toml ~/.JuliaFormatter.toml
+cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
 ## Set `node`
