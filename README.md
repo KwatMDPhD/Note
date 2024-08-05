@@ -1,1 +1,1 @@
-How to do some things well 🥋
+Notes about a few things 🥋
