@@ -138,11 +138,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'sheerun/vim-polyglot'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install'}
-
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
-
-Plug 'JuliaEditorSupport/julia-vim'
 
 Plug 'jpalardy/vim-slime'
 
@@ -156,14 +152,13 @@ colorscheme carbonfox
 
 highlight Search guibg=#913228 guifg=#ffffff
 
-highlight IncSearch guibg=#913228 guifg=#ffffff
+highlight IncSearch guibg=#ffffff guifg=#913228
 
 " =============================================================================================== "
 " vim_current_word
-" #4c221b
 " ----------------------------------------------------------------------------------------------- "
 
-highlight CurrentWord guibg=#512c31
+highlight CurrentWord guibg=#4c221b
 
 highlight CurrentWordTwins guibg=#512c31
 
@@ -232,42 +227,6 @@ set rtp+=/opt/homebrew/opt/fzf
 " ----------------------------------------------------------------------------------------------- "
 
 nnoremap <leader>r :Rg<CR>
-
-" =============================================================================================== "
-" coc.nvim
-" ----------------------------------------------------------------------------------------------- "
-
-let g:coc_global_extensions = ['coc-tabnine', 'coc-sh', 'coc-json', 'coc-julia', 'coc-html', 'coc-css', 'coc-svelte']
-
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <expr> <TAB> coc#pum#visible() ? coc#pum#next(1): CheckBackspace() ? "\<Tab>" : coc#refresh()
-
-inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice.
-inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-function! CheckBackspace() abort
-
-  let col = col('.') - 1
-
-  return !col || getline('.')[col - 1]  =~# '\s'
-
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-
-  inoremap <expr> <c-space> coc#refresh()
-
-else
-
-  inoremap <expr> <c-@> coc#refresh()
-
-endif
 
 " =============================================================================================== "
 " markdown-preview.nvim
