@@ -14,17 +14,17 @@ alias tree="tree -h"
 
 alias du="du -h"
 
-alias grep="grep --color"
+alias find="find -E"
 
-alias rm="rm -i"
-
-alias mv="mv -i"
+alias grep="grep --color --ignore-case"
 
 alias cp="cp -i"
 
-alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
+alias mv="mv -i"
 
-alias find="find -E"
+alias rm="rm -i"
+
+alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
 alias ju="julia --project"
 
