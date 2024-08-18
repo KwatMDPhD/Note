@@ -1,8 +1,8 @@
 if isinteractive()
 
-    using Revise
-
     using BenchmarkTools
+
+    using Revise
 
     using TestEnv: activate
 
