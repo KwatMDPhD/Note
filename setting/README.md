@@ -94,14 +94,34 @@ npm install --global prettier prettier-plugin-svelte
 
 ## (Useful commands)
 
-```zsh
-diff zshrc ~/.zshrc
+Check deviation
 
-diff screenrc ~/.screenrc
+```bash
+diff zshrc ~/.zshrc &&
 
-diff vimrc ~/.vimrc
+diff screenrc ~/.screenrc &&
 
-diff startup.jl ~/.julia/config/startup.jl
+diff vimrc ~/.vimrc &&
+
+diff startup.jl ~/.julia/config/startup.jl &&
 
 diff JuliaFormatter.toml ~/.JuliaFormatter.toml
+```
+
+Update
+
+```bash
+brew update &&
+
+brew upgrade &&
+
+npm --global upgrade &&
+
+julia --eval "using Pkg; Pkg.update()"
+```
+
+```vim
+:PlugUpgrade
+
+:PlugUpdate
 ```
