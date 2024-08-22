@@ -18,21 +18,21 @@ General > Software Update > Update.
 
 Picture > Set.
 
+iCloud > Manage... > All except: Apple Books, iCloud Photos > Delete
+
 iCloud > Optimize Mac Storage > 👎
 
-iCloud > All except: Photos, iCloud Drive, iCloud Mail, Password & Keychain, Notes, Find My Mac, Contacts, Calendars, Reminders, Safari, and Stocks > 👎
+iCloud > Apps Using iCloud > iCloud Drive > Desktop & Documents Folders > 👎
 
-iCloud > Manage... > All except: Family, iCloud Drive, Messages, Photos, Mail, Backups, Voice Memos, and Safari > 👎
+iCloud > Apps Using iCloud > iCloud Drive > Apps syncing to iCloud Drive > As many > 👎
 
-iCloud > iCloud Drive > Apps syncing to iCloud Drive > All except: Messages, Mail, Photos, Keynote, and Books > 👎
-
-iCloud > iCloud Drive > Apps syncing to iCloud Drive > Options... > Look Me Up By Email > Empty.
+iCloud > Apps Using iCloud > Show More Apps... > As many > 👎
 
 iCloud > Private Relay > Turn On...
 
 iCloud > Private Relay > IP Address Location > Use country and time zone
 
-iCloud > Advanced Data Protection > Turn On... (may have to wait)
+iCloud > Advanced Data Protection > Turn On (eventually)
 
 ### Family
 
@@ -46,7 +46,7 @@ Advanced... > Known Networks > Unknown ones > ... > Remove From List
 
 ### Bluetooth
 
-My Devices > Unneeded ones > i > Forget This Device...
+My Devices > Un-needed ones > i > Forget This Device...
 
 ### Focus
 
@@ -68,7 +68,7 @@ Language & Region > Measurement system > Metric
 
 Language & Region > First day of week > Monday
 
-Language & Region > Date format > 2023.08.19
+Language & Region > Date format > 2023 08 19
 
 Date & Time > 24-hour time > 👍
 
@@ -128,13 +128,9 @@ Monitor > Text size > Match Built-in Display.
 
 Monitor > Refresh rate > Maximize.
 
-### Touch ID & Password
-
-Touch ID > Set two fingers.
-
 ### Internet Accounts
 
-All except: Mail > 👎
+Non-iCloud accounts > All except: Mail > 👎
 
 ### Game Center
 
@@ -150,9 +146,9 @@ Turn keyboard backlight off after inactivity > After 1 Minute
 
 Press 🌐 key to > Change Input Source
 
-Touch Bar Settings... > Touch Bar shows > Expanded Control Strip
+(Touch Bar Settings... > Touch Bar shows > Expanded Control Strip)
 
-Touch Bar Settings... > Customize Control Strip > Space joining: Keyboard Brightness, Brightness, Volume, Media, Night Shift, and Sleep)
+(Touch Bar Settings... > Customize Control Strip > Space joining: Keyboard Brightness, Brightness, Volume, Media, Night Shift, and Sleep))
 
 ### Mouse
 
@@ -186,19 +182,17 @@ Advanced > Show all filename extensions > 👍
 
 Advanced > Show warning before removing from iCloud Drive > 👎
 
+Advanced > When performing a search: > Search the Current Folder
+
 ### Show View Options
 
 Icon size > Large
 
-Show columns: > All except: Data Modified and Size > 👎
+Show columns: > All except: Date Created, Date Modified, and Size > 👎
 
 Calculate all sizes > 👍
 
 Use as Defaults
-
-### Desktop
-
-Sort By > Date Modified
 
 ## Dock
 
