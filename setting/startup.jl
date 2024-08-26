@@ -4,6 +4,6 @@ if isinteractive()
 
     using Revise
 
-    using TestEnv: activate
+    using TestEnv: activate as te
 
 end
