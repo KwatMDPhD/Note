@@ -71,7 +71,7 @@ https://julialang.org/downloads
 ```julia
 using Pkg: add
 
-for pa in ("BenchmarkTools", "Revise", "TestEnv")
+for pa in ("BenchmarkTools", "Revise")
 
     add(pa)
 
