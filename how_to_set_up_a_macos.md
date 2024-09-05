@@ -176,7 +176,9 @@ General > New Finder windows show: > User
 
 Tags > All > Delete Tags
 
-Sidebar > Favorites > (Select in order) Recents, Applications, User, and Downloads
+Sidebar > Favorites > (Select in order) Applications, Recents, User, and Downloads
+
+Sidebar > iCloud > (Select in order) iCloud Drive and Shared
 
 Advanced > Show all filename extensions > 👍
 
@@ -188,7 +190,7 @@ Advanced > When performing a search: > Search the Current Folder
 
 Icon size > Large
 
-Show columns: > All except: Date Created, Date Modified, and Size > 👎
+Show Columns: > (Select in order) Date Created, Date Modified, and Size
 
 Calculate all sizes > 👍
 
