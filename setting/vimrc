@@ -150,17 +150,17 @@ call plug#end()
 
 colorscheme carbonfox
 
-highlight Search guibg=#913228 guifg=#ffffff
+highlight Search guibg=#ffa631 guifg=#ffffff
 
-highlight IncSearch guibg=#ffffff guifg=#913228
+highlight IncSearch guibg=#ffa631 guifg=#ffffff
 
 " =============================================================================================== "
 " vim_current_word
 " ----------------------------------------------------------------------------------------------- "
 
-highlight CurrentWord guibg=#4c221b
+highlight CurrentWord guibg=#913228 guifg=#ffffff
 
-highlight CurrentWordTwins guibg=#512c31
+highlight CurrentWordTwins guibg=#913228 guifg=#ffffff
 
 " =============================================================================================== "
 " rainbow
