@@ -1,14 +1,12 @@
-When naming files or tasks (or writing in general), try to start with a verb (`Explain Naming a File.extension`).
-
-When dating a name, prefix it with the most specific known time in "Year Mo Da Ho Mi Se" (`2024 08 19 15 24 Explain Dating`)
+When dating a name, prefix it with the most specific known time in "Year Mo Da Ho Mi Se" (`2024 08 19 15 24 File Name`).
 
 ## File
 
-Very temporary files ➡ `~/Downloads`.
+Very temporary files (to be deleted on the same day) ➡ `~/Downloads`.
 
-Temporary files ➡ `~/Desktop`.
+Temporary files (to be deleted) ➡ `~/Desktop`.
 
-Files ➡ `iCloud Drive`, which has the Apple directories, directories shared by others, and a personal directory
+Files (to be kept) ➡ `iCloud Drive`, which has the Apple directories, directories shared by others, and a personal directory
 
 ```
 iCloud Drive/
@@ -19,7 +17,7 @@ iCloud Drive/
 
     Tiny Beasts/ 👯‍♀️ Shared by Amanda.
 
-    .../ 👯‍♀️ Shared by someone.
+    .../ 👯‍♀️ Shared by someone else.
 
     Kwat/ 🕺 Personal.
 ```

@@ -26,7 +26,7 @@ Verify identity.
 
 "Is that okay with you?"
 
-## [Interview](1.interview.md)
+## [Interview](interview.md)
 
 "I want to assure you that everything we talk about is confidential between us and the healthcare team, except when there is an immediate threat to someone."
 
@@ -36,7 +36,7 @@ Verify identity.
 
 "I am going to try to summarize what you have told me. If I am missing anything or there is something you want to add, let me know."
 
-## [Exam](2.exam.md)
+## [Exam](exam.md)
 
 ## End
 
@@ -50,4 +50,4 @@ Tell the patient what is next.
 
 ## Order Diagnostic
 
-## [Assess](3.assess.md)
+## [Assess](assess.md)
