@@ -44,7 +44,7 @@ Count from one: 1, 2, ...
 
 Use `<` and `<=` instead of `>` and `>=`.
 
-## Allocate Less
+Allocate less.
 
 Use concrete, immutable data.
 
@@ -52,7 +52,7 @@ Use small data.
 
 Initialize data structures ahead of time.
 
-## Compute Less
+Compute less.
 
 Be simple.
 
@@ -73,7 +73,5 @@ Store related data close in space.
 Access related data close in time.
 
 Handle errors close to their source.
-
-## Write
 
 Instead of creating a nested path, create intermediate directories sequentially.
