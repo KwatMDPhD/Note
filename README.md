@@ -1,3 +1,5 @@
+🥋
+
 Less is more.
 
 Optimize for mastery.
