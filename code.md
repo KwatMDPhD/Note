@@ -2,17 +2,15 @@
 
 Understand every expression.
 
-Be perfect.
-
 Be consistent.
 
 Trim continuously; when in doubt, delete.
 
 Ship continuously.
 
-## Naming Variables
+## Naming
 
-Name variables with two characters and pluralize them by suffixing with _the number of preceding "\_" + 1_ "\_"
+Name variables with two characters and pluralize by suffixing with _the number of preceding "\_" + 1_ "\_"
 
 - "Thing": `th` (plural `th_`); if `th` is taken, use the next character: `ti` (`ti_`).
 
@@ -22,19 +20,19 @@ Name variables with two characters and pluralize them by suffixing with _the num
 
 - Dictionary (key => values): `ke_va_` (`ke_va__`).
 
+Uppercase global variables: `GL` (`GL_`).
+
 Name functions explicitly; `get_signal_to_noise_ratio(n1_, n2_)`.
 
 Prefix names not to be exposed with "\_".
 
-Uppercase global variables: `GL` (`GL_`).
+When getting a file, keep its original name.
 
-## Naming Files
+When writing a file
 
-- Table: `feature_x_sample_x_number.tsv`.
-
-Extend a name
-
-- `OriginalName.tsv`: `OriginalName.log.tsv`.
+- Name tables like `feature_x_sample_x_number.tsv`.
+- Name dictionary like `key_x_value.json`.
+- Add extension to mark a transformation like `feature_x_sample_x_number.log.tsv`.
 
 ## Importing
 
