@@ -1,6 +1,14 @@
-When dating a name, prefix it with the most specific known time in "Year Mo Da Ho Mi Se" (`2024 08 19 15 24 File Name`).
+## Task
+
+Time-sensitive or collaborative tasks ➡ `Reminders`.
+
+Other tasks ➡ `Screenshot` (➡ `~/Desktop`).
+
+Events ➡ `Calender`.
 
 ## File
+
+When dating a name, prefix it with the most specific known time in "Year Mo Da Ho Mi Se" (`2024 08 19 15 24 File Name`).
 
 Very temporary files (to be deleted on the same day) ➡ `~/Downloads`.
 
@@ -43,7 +51,7 @@ Record/
 
         2022 09 19 16 54.mov
 
-    Jiu-Jitsu/ 📈 A life project.
+    Jiu-Jitsu/ 🥋 A life project.
 
         2023 03 28.mp4
 
@@ -57,11 +65,3 @@ Record/
 
         2021 06 25 Pulmonary Embolism to Obstructive Shock.mp4
 ```
-
-## Task
-
-Time-sensitive or collaborative tasks ➡ `Reminders`.
-
-Other tasks ➡ `Screenshot` (➡ `~/Desktop`).
-
-Events ➡ `Calender`.

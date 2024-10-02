@@ -1,20 +1,26 @@
+## Plan
+
 Plan what a receiver should know, feel, and do after.
 
 Optimize the channel and the condition for the receiver.
 
-Maximize the message fidelity, which is `signal / noise`.
+## Maximize Signal
 
 Slow down.
-
-Use body.
-
-Keep an eye contact.
 
 Say what the receiver wants first.
 
 Structure a message with "What", "So what", and "Now what".
 
+Use body.
+
+Keep an eye contact.
+
+## Minimize Noise
+
 Do not interrupt.
+
+## Influence
 
 State with a question.
 
