@@ -1,4 +1,4 @@
-## Set Terminal
+## Terminal
 
 Settings... > Profiles > Import `setting/terminal/*`
 
@@ -12,7 +12,7 @@ https://brew.sh
 brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip xsel exiftool imagemagick
 ```
 
-## Set profiles
+## Profiles
 
 ```bash
 cp setting/zshrc ~/.zshrc &&
@@ -22,7 +22,7 @@ cp setting/vimrc ~/.vimrc &&
 cp setting/screenrc ~/.screenrc
 ```
 
-## Set `macvim`
+## `macvim`
 
 ```bash
 rm -rf ~/.vim/
@@ -36,7 +36,7 @@ MacVim > Settings... > After last window closes: > Quit MacVim
 
 MacVim > Settings... > Resizing window: > Smoothly resizes window > 👍
 
-## Set `git`
+## `git`
 
 ```bash
 git config --global user.name "KwatMDPhD" &&
@@ -60,7 +60,7 @@ git config --global http.postBuffer 524288000 &&
 git config --global --list
 ```
 
-## Install and set `julia`
+## `julia`
 
 ```bash
 rm -rf ~/.julia/
@@ -88,7 +88,7 @@ cp setting/startup.jl ~/.julia/config
 cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
-## Set `node`
+## `node`
 
 ```bash
 npm install --global prettier prettier-plugin-svelte

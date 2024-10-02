@@ -16,7 +16,7 @@ Respiratory rate
 
 ### Skull
 
-Palpate:
+Palpate
 
 -
 
@@ -28,19 +28,19 @@ Scope
 
 ### Eye
 
-Palpate:
+Palpate
 
 -
 
 ### Face
 
-Palpate:
+Palpate
 
 - Sinus
 
 ### Ear
 
-Palpate:
+Palpate
 
 -
 
@@ -48,20 +48,22 @@ Scope
 
 ### Mouth
 
-Palpate:
+Palpate
 
 -
 
-Place the tongue blade on the side to avoid gag reflex, and inspect:
+Place the tongue blade on the side to avoid gag reflex, and inspect
 
 -
 
 ### Neck
 
-Palpate:
+Palpate
 
 - Lymphnode
+
 - Larynx
+
 - Thyroid gland
 
 ## Circulatory
@@ -102,11 +104,14 @@ Have the patinet sit forward and exhale a deep breath, diaphram auscultate LLSB.
 
 ### Peripheral Artery
 
-Check pulse from:
+Check pulse from
 
 - Brachial artery
+
 - Popliteal artery
+
 - Distal tibial artery
+
 - Dorsalis pedis artery
 
 ### Lower Extremity
@@ -117,10 +122,12 @@ Press distal tibia for 2 seconds and check for indention.
 
 ### Chest
 
-Inspect:
+Inspect
 
 - Distress
+
 - Asymmetry
+
 - Deformity
 
 ### Neck
@@ -129,13 +136,15 @@ Palpate trachea.
 
 ### Lung
 
-Diaphram auscultate:
+Diaphram auscultate
 
 - Anterior 2 levels
+
 - Lateral 2 levels
+
 - Posterior 3 levels
 
-Percuss:
+Percuss
 
 - Posterior 3 levels
 
@@ -149,11 +158,14 @@ Percuss:
 
 ### Abdomen
 
-Inspect:
+Inspect
 
 - Contour
+
 - Mass
+
 - Vein
+
 - Movement
 
 Diaphram auscultate the center.
@@ -199,25 +211,34 @@ Awake
 
 Alert
 
-Orient (cognition):
+Orient (cognition)
 
 - Person
+
 - Place
+
 - Time
+
 - Situation
 
-Speech:
+Speech
 
 - Clear (volume, articulation)
+
 - Fluent
+
 - Error
 
-Language:
+Language
 
 - Comprehend
+
 - Repeat
+
 - Name
+
 - Read
+
 - Write
 
 Dysarthria and aphagia
@@ -246,6 +267,7 @@ Color (Ishihara plate)
 Fundoscope
 
 - Sharp disk (optic nerve atrophy too sharp or too blurry)
+
 - Vascular change (angiopathy, diabetes)
 
 (Diplopia: bilateral neural, unilateral structural)
@@ -265,7 +287,9 @@ Light reflex (light ipsilateral pupil, light contralateral puppil, swing test no
 Touch
 
 - Forehead
+
 - Cheek
+
 - Jaw
 
 Facial pain (facial pain field peripherally, trigeminal neuralgia)
@@ -279,8 +303,11 @@ Corneal reflex (5.1 senses and 7 blinks)
 Facial muscles
 
 - Raise eyebrows
+
 - Close eyes
+
 - Show teeth
+
 - Puff cheecks
 
 Anterior 2/3 tongue taste
@@ -308,6 +335,7 @@ Swallow
 Tongue
 
 - Midline
+
 - Move
 
 #### 11
@@ -335,39 +363,73 @@ Bulk and tone
 Range of motion and strength
 
 - Neck
+
   - Flex-extend
+
   - Lateral bend
+
   - Rotate
+
 - Shoulder
+
   - Flex-extend
+
   - Adduct-abduct
+
   - Rotate
+
 - Elbow
+
   - Flex-extend
+
   - Pronate-supinate
+
 - Wrist
+
   - Flex-extend
+
   - Ulnar radial deviate
+
 - Finger
+
   - Grasp
+
   - Flex-extend
+
   - Adduct-abduct
+
   - Thumb oppose
+
 - Back
+
   - Flex-extend
+
   - Abduct-adduct
+
   - Rotate
+
 - Hip
+
   - Flex-extend
+
   - Adduct-abduct
+
   - Rotate
+
 - Knee
+
   - Flex-extend
+
 - Ankle
+
   - Flex-extend
+
   - Adduct-abduct
+
   - Invert-exvert
+
 - Toe
+
   - Flex-extend
 
 ### Reflex
@@ -375,18 +437,25 @@ Range of motion and strength
 (0 none, 1 low, 2 normal, 3 high, 4 clonus)
 
 - Biceps (C5, 6)
+
 - Triceps (C6, 7, 8)
+
 - Brachioradialis (C5, 6)
+
 - Patellar (L2, 3, 4)
+
 - Achilles (S1, 2)
+
 - Plantar
 
 ### Sensory
 
 - Touch
-- Pain
-  (B12 posterior column)
+
+- Pain (B12 posterior column)
+
 - Proprioception
+
 - Vibration
 
 Cognitive sense (2 point discrimination)
@@ -408,9 +477,15 @@ Stand up without arms, hold a little to check orthostasis
 Walk
 
 - Pace
+
 - Step
+
 - Arm swing
+
 - Turn
+
 - Heel
+
 - Toe
+
 - Tandem

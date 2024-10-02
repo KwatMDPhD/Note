@@ -1,4 +1,4 @@
-## Task
+## Organize Task
 
 Time-sensitive or collaborative tasks ➡ `Reminders`.
 
@@ -6,7 +6,7 @@ Other tasks ➡ `Screenshot` (➡ `~/Desktop`).
 
 Events ➡ `Calender`.
 
-## File
+## Organize File
 
 When dating a name, prefix it with the most specific known time in "Year Mo Da Ho Mi Se" (`2024 08 19 15 24 File Name`).
 

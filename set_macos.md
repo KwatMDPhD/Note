@@ -1,8 +1,6 @@
-## Erase macOS.
+## Reinstall
 
 Restart > Load Recovery Mode > Disk Utility > Volume > Erase > APFS
-
-## Reinstall macOS.
 
 Analytics > All > 👎
 
@@ -10,13 +8,13 @@ Siri > All > 👎
 
 ## System Settings
 
-### Update.
+### Update
 
-General > Software Update > Update.
+General > Software Update > Update
 
 ### Apple ID
 
-Picture > Set.
+Picture > Set
 
 iCloud > Manage... > All except: Apple Books, iCloud Photos > Delete
 
@@ -110,7 +108,7 @@ Hot Corners... > (top left and clock wise) Mission Control, Notification Center,
 
 ### Displays
 
-Arrange... > Vertically.
+Arrange... > Vertically
 
 Built-in Display > Use as > Main display
 
@@ -120,13 +118,13 @@ Built-in Display > Refresh rate > ProMotion
 
 Built-in Display > Night Shift... > Schedule > Sunset to Sunrise
 
-Built-in Display > Night Shift... > Color temperature > Warmest.
+Built-in Display > Night Shift... > Color temperature > Warmest
 
 Monitor > Use as > Extended display
 
-Monitor > Text size > Match Built-in Display.
+Monitor > Text size > Match Built-in Display
 
-Monitor > Refresh rate > Maximize.
+Monitor > Refresh rate > Maximize
 
 ### Internet Accounts
 
@@ -138,9 +136,9 @@ Game Center > Sign Out > Sign Out
 
 ### Keyboard
 
-Key repeat rate > Fastest.
+Key repeat rate > Fastest
 
-Delay until repeat > Shortest.
+Delay until repeat > Shortest
 
 Turn keyboard backlight off after inactivity > After 1 Minute
 
@@ -152,7 +150,7 @@ Press 🌐 key to > Change Input Source
 
 ### Mouse
 
-Point & Click > Tracking speed > Fourth fastest.
+Point & Click > Tracking speed > Fourth fastest
 
 Point & Click > Secondary click > Click Right Side
 
@@ -162,7 +160,7 @@ More Gestures > Swipe between pages > Scroll Left or Right with One Finger
 
 ### Trackpad
 
-Tracking speed > Fourth fastest.
+Tracking speed > Fourth fastest
 
 Tap to click > 👍
 

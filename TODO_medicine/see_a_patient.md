@@ -14,8 +14,6 @@ Verify identity.
 
 "I want to ask you some questions and do a physical exam."
 
-### (Tele)
-
 ("I want to assure you that there is no one here with me and this is a private conversation.")
 
 ("If the connection fails, rejoin.")
@@ -26,7 +24,7 @@ Verify identity.
 
 "Is that okay with you?"
 
-## [Interview](interview.md)
+## [Interview](interview_a_patient.md)
 
 "I want to assure you that everything we talk about is confidential between us and the healthcare team, except when there is an immediate threat to someone."
 
@@ -36,7 +34,7 @@ Verify identity.
 
 "I am going to try to summarize what you have told me. If I am missing anything or there is something you want to add, let me know."
 
-## [Exam](exam.md)
+## [Exam](exam_a_patient.md)
 
 ## End
 
@@ -50,4 +48,4 @@ Tell the patient what is next.
 
 ## Order Diagnostic
 
-## [Assess](assess.md)
+## [Assess](assess_a_patient.md)

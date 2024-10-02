@@ -1,5 +1,3 @@
-##
-
 Understand every expression.
 
 Be consistent.
