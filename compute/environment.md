@@ -1,6 +1,6 @@
 ## Set Terminal
 
-Settings... > Profiles > Import `terminal/*`
+Settings... > Profiles > Import `setting/terminal/*`
 
 View > Hide Marks
 
@@ -15,11 +15,11 @@ brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip x
 ## Set profiles
 
 ```bash
-cp zshrc ~/.zshrc &&
+cp setting/zshrc ~/.zshrc &&
 
-cp vimrc ~/.vimrc &&
+cp setting/vimrc ~/.vimrc &&
 
-cp screenrc ~/.screenrc
+cp setting/screenrc ~/.screenrc
 ```
 
 ## Set `macvim`
@@ -81,11 +81,11 @@ end
 ```bash
 mkdir -p ~/.julia/config &&
 
-cp startup.jl ~/.julia/config
+cp setting/startup.jl ~/.julia/config
 ```
 
 ```bash
-cp JuliaFormatter.toml ~/.JuliaFormatter.toml
+cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
 ## Set `node`
@@ -99,15 +99,15 @@ npm install --global prettier prettier-plugin-svelte
 Check deviation
 
 ```bash
-diff zshrc ~/.zshrc &&
+diff setting/zshrc ~/.zshrc &&
 
-diff screenrc ~/.screenrc &&
+diff setting/vimrc ~/.vimrc &&
 
-diff vimrc ~/.vimrc &&
+diff setting/screenrc ~/.screenrc &&
 
-diff startup.jl ~/.julia/config/startup.jl &&
+diff setting/startup.jl ~/.julia/config/startup.jl &&
 
-diff JuliaFormatter.toml ~/.JuliaFormatter.toml
+diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
 Update
