@@ -1,4 +1,4 @@
-## General
+##
 
 Understand every expression.
 
@@ -8,7 +8,7 @@ Order everything like a story.
 
 Trim continuously; when in doubt, delete.
 
-## Naming
+## Name
 
 Name variables with two characters and pluralize by suffixing with _the number of preceding "\_" + 1_ "\_"
 
@@ -73,5 +73,7 @@ Store related data close in space.
 Access related data close in time.
 
 Handle errors close to their source.
+
+## Write
 
 Instead of creating a nested path, create intermediate directories sequentially.
