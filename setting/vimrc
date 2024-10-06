@@ -120,6 +120,8 @@ Plug 'EdenEast/nightfox.nvim'
 
 Plug 'dominikduda/vim_current_word'
 
+Plug 'chrisbra/Colorizer'
+
 Plug 'luochen1990/rainbow'
 
 Plug 'airblade/vim-gitgutter'
@@ -161,6 +163,12 @@ highlight Search guibg=#ffa631 guifg=#ffffff
 highlight CurrentWord guibg=#000000 guifg=NONE 
 
 highlight CurrentWordTwins guibg=#913228 guifg=#ffffff
+
+" =============================================================================================== "
+" Colorizer
+" ----------------------------------------------------------------------------------------------- "
+
+nnoremap <leader>c :ColorToggle<CR>
 
 " =============================================================================================== "
 " rainbow
