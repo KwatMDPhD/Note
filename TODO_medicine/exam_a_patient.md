@@ -2,15 +2,15 @@
 
 ## Vital
 
-Temperature
+Temperature.
 
-Heart rate
+Heart rate.
 
-Blood pressure
+Blood pressure.
 
-Respiratory rate
+Respiratory rate.
 
-%O₂
+%O₂.
 
 ## Head
 
@@ -18,53 +18,53 @@ Respiratory rate
 
 Palpate
 
--
+- .
 
 ### Nose
 
-Check congestion
+Check congestion.
 
-Scope
+Scope.
 
 ### Eye
 
 Palpate
 
--
+- .
 
 ### Face
 
 Palpate
 
-- Sinus
+- Sinus.
 
 ### Ear
 
 Palpate
 
--
+- .
 
-Scope
+Scope.
 
 ### Mouth
 
 Palpate
 
--
+- .
 
 Place the tongue blade on the side to avoid gag reflex, and inspect
 
--
+- .
 
 ### Neck
 
 Palpate
 
-- Lymphnode
+- Lymphnode.
 
-- Larynx
+- Larynx.
 
-- Thyroid gland
+- Thyroid gland.
 
 ## Circulatory
 
@@ -77,6 +77,7 @@ Measure heart rate and check if the rhythm is regular.
 ### Jagular Vein
 
 Have the patient angle at 45 degrees and turn the head to the left, and measure the distance from the sternal angle to a pulsation.
+
 (It should be less than 5cm.)
 
 ### Carotid Artery
@@ -90,6 +91,7 @@ One side at a time, have the patient take a deep breath and hold, and bell auscu
 ### Heart
 
 Feel the apex.
+
 (It is palpable in 25% of adults.)
 
 Diaphram auscultate LLSB, LICS2, the apex, and RICS2.
@@ -97,22 +99,24 @@ Diaphram auscultate LLSB, LICS2, the apex, and RICS2.
 Bell auscultate the apex.
 
 In the left lateral position, bell auscultate the apex.
+
 (Hear for S3, S4, and mitral stenosis.)
 
 Have the patinet sit forward and exhale a deep breath, diaphram auscultate LLSB.
+
 (Hear for aortic regurgitation.)
 
 ### Peripheral Artery
 
 Check pulse from
 
-- Brachial artery
+- Brachial artery.
 
-- Popliteal artery
+- Popliteal artery.
 
-- Distal tibial artery
+- Distal tibial artery.
 
-- Dorsalis pedis artery
+- Dorsalis pedis artery.
 
 ### Lower Extremity
 
@@ -124,11 +128,11 @@ Press distal tibia for 2 seconds and check for indention.
 
 Inspect
 
-- Distress
+- Distress.
 
-- Asymmetry
+- Asymmetry.
 
-- Deformity
+- Deformity.
 
 ### Neck
 
@@ -138,15 +142,15 @@ Palpate trachea.
 
 Diaphram auscultate
 
-- Anterior 2 levels
+- Anterior 2 levels.
 
-- Lateral 2 levels
+- Lateral 2 levels.
 
-- Posterior 3 levels
+- Posterior 3 levels.
 
 Percuss
 
-- Posterior 3 levels
+- Posterior 3 levels.
 
 (When percussing, any fluid inside or outside the airway results in dullness.)
 
@@ -160,13 +164,13 @@ Percuss
 
 Inspect
 
-- Contour
+- Contour.
 
-- Mass
+- Mass.
 
-- Vein
+- Vein.
 
-- Movement
+- Movement.
 
 Diaphram auscultate the center.
 
@@ -179,21 +183,20 @@ Press slowly and then release quickly.
 ### Liver
 
 Percuss and size.
+
 (The height should be less than 12cm.)
 
 While the patient exhales a deep breath, palpate.
 
 ### Spleen
 
-Have the patient continuously take deep breaths, and percuss and size.
-(The height should be less than 7cm.)
+Have the patient continuously take deep breaths, and percuss and size. (The height should be less than 7cm.)
 
 Have the patient exhale a deep breath, and sandwitch palpate.
 
 ### Abdominal Aorta
 
-Palpate and size.
-(The diameter should be less than 3cm.)
+Palpate and size. (The diameter should be less than 3cm.)
 
 ### Kidney
 
@@ -207,285 +210,282 @@ Sandwitch palpate.
 
 "I have to ask some silly routine question."
 
-Awake
+Awake.
 
-Alert
+Alert.
 
-Orient (cognition)
+Orient (Cognition.)
 
-- Person
+- Person.
 
-- Place
+- Place.
 
-- Time
+- Time.
 
-- Situation
+- Situation.
 
 Speech
 
-- Clear (volume, articulation)
+- Clear. (Volume and articulation.)
 
-- Fluent
+- Fluent.
 
-- Error
+- Error.
 
 Language
 
-- Comprehend
+- Comprehend.
 
-- Repeat
+- Repeat.
 
-- Name
+- Name.
 
-- Read
+- Read.
 
-- Write
+- Write.
 
-Dysarthria and aphagia
+Dysarthria and aphagia.
 
-Mimic
+Mimic.
 
-Recall 3 objects from different categories in 5 minutes; hint if fail.
-(Hippocampus encodes and prefrontal cortex associates.)
+Recall 3 objects from different categories in 5 minutes; hint if fail. (Hippocampus encodes and prefrontal cortex associates.)
 
-Remember distant past events
+Remember distant past events.
 
 ### Cranial Nerve
 
 #### 1
 
-Smell
+Smell.
 
 #### 2
 
-Field
+Field.
 
-Acuity
+Acuity.
 
-Color (Ishihara plate)
+Color. (Ishihara plate.)
 
 Fundoscope
 
-- Sharp disk (optic nerve atrophy too sharp or too blurry)
+- Sharp disk. (Optic nerve atrophy too sharp or too blurry.)
 
-- Vascular change (angiopathy, diabetes)
+- Vascular change. (Angiopathy and diabetes.)
 
-(Diplopia: bilateral neural, unilateral structural)
+- Diplopia. (Bilateral neural and unilateral structural.)
 
 #### 3, 4, 6
 
-Extraocular muscles
+Extraocular muscles.
 
-Nystagmus (cerebellum)
+Nystagmus. (Cerebellum.)
 
-Accomodation-convergence reflex
+Accomodation-convergence reflex.
 
-Light reflex (light ipsilateral pupil, light contralateral puppil, swing test not rapidly and U)
+Light reflex. (Light ipsilateral pupil, light contralateral puppil, and swing test not rapidly and U.)
 
 #### 5
 
 Touch
 
-- Forehead
+- Forehead.
 
-- Cheek
+- Cheek.
 
-- Jaw
+- Jaw.
 
-Facial pain (facial pain field peripherally, trigeminal neuralgia)
+Facial pain. (Facial pain field peripherally and trigeminal neuralgia.).
 
-Mastication muscles
+Mastication muscles.
 
-Corneal reflex (5.1 senses and 7 blinks)
+Corneal reflex. (5.1 senses and 7 blinks.)
 
 #### 7
 
 Facial muscles
 
-- Raise eyebrows
+- Raise eyebrows.
 
-- Close eyes
+- Close eyes.
 
-- Show teeth
+- Show teeth.
 
-- Puff cheecks
+- Puff cheecks.
 
-Anterior 2/3 tongue taste
+Anterior 2/3 tongue taste.
 
-Stapes (hyperacusia)
+Stapes. (Hyperacusia.)
 
-Gland
+Gland.
 
 #### 8
 
-Hear
+Hear.
 
-Vestibular (vestibular ocular reflex)
+Vestibular. (Vestibular ocular reflex.)
 
-Nystagmus
+Nystagmus.
 
 #### 9, 10, 12
 
-Uvula
+Uvula.
 
-Palate
+Palate.
 
-Swallow
+Swallow.
 
 Tongue
 
-- Midline
+- Midline.
 
-- Move
+- Move.
 
 #### 11
 
-Sternocleidomastoid
+Sternocleidomastoid.
 
-Trapezius
+Trapezius.
 
 ### Motor
 
-Use 2 hands
+Use 2 hands.
 
-(Proximal to distal)
+Proximal to distal.
 
 Feel first.
 
-(0 none, 1 flicker, 2 horizontal plane, 3 veritcal place antigravity, 4 some resistance, 5 normal)
+(0 none, 1 flicker, 2 horizontal plane, 3 veritcal place antigravity, 4 some resistance, and 5 normal.)
 
-(Trauma)
+(Trauma.)
 
-(Range of motion)
+(Range of motion.)
 
-Bulk and tone
+Bulk and tone.
 
 Range of motion and strength
 
 - Neck
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Lateral bend
+  - Lateral bend.
 
-  - Rotate
+  - Rotate.
 
 - Shoulder
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Adduct-abduct
+  - Adduct-abduct.
 
-  - Rotate
+  - Rotate.
 
 - Elbow
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Pronate-supinate
+  - Pronate-supinate.
 
 - Wrist
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Ulnar radial deviate
+  - Ulnar radial deviate.
 
 - Finger
 
-  - Grasp
+  - Grasp.
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Adduct-abduct
+  - Adduct-abduct.
 
-  - Thumb oppose
+  - Thumb oppose.
 
 - Back
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Abduct-adduct
+  - Abduct-adduct.
 
-  - Rotate
+  - Rotate.
 
 - Hip
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Adduct-abduct
+  - Adduct-abduct.
 
-  - Rotate
+  - Rotate.
 
 - Knee
 
-  - Flex-extend
+  - Flex-extend.
 
 - Ankle
 
-  - Flex-extend
+  - Flex-extend.
 
-  - Adduct-abduct
+  - Adduct-abduct.
 
-  - Invert-exvert
+  - Invert-exvert.
 
 - Toe
 
-  - Flex-extend
+  - Flex-extend.
 
-### Reflex
+### Reflex (0 none, 1 low, 2 normal, 3 high, and 4 clonus.)
 
-(0 none, 1 low, 2 normal, 3 high, 4 clonus)
+- Biceps (C5, 6).
 
-- Biceps (C5, 6)
+- Triceps (C6, 7, 8).
 
-- Triceps (C6, 7, 8)
+- Brachioradialis (C5, 6).
 
-- Brachioradialis (C5, 6)
+- Patellar (L2, 3, 4).
 
-- Patellar (L2, 3, 4)
+- Achilles (S1, 2).
 
-- Achilles (S1, 2)
-
-- Plantar
+- Plantar.
 
 ### Sensory
 
-- Touch
+- Touch.
 
-- Pain (B12 posterior column)
+- Pain. (B12 posterior column.)
 
-- Proprioception
+- Proprioception.
 
-- Vibration
+- Vibration.
 
-Cognitive sense (2 point discrimination)
+Cognitive sense. (2 point discrimination.)
 
-Move proximally if no sense
+Move proximally if no sense.
 
 ### Coordination and Gait (basal ganglia < cerebellum)
 
-Nose-finger touch
+Nose-finger touch.
 
-Hand flip flop
+Hand flip flop.
 
-Heel-shin rub
+Heel-shin rub.
 
-Blind standing (no hand no balance, hand balance)
+Blind standing. (No hand no balance and hand balance.)
 
-Stand up without arms, hold a little to check orthostasis
+Stand up without arms, hold a little to check orthostasis.
 
 Walk
 
-- Pace
+- Pace.
 
-- Step
+- Step.
 
-- Arm swing
+- Arm swing.
 
-- Turn
+- Turn.
 
-- Heel
+- Heel.
 
-- Toe
+- Toe.
 
-- Tandem
+- Tandem.
