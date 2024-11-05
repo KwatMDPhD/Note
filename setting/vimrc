@@ -160,6 +160,10 @@ highlight Search guibg=#ffa631 guifg=#ffffff
 " vim_current_word
 " ----------------------------------------------------------------------------------------------- "
 
+let g:vim_current_word#highlight_delay = 200
+
+let g:vim_current_word#highlight_only_in_focused_window = 0
+
 highlight CurrentWord guibg=#000000 guifg=NONE 
 
 highlight CurrentWordTwins guibg=#913228 guifg=#ffffff
