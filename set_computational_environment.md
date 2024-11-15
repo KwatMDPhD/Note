@@ -91,7 +91,7 @@ cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ## `node`
 
 ```bash
-npm install --global prettier prettier-plugin-svelte
+npm install --global prettier prettier-plugin-tailwindcss
 ```
 
 ## (Useful commands)
