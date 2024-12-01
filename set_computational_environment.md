@@ -94,6 +94,18 @@ cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 npm install --global http-server prettier prettier-plugin-toml prettier-plugin-tailwindcss
 ```
 
+## `python`
+
+```bash
+brew install pyenv 
+
+pyenv install 3.13.0
+
+pyenv global 3.13.0
+
+pip install ipython virtualenv
+```
+
 ## (Useful commands)
 
 Check deviation
