@@ -97,7 +97,7 @@ npm install --global http-server prettier prettier-plugin-toml prettier-plugin-t
 ## `python`
 
 ```bash
-brew install pyenv 
+brew install pyenv
 
 pyenv install 3.13.0
 
