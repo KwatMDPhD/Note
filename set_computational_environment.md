@@ -111,15 +111,15 @@ pip install ipython virtualenv
 Check deviation
 
 ```bash
-diff setting/zshrc ~/.zshrc &&
+git diff setting/zshrc ~/.zshrc &&
 
-diff setting/vimrc ~/.vimrc &&
+git diff setting/vimrc ~/.vimrc &&
 
-diff setting/screenrc ~/.screenrc &&
+git diff setting/screenrc ~/.screenrc &&
 
-diff setting/startup.jl ~/.julia/config/startup.jl &&
+git diff setting/startup.jl ~/.julia/config/startup.jl &&
 
-diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
+git diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
 Update
