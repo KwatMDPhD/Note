@@ -8,6 +8,7 @@ View > Hide Marks
 
 https://brew.sh
 
+# TODO: Remove
 ```bash
 brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip xsel exiftool imagemagick
 ```
@@ -17,9 +18,7 @@ brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip x
 ```bash
 cp setting/zshrc ~/.zshrc &&
 
-cp setting/vimrc ~/.vimrc &&
-
-cp setting/screenrc ~/.screenrc
+cp setting/vimrc ~/.vimrc
 ```
 
 ## `macvim`
@@ -114,8 +113,6 @@ Check deviation
 git diff setting/zshrc ~/.zshrc &&
 
 git diff setting/vimrc ~/.vimrc &&
-
-git diff setting/screenrc ~/.screenrc &&
 
 git diff setting/startup.jl ~/.julia/config/startup.jl &&
 
