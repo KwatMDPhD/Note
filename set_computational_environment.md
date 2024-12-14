@@ -8,8 +8,6 @@ View > Hide Marks
 
 https://brew.sh
 
-# TODO: Remove
-
 ```bash
 brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip xsel exiftool imagemagick
 ```
@@ -37,8 +35,6 @@ MacVim > Settings... > After last window closes: > Quit MacVim
 MacVim > Settings... > Resizing window: > Smoothly resizes window > 👍
 
 ## `git`
-
-# TODO: Remove
 
 ```bash
 git config --global user.name "KwatMDPhD" &&

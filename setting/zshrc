@@ -46,15 +46,6 @@ RPROMPT=" %B%*%b"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/kwat/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
-
 PATH=~/.julia/bin:$PATH
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -66,3 +57,12 @@ eval "$(pyenv init -)"
 # ----------------------------------------------------------------------------------------------- #
 
 screen -list
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/kwat/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
