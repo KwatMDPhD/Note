@@ -6,7 +6,7 @@ Order everything like a story.
 
 Trim continuously; when in doubt, delete.
 
-## Name
+## Name variables
 
 Name variables with two characters and pluralize by suffixing with _the number of preceding "\_" + 1_ "\_"
 
@@ -22,11 +22,11 @@ Uppercase global variables: `GL` (`GL_`).
 
 Name functions explicitly; `get_signal_to_noise_ratio(n1_, n2_)`.
 
-Avoid numbers; `ro_` and `co_` over `d1_` and `d2_` (row and column over dimension 1 and dimension 2).
+Prefix names not to be exposed with "\_".
 
 Avoid conflict by removing a character; `write` and `writ`.
 
-Prefix names not to be exposed with "\_".
+## Name files
 
 When getting a file, keep its original name.
 
