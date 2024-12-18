@@ -72,6 +72,8 @@ Access related data close in time.
 
 Handle errors close to their source.
 
+Limit numbers or their fractions to multiples of 8: 8, 16, 1.24, 1.032, ...
+
 ## Write
 
 Instead of creating a nested path, create intermediate directories sequentially.

@@ -94,3 +94,7 @@ Copying scattered indices of an array to a contiguous array and then linearly in
 
 Make custom `struct`s with data-oriented design.
 For example, use `struct` of `Array`s instead of `Array` of `struct`s.
+
+Avoid `view`.
+
+Use `Int` over `UInt`.
