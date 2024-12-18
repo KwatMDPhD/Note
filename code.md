@@ -22,6 +22,8 @@ Uppercase global variables: `GL` (`GL_`).
 
 Name functions explicitly; `get_signal_to_noise_ratio(n1_, n2_)`.
 
+Avoid numbers; `ro_` and `co_` over `d1_` and `d2_` (row and column over dimension 1 and dimension 2).
+
 Avoid conflict by removing a character; `write` and `writ`.
 
 Prefix names not to be exposed with "\_".
