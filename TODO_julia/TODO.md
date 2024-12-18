@@ -98,3 +98,5 @@ For example, use `struct` of `Array`s instead of `Array` of `struct`s.
 Avoid `view`.
 
 Use `Int` over `UInt`.
+
+Use `1` over `1.0`.

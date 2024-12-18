@@ -22,6 +22,8 @@ Uppercase global variables: `GL` (`GL_`).
 
 Name functions explicitly; `get_signal_to_noise_ratio(n1_, n2_)`.
 
+Avoid conflict by removing a character; `write` and `writ`.
+
 Prefix names not to be exposed with "\_".
 
 When getting a file, keep its original name.
@@ -72,7 +74,7 @@ Access related data close in time.
 
 Handle errors close to their source.
 
-Limit numbers or their fractions to multiples of 8: 8, 16, 1.24, 1.032, ...
+Limit integers to 2, 4, or multiples of 8, and limit floats to those whose fractions are multiples of 8: 2, 4, 8, 16, 0.24, 1.032, 2.0048, ...
 
 ## Write
 
