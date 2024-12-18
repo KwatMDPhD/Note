@@ -1,14 +1,8 @@
-Understand every expression.
-
-Be consistent.
-
-Order everything like a story.
-
-Trim continuously; when in doubt, delete.
-
 ## Name variables
 
-Name variables with two characters and pluralize by suffixing with _the number of preceding "\_" + 1_ "\_"
+Name specifically.
+
+Name with two characters and pluralize by suffixing with the number of preceding "\_".
 
 - "Thing": `th` (plural `th_`); if `th` is taken, use the next character: `ti` (`ti_`).
 
@@ -20,33 +14,35 @@ Name variables with two characters and pluralize by suffixing with _the number o
 
 Uppercase global variables: `GL` (`GL_`).
 
-Name functions explicitly; `get_signal_to_noise_ratio(n1_, n2_)`.
+Name functions explicitly: `do_something()`.
 
-Prefix names not to be exposed with "\_".
+Avoid collisions by removing a character: `do_somethin()`.
 
-Avoid conflict by removing a character; `write` and `writ`.
+Prefix names not to be exposed with "\_": `_do_something_local()`.
 
 ## Name files
 
-When getting a file, keep its original name.
+Keep original names.
 
 When writing a file
 
-- Name tables like `feature_x_sample_x_number.tsv`.
+- Table: `feature_x_sample_x_number.tsv`.
 
-- Name dictionary like `key_x_value.json`.
+- Dictionary: `key_x_value.json`.
 
-- Add extension to mark a transformation like `feature_x_sample_x_number.log.tsv`.
+- Mark a transformation with an extension: `feature_x_sample_x_number.log.tsv`.
 
-## Practice
+## Think less
 
-Import, at the top, only what is used in the file.
-
-Count from one: 1, 2, ...
+Import specifically at the top.
 
 Use `<` and `<=` instead of `>` and `>=`.
 
-Allocate less.
+Count from one.
+
+Limit subjective integers to 2, 4, or multiples of 8, and limit floats to those whose fractions are multiples of 8: 2, 4, 8, 16, 0.24, 1.032, 2.0048, ...
+
+## Allocate less
 
 Use concrete, immutable data.
 
@@ -54,21 +50,15 @@ Use small data.
 
 Initialize data structures ahead of time.
 
-Compute less.
+## Compute less
 
 Be simple.
 
 Be flat.
 
-Minimize nesting like `f1(f2(f3))`.
-
 Be predictable.
 
 Do not change a variable's type.
-
-Write small, pure functions, each doing one thing and returning one type.
-
-Avoid accessing global variables within a function.
 
 Store related data close in space.
 
@@ -76,8 +66,6 @@ Access related data close in time.
 
 Handle errors close to their source.
 
-Limit integers to 2, 4, or multiples of 8, and limit floats to those whose fractions are multiples of 8: 2, 4, 8, 16, 0.24, 1.032, 2.0048, ...
+Write small, pure functions, each doing one thing and returning one type.
 
-## Write
-
-Instead of creating a nested path, create intermediate directories sequentially.
+Avoid accessing global variables within a function.

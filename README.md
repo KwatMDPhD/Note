@@ -2,6 +2,8 @@
 
 Less is more.
 
+Trim continuously; when in doubt, delete.
+
 Every adversity, carries with it, the seed of equivalent advantage.
 
 If this were easy, what would it look like?
