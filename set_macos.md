@@ -1,3 +1,4 @@
+﻿
 ## Reinstall
 
 Restart > Load Recovery Mode > Disk Utility > Volume > Erase > APFS
@@ -18,11 +19,11 @@ Picture > Set
 
 iCloud > Manage... > All except: Apple Books, iCloud Photos > Delete
 
-iCloud > Optimize Mac Storage > 👎
+iCloud > Saved to iCloud > See All > Apps syncing to iCloud > As many > 👎
+ 
+iCloud > Saved to iCloud > Drive > Optimize Mac Storage > 👎 
 
-iCloud > Apps Using iCloud > iCloud Drive > Desktop & Documents Folders > 👎
-
-iCloud > Apps Using iCloud > iCloud Drive > Apps syncing to iCloud Drive > As many > 👎
+iCloud > Saved to iCloud > Drive > Desktop & Documents Folders > 👎
 
 iCloud > Apps Using iCloud > Show More Apps... > As many > 👎
 
@@ -66,7 +67,7 @@ Language & Region > Measurement system > Metric
 
 Language & Region > First day of week > Monday
 
-Language & Region > Date format > 2023 08 19
+Language & Region > Date format > 2023-08-19
 
 Date & Time > 24-hour time > 👍
 
@@ -82,9 +83,19 @@ Menu Bar Only > All > Don’t Show in Menu Bar
 
 Location Services > System Services > Details... > Significant locations > 👎
 
-Location Services > System Services > Details... > Significant locations > Details... > ... > Clear History
+Location Services > System Services > Details... > Significant locations > Recent Records > ... > Clear History
 
-Location Services > System Services > Details... > All except: Location-based alerts, Setting time zone, System customization, Find My Mac, Networking and wireless, and Wi-Fi calling > 👎
+Location Services > System Services > Details... >
+
+- Alerts & Shortcuts Automations 👎
+- Suggestions & Search 👎
+- Setting time zone
+- System customization
+- Significant locations👎
+- Find My Mac
+- HomeKit👎
+- Networking and wireless
+- Mac Analytics👎
 
 Location Services > System Services > Details... > Significant locations > Show location icon in menu bar when System Services request your location > 👍
 
@@ -100,7 +111,7 @@ Position on screen > Left
 
 Automatically hide and show the Dock > 👍
 
-Show recent applications in Dock > 👎
+Show suggested & recent applications in Dock > 👎
 
 Automatically rearrange Spaces based on most recent use > 👎
 
@@ -142,7 +153,7 @@ Delay until repeat > Shortest
 
 Turn keyboard backlight off after inactivity > After 1 Minute
 
-Press 🌐 key to > Change Input Source
+Press 🌐 key to > Change Input Source (are you sure? don't you like to use emojis?)
 
 (Touch Bar Settings... > Touch Bar shows > Expanded Control Strip)
 
@@ -216,9 +227,9 @@ Websites > Location > When visiting other websites > Deny
 
 Websites > Notifications > Allow websites to ask for permission to send notification > 👎
 
-Extensions > Vimari, Ad block, and Grammarly > Install and 👍
+Extensions > Vimari, Ad block, and Grammarly (optional) > Install and 👍
 
-Advanced > Show Develop menu in menu bar > 👍
+Advanced > Show features for web developers > 👍
 
 ## Messages > Settings...
 
