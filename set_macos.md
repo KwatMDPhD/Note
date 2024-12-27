@@ -66,7 +66,7 @@ Language & Region > Measurement system > Metric
 
 Language & Region > First day of week > Monday
 
-Language & Region > Date format > 2023-08-19
+Language & Region > Date format > 2024 12 27
 
 Date & Time > 24-hour time > 👍
 
