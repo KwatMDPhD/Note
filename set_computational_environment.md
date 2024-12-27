@@ -1,244 +1,137 @@
-﻿
-## Reinstall
+## Terminal
 
-Restart > Load Recovery Mode > Disk Utility > Volume > Erase > APFS
+Settings... > Profiles > Import `setting/terminal/*`
 
-Analytics > All > 👎
+View > Hide Marks
 
-Siri > All > 👎
+## Install `brew` and other command-line tools
 
-## System Settings
+https://brew.sh
 
-### Update
+```bash
+brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip xsel exiftool imagemagick
+```
 
-General > Software Update > Update
+## Profiles
 
-### Apple ID
+```bash
+cp setting/zshrc ~/.zshrc &&
 
-Picture > Set
+cp setting/vimrc ~/.vimrc
+```
 
-iCloud > Manage... > All except: Apple Books, iCloud Photos > Delete
+## `macvim`
 
-iCloud > Saved to iCloud > See All > Apps syncing to iCloud > As many > 👎
- 
-iCloud > Saved to iCloud > Drive > Optimize Mac Storage > 👎 
+```bash
+rm -rf ~/.vim/
+```
 
-iCloud > Saved to iCloud > Drive > Desktop & Documents Folders > 👎
+```vim
+:PlugInstall
+```
 
-iCloud > Apps Using iCloud > Show More Apps... > As many > 👎
+MacVim > Settings... > After last window closes: > Quit MacVim
 
-iCloud > Private Relay > Turn On...
+MacVim > Settings... > Resizing window: > Smoothly resizes window > 👍
 
-iCloud > Private Relay > IP Address Location > Use country and time zone
+## `git`
 
-iCloud > Advanced Data Protection > Turn On (eventually)
+```bash
+git config --global user.name "KwatMDPhD" &&
 
-### Family
+git config --global user.email "kwat.me@icloud.com" &&
 
-Name (Me) > Purchases > Share My Purchases > 👍
+git config --global credential.helper osxkeychain &&
 
-Name (Me) > Location Sharing > Everyone and Automatically Share Location > 👍
+git config --global fetch.prune true &&
 
-### Wi-Fi
+git config --global pull.rebase true &&
 
-Advanced... > Known Networks > Unknown ones > ... > Remove From List
+git config --global status.submoduleSummary true &&
 
-### Bluetooth
+git config --global diff.submodule log &&
 
-My Devices > Un-needed ones > i > Forget This Device...
+git config --global diff.colorMoved zebra &&
 
-### Focus
+git config --global http.postBuffer 524288000 &&
 
-All except: Do Not Disturb > 👎
+git config --global --list
+```
 
-Focus status > Share Focus status > 👎
+## `julia`
 
-### General
+```bash
+rm -rf ~/.julia/
+```
 
-About > Name > Rename
+https://julialang.org/downloads
 
-Storage > Store in iCloud... > Cancel
+```julia
+using Pkg: add
 
-Storage > Messages > i > All > Delete
+for pa in ("BenchmarkTools", "Revise")
 
-Language & Region > Temperature > Celsius (C)
+    add(pa)
 
-Language & Region > Measurement system > Metric
+end
+```
 
-Language & Region > First day of week > Monday
+```bash
+mkdir -p ~/.julia/config &&
 
-Language & Region > Date format > 2023-08-19
+cp setting/startup.jl ~/.julia/config
+```
 
-Date & Time > 24-hour time > 👍
+```bash
+cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
+```
 
-### Control Center
+## `node`
 
-Control Center Modules > All > Show When Active or (if not available) Don’t Show in Menu Bar
+```bash
+npm install --global http-server prettier prettier-plugin-toml prettier-plugin-tailwindcss
+```
 
-Battery > Show Percentage > 👍
+## `python`
 
-Menu Bar Only > All > Don’t Show in Menu Bar
+```bash
+brew install pyenv
 
-### Privacy & Security
+pyenv install 3.13.0
 
-Location Services > System Services > Details... > Significant locations > 👎
+pyenv global 3.13.0
 
-Location Services > System Services > Details... > Significant locations > Recent Records > ... > Clear History
+pip install ipython virtualenv
+```
 
-Location Services > System Services > Details... >
+## (Useful commands)
 
-- Alerts & Shortcuts Automations 👎
-- Suggestions & Search 👎
-- Setting time zone
-- System customization
-- Significant locations👎
-- Find My Mac
-- HomeKit👎
-- Networking and wireless
-- Mac Analytics👎
+Check deviation
 
-Location Services > System Services > Details... > Significant locations > Show location icon in menu bar when System Services request your location > 👍
+```bash
+git diff setting/zshrc ~/.zshrc &&
 
-Analytics & Improvements > All > 👎
+git diff setting/vimrc ~/.vimrc &&
 
-Apple Advertising > Personalized Ads > 👎
+git diff setting/startup.jl ~/.julia/config/startup.jl &&
 
-Extensions > Sharing > All except: Copy Link > 👎
+git diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
+```
 
-### Desktop & Dock
+Update
 
-Position on screen > Left
+```bash
+brew update &&
 
-Automatically hide and show the Dock > 👍
+brew upgrade &&
 
-Show suggested & recent applications in Dock > 👎
+npm --global upgrade &&
 
-Automatically rearrange Spaces based on most recent use > 👎
+julia --eval "using Pkg; Pkg.update()"
+```
 
-Hot Corners... > (top left and clock wise) Mission Control, Notification Center, Desktop, and Application Windows
+```vim
+:PlugUpgrade
 
-### Displays
-
-Arrange... > Vertically
-
-Built-in Display > Use as > Main display
-
-Built-in Display > Text size > Default
-
-Built-in Display > Refresh rate > ProMotion
-
-Built-in Display > Night Shift... > Schedule > Sunset to Sunrise
-
-Built-in Display > Night Shift... > Color temperature > Warmest
-
-Monitor > Use as > Extended display
-
-Monitor > Text size > Match Built-in Display
-
-Monitor > Refresh rate > Maximize
-
-### Internet Accounts
-
-Non-iCloud accounts > All except: Mail > 👎
-
-### Game Center
-
-Game Center > Sign Out > Sign Out
-
-### Keyboard
-
-Key repeat rate > Fastest
-
-Delay until repeat > Shortest
-
-Turn keyboard backlight off after inactivity > After 1 Minute
-
-Press 🌐 key to > Change Input Source (are you sure? don't you like to use emojis?)
-
-(Touch Bar Settings... > Touch Bar shows > Expanded Control Strip)
-
-(Touch Bar Settings... > Customize Control Strip > Space joining: Keyboard Brightness, Brightness, Volume, Media, Night Shift, and Sleep))
-
-### Mouse
-
-Point & Click > Tracking speed > Fourth fastest
-
-Point & Click > Secondary click > Click Right Side
-
-Point & Click > Smart zoom > 👍
-
-More Gestures > Swipe between pages > Scroll Left or Right with One Finger
-
-### Trackpad
-
-Tracking speed > Fourth fastest
-
-Tap to click > 👍
-
-## Finder
-
-### Settings...
-
-General > Show these items on the desktop: > External disks, CDs, DVDs, and iPods, and Connected servers > 👍
-
-General > New Finder windows show: > User
-
-Tags > All > Delete Tags
-
-Sidebar > Favorites > (Select in order) Applications, Recents, User, and Downloads
-
-Sidebar > iCloud > (Select in order) iCloud Drive and Shared
-
-Advanced > Show all filename extensions > 👍
-
-Advanced > Show warning before removing from iCloud Drive > 👎
-
-Advanced > When performing a search: > Search the Current Folder
-
-### Show View Options
-
-Icon size > Large
-
-Show Columns: > (Select in order) Date Created, Date Modified, and Size
-
-Calculate all sizes > 👍
-
-Use as Defaults
-
-## Dock
-
-All except: Finder, Downloads, and Trash > 👎
-
-## Safari > Settings...
-
-General > Safari opens with: > A new private window
-
-General > Open "safe" files after downloading > 👎
-
-Websites > Page Zoom > All > Remove
-
-Websites > Camera > When visiting other websites > Deny
-
-Websites > Microphone > When visiting other websites > Deny
-
-Websites > Screen Sharing > When visiting other websites > Deny
-
-Websites > Location > When visiting other websites > Deny
-
-Websites > Notifications > Allow websites to ask for permission to send notification > 👎
-
-Extensions > Vimari, Ad block, and Grammarly (optional) > Install and 👍
-
-Advanced > Show features for web developers > 👍
-
-## Messages > Settings...
-
-General > Share Name and Photo > 👍
-
-General > Share Automatically > Contacts Only
-
-iMessage > Send read receipts > 👎
-
-Shared with You > Automatic Sharing > 👎
-
-Shared with You > All > 👎
+:PlugUpdate
+```
