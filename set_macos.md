@@ -1,5 +1,4 @@
-﻿
-## Reinstall
+﻿## Reinstall
 
 Restart > Load Recovery Mode > Disk Utility > Volume > Erase > APFS
 
@@ -20,8 +19,8 @@ Picture > Set
 iCloud > Manage... > All except: Apple Books, iCloud Photos > Delete
 
 iCloud > Saved to iCloud > See All > Apps syncing to iCloud > As many > 👎
- 
-iCloud > Saved to iCloud > Drive > Optimize Mac Storage > 👎 
+
+iCloud > Saved to iCloud > Drive > Optimize Mac Storage > 👎
 
 iCloud > Saved to iCloud > Drive > Desktop & Documents Folders > 👎
 
@@ -91,11 +90,11 @@ Location Services > System Services > Details... >
 - Suggestions & Search 👎
 - Setting time zone
 - System customization
-- Significant locations👎
+- Significant locations 👎
 - Find My Mac
-- HomeKit👎
+- HomeKit 👎
 - Networking and wireless
-- Mac Analytics👎
+- Mac Analytics 👎
 
 Location Services > System Services > Details... > Significant locations > Show location icon in menu bar when System Services request your location > 👍
 
@@ -152,12 +151,6 @@ Key repeat rate > Fastest
 Delay until repeat > Shortest
 
 Turn keyboard backlight off after inactivity > After 1 Minute
-
-Press 🌐 key to > Change Input Source (are you sure? don't you like to use emojis?)
-
-(Touch Bar Settings... > Touch Bar shows > Expanded Control Strip)
-
-(Touch Bar Settings... > Customize Control Strip > Space joining: Keyboard Brightness, Brightness, Volume, Media, Night Shift, and Sleep))
 
 ### Mouse
 
