@@ -135,3 +135,15 @@ julia --eval "using Pkg; Pkg.update()"
 
 :PlugUpdate
 ```
+
+```bash
+kata delete && kata beautify
+```
+
+```bash
+for jl in **/*jl/; do pushd $jl; kata match; julia --project --eval "using Pkg; Pkg.update()"; popd; done && kata festdi; kata adcopu ""
+```
+
+```bash
+npm run deploy && kata adcopu ""
+```
