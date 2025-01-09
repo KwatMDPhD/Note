@@ -15,7 +15,7 @@ brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip x
 ## Profiles
 
 ```bash
-cp setting/zshrc ~/.zshrc &&
+cp setting/zshrc ~/.zshrc
 
 cp setting/vimrc ~/.vimrc
 ```
@@ -37,23 +37,23 @@ MacVim > Settings... > Resizing window: > Smoothly resizes window > 👍
 ## `git`
 
 ```bash
-git config --global user.name "KwatMDPhD" &&
+git config --global user.name "KwatMDPhD"
 
-git config --global user.email "kwat.me@icloud.com" &&
+git config --global user.email "kwat.me@icloud.com"
 
-git config --global credential.helper osxkeychain &&
+git config --global credential.helper osxkeychain
 
-git config --global fetch.prune true &&
+git config --global fetch.prune true
 
-git config --global pull.rebase true &&
+git config --global pull.rebase true
 
-git config --global status.submoduleSummary true &&
+git config --global status.submoduleSummary true
 
-git config --global diff.submodule log &&
+git config --global diff.submodule log
 
-git config --global diff.colorMoved zebra &&
+git config --global diff.colorMoved zebra
 
-git config --global http.postBuffer 524288000 &&
+git config --global http.postBuffer 524288000
 
 git config --global --list
 ```
@@ -77,7 +77,7 @@ end
 ```
 
 ```bash
-mkdir -p ~/.julia/config &&
+mkdir -p ~/.julia/config
 
 cp setting/startup.jl ~/.julia/config
 ```
@@ -109,11 +109,11 @@ pip install ipython virtualenv
 Check deviation
 
 ```bash
-git diff setting/zshrc ~/.zshrc &&
+git diff setting/zshrc ~/.zshrc
 
-git diff setting/vimrc ~/.vimrc &&
+git diff setting/vimrc ~/.vimrc
 
-git diff setting/startup.jl ~/.julia/config/startup.jl &&
+git diff setting/startup.jl ~/.julia/config/startup.jl
 
 git diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
@@ -121,11 +121,11 @@ git diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 Update
 
 ```bash
-brew update &&
+brew update
 
-brew upgrade &&
+brew upgrade
 
-npm --global upgrade &&
+npm --global upgrade
 
 julia --eval "using Pkg; Pkg.update()"
 ```
@@ -134,16 +134,4 @@ julia --eval "using Pkg; Pkg.update()"
 :PlugUpgrade
 
 :PlugUpdate
-```
-
-```bash
-kata delete && kata beautify
-```
-
-```bash
-for jl in **/*jl/; do pushd $jl; kata match; julia --project --eval "using Pkg; Pkg.update()"; popd; done && kata festdi; kata adcopu ""
-```
-
-```bash
-npm run deploy && kata adcopu ""
 ```
