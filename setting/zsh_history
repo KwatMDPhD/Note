@@ -1,3 +1,0 @@
-cp ~/craft/wr/Note/setting/zsh_history ~/.zsh_history
-kata delete && kata beautify && for jl in **/*jl/; do pushd $jl; kata match; julia --project --eval "using Pkg; Pkg.update()"; popd; done && kata festdi; kata adcopu ""
-kata delete && kata beautify
