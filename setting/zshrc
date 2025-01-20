@@ -26,6 +26,10 @@ alias rm="rm -i"
 
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
+alias scs="screen -S 1"
+
+alias scr="screen -r"
+
 alias ju="julia --project"
 
 alias ..="cd .."
@@ -46,9 +50,9 @@ function kata-clean {
 
 function kata-sync {
 
-  for jl in **/*jl/; do
-
-    pushd $jl
+  for di in $(find -E . -type d -regex ".*\.(jl|pr)" -not -regex ".*node_modules.*"); do
+    
+    pushd $di
 
     kata match
 
