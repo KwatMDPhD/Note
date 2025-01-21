@@ -20,25 +20,11 @@ Avoid collisions by removing a character: `do_somethin()`.
 
 Prefix names not to be exposed with "\_": `_do_something_local()`.
 
-## Name files
-
-Keep original names.
-
-When writing a file
-
-- Table: `feature_x_sample_x_number.tsv`.
-
-- Dictionary: `key_x_value.json`.
-
-- Mark a transformation with an extension: `feature_x_sample_x_number.log.tsv`.
-
 ## Think less
 
 Import specifically at the top.
 
 Use `<` and `<=` instead of `>` and `>=`.
-
-Count from one.
 
 Limit subjective integers to 2, 4, or multiples of 8, and limit floats to those whose fractions are multiples of 8: 2, 4, 8, 16, 0.24, 1.032, 2.0048, ...
 
@@ -69,3 +55,23 @@ Handle errors close to their source.
 Write small, pure functions, each doing one thing and returning one type.
 
 Avoid accessing global variables within a function.
+
+##
+
+If there are 2 or more lines in a conditional block, use `continue` style.
+
+```julia
+# Bad
+if condition
+    Line 1
+    Line 2
+end
+
+# Good
+if !condition
+    continue
+end
+Line 1
+Line 2
+...
+```
