@@ -1,25 +1,3 @@
-## Name variables
-
-Name specifically.
-
-Name with two characters and pluralize by suffixing with the number of preceding "\_".
-
-- "Thing": `th` (plural `th_`); if `th` is taken, use the next character: `ti` (`ti_`).
-
-- "Number of things": `ut`.
-
-- Dictionary (key => value): `ke_va` (`ke_va__`).
-
-- Dictionary (key => values): `ke_va_` (`ke_va__`).
-
-Uppercase global variables: `GL` (`GL_`).
-
-Name functions explicitly: `do_something()`.
-
-Avoid collisions by removing a character: `do_somethin()`.
-
-Prefix names not to be exposed with "\_": `_do_something_local()`.
-
 ## Think less
 
 Import specifically at the top.
@@ -27,6 +5,24 @@ Import specifically at the top.
 Use `<` and `<=` instead of `>` and `>=`.
 
 Limit subjective integers to 2, 4, or multiples of 8, and limit floats to those whose fractions are multiples of 8: 2, 4, 8, 16, 0.24, 1.032, 2.0048, ...
+
+If there are 2 or more lines in a conditional block, use `continue` style.
+
+```julia
+# Bad
+if condition
+    Line 1
+    Line 2
+end
+
+# Good
+if !condition
+    continue
+end
+Line 1
+Line 2
+...
+```
 
 ## Allocate less
 
@@ -55,23 +51,3 @@ Handle errors close to their source.
 Write small, pure functions, each doing one thing and returning one type.
 
 Avoid accessing global variables within a function.
-
-##
-
-If there are 2 or more lines in a conditional block, use `continue` style.
-
-```julia
-# Bad
-if condition
-    Line 1
-    Line 2
-end
-
-# Good
-if !condition
-    continue
-end
-Line 1
-Line 2
-...
-```
