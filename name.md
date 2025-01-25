@@ -18,7 +18,7 @@ Name major things (sample, feature, ...) consistently within the global context 
 
 - "Cat" in a file and "Car" in another: `ca`.
 
-Name common things (index, minimum, mean, median, maximum, standard deviation, unique, ...) consistently within the local context (function, loop, ...)
+Name common things (index, select, line, minimum, mean, median, maximum, standard deviation, unique, ...) consistently within the local context (function, loop, ...)
 
 - "Index of row" in a location and "Index of column" in another: `id`.
 
