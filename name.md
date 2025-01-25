@@ -14,11 +14,11 @@ Uppercase global variables.
 
 ## Name in context
 
-Name major things (sample, feature, ...) consistently within the global context (module, file, ...)
+Name major things (sample, feature, variant, ...) consistently within the global context (module, file, ...)
 
 - "Cat" in a file and "Car" in another: `ca`.
 
-Name common things (index, select, line, minimum, mean, median, maximum, standard deviation, unique, ...) consistently within the local context (function, loop, ...)
+Name common things (index, minimum, directory, ...) consistently within the local context (function, loop, ...)
 
 - "Index of row" in a location and "Index of column" in another: `id`.
 
