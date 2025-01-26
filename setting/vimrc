@@ -2,15 +2,15 @@
 " Cache
 " ----------------------------------------------------------------------------------------------- "
 
-if empty(glob('~/.cache/vim'))
+if empty(glob('~/.vim_cache'))
 
-  silent !mkdir -p ~/.cache/vim
+  silent !mkdir ~/.vim_cache
 
 endif
 
-set dir=~/.cache/vim
+set dir=~/.vim_cache
 
-set backupdir=~/.cache/vim
+set backupdir=~/.vim_cache
 
 set nobackup
 
@@ -152,21 +152,21 @@ call plug#end()
 
 colorscheme carbonfox
 
-highlight IncSearch guibg=#000000 guifg=NONE 
+highlight IncSearch guibg=#fc7f31 guifg=#000000
 
-highlight Search guibg=#ffa631 guifg=#ffffff
+highlight Search guibg=#ffff93 guifg=#000000
 
 " =============================================================================================== "
 " vim_current_word
 " ----------------------------------------------------------------------------------------------- "
 
-let g:vim_current_word#highlight_delay = 200
+let g:vim_current_word#highlight_delay = 160
 
 let g:vim_current_word#highlight_only_in_focused_window = 0
 
-highlight CurrentWord guibg=#000000 guifg=NONE 
+highlight CurrentWord guibg=#4c221b guifg=NONE 
 
-highlight CurrentWordTwins guibg=#913228 guifg=#ffffff
+highlight CurrentWordTwins guibg=#913228 guifg=NONE 
 
 " =============================================================================================== "
 " Colorizer
