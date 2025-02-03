@@ -198,7 +198,7 @@ let NERDTreeSortOrder = []
 
 let NERDTreeStatusline = -1
 
-let NERDTreeWinSize = 64
+let NERDTreeWinSize = 48
 
 let NERDTreeMinimalUI = 1
 
