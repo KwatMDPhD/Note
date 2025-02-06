@@ -40,6 +40,12 @@ alias ...="cd ../.."
 # Kata
 # ----------------------------------------------------------------------------------------------- #
 
+function prettiersh {
+
+  prettier --plugin $(brew --prefix)/lib/node_modules/prettier-plugin-sh/lib/index.js --write $1
+
+}
+
 function kata-clean {
 
   kata delete
@@ -51,7 +57,7 @@ function kata-clean {
 function kata-sync {
 
   for di in $(find -E . -type d -regex ".*\.(jl|pr)" -not -regex ".*node_modules.*"); do
-    
+
     pushd $di
 
     kata match
