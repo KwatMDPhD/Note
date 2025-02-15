@@ -2,9 +2,9 @@ Prefix names not to be exposed with a "\_": `_th` and `_do_something`.
 
 ## Name variables
 
-Use two characters: "thing" xx `th`.
+Use two characters: "thing" ➡ `th`.
 
-Pluralize by suffixing with (the number of preceding "_" + 1) "_"s: "things" xx `th_`.
+Pluralize by suffixing with (the number of preceding "_" + 1) "_"s: "things" ➡ `th_`.
 
 Uppercase global ones: `TH`.
 
@@ -14,7 +14,7 @@ Name after content (not data structure or type).
 
 Name as generally as possible.
 
-Name numbers with equations in mind: probability xx `pr`, entropy xx `en`, fraction xx `fr`, and number of things xx `um`.
+Name numbers with equations in mind: probability ➡ `pr`, entropy ➡ `en`, fraction ➡ `fr`, and number of things ➡ `um`.
 
 Differentiate ones with the same content by numbering: `t1` and `t2`.
 
