@@ -1,41 +1,27 @@
+Prefix names not to be exposed with a "\_": `_th` and `_do_something`.
+
 ## Name variables
 
-Use two characters and pluralize by suffixing with the number of preceding `_` + 1 `_`s
+Use two characters: "thing" xx `th`.
 
-- "Thing": `th` (pluralize by adding 0 + 1 `_` ➡ `th_`).
+Pluralize by suffixing with (the number of preceding "_" + 1) "_"s: "things" xx `th_`.
 
-Special cases
+Uppercase global ones: `TH`.
 
-- "Number of things": `ut` (0 + 1 ➡ `ut_`).
+Name within the smallest context.
 
-- "Dictionary mapping a key to a value": `ke_va` (1 + 1 ➡ `ke_va__`).
+Name after content (not data structure or type).
 
-Uppercase global variables.
+Name as generally as possible.
 
-## Name in context
+Name numbers with equations in mind: probability xx `pr`, entropy xx `en`, fraction xx `fr`, and number of things xx `um`.
 
-Name major things (sample, feature, variant, ...) consistently within the global context (module, file, ...)
+Differentiate ones with the same content by numbering: `t1` and `t2`.
 
-- "Cat" in a file and "Car" in another: `ca`.
-
-Name common things (index, minimum, directory, ...) consistently within the local context (function, loop, ...)
-
-- "Index of row" in a location and "Index of column" in another: `id`.
-
-When two variables collide in a context, make the second character the differentiator
-
-- "Thing before" and "Thing after" in a location: `tb` and `ta` (or `t1` and `t2`).
+Differentiate ones with different content by shifting: mean `me` and median `ed`.
 
 ## Name functions
 
-Name functions explicitly
+Name explicitly: `do_something()`.
 
-- `do_something()`.
-
-Avoid collisions by removing a character
-
-- `do_somethin()`.
-
-Prefix names not to be exposed with "\_"
-
-- `_do_something_local()`.
+Differentiate by removing a character: `do_somethin()`.
