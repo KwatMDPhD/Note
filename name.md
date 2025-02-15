@@ -14,6 +14,8 @@ Name after content (not data structure or type).
 
 Name as generally as possible.
 
+Names must never be false.
+
 Name numbers with equations in mind: probability ➡ `pr`, entropy ➡ `en`, fraction ➡ `fr`, and number of things ➡ `um`.
 
 Differentiate ones with the same content by numbering: `t1` and `t2`.
