@@ -106,8 +106,6 @@ pip install ipython virtualenv
 
 ## (Useful commands)
 
-Check deviation
-
 ```bash
 git diff setting/zshrc ~/.zshrc
 
@@ -117,8 +115,6 @@ git diff setting/startup.jl ~/.julia/config/startup.jl
 
 git diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
-
-Update
 
 ```bash
 brew update
