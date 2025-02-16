@@ -1,10 +1,10 @@
-Prefix names not to be exposed with a "\_": `_th` and `_do_something`.
-
 ## Name variables
 
 Use two characters: "thing" ➡ `th`.
 
-Pluralize by suffixing with (the number of preceding "_" + 1) "_"s: "things" ➡ `th_`.
+Use one uppercase character for matrices: "Distance matrix" ➡ `D`.
+
+Pluralize by adding one "_": "things" ➡ `th_`.
 
 Uppercase global ones: `TH`.
 
