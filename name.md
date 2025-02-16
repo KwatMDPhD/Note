@@ -12,11 +12,11 @@ Name within the smallest context.
 
 Name after content (not data structure or type).
 
-Name as generally as possible.
-
-Names must never be false.
+Name as generally as possible without risking being false.
 
 Name numbers with equations in mind: probability ➡ `pr`, entropy ➡ `en`, fraction ➡ `fr`, and number of things ➡ `um`.
+
+When using external tools, use their standard names.
 
 Differentiate ones with the same content by numbering: `t1` and `t2`.
 
