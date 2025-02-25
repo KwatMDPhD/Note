@@ -22,11 +22,11 @@ Differentiate ones with different content types by shifting: mean `me` and media
 
 ## Name functions
 
-Returns booleans: `is_something`.
+Updates parts: `update!` or `update`.
 
 Gets parts without modification: `ge` or `get_something`.
 
-Updates parts: `update!` or `update`.
+Returns booleans: `is_something`.
 
 Returns new data structures: `make` or `make_something`.
 

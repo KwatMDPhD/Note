@@ -20,7 +20,7 @@ end
 Line 1
 Line 2
 
-# instead of this 
+# instead of this
 if condition
     Line 1
     Line 2
