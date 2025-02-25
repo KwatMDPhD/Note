@@ -1,27 +1,41 @@
 ## Name variables
 
-Use two characters: "thing" ➡ `th`.
-
-Use one uppercase character for matrices: "Distance matrix" ➡ `D`.
-
-Pluralize by adding one "_": "things" ➡ `th_`.
-
-Uppercase global ones: `TH`.
-
-Name within the smallest context.
-
-Name after content (not data structure or type).
+Name after content.
 
 Name as generally as possible without risking being false.
 
-When using external tools, use their standard names.
+Name within the smallest context.
 
-Differentiate ones with the same content by numbering: `t1` and `t2`.
+When using external tools, use their names.
 
-Differentiate ones with different content by shifting: mean `me` and median `ed`.
+Use two characters: thing ➡ `th`.
+
+Uppercase global ones: `TH`.
+
+Pluralize by adding one underscore: things ➡ `th_`.
+
+Use one uppercase for matrices: Distance matrix ➡ `D`.
+
+Differentiate ones with the same content type by numbering: number 1 `n1` and number 2 `n2`.
+
+Differentiate ones with different content types by shifting: mean `me` and median `ed`.
 
 ## Name functions
 
-Name explicitly: `do_something()`.
+Returns booleans: `is_something`.
 
-Differentiate by removing a character: `do_somethin()`.
+Gets parts without modification: `ge` or `get_something`.
+
+Updates parts: `update!` or `update`.
+
+Returns new data structures: `make` or `make_something`.
+
+Returns texts: `text`.
+
+Reads: `rea`.
+
+Writes: `writ`.
+
+Keyword arguments: `ke_`.
+
+Differentiate by removing a character: `write` and `writ`.
