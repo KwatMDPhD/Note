@@ -89,7 +89,7 @@ cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ## `node`
 
 ```bash
-npm install --global http-server prettier prettier-plugin-toml prettier-plugin-tailwindcss prettier-plugin-sh
+npm install --global http-server prettier prettier-plugin-tailwindcss prettier-plugin-sh
 ```
 
 ## `python`

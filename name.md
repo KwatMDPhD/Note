@@ -32,6 +32,8 @@ Returns new data structures: `make` or `make_something`.
 
 Returns texts: `text`.
 
+Returns paths: `path`.
+
 Reads: `rea`.
 
 Writes: `writ`.
