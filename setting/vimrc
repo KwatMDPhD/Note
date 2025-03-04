@@ -42,7 +42,7 @@ set lazyredraw
 
 set wildmenu
 
-set guifont=Menlo-Regular:h14
+set guifont=Menlo-Regular:h13
 
 set guicursor+=a:blinkon0
 
