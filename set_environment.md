@@ -1,40 +1,24 @@
-## Terminal
+Terminal > Settings... > Profiles > Import `setting/terminal/*`
 
-Settings... > Profiles > Import `setting/terminal/*`
-
-View > Hide Marks
-
-## Install `brew` and other command-line tools
-
-https://brew.sh
+Terminal > View > Hide Marks
 
 ```bash
-brew install tree screen rename ripgrep neovide luarocks shfmt exiftool imagemagick
+brew install tree rename ripgrep screen neovide luarocks shfmt node exiftool imagemagick
 ```
-
-## Profiles
 
 ```bash
-cp setting/zshrc ~/.zshrc
+ln -s $(pwd)/setting/zshrc ~/.zshrc
 
-cp setting/vimrc ~/.vimrc
+mkdir -p ~/.config/nvim
+
+ln -s $(pwd)/setting/init.lua ~/.config/nvim
+
+mkdir -p ~/.julia/config
+
+ln -s $(pwd)/setting/startup.jl ~/.julia/config
+
+ln -s $(pwd)/setting/JuliaFormatter.toml  ~/.JuliaFormatter.toml
 ```
-
-## `macvim`
-
-```bash
-rm -rf ~/.vim/
-```
-
-```vim
-:PlugInstall
-```
-
-MacVim > Settings... > After last window closes: > Quit MacVim
-
-MacVim > Settings... > Resizing window: > Smoothly resizes window > 👍
-
-## `git`
 
 ```bash
 git config --global user.name "KwatMDPhD"
@@ -58,8 +42,6 @@ git config --global http.postBuffer 524288000
 git config --global --list
 ```
 
-## `julia`
-
 ```bash
 rm -rf ~/.julia/
 ```
@@ -77,22 +59,8 @@ end
 ```
 
 ```bash
-mkdir -p ~/.julia/config
-
-cp setting/startup.jl ~/.julia/config
-```
-
-```bash
-cp setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
-```
-
-## `node`
-
-```bash
 npm install --global http-server prettier prettier-plugin-tailwindcss prettier-plugin-sh
 ```
-
-## `python`
 
 ```bash
 brew install pyenv
@@ -102,32 +70,4 @@ pyenv install 3.13.0
 pyenv global 3.13.0
 
 pip install ipython virtualenv
-```
-
-## (Useful commands)
-
-```bash
-git diff setting/zshrc ~/.zshrc
-
-git diff setting/init.lua ~/.config/nvim/init.lua
-
-git diff setting/startup.jl ~/.julia/config/startup.jl
-
-git diff setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
-```
-
-```bash
-brew update
-
-brew upgrade
-
-npm --global upgrade
-
-julia --eval "using Pkg; Pkg.update()"
-```
-
-```vim
-:PlugUpgrade
-
-:PlugUpdate
 ```
