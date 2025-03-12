@@ -43,7 +43,7 @@ git config --global --list
 ```
 
 ```bash
-rm -rf ~/.julia/
+rm -rf ~/.julia
 ```
 
 ```julia
