@@ -42,6 +42,7 @@ require("lazy").setup({
 			require("nvim-tree").setup({
 				view = { width = 56 },
 				filters = { dotfiles = true },
+				sort = { sorter = "case_sensitive" },
 			})
 		end,
 	}, {
@@ -66,7 +67,6 @@ require("lazy").setup({
 		"jpalardy/vim-slime",
 		config = function()
 			vim.g.slime_target = "screen"
-			vim.g.slime_dont_ask_default = 1
 			vim.g.slime_cell_delimiter = "# ---- #"
 		end,
 	}, { "itchyny/vim-cursorword" }, { "rebelot/kanagawa.nvim" } },
