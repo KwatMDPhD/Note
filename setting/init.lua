@@ -1,6 +1,23 @@
+vim.opt.autoread = true
+
+vim.api.nvim_create_autocmd(
+	{ "BufEnter", "CursorHold" },
+	{
+		pattern = "*",
+		command = "checktime",
+	}
+)
+
+vim.opt.updatetime = 800
+
 vim.opt.termguicolors = true
+
 vim.opt.number = true
 vim.opt.signcolumn = "number"
+
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -52,7 +69,7 @@ require("lazy").setup({
 			vim.g.slime_dont_ask_default = 1
 			vim.g.slime_cell_delimiter = "# ---- #"
 		end,
-	}, { "rebelot/kanagawa.nvim" } },
+	}, { "itchyny/vim-cursorword" }, { "rebelot/kanagawa.nvim" } },
 })
 
 vim.keymap.set("n", "<Leader>h", ":nohlsearch<CR>", { noremap = true })
