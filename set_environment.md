@@ -7,7 +7,7 @@ brew install tree rename ripgrep screen neovide luarocks shfmt node exiftool ima
 ```
 
 ```bash
-ln -s $(pwd)/setting/zshrc ~/.zshrc
+ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
 mkdir -p ~/.config/nvim
 
@@ -17,7 +17,7 @@ mkdir -p ~/.julia/config
 
 ln -s $(pwd)/setting/startup.jl ~/.julia/config
 
-ln -s $(pwd)/setting/JuliaFormatter.toml  ~/.JuliaFormatter.toml
+ln -s $(pwd)/setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
 ```bash
@@ -46,12 +46,10 @@ git config --global --list
 rm -rf ~/.julia/
 ```
 
-https://julialang.org/downloads
-
 ```julia
 using Pkg: add
 
-for pa in ("BenchmarkTools", "Revise")
+for pa in ("BenchmarkTools", "Logging", "Revise")
 
     add(pa)
 
@@ -59,7 +57,7 @@ end
 ```
 
 ```bash
-npm install --global http-server prettier prettier-plugin-tailwindcss prettier-plugin-sh
+npm install --global http-server prettier prettier-plugin-tailwindcss prettier-plugin-sh @prettier/plugin-lua
 ```
 
 ```bash
@@ -70,4 +68,14 @@ pyenv install 3.13.0
 pyenv global 3.13.0
 
 pip install ipython virtualenv
+```
+
+```bash
+brew update
+
+brew upgrade
+
+npm --global upgrade
+
+julia --eval "using Pkg; Pkg.update()"
 ```
