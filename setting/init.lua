@@ -52,9 +52,6 @@ require("lazy").setup(
                 end
             },
             {
-                "rebelot/kanagawa.nvim"
-            },
-            {
                 "lewis6991/gitsigns.nvim",
                 config = function()
                     require("gitsigns").setup()
@@ -71,6 +68,9 @@ require("lazy").setup(
                     vim.g.slime_cell_delimiter = "# ---- #"
                 end
             }
+            {
+                "rebelot/kanagawa.nvim"
+            },
         }
     }
 )
