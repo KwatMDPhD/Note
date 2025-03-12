@@ -9,7 +9,7 @@ View > Hide Marks
 https://brew.sh
 
 ```bash
-brew install screen tree rename watch macvim fzf ripgrep node yarn shfmt xclip xsel exiftool imagemagick
+brew install tree screen rename ripgrep neovim neovide luarocks shfmt exiftool imagemagick
 ```
 
 ## Profiles
@@ -109,7 +109,7 @@ pip install ipython virtualenv
 ```bash
 git diff setting/zshrc ~/.zshrc
 
-git diff setting/vimrc ~/.vimrc
+git diff setting/init.lua ~/.config/nvim/init.lua
 
 git diff setting/startup.jl ~/.julia/config/startup.jl
 

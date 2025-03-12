@@ -1,35 +1,3 @@
-" =============================================================================================== "
-" Cache
-" ----------------------------------------------------------------------------------------------- "
-
-if empty(glob('~/.vim_cache'))
-
-  silent !mkdir ~/.vim_cache
-
-endif
-
-set dir=~/.vim_cache
-
-set backupdir=~/.vim_cache
-
-set nobackup
-
-set nowritebackup
-
-" =============================================================================================== "
-" Auto-reload
-" ----------------------------------------------------------------------------------------------- "
-
-set autoread
-
-autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
-
-autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-
-" =============================================================================================== "
-" General
-" ----------------------------------------------------------------------------------------------- "
-
 set updatetime=160
 
 set encoding=utf-8
@@ -49,8 +17,6 @@ set guicursor+=a:blinkon0
 set belloff=all
 
 set number
-
-set signcolumn=number
 
 set ruler
 
@@ -90,170 +56,18 @@ set showmatch
 
 set mps+=<:>
 
-" =============================================================================================== "
-" Map
-" ----------------------------------------------------------------------------------------------- "
-
-nnoremap <leader>b :Buffers<CR>
-
-nnoremap <leader>h :nohlsearch<CR>
-
-" =============================================================================================== "
-" Plug
-" ----------------------------------------------------------------------------------------------- "
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-endif
-
-call plug#begin()
-
-Plug 'sainnhe/edge'
-
-Plug 'sainnhe/sonokai'
-
-Plug 'sainnhe/gruvbox-material'
-
-Plug 'EdenEast/nightfox.nvim'
-
 Plug 'dominikduda/vim_current_word'
 
 Plug 'chrisbra/Colorizer'
+nnoremap <leader>c :ColorToggle<CR>
 
 Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
 
 Plug 'airblade/vim-gitgutter'
-
-Plug 'preservim/nerdtree'
-
-Plug 'unkiwii/vim-nerdtree-sync'
-
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" brew install fzf ripgrep
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
-Plug 'junegunn/fzf.vim'
 
 Plug 'sheerun/vim-polyglot'
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
-
-Plug 'jpalardy/vim-slime'
-
-call plug#end()
-
-" =============================================================================================== "
-" colorscheme
-" ----------------------------------------------------------------------------------------------- "
-
-colorscheme carbonfox
-
-highlight IncSearch guibg=#fc7f31 guifg=#000000
-
-highlight Search guibg=#ffff93 guifg=#000000
-
-" =============================================================================================== "
-" vim_current_word
-" ----------------------------------------------------------------------------------------------- "
-
-let g:vim_current_word#highlight_delay = 160
-
-let g:vim_current_word#highlight_only_in_focused_window = 0
-
-highlight CurrentWord guibg=#4c221b guifg=NONE 
-
-highlight CurrentWordTwins guibg=#913228 guifg=NONE 
-
-" =============================================================================================== "
-" Colorizer
-" ----------------------------------------------------------------------------------------------- "
-
-nnoremap <leader>c :ColorToggle<CR>
-
-" =============================================================================================== "
-" rainbow
-" ----------------------------------------------------------------------------------------------- "
-
-let g:rainbow_active = 1
-
-" =============================================================================================== "
-" nerdtree
-" ----------------------------------------------------------------------------------------------- "
-
-nnoremap <leader>t :NERDTreeToggle<CR>
-
-let NERDTreeCaseSensitiveSort = 1
-
-let NERDTreeNaturalSort = 1
-
-let NERDTreeIgnore = ['\.vim$', '\~$']
-
-let NERDTreeMouseMode = 3
-
-let NERDTreeSortOrder = []
-
-let NERDTreeStatusline = -1
-
-let NERDTreeWinSize = 48
-
-let NERDTreeMinimalUI = 1
-
-let NERDTreeMinimalMenu = 1
-
-let NERDTreeCascadeSingleChildDir = 1
-
-let NERDTreeAutoDeleteBuffer = 1
-
-autocmd BufEnter NERD_tree_* | execute 'normal R'
-
-" =============================================================================================== "
-" vim-nerdtree-sync
-" ----------------------------------------------------------------------------------------------- "
-
-let g:nerdtree_sync_cursorline = 1
-
-let g:NERDTreeHighlightCursorline = 1
-
-" =============================================================================================== "
-" fzf.vim (fzf)
-" ----------------------------------------------------------------------------------------------- "
-
-nnoremap <leader>f :Files<CR>
-
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
-  \   1,
-  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),
-  \   <bang>0,
-  \ )
-
-set rtp+=/opt/homebrew/opt/fzf
-
-" =============================================================================================== "
-" fzf.vim (ripgrep)
-" ----------------------------------------------------------------------------------------------- "
-
-nnoremap <leader>r :Rg<CR>
-
-" =============================================================================================== "
-" markdown-preview.nvim
-" ----------------------------------------------------------------------------------------------- "
-
 nnoremap <leader>m :MarkdownPreview<CR>
-
 let g:mkdp_refresh_slow=1
-
-" =============================================================================================== "
-" vim-slime
-" ----------------------------------------------------------------------------------------------- "
-
-xnoremap <space><space> <Plug>SlimeRegionSend
-
-let g:slime_cell_delimiter = "# ---- #"
-
-nnoremap <space><space> <Plug>SlimeSendCell

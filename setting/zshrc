@@ -30,6 +30,8 @@ alias scs="screen -S 1"
 
 alias scr="screen -r"
 
+alias ne="neovide"
+
 alias ju="julia --project"
 
 alias ..="cd .."
