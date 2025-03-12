@@ -9,7 +9,7 @@ View > Hide Marks
 https://brew.sh
 
 ```bash
-brew install tree screen rename ripgrep neovim neovide luarocks shfmt exiftool imagemagick
+brew install tree screen rename ripgrep neovide luarocks shfmt exiftool imagemagick
 ```
 
 ## Profiles
