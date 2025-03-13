@@ -19,17 +19,17 @@ vim.api.nvim_create_autocmd(
 	}
 )
 
-vim.keymap.set("n", "<C-=>", function()
-	vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
+vim.keymap.set("n", "<Leader>h", ":nohlsearch<CR>")
+
+vim.keymap.set("n", "<C-0>", function()
+	vim.g.neovide_scale_factor = 1
 end)
 vim.keymap.set("n", "<C-->", function()
 	vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1
 end)
-vim.keymap.set("n", "<C-0>", function()
-	vim.g.neovide_scale_factor = 1
+vim.keymap.set("n", "<C-=>", function()
+	vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
 end)
-
-vim.keymap.set("n", "<Leader>h", ":nohlsearch<CR>")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
