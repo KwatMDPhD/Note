@@ -218,7 +218,7 @@
 	<key>VisualBell</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>128</integer>
+	<integer>99</integer>
 	<key>name</key>
 	<string>Warm Neon</string>
 	<key>noWarnProcesses</key>

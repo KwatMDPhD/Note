@@ -53,6 +53,11 @@ require("lazy").setup({
 			vim.cmd("colorscheme kanagawa")
 		end,
 	}, {
+		"brenoprata10/nvim-highlight-colors",
+		config = function()
+			require("nvim-highlight-colors").setup({})
+		end,
+	}, {
 		"nvim-tree/nvim-tree.lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
