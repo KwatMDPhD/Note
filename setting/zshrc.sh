@@ -2,21 +2,9 @@
 # Alias
 # ----------------------------------------------------------------------------------------------- #
 
-alias ls="ls -hG"
+alias ..="cd .."
 
-alias ll="ls -l"
-
-alias la="ls -lA"
-
-alias lt="ls -ltr"
-
-alias tree="tree -h"
-
-alias du="du -h"
-
-alias find="find -E"
-
-alias grep="grep --color --ignore-case"
+alias ...="cd ../.."
 
 alias cp="cp -i"
 
@@ -26,17 +14,25 @@ alias rm="rm -i"
 
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
-alias scs="screen -S 1"
+alias ls="ls -G"
 
-alias scr="screen -r"
+alias ll="ls -lh"
+
+alias la="ls -lhA"
+
+alias lt="ls -lhtr"
+
+alias du="du -h"
+
+alias tree="tree -h"
+
+alias find="find -E"
+
+alias grep="grep --color --ignore-case"
 
 alias ne="neovide &!"
 
 alias ju="julia --project"
-
-alias ..="cd .."
-
-alias ...="cd ../.."
 
 # =============================================================================================== #
 # Kata
@@ -66,7 +62,7 @@ function kata-sync {
 
   kata festdi
 
-  kata adcopu $1
+  kata adcopu "$1"
 
 }
 
@@ -82,23 +78,14 @@ RPROMPT=" %B%*%b"
 # Environment
 # ----------------------------------------------------------------------------------------------- #
 
+export PATH="$HOME/.julia/bin:$HOME/.juliaup/bin:$HOME/.pyenv/bin:$PATH"
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-PATH=~/.julia/bin:$PATH
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # =============================================================================================== #
 # Run
 # ----------------------------------------------------------------------------------------------- #
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/kwat/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
+screen -ls
