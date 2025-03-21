@@ -41,9 +41,9 @@ npm install --global http-server prettier prettier-plugin-tailwindcss prettier-p
 ```bash
 brew install pyenv
 
-pyenv install 3.13.0
+pyenv install 3.13.2
 
-pyenv global 3.13.0
+pyenv global 3.13.2
 
 pip install ipython virtualenv
 ```
