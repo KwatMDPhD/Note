@@ -35,7 +35,7 @@ end
 ```
 
 ```bash
-npm install --global http-server prettier prettier-plugin-tailwindcss prettier-plugin-sh @prettier/plugin-lua
+npm install --global http-server prettier prettier-plugin-tailwindcss prettier-plugin-toml prettier-plugin-sh @prettier/plugin-lua
 ```
 
 ```bash

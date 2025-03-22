@@ -157,6 +157,8 @@
 	</data>
 	<key>Bell</key>
 	<false/>
+	<key>BookmarkRestorations</key>
+	<false/>
 	<key>CursorColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -168,6 +170,8 @@
 	</data>
 	<key>CursorType</key>
 	<integer>0</integer>
+	<key>EnableSmoothResizing</key>
+	<true/>
 	<key>Font</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -194,6 +198,8 @@
 	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>ShowRepresentedURLPathInTitle</key>
+	<true/>
 	<key>TextBoldColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -228,7 +234,7 @@
 		</dict>
 	</array>
 	<key>rowCount</key>
-	<integer>99</integer>
+	<integer>128</integer>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
