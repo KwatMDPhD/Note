@@ -1,7 +1,7 @@
 Terminal > Settings... > Profiles > Import `setting/terminal/*`
 
 ```bash
-brew install tree rename ripgrep neovide luarocks shfmt node exiftool imagemagick
+brew install watch tree rename neovide luarocks ripgrep screen shfmt node exiftool imagemagick
 ```
 
 ```bash
