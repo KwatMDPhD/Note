@@ -12,11 +12,11 @@ Use two characters: thing ➡ `th`.
 
 Uppercase global ones: `TH`.
 
-They are sensitive: `th` != `TH` and `in_` != `in`.
-
 Pluralize by adding one underscore: things ➡ `th_`.
 
 Use one uppercase for matrices: Distance matrix ➡ `D`.
+
+Collisions are sensitive: `th` != `TH` and `in_` != `in`.
 
 Differentiate ones with the same content type by numbering: number 1 `n1` and number 2 `n2`.
 
