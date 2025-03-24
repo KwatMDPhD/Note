@@ -12,7 +12,7 @@ Use two characters: thing ➡ `th`.
 
 Uppercase global ones: `TH`.
 
-Collision is case sensitive: `th` and `TH` do not collide.
+They are sensitive: `th` != `TH` and `in_` != `in`.
 
 Pluralize by adding one underscore: things ➡ `th_`.
 
