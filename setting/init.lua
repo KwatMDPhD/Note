@@ -90,7 +90,7 @@ require("lazy").setup({
 		config = function()
 			require("gitsigns").setup()
 		end,
-	}, { "tpope/vim-fugitive" }, { "itchyny/vim-cursorword" }, {
+	}, { "tpope/vim-fugitive" }, { "RRethy/vim-illuminate" }, {
 		"jpalardy/vim-slime",
 		config = function()
 			vim.g.slime_target = "screen"
