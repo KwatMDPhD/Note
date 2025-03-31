@@ -50,7 +50,7 @@ require("lazy").setup({
 	spec = { {
 		"rebelot/kanagawa.nvim",
 		config = function()
-			vim.cmd("colorscheme kanagawa")
+			vim.cmd"colorscheme kanagawa"
 		end,
 	}, {
 		"brenoprata10/nvim-highlight-colors",
@@ -90,7 +90,13 @@ require("lazy").setup({
 		config = function()
 			require("gitsigns").setup()
 		end,
-	}, { "tpope/vim-fugitive" }, { "RRethy/vim-illuminate" }, {
+	}, { "tpope/vim-fugitive" }, {
+		"dominikduda/vim_current_word",
+		config = function()
+			vim.cmd"let g:vim_current_word#highlight_current_word = 0"
+			vim.cmd"highlight CurrentWordTwins guibg=#4c221b"
+		end,
+	}, {
 		"jpalardy/vim-slime",
 		config = function()
 			vim.g.slime_target = "screen"
