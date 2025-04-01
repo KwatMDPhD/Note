@@ -94,7 +94,7 @@ require("lazy").setup({
 		"dominikduda/vim_current_word",
 		config = function()
 			vim.cmd"let g:vim_current_word#highlight_current_word = 0"
-			vim.cmd"highlight CurrentWordTwins guibg=#4c221b"
+			vim.cmd"highlight CurrentWordTwins guibg=#790505"
 		end,
 	}, {
 		"jpalardy/vim-slime",
