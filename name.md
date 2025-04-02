@@ -1,10 +1,8 @@
 ## Name variables
 
-Name after content.
-
-Name as generally as possible without risking being false.
-
 Name within the smallest context.
+
+Name as generally as possible without being false.
 
 When using external tools, use their names.
 
@@ -14,9 +12,7 @@ Uppercase global ones: `TH`.
 
 Pluralize by adding one underscore: things ➡ `th_`.
 
-Use one uppercase for matrices: Distance matrix ➡ `D`.
-
-Collisions are sensitive: `th` != `TH` and `in_` != `in`.
+Use one uppercase for matrices and tables: Distance matrix ➡ `D`.
 
 Differentiate ones with the same content type by numbering: number 1 `n1` and number 2 `n2`.
 
@@ -24,22 +20,24 @@ Differentiate ones with different content types by shifting: mean `me` and media
 
 ## Name functions
 
-Updates parts: `update!` or `update`.
+`lo*`.
 
-Gets parts without modification: `ge` or `get_something`.
+`update*!`.
 
-Returns booleans: `is_something`.
+`ge*`.
 
-Returns new data structures: `make` or `make_something`.
+`is*`.
 
-Returns texts: `text`.
+`index*`.
 
-Returns paths: `path`.
+`make*`.
 
-Reads: `rea`.
+`text*`.
 
-Writes: `writ`.
+`path*`.
 
-Keyword arguments: `ke_`.
+`rea*`.
+
+`writ*`.
 
 Differentiate by removing a character: `write` and `writ`.
