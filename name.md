@@ -1,4 +1,6 @@
-Name objects using the most specific computer physics (how they are stored) or algorithm (how they are computed).
+Name objects using computer physics (how they are stored) or algorithm (how they are computed).
+
+Name {0 <= and <= 1} `pr` and {0, 1, 2, ...} `um`.
 
 Name collections by their content.
 

@@ -19,8 +19,6 @@ vim.api.nvim_create_autocmd(
 	}
 )
 
-vim.keymap.set("n", "<Leader>h", ":nohlsearch<CR>")
-
 vim.keymap.set("n", "<C-0>", function()
 	vim.g.neovide_scale_factor = 1
 end)
@@ -30,6 +28,8 @@ end)
 vim.keymap.set("n", "<C-=>", function()
 	vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
 end)
+
+vim.keymap.set("n", "<Leader>h", ":nohlsearch<CR>")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -48,16 +48,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	spec = { {
-		"rebelot/kanagawa.nvim",
-		config = function()
-			vim.cmd"colorscheme kanagawa"
-		end,
-	}, {
-		"brenoprata10/nvim-highlight-colors",
-		config = function()
-			require("nvim-highlight-colors").setup({})
-		end,
-	}, {
 		"nvim-tree/nvim-tree.lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
@@ -76,6 +66,16 @@ require("lazy").setup({
 			vim.keymap.set("n", "<Leader>r", builtin.live_grep)
 		end,
 	}, {
+		"rebelot/kanagawa.nvim",
+		config = function()
+			vim.cmd"colorscheme kanagawa"
+		end,
+	}, {
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	}, {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()
@@ -86,15 +86,15 @@ require("lazy").setup({
 			})
 		end,
 	}, {
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	}, { "tpope/vim-fugitive" }, {
 		"dominikduda/vim_current_word",
 		config = function()
 			vim.cmd"let g:vim_current_word#highlight_current_word = 0"
 			vim.cmd"highlight CurrentWordTwins guibg=#790505"
+		end,
+	}, {
+		"brenoprata10/nvim-highlight-colors",
+		config = function()
+			require("nvim-highlight-colors").setup({})
 		end,
 	}, {
 		"jpalardy/vim-slime",
