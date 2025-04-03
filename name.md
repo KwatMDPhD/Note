@@ -1,16 +1,14 @@
-## Name variables
+Name objects using the most specific computer physics (how they are stored) or algorithm (how they are computed).
 
-Name within the smallest context.
+Name collections by their content.
 
-Name as generally as possible without being false.
+Keep external names.
 
-When using external tools, use their names.
+Use two characters: string ➡ `st`.
 
-Use two characters: thing ➡ `th`.
+Uppercase global ones: `ST`.
 
-Uppercase global ones: `TH`.
-
-Pluralize by adding one underscore: things ➡ `th_`.
+Pluralize by adding one underscore: strings ➡ `st_`.
 
 Use one uppercase for matrices and tables: Distance matrix ➡ `D`.
 
@@ -18,26 +16,17 @@ Differentiate ones with the same content type by numbering: number 1 `n1` and nu
 
 Differentiate ones with different content types by shifting: mean `me` and median `ed`.
 
-## Name functions
+Limit function names
 
-`lo*`.
+- `lo*`
+- `update*!`
+- `ge*`
+- `is*`
+- `index*`
+- `make*`
+- `text*`
+- `path*`
+- `rea*`
+- `writ*`
 
-`update*!`.
-
-`ge*`.
-
-`is*`.
-
-`index*`.
-
-`make*`.
-
-`text*`.
-
-`path*`.
-
-`rea*`.
-
-`writ*`.
-
-Differentiate by removing a character: `write` and `writ`.
+Differentiate function names by removing a character: `write` and `writ`.

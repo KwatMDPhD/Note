@@ -104,5 +104,17 @@ require("lazy").setup({
 			vim.keymap.set("n", "<Space><Space>", "<Plug>SlimeSendCell")
 			vim.keymap.set("x", "<Space><Space>", "<Plug>SlimeRegionSend")
 		end,
+	}, {
+		"iamcco/markdown-preview.nvim",
+		cmd = {
+			"MarkdownPreviewToggle",
+			"MarkdownPreview",
+			"MarkdownPreviewStop",
+		},
+		build = "cd app && npm install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
 	} },
 })

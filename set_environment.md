@@ -1,7 +1,27 @@
 Terminal > Settings... > Profiles > Import `setting/terminal/*`
 
 ```bash
+ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
+
+mkdir -p ~/.config/nvim
+
+ln -s $(pwd)/setting/init.lua ~/.config/nvim
+
+mkdir -p ~/.julia/config
+
+ln -s $(pwd)/setting/startup.jl ~/.julia/config
+
+ln -s $(pwd)/setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
+```
+
+```bash
 brew install watch tree rename neovide luarocks ripgrep screen shfmt node exiftool imagemagick
+```
+
+```bash
+npm --global uninstall corepack
+
+npm --global install http-server prettier prettier-plugin-tailwindcss prettier-plugin-toml prettier-plugin-sh @prettier/plugin-lua
 ```
 
 ```bash
@@ -35,10 +55,6 @@ end
 ```
 
 ```bash
-npm install --global http-server prettier prettier-plugin-tailwindcss prettier-plugin-toml prettier-plugin-sh @prettier/plugin-lua
-```
-
-```bash
 brew install pyenv
 
 pyenv install 3.13.2
@@ -49,25 +65,15 @@ pip install ipython virtualenv
 ```
 
 ```bash
-ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
-
-mkdir -p ~/.config/nvim
-
-ln -s $(pwd)/setting/init.lua ~/.config/nvim
-
-mkdir -p ~/.julia/config
-
-ln -s $(pwd)/setting/startup.jl ~/.julia/config
-
-ln -s $(pwd)/setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
-```
-
-```bash
 brew update
 
 brew upgrade
 
+brew doctor
+
+brew cleanup
+
 npm --global upgrade
 
-julia --eval "using Pkg; Pkg.update()"
+julia --eval "using Pkg: update; update()"
 ```
