@@ -15,7 +15,7 @@ ln -s $(pwd)/setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
 ```bash
-brew install watch tree rename neovide luarocks ripgrep screen shfmt node exiftool imagemagick
+brew install watch tree rename neovide luarocks ripgrep screen shfmt node yarn exiftool imagemagick
 ```
 
 ```bash
