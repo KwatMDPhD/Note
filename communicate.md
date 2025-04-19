@@ -1,125 +1,85 @@
-Make people high; create experience; make people want to help you with your mission.
+## General
 
-Turn people into evalgelists gradually.
+Dress well
 
-The worst case scenatio is really bad.
+Lead with your body
 
-Tell storeis; how scenes.
+Keep eye contact
 
-Tell what listers get.
+The worst case scenatio is really bad
 
-## How
+Use tangible examples
 
-Start with what people get; Why should they care; use tangible examples; tell them early, often, and pesonalized.
+Make headlines
 
-Make a story.
+Plan in analog
 
-Improve the story.
+Prioritize 3 messages
+Package for a napkin
 
-Make headlines for publishers.
+Use 3
 
-Use 3.
+Make people high
+Create an experience
+Turn people into evalgelists gradually
+Make people want to help you with your mission
+Make history together
+Explain why only the listener can help
 
-Antagonist.
+Tell what people get early, often, and personalized
 
-Villain is defeated by the hero.
+Tell stories
+Show scenes
+Add drama
+Build up to one holy smokes moment
 
-Napkin test.
+Use simple, vivid, and exciting language (magical)
+Make road map
 
-Today Apple reinvents the phone.
+Use metaphors
 
-3 messages you want audience to receive.
+Defeat antagonist
 
-Metaphor.
+Demo as much
 
-Demo as much as possible.
+Bring on partners
 
-Bring on partners.
+Do not bore listners by hitting the senses
 
-Hit the senses; people get bored.
+Use first name often
 
-1. Story.
-2. Problem.
-3. Solution.
-4. Benefit.
-5. Call to action.
+Make melody
 
-After talking about the statue quo, make a verbal road map.
+Make numbers specific, relevant, and contextual
 
-Use first name often.
+1. Story
+2. Problem
+3. Solution
+4. Benefit
+5. Call to action
 
-Rhythm.
+## Caucell
 
-Talk about the future.
+Caucell reinvents the blood test
 
-## Word
+Future
 
-Mission
+Our mission
 
-I'm excited about this product because (passion statement).
+I'm excited about this product because
 
 Partner
 
 See it exist
 
-Crystal ball for your health.
+Crystal ball for your health
 
 We did this for the number one use physicians tell us they want
 
-What that means is...
+What that means is
 
 As our test screens for more diseaes, you will
 
-Using Caucell test is like having a medical university biomedical department analyze your blood.
+Using Caucell test is like having an entire medical university analyze your blood
 
-With just one "click".
-
-Make history together; sell dreams not products.
-
-Far more important than
-
-# Create the story
-
-Create the story on paper.
-
-Inspire with a passionate and emotional why statement.
-
-Create a memorable headline.
-
-Create a villain and make yourself the hero.
-
-Use three.
-
-Sell the dream, not the product.
-
-# Create the experience
-
-Make numbers specific, relevant, and contextual.
-
-Use simple, vivid, and exciting language (magical).
-
-Use minimalistic visuals.
-
-Make it an experience, not a presentation.
-
-Add drama.
-
-Create variety with videos, demonstrations, and guests.
-
-Appeal to all senses.
-
-Build up to one holy smokes moment - the one thing you want the viewer to remember.
-
-# Rehearse
-
-Dress the best in the room.
-
-Use hand gestures that show your thoughts.
-
-Open your body.
-
-Keep eye contact.
-
-Handle errors with calm, confidence, and humor.
-
-Practice so much that you appear spontaneous.
+With just one click
