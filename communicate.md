@@ -1,5 +1,10 @@
 ## General
 
+Create a meaning bucket early, then fill it with details
+"Will it eat me" not "how many teeth does it have".
+
+Repeating is good
+
 Dress well
 
 Lead with your body
@@ -10,7 +15,9 @@ The worst case scenatio is really bad
 
 Use tangible examples
 
-Make headlines
+Dictate headlines
+Make 1 liner for each product
+Make concise and specific and include personal benefits
 
 Plan in analog
 
@@ -26,6 +33,7 @@ Make people want to help you with your mission
 Make history together
 Explain why only the listener can help
 
+Think from the perspective of the users
 Tell what people get early, often, and personalized
 
 Tell stories
@@ -52,11 +60,11 @@ Make melody
 
 Make numbers specific, relevant, and contextual
 
-1. Story
-2. Problem
-3. Solution
-4. Benefit
-5. Call to action
+Story
+Problem
+Solution
+Benefit
+Call to action
 
 ## Caucell
 
@@ -83,3 +91,29 @@ As our test screens for more diseaes, you will
 Using Caucell test is like having an entire medical university analyze your blood
 
 With just one click
+
+For everyone
+
+The world's most powerful blood test at 100th of the price
+
+Talk about the scientific fiction movie.
+When are we going to get that magical blood test?
+Who is working on it?
+
+The usual suspects of the routine blood test
+
+Six months from now
+
+It works like a magic
+
+We don't mind if there are other companies making products
+
+Blood testing can be reinvented
+
+We thought we could contribute something
+
+If we just got one percent market share, that's
+
+Enemy = surprise
+
+What do you do? What do you solve (introduce the villain in detail)? How are you different? Why should I care?
