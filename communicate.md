@@ -1,119 +1,109 @@
-## General
+## Practice
 
-Create a meaning bucket early, then fill it with details
-"Will it eat me" not "how many teeth does it have".
+Review by seeing, hearing, and reading
 
-Repeating is good
+Make it natural by practicing a lot
 
-Dress well
+## Meeting
 
-Lead with your body
+Aim to cause 1 action
 
-Keep eye contact
+Treat it like a theater with 1 holy smoke moment
 
-The worst case scenatio is really bad
+Hit senses and deliver infotainment and feelings, the only thing remembered
 
-Use tangible examples
+Introduce 1 villain in detail
 
-Dictate headlines
-Make 1 liner for each product
-Make concise and specific and include personal benefits
+Deliver 3 messages
 
-Plan in analog
+Repeat the core message
 
-Prioritize 3 messages
-Package for a napkin
-
-Use 3
-
-Make people high
-Create an experience
-Turn people into evalgelists gradually
-Make people want to help you with your mission
-Make history together
-Explain why only the listener can help
-
-Think from the perspective of the users
-Tell what people get early, often, and personalized
-
-Tell stories
-Show scenes
-Add drama
-Build up to one holy smokes moment
-
-Use simple, vivid, and exciting language (magical)
-Make road map
-
-Use metaphors
-
-Defeat antagonist
-
-Demo as much
+Demo short, simple, sweet, swift, and substantial
 
 Bring on partners
 
-Do not bore listners by hitting the senses
+Prepare for questions
 
-Use first name often
+Make evangelists
+
+## Keynote
+
+Make 1 slide = 1 message = 1 picture + 1 arrow + 1 word + spaces
+
+Refer elsewhere for details
+
+Refresh in 10 minutes
+
+## Body
+
+Deliver high energy
+
+Maintain eye contact
+
+Smile
+
+Stay open
+
+Deliver thinking
+
+## Voice
 
 Make melody
 
-Make numbers specific, relevant, and contextual
+## Message
 
-Story
-Problem
-Solution
-Benefit
-Call to action
+Think from their perspectives
 
-## Caucell
+Create a meaning bucket and then fill it with details
 
-Caucell reinvents the blood test
+Frame with a road map
+
+Tell benefit early
+
+Speak headlines
+
+Tell stories
+
+Speak simply, so simple that they think that they can copy
+
+Speak specifically
+
+Speak with excitement and in almost hyperbole
+
+Follow up numbers with analogies
+
+Use tangible examples
+
+Use metaphors
+
+Use first name often
+
+## Phrase
+
+It's like this
+
+What that means is
+
+-est
+
+Boom
+
+Isn't that great
 
 Future
 
-Our mission
+Mission
 
-I'm excited about this product because
+I'm excited about this thing because
 
 Partner
 
 See it exist
 
-Crystal ball for your health
-
-We did this for the number one use physicians tell us they want
-
-What that means is
-
-As our test screens for more diseaes, you will
-
-Using Caucell test is like having an entire medical university analyze your blood
-
-With just one click
+With just one
 
 For everyone
 
-The world's most powerful blood test at 100th of the price
-
-Talk about the scientific fiction movie.
-When are we going to get that magical blood test?
-Who is working on it?
-
-The usual suspects of the routine blood test
-
-Six months from now
+Everybody benefits
 
 It works like a magic
-
-We don't mind if there are other companies making products
-
-Blood testing can be reinvented
-
-We thought we could contribute something
-
-If we just got one percent market share, that's
-
-Enemy = surprise
-
-What do you do? What do you solve (introduce the villain in detail)? How are you different? Why should I care?
