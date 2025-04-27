@@ -18,11 +18,11 @@ Keep external names.
 
 Name things by algorithm.
 
-Name things by physics.
-
 Name {0 <= and <= 1} `pr`.
 
 Name {0, 1, 2, ...} `um`.
+
+Name things by physics.
 
 ## Name functions
 
