@@ -1,4 +1,4 @@
-## Name variables
+## Structure
 
 Use two characters.
 
@@ -12,17 +12,17 @@ Differentiate ones with the same content type by numbering.
 
 Differentiate ones with different content types by shifting.
 
-## Prioritize
+## Stabilize
 
 Keep external names.
 
 Name things by algorithm.
 
+Name things by physics.
+
 Name {0 <= and <= 1} `pr`.
 
 Name {0, 1, 2, ...} `um`.
-
-Name things by physics.
 
 ## Name functions
 
