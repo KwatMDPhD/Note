@@ -1,49 +1,34 @@
-## Structure
-
 Use two characters.
 
 Uppercase global ones.
 
-Pluralize by adding one underscore.
-
-Use one uppercase for matrices and alikes.
+Pluralize by adding an underscore.
 
 Differentiate ones with the same content type by numbering.
 
 Differentiate ones with different content types by shifting.
 
-## Stabilize
+Use an uppercase for matrix-like objects.
 
-Keep external names.
+Name based on the idea least likely to change
 
-Name things by algorithm.
+- Keep external names
+- Base on the algorithm
+- Name numbers between 0 and 1 as `pr`
+- Name counts as `um`
+- Base on physics
 
-Name {0 <= and <= 1} `pr`.
+Limit function names
 
-Name {0, 1, 2, ...} `um`.
+- `lo*`
+- `update*!`
+- `ge*`
+- `is*`
+- `index*`
+- `make*`
+- `text*`
+- `path*`
+- `rea*`
+- `writ*`
 
-Name things by physics.
-
-## Name functions
-
-`lo*`
-
-`update*!`
-
-`ge*`
-
-`is*`
-
-`index*`
-
-`make*`
-
-`text*`
-
-`path*`
-
-`rea*`
-
-`writ*`
-
-Differentiate by removing a character.
+Differentiate function names by removing the last character.
