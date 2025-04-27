@@ -1,44 +1,49 @@
-##
+## Name variables
 
-Use two characters: string ➡ `st`.
+Use two characters.
 
-Uppercase global ones: `ST`.
+Uppercase global ones.
 
-Name collections by their content.
+Pluralize by adding one underscore.
 
-Pluralize by adding one underscore: strings ➡ `st_`.
+Use one uppercase for matrices and alikes.
 
-Use one uppercase for matrices and tables: Distance matrix ➡ `D`.
+Differentiate ones with the same content type by numbering.
 
-Differentiate ones with the same content type by numbering: number 1 `n1` and number 2 `n2`.
+Differentiate ones with different content types by shifting.
 
-Differentiate ones with different content types by shifting: mean `me` and median `ed`.
-
-##
+## Prioritize
 
 Keep external names.
 
-Name numbers using algorithm.
+Name things by algorithm.
 
 Name {0 <= and <= 1} `pr`.
 
 Name {0, 1, 2, ...} `um`.
 
-Name objects using computer physics.
+Name things by physics.
 
-##
+## Name functions
 
-Limit function names
+`lo*`
 
-- `lo*`
-- `update*!`
-- `ge*`
-- `is*`
-- `index*`
-- `make*`
-- `text*`
-- `path*`
-- `rea*`
-- `writ*`
+`update*!`
 
-Differentiate function names by removing a character: `write` and `writ`.
+`ge*`
+
+`is*`
+
+`index*`
+
+`make*`
+
+`text*`
+
+`path*`
+
+`rea*`
+
+`writ*`
+
+Differentiate by removing a character.
