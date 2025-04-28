@@ -20,6 +20,7 @@ Name based on the idea least likely to change
 
 Limit function names
 
+- `test*`
 - `lo*`
 - `update*!`
 - `ge*`
