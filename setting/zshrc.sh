@@ -1,5 +1,3 @@
-# Alias
-
 alias ..="cd .."
 
 alias ...="cd ../.."
@@ -32,9 +30,7 @@ alias ne="neovide &!"
 
 alias ju="julia --project"
 
-# Kata
-
-function kata-clean {
+function clea {
 
   kata delete
 
@@ -42,7 +38,7 @@ function kata-clean {
 
 }
 
-function kata-sync {
+function syn {
 
   for di in $(find -E . -type d -regex ".*\.(jl|pr)" -not -regex ".*node_modules.*"); do
 
@@ -62,13 +58,9 @@ function kata-sync {
 
 }
 
-# Style
-
 PROMPT="%B%~%b "
 
 RPROMPT=" %B%*%b"
-
-# Environment
 
 export PATH="$HOME/.julia/bin:$HOME/.juliaup/bin:$HOME/.pyenv/bin:$PATH"
 
