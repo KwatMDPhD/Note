@@ -18,10 +18,26 @@ ln -s $(pwd)/setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 brew install watch tree rename neovide luarocks ripgrep screen shfmt node yarn exiftool imagemagick
 ```
 
-```bash
-npm --global uninstall corepack
+```julia
+using Pkg: add
 
-npm --global install http-server prettier prettier-plugin-tailwindcss prettier-plugin-toml prettier-plugin-sh @prettier/plugin-lua
+for pa in ("BenchmarkTools", "Logging", "Revise")
+
+    add(pa)
+
+end
+```
+
+```bash
+brew install pyenv
+
+pyenv install --list | grep dev
+
+pyenv install 3.13.3
+
+pyenv global 3.13.3
+
+pip install ipython virtualenv
 ```
 
 ```bash
@@ -40,26 +56,6 @@ git config --global status.submoduleSummary true
 git config --global diff.submodule log
 
 git config --global diff.colorMoved zebra
-```
-
-```julia
-using Pkg: add
-
-for pa in ("BenchmarkTools", "Logging", "Revise")
-
-    add(pa)
-
-end
-```
-
-```bash
-brew install pyenv
-
-pyenv install 3.13.2
-
-pyenv global 3.13.2
-
-pip install ipython virtualenv
 ```
 
 ```bash
