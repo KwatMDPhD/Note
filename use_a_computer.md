@@ -30,7 +30,7 @@ iCloud Drive/
     Kwat/ 🕺 Personal
 ```
 
-Code and data ➡ `~/craft` ➡ GitHub
+Code and data ➡ `~/cr` ➡ GitHub
 
 Media (including the ones in `Photos`) ➡ `~/Record`, which has `Event` and project directories
 
