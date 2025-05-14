@@ -62,7 +62,7 @@ PROMPT="%B%~%b "
 
 RPROMPT=" %B%*%b"
 
-export PATH="$HOME/ot/bi:$HOME/.julia/bin:$HOME/.juliaup/bin:$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.julia/bin:$HOME/.juliaup/bin:$HOME/.pyenv/bin:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
