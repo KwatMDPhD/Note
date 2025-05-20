@@ -3,6 +3,8 @@ Terminal > Settings... > Profiles > Import `setting/terminal/*`
 ```bash
 ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
+ln -s $(pwd)/setting/screenrc ~/.screenrc
+
 mkdir -p ~/.config/nvim
 
 ln -s $(pwd)/setting/init.lua ~/.config/nvim
