@@ -43,6 +43,10 @@ pip install ipython virtualenv
 ```
 
 ```bash
+npm install --global prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua
+```
+
+```bash
 git config --global user.name "KwatMDPhD"
 
 git config --global user.email "kwat.me@icloud.com"
