@@ -39,7 +39,7 @@ pyenv install 3.13.3
 
 pyenv global 3.13.3
 
-#pip install ipython virtualenv
+pip install ipython virtualenv
 ```
 
 ```bash
