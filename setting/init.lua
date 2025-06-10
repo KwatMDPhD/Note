@@ -55,6 +55,7 @@ require("lazy").setup({
 				view = { width = 48 },
 				filters = { dotfiles = true },
 				sort = { sorter = "case_sensitive" },
+				update_focused_file = { enable = true },
 			})
 			vim.keymap.set("n", "<Leader>t", ":NvimTreeToggle<CR>")
 		end,
