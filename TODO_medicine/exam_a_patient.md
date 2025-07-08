@@ -365,7 +365,6 @@ Bulk and tone.
 Range of motion and strength
 
 - Neck
-
   - Flex-extend.
 
   - Lateral bend.
@@ -373,7 +372,6 @@ Range of motion and strength
   - Rotate.
 
 - Shoulder
-
   - Flex-extend.
 
   - Adduct-abduct.
@@ -381,19 +379,16 @@ Range of motion and strength
   - Rotate.
 
 - Elbow
-
   - Flex-extend.
 
   - Pronate-supinate.
 
 - Wrist
-
   - Flex-extend.
 
   - Ulnar radial deviate.
 
 - Finger
-
   - Grasp.
 
   - Flex-extend.
@@ -403,7 +398,6 @@ Range of motion and strength
   - Thumb oppose.
 
 - Back
-
   - Flex-extend.
 
   - Abduct-adduct.
@@ -411,7 +405,6 @@ Range of motion and strength
   - Rotate.
 
 - Hip
-
   - Flex-extend.
 
   - Adduct-abduct.
@@ -419,11 +412,9 @@ Range of motion and strength
   - Rotate.
 
 - Knee
-
   - Flex-extend.
 
 - Ankle
-
   - Flex-extend.
 
   - Adduct-abduct.
@@ -431,7 +422,6 @@ Range of motion and strength
   - Invert-exvert.
 
 - Toe
-
   - Flex-extend.
 
 ### Reflex (0 none, 1 low, 2 normal, 3 high, and 4 clonus.)
