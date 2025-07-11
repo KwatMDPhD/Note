@@ -35,9 +35,9 @@ brew install pyenv
 
 pyenv install --list | grep dev
 
-pyenv install 3.13.3
+pyenv install 3.13.5
 
-pyenv global 3.13.3
+pyenv global 3.13.5
 
 pip install ipython virtualenv
 ```
