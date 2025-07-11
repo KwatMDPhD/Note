@@ -1,14 +1,10 @@
 ## Organize task
 
-Time-sensitive or collaborative tasks ➡ `Reminders`
-
-Other tasks ➡ `Screenshot` (➡ `~/Desktop`)
-
-Events ➡ `Calender`
+Tasks ➡ `Screenshot` (➡ `~/Desktop`)
 
 ## Organize file
 
-When dating a name, prefix it with the most specific known time in "Year Mo Da Ho Mi Se" (`2024 08 19 15 24 File Name`).
+When dating a name, prefix it with the most specific known time in "Ye Mo Da Ho Mi Se" (`2024 08 19 15 24 File Name`).
 
 Very temporary files (to be deleted on the same day) ➡ `~/Downloads`
 
@@ -23,7 +19,7 @@ iCloud Drive/
 
     .../ 🍎 Apple's
 
-    Tiny Beasts/ 👯‍♀️ Shared by Amanda
+    Project 1/ 👯‍♀️ Shared by a person
 
     .../ 👯‍♀️ Shared by someone else
 
