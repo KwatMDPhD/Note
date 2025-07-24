@@ -1,3 +1,3 @@
-Lowercase magnitudes, uppercase units, and add no space: 8nG/uL.
+Capitalize only the first letter unless using a proper noun like RNAlater.
 
-Use at most 2 characters: 7Da.
+Lowercase magnitudes, uppercase units, and add no space: 8nG/uL.
