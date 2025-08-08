@@ -223,7 +223,7 @@
 	<key>VisualBell</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>99</integer>
+	<integer>100</integer>
 	<key>name</key>
 	<string>Pencil Dark</string>
 	<key>noWarnProcesses</key>
