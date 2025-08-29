@@ -4,11 +4,7 @@ Tasks ➡ `Screenshot` (➡ `~/Desktop`)
 
 ## Organize file
 
-When dating a name, prefix it with the most specific known time in "Ye Mo Da Ho Mi Se" (`2024 08 19 15 24 File Name`).
-
-Very temporary files (to be deleted on the same day) ➡ `~/Downloads`
-
-Temporary files (to be deleted) ➡ `~/Desktop`
+Temporary files (to be deleted) ➡ `~/Downloads`
 
 Files (to be kept) ➡ `iCloud Drive`, which has the Apple directories, directories shared by others, and a personal directory
 
@@ -19,12 +15,12 @@ iCloud Drive/
 
     .../ 🍎 Apple's
 
-    Project 1/ 👯‍♀️ Shared by a person
-
-    .../ 👯‍♀️ Shared by someone else
-
     Kwat/ 🕺 Personal
+
+    Project 1/ 👯‍♀️ Shared
 ```
+
+When dating a name, prefix it with the most specific known time in "Ye Mo Da Ho Mi Se" (`2024 08 19 15 24 File name`).
 
 Code and data ➡ `~/cr` ➡ GitHub
 
