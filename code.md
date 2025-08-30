@@ -8,8 +8,6 @@ Limit integers to 0, 1, 2, 4, or multiples of 8; for floats, apply this rule to 
 
 Use specialized functions instead of implementing.
 
-Index with integers instead of booleans.
-
 If there are 2 or more lines in a conditional block, use `continue` style
 
 ```julia
@@ -52,8 +50,6 @@ Store related data close in space.
 Access related data close in time.
 
 Write small, pure functions, each doing one thing and returning one type.
-
-Avoid accessing global variables within a function.
 
 ## Test
 
