@@ -41,15 +41,19 @@ end
 ```bash
 cd
 
-brew install pyenv
+brew install pyenv-virtualenv
 
-pyenv install --list | grep dev
+pyenv install 3.13.7
 
-pyenv install 3.13.5
+pyenv global 3.13.7
+```
 
-pyenv global 3.13.5
+```bash
+pyenv virtualenv 3.13.7 Project
 
-pip install ipython virtualenv
+cd Project
+
+pyenv local Project
 ```
 
 ```bash
