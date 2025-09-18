@@ -222,7 +222,7 @@
 	<key>VisualBell</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>100</integer>
+	<integer>99</integer>
 	<key>name</key>
 	<string>WildCherry</string>
 	<key>noWarnProcesses</key>
