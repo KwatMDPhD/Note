@@ -220,8 +220,6 @@ Websites > Location > When visiting other websites > Deny
 
 Websites > Notifications > Allow websites to ask for permission to send notification > 👎
 
-Extensions > Ad block > Install and 👍
-
 Advanced > Show features for web developers > 👍
 
 ## Messages > Settings...
