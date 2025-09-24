@@ -18,13 +18,13 @@ Picture > Set
 
 iCloud > Manage... > All except: Apple Books, iCloud Photos > Delete
 
-iCloud > Saved to iCloud > See All > Apps syncing to iCloud > As many > 👎
+iCloud > Saved to iCloud > See All > Apps syncing to iCloud > Unneeded ones > 👎
 
 iCloud > Saved to iCloud > Drive > Optimize Mac Storage > 👎
 
 iCloud > Saved to iCloud > Drive > Desktop & Documents Folders > 👎
 
-iCloud > Apps Using iCloud > Show More Apps... > As many > 👎
+iCloud > Apps Using iCloud > See All > Unneeded ones > 👎
 
 iCloud > Private Relay > Turn On...
 
@@ -80,7 +80,7 @@ Menu Bar Only > All > Don’t Show in Menu Bar
 
 ### Privacy & Security
 
-Location Services > System Services > Details... > Significant locations > 👎
+Location Services > System Services > Details... > Significant locations > 👍
 
 Location Services > System Services > Details... > Significant locations > Recent Records > ... > Clear History
 
@@ -88,12 +88,12 @@ Location Services > System Services > Details... >
 
 - Alerts & Shortcuts Automations 👎
 - Suggestions & Search 👎
-- Setting time zone
-- System customization
+- Setting time zone 👍
+- System customization 👍
 - Significant locations 👎
-- Find My Mac
+- Find My Mac 👍
 - HomeKit 👎
-- Networking and wireless
+- Networking and wireless 👍
 - Mac Analytics 👎
 
 Location Services > System Services > Details... > Significant locations > Show location icon in menu bar when System Services request your location > 👍
@@ -192,7 +192,7 @@ Advanced > When performing a search: > Search the Current Folder
 
 Icon size > Large
 
-Show Columns: > (Select in order) Date Created, Date Modified, and Size
+Show Columns: > (Select in order) Date Modified and Size
 
 Calculate all sizes > 👍
 
@@ -220,7 +220,7 @@ Websites > Location > When visiting other websites > Deny
 
 Websites > Notifications > Allow websites to ask for permission to send notification > 👎
 
-Extensions > Vimari, Ad block, and Grammarly (optional) > Install and 👍
+Extensions > Ad block > Install and 👍
 
 Advanced > Show features for web developers > 👍
 
