@@ -48,8 +48,6 @@ pyenv install 3.13.7
 pyenv global 3.13.7
 ```
 
-Make a virtual environment named 1 and use it in a project
-
 ```bash
 pyenv virtualenv 3.13.7 1
 

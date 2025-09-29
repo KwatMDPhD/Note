@@ -12,24 +12,24 @@ Use an uppercase for matrix-like objects.
 
 Name based on the idea least likely to change
 
-- Keep external names
-- Base on the algorithm
-- Name numbers between 0 and 1 as `pr`
-- Name counts as `um`
 - Base on physics
+- Name counts as `um`
+- Name numbers between 0 and 1 as `pr`
+- Base on the algorithm
+- Keep external names
 
 Limit function names
 
 - `test*`
 - `lo*`
 - `update*!`
-- `ge*`
+- `get*`
 - `is*`
 - `index*`
 - `make*`
 - `text*`
 - `path*`
-- `rea*`
-- `writ*`
+- `read*`
+- `write*`
 
 Differentiate function names by removing the last character.

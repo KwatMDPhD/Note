@@ -1,62 +1,27 @@
-## Think less
-
 Import specifically at the top.
-
-Use `<` and `<=` instead of `>` and `>=`.
-
-Limit integers to 0, 1, 2, 4, or multiples of 8; for floats, apply this rule to their fraction component.
-
-Use specialized functions instead of implementing.
-
-If there are 2 or more lines in a conditional block, use `continue` style
-
-```julia
-# Do this
-if !condition
-    continue
-end
-Line 1
-Line 2
-
-# instead of this
-if condition
-    Line 1
-    Line 2
-end
-```
-
-Add `.0` to only the last value: `[1, 2, 3.0]`.
-
-## Allocate less
 
 Use concrete, immutable data.
 
-Use small data.
-
 Initialize data structures ahead of time.
 
-## Compute less
+Do not change types.
 
-Be simple.
+Use specialized functions.
 
-Be flat.
+Interpolate variables instead of expressions.
 
-Be predictable.
+Use `continue` instead of multiple lines.
 
-Do not change a variable's type.
+Use `if` instead of `?`.
 
-Store related data close in space.
+Use `<` and `<=` instead of `>` and `>=`.
 
-Access related data close in time.
+Include `.0` only in the last number: `[1, 2, 3.0]`.
 
-Write small, pure functions, each doing one thing and returning one type.
+Test functions with loops.
 
-## Test
+Name results `re`.
 
-1 function, 1 loop.
+Use `===`.
 
-Name any result `re`.
-
-Prefer `===`.
-
-Keep `@btime` close.
+Follow `@test` with `@btime`.
