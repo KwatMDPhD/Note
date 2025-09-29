@@ -1,103 +1,105 @@
-## Source of Information
+## Source of information
 
-When (year-month-day-hour-minute)
+Time.
 
-Where
+Location.
 
-How
+Source.
 
-Source
+Medium.
 
 ## Patient
 
-Name (first last)
+Name.
 
-Data of birth (year-month-day)
+Sex.
 
-Sex
+Date of birth.
 
-## Chief Complain
+## Chief complain
 
-## History of Present Illness
+## History of present illness
 
-Onset
+Onset.
 
-Duration
+Duration.
 
-Frequency
+Frequency.
 
-Quality (patient's words)
+Quality (patient's words).
 
-Radiation
+Radiation.
 
-0-10
+0-10.
 
-Association
+Associations.
 
-Aggrevation
+Alleviations.
 
-Alleviation
+Aggrevations.
 
-Progress
+Progress.
 
-## Medical History
+## Medical history
 
-Event (timing)
+Events (time).
 
-Allergen; reaction
+Allergens (reaction).
 
 ## Intake
 
-Medication (medication; timing; amount; adrerence)
+Medications (time, amount, and adrerence).
 
-Supplement (supplement; timing; amount)
+Supplements (time and amount).
 
 ## Prevention
 
-Immunization
+Immunizations.
 
-Screening
+Screenings.
 
-## Family Medical History
+## Family medical history
 
-Condition
+Patient.
 
-Mother
+Mother.
 
-Father
+Father.
 
-Sibling
+Siblings.
 
-Child
+Children.
 
-## Social History
+## Social history
 
-Home
+Home.
 
-Employment
+Sleep.
 
-Sleep
+Diet.
 
-Diet
+Exercise.
 
-Exercise
+Employment.
 
-Hobby
+Hobbies.
 
-People
+People.
 
-Pet
+Pets.
 
-Alcohol (timing; amount)
+##
 
-Tabacco (timing; amount)
+Alcohol (time and amount).
 
-Recreational drug (substance; timing; amount)
+Tabacco (time and amount).
 
-Sexuality
+Recreational substances (time and amount).
 
-Psychiatry
+Sexuality.
 
-Safety
+Mental health.
 
-Support
+Safety.
+
+Support system.

@@ -2,7 +2,7 @@ Tasks ➡ Screenshot ➡ `~/Desktop`
 
 Temporary files ➡ `~/Downloads`
 
-Files ➡ `iCloud Drive` (which has Apple, shared, and a personal directories)
+Files ➡ `iCloud Drive` (which has default directories, shared directories, and a personal directory)
 
 ```
 iCloud Drive/
@@ -11,16 +11,16 @@ iCloud Drive/
 
     ...
 
-    Project 1/
+    Tiny Beasts/
 
     ...
 
-    Person/
+    Kw/
 ```
 
 Code and data ➡ `~/cr` ➡ GitHub
 
-Media (including the ones in Photos) ➡ `~/Record` (which has `Event` and project directories)
+Media (including Photos) ➡ `~/Record` (which has `Event` and project directories)
 
 ```
 Record/
@@ -42,5 +42,3 @@ Record/
         ...
 
 ```
-
-When dating a name, prefix it with the most specific known time in "Ye Mo Da Ho Mi Se": 2024 08 19 15 24 File name.

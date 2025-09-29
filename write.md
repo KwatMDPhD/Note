@@ -1,3 +1,15 @@
-Capitalize only the first letter unless using a proper noun like RNAlater.
+##
 
-Lowercase magnitudes, uppercase units, and add no space: 8nG/uL.
+End a clause with a period or structure.
+
+##
+
+In a clause, uppercase only the first character.
+
+Lowercase magnitudes, uppercase units, and have no spaces: 8nG/uL.
+
+Respect proper-noun cases.
+
+##
+
+Date "Year Month Day Hour Minute Second": 2025 09 29 16 36 12.

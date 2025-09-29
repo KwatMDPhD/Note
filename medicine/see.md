@@ -1,51 +1,61 @@
-## Greet
+# Greet
 
-"I am looking for PATIENTNAME."
+I am looking for NAME.
 
-Verify identity.
+(Verify identity.)
 
-"My name is MYNAME. I am a TITLE. You can call me MYALIAS."
+My name is Kwat Medetgul-Ernar.
 
-"How do you want me to call you?"
+I am a medical student.
+
+You can call me Kwat.
+
+How do you want me to call you?
 
 ## Frame
 
-"PATIENTALIAS, I am here to help you with your medical needs."
+ALIAS, I am here to help you with your medical needs.
 
-"I want to ask you some questions and do a physical exam."
+I want to ask you some questions and do a physical exam.
 
-("I want to assure you that there is no one here with me and this is a private conversation.")
+##
 
-("If the connection fails, rejoin.")
+I want to assure you that there is no one here with me and this is a private conversation.
 
-("If you can not hear me, waive your hand.")
+If the connection fails, rejoin.
 
-## Consent
+If you can not hear me, waive your hand.
 
-"Is that okay with you?"
+## Get consent
 
-## [Interview](interview_a_patient.md)
+Is that okay with you?
 
-"I want to assure you that everything we talk about is confidential between us and the healthcare team, except when there is an immediate threat to someone."
+I want to assure you that everything we talk about is confidential between us and the healthcare team, except when there is an immediate threat to someone.
 
-## Review System
+## Interview
 
-### Summarize
+## Review systems
 
-"I am going to try to summarize what you have told me. If I am missing anything or there is something you want to add, let me know."
+## Summarize
 
-## [Exam](exam_a_patient.md)
+I am going to try to summarize what you have told me.
+
+If I am missing anything or there is something you want to add, let me know.
+
+## Exam
 
 ## End
 
-"Do you have any questions, concerns, or anything else that we can help you with?"
+Do you have any questions, concerns, or anything else that we can help you with?
 
-"If anyting comes up, let us know."
+If anyting comes up, let us know.
 
-Tell the patient what is next.
+(Tell the patient what is next.)
 
-"It was good seeing you today PATIENTALIAS - take care."
+It was good seeing you today ALIAS.
 
-## Order Diagnostic
+Take care.
 
-## [Assess](assess_a_patient.md)
+## Order diagnostic
+
+## Assess

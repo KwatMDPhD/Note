@@ -1,35 +1,53 @@
-Use two characters.
+##
 
-Uppercase global ones.
+Use two characters.
 
 Pluralize by adding an underscore.
 
-Differentiate ones with the same content type by numbering.
+Differentiate by numbering and shifting.
 
-Differentiate ones with different content types by shifting.
+Use one uppercase for matrices.
 
-Use an uppercase for matrix-like objects.
+Uppercase global ones.
 
-Name based on the idea least likely to change
+##
 
-- Base on physics
-- Name counts as `um`
-- Name numbers between 0 and 1 as `pr`
-- Base on the algorithm
-- Keep external names
+Name using the most stable idea from
+
+- Physics
+
+- Algorithms
+
+- Sources
+
+Name numbers between 0 and 1 `pr`.
+
+Name counts `um`.
+
+##
 
 Limit function names
 
-- `test*`
-- `lo*`
-- `update*!`
-- `get*`
-- `is*`
-- `index*`
-- `make*`
-- `text*`
-- `path*`
-- `read*`
-- `write*`
+- `test`
+
+- `lo`
+
+- `update!`
+
+- `get`
+
+- `is`
+
+- `index`
+
+- `make`
+
+- `text`
+
+- `path`
+
+- `read`
+
+- `write`
 
 Differentiate function names by removing the last character.

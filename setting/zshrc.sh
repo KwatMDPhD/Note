@@ -2,6 +2,8 @@ alias ..="cd .."
 
 alias ...="cd ../.."
 
+alias ....="cd ../../.."
+
 alias cp="cp -i"
 
 alias mv="mv -i"
@@ -18,11 +20,7 @@ alias la="ls -lhA"
 
 alias lt="ls -lhtr"
 
-alias du="du -h"
-
 alias tree="tree -h"
-
-alias find="find -E"
 
 alias grep="grep --color --ignore-case"
 

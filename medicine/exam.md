@@ -10,7 +10,7 @@ Blood pressure.
 
 Respiratory rate.
 
-%O₂.
+Oxygen saturation.
 
 ## Head
 
@@ -18,7 +18,8 @@ Respiratory rate.
 
 Palpate
 
-- .
+- TODO
+- TODO
 
 ### Nose
 
@@ -30,19 +31,21 @@ Scope.
 
 Palpate
 
-- .
+- TODO
+
+- TODO
 
 ### Face
 
 Palpate
 
-- Sinus.
+- Sinus
 
 ### Ear
 
 Palpate
 
-- .
+- TODO
 
 Scope.
 
@@ -50,37 +53,35 @@ Scope.
 
 Palpate
 
-- .
+- TODO
 
 Place the tongue blade on the side to avoid gag reflex, and inspect
 
-- .
+- TODO
 
 ### Neck
 
 Palpate
 
-- Lymphnode.
-
-- Larynx.
-
-- Thyroid gland.
+- Lymphnode
+- Larynx
+- Thyroid gland
 
 ## Circulatory
 
-### Radial Artery
+### Radial artery
 
 (Systolic blood pressure of 80 is required.)
 
 Measure heart rate and check if the rhythm is regular.
 
-### Jagular Vein
+### Jagular vein
 
 Have the patient angle at 45 degrees and turn the head to the left, and measure the distance from the sternal angle to a pulsation.
 
-(It should be less than 5cm.)
+(It should be less than 5cM.)
 
-### Carotid Artery
+### Carotid artery
 
 (Systolic blood pressure of 60 is required.)
 
@@ -106,19 +107,16 @@ Have the patinet sit forward and exhale a deep breath, diaphram auscultate LLSB.
 
 (Hear for aortic regurgitation.)
 
-### Peripheral Artery
+### Peripheral artery
 
 Check pulse from
 
-- Brachial artery.
+- Brachial artery
+- Popliteal artery
+- Distal tibial artery
+- Dorsalis pedis artery
 
-- Popliteal artery.
-
-- Distal tibial artery.
-
-- Dorsalis pedis artery.
-
-### Lower Extremity
+### Lower extremity
 
 Press distal tibia for 2 seconds and check for indention.
 
@@ -128,11 +126,9 @@ Press distal tibia for 2 seconds and check for indention.
 
 Inspect
 
-- Distress.
-
-- Asymmetry.
-
-- Deformity.
+- Distress
+- Asymmetry
+- Deformity
 
 ### Neck
 
@@ -142,15 +138,13 @@ Palpate trachea.
 
 Diaphram auscultate
 
-- Anterior 2 levels.
-
-- Lateral 2 levels.
-
-- Posterior 3 levels.
+- Anterior 2 levels
+- Lateral 2 levels
+- Posterior 3 levels
 
 Percuss
 
-- Posterior 3 levels.
+- Posterior 3 levels
 
 (When percussing, any fluid inside or outside the airway results in dullness.)
 
@@ -164,13 +158,10 @@ Percuss
 
 Inspect
 
-- Contour.
-
-- Mass.
-
-- Vein.
-
-- Movement.
+- Contour
+- Mass
+- Vein
+- Movement
 
 Diaphram auscultate the center.
 
@@ -184,298 +175,24 @@ Press slowly and then release quickly.
 
 Percuss and size.
 
-(The height should be less than 12cm.)
+(The height should be less than 12cM.)
 
 While the patient exhales a deep breath, palpate.
 
 ### Spleen
 
-Have the patient continuously take deep breaths, and percuss and size. (The height should be less than 7cm.)
+Have the patient continuously take deep breaths, and percuss and size. (The height should be less than 7cM.)
 
 Have the patient exhale a deep breath, and sandwitch palpate.
 
-### Abdominal Aorta
+### Abdominal aorta
 
-Palpate and size. (The diameter should be less than 3cm.)
+Palpate and size.
+
+(The diameter should be less than 3cM.)
 
 ### Kidney
 
 Press costovertebral angle.
 
 Sandwitch palpate.
-
-## Neural
-
-### Mental Status
-
-"I have to ask some silly routine question."
-
-Awake.
-
-Alert.
-
-Orient (Cognition.)
-
-- Person.
-
-- Place.
-
-- Time.
-
-- Situation.
-
-Speech
-
-- Clear. (Volume and articulation.)
-
-- Fluent.
-
-- Error.
-
-Language
-
-- Comprehend.
-
-- Repeat.
-
-- Name.
-
-- Read.
-
-- Write.
-
-Dysarthria and aphagia.
-
-Mimic.
-
-Recall 3 objects from different categories in 5 minutes; hint if fail. (Hippocampus encodes and prefrontal cortex associates.)
-
-Remember distant past events.
-
-### Cranial Nerve
-
-#### 1
-
-Smell.
-
-#### 2
-
-Field.
-
-Acuity.
-
-Color. (Ishihara plate.)
-
-Fundoscope
-
-- Sharp disk. (Optic nerve atrophy too sharp or too blurry.)
-
-- Vascular change. (Angiopathy and diabetes.)
-
-- Diplopia. (Bilateral neural and unilateral structural.)
-
-#### 3, 4, 6
-
-Extraocular muscles.
-
-Nystagmus. (Cerebellum.)
-
-Accomodation-convergence reflex.
-
-Light reflex. (Light ipsilateral pupil, light contralateral puppil, and swing test not rapidly and U.)
-
-#### 5
-
-Touch
-
-- Forehead.
-
-- Cheek.
-
-- Jaw.
-
-Facial pain. (Facial pain field peripherally and trigeminal neuralgia.).
-
-Mastication muscles.
-
-Corneal reflex. (5.1 senses and 7 blinks.)
-
-#### 7
-
-Facial muscles
-
-- Raise eyebrows.
-
-- Close eyes.
-
-- Show teeth.
-
-- Puff cheecks.
-
-Anterior 2/3 tongue taste.
-
-Stapes. (Hyperacusia.)
-
-Gland.
-
-#### 8
-
-Hear.
-
-Vestibular. (Vestibular ocular reflex.)
-
-Nystagmus.
-
-#### 9, 10, 12
-
-Uvula.
-
-Palate.
-
-Swallow.
-
-Tongue
-
-- Midline.
-
-- Move.
-
-#### 11
-
-Sternocleidomastoid.
-
-Trapezius.
-
-### Motor
-
-Use 2 hands.
-
-Proximal to distal.
-
-Feel first.
-
-(0 none, 1 flicker, 2 horizontal plane, 3 veritcal place antigravity, 4 some resistance, and 5 normal.)
-
-(Trauma.)
-
-(Range of motion.)
-
-Bulk and tone.
-
-Range of motion and strength
-
-- Neck
-  - Flex-extend.
-
-  - Lateral bend.
-
-  - Rotate.
-
-- Shoulder
-  - Flex-extend.
-
-  - Adduct-abduct.
-
-  - Rotate.
-
-- Elbow
-  - Flex-extend.
-
-  - Pronate-supinate.
-
-- Wrist
-  - Flex-extend.
-
-  - Ulnar radial deviate.
-
-- Finger
-  - Grasp.
-
-  - Flex-extend.
-
-  - Adduct-abduct.
-
-  - Thumb oppose.
-
-- Back
-  - Flex-extend.
-
-  - Abduct-adduct.
-
-  - Rotate.
-
-- Hip
-  - Flex-extend.
-
-  - Adduct-abduct.
-
-  - Rotate.
-
-- Knee
-  - Flex-extend.
-
-- Ankle
-  - Flex-extend.
-
-  - Adduct-abduct.
-
-  - Invert-exvert.
-
-- Toe
-  - Flex-extend.
-
-### Reflex (0 none, 1 low, 2 normal, 3 high, and 4 clonus.)
-
-- Biceps (C5, 6).
-
-- Triceps (C6, 7, 8).
-
-- Brachioradialis (C5, 6).
-
-- Patellar (L2, 3, 4).
-
-- Achilles (S1, 2).
-
-- Plantar.
-
-### Sensory
-
-- Touch.
-
-- Pain. (B12 posterior column.)
-
-- Proprioception.
-
-- Vibration.
-
-Cognitive sense. (2 point discrimination.)
-
-Move proximally if no sense.
-
-### Coordination and Gait (basal ganglia < cerebellum)
-
-Nose-finger touch.
-
-Hand flip flop.
-
-Heel-shin rub.
-
-Blind standing. (No hand no balance and hand balance.)
-
-Stand up without arms, hold a little to check orthostasis.
-
-Walk
-
-- Pace.
-
-- Step.
-
-- Arm swing.
-
-- Turn.
-
-- Heel.
-
-- Toe.
-
-- Tandem.
