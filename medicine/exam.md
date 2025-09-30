@@ -1,198 +1,109 @@
-## Appearance
+Look for distress.
 
-## Vital
+Measure the body temperature.
 
-Temperature.
+Measure the heart rate.
 
-Heart rate.
+Measure the blood pressure.
 
-Blood pressure.
+Measure the respiratory rate.
 
-Respiratory rate.
+Measure the oxygen %.
 
-Oxygen saturation.
+Palpate the skull.
 
-## Head
+Check the nose for congestion.
 
-### Skull
+Scope the nose.
 
-Palpate
+Palpate the structures around the eyes.
 
-- TODO
-- TODO
+Palpate the sinuses.
 
-### Nose
+Palpate the ears.
 
-Check congestion.
+Scope the ears.
 
-Scope.
+Palpate inside the mouth.
 
-### Eye
+Place a tongue blade on the side to avoid triggering the gag reflex, and inspect inside the mouth.
 
-Palpate
+Palpate the neck lymph nodes.
 
-- TODO
+Palpate the larynx.
 
-- TODO
+Palpate the thyroid gland.
 
-### Face
+Touch the radial arteries to measure the heart rate and rhythm.
+(This requires a systolic blood pressure of 80 mMHg.)
 
-Palpate
-
-- Sinus
-
-### Ear
-
-Palpate
-
-- TODO
-
-Scope.
-
-### Mouth
-
-Palpate
-
-- TODO
-
-Place the tongue blade on the side to avoid gag reflex, and inspect
-
-- TODO
-
-### Neck
-
-Palpate
-
-- Lymphnode
-- Larynx
-- Thyroid gland
-
-## Circulatory
-
-### Radial artery
-
-(Systolic blood pressure of 80 is required.)
-
-Measure heart rate and check if the rhythm is regular.
-
-### Jagular vein
-
-Have the patient angle at 45 degrees and turn the head to the left, and measure the distance from the sternal angle to a pulsation.
-
+Have the patient sit at a 45-degree angle, turn their head to the left, and measure the distance on the right jugular vein from the sternal angle to the pulse.
 (It should be less than 5cM.)
 
-### Carotid artery
-
-(Systolic blood pressure of 60 is required.)
-
-One side at a time, palpate.
+One side at a time, palpate the carotid arteries.
 
 One side at a time, have the patient take a deep breath and hold, and bell auscultate.
+(This requires a systolic blood pressure of 60 mMHg.)
 
-### Heart
-
-Feel the apex.
-
+Feel the heart apex.
 (It is palpable in 25% of adults.)
 
-Diaphram auscultate LLSB, LICS2, the apex, and RICS2.
+Diaphragm auscultate the LLSB, the LICS2, the heart apex, and the RICS2.
 
-Bell auscultate the apex.
+Bell auscultate the heart apex.
 
-In the left lateral position, bell auscultate the apex.
+Have the patient lie on their left side and bell auscultate the heart apex.
+(Listen for an S3, S4, and mitral stenosis.)
 
-(Hear for S3, S4, and mitral stenosis.)
+Have the patient sit forward and exhale a deep breath, and diaphragm auscultate the LLSB.
+(Listen for aortic regurgitation.)
 
-Have the patinet sit forward and exhale a deep breath, diaphram auscultate LLSB.
+Check the brachial arteries for pulses.
 
-(Hear for aortic regurgitation.)
+Check the popliteal arteries for pulses.
 
-### Peripheral artery
+Check the distal tibial arteries for pulses.
 
-Check pulse from
+Check the dorsalis pedis arteries for pulses.
 
-- Brachial artery
-- Popliteal artery
-- Distal tibial artery
-- Dorsalis pedis artery
+Press the distal tibia for 2 seconds and check for an indentation.
 
-### Lower extremity
+Inspect the chest for distress, asymmetries, and deformities.
 
-Press distal tibia for 2 seconds and check for indention.
+Palpate the trachea.
 
-## Pulmonary
+Diaphragm auscultate the lungs at 2 anterior levels, 2 lateral levels, and 3 posterior levels.
+(Fluids inside the airways result in more resonance and those outside less.)
+(The 2nd level is within the triangle formed by the trapezius, the latissimus dorsi, and the scapula.)
 
-### Chest
+Percuss the lungs at 3 posterior levels.
+(Fluids inside or outside the airways result in dullness.)
 
-Inspect
+Inspect the abdominal contours.
 
-- Distress
-- Asymmetry
-- Deformity
+Inspect the abdomen for masses, veins, and movements.
 
-### Neck
+Diaphragm auscultate the abdominal center.
 
-Palpate trachea.
+Percuss all abdominal areas.
 
-### Lung
+Starting furthest from any pain, palpate the abdomen superficially and then deeply.
 
-Diaphram auscultate
+Press the abdomen slowly and deeply, hold, and release quickly.
 
-- Anterior 2 levels
-- Lateral 2 levels
-- Posterior 3 levels
+Percuss the liver to size it.
+(Its height should be less than 12cM.)
 
-Percuss
+Have the patient exhale deeply, and palpate the liver.
 
-- Posterior 3 levels
+Have the patient take deep breaths continuously, and percuss the spleen to size it.
+(Its height should be less than 7cM.)
 
-(When percussing, any fluid inside or outside the airway results in dullness.)
+Have the patient exhale deeply, and sandwich-palpate the spleen.
 
-(When auscultating, any fluid inside the airway results in more resonance but any fluid outside the airway results in less resonance.)
+Palpate the abdominal aorta and size it.
+(Its diameter should be less than 3cM.)
 
-(The 2nd level should be at the triangle made of trapezius, latissimus dorsi, and scapula.)
+Press the kidneys at the costovertebral angles, the spaces on the back between the 12th rib and the vertebral column.
 
-### Abdominal
-
-### Abdomen
-
-Inspect
-
-- Contour
-- Mass
-- Vein
-- Movement
-
-Diaphram auscultate the center.
-
-Percuss all areas.
-
-All areas but starting furthest from any pain, palpate superficially and then deeply.
-
-Press slowly and then release quickly.
-
-### Liver
-
-Percuss and size.
-
-(The height should be less than 12cM.)
-
-While the patient exhales a deep breath, palpate.
-
-### Spleen
-
-Have the patient continuously take deep breaths, and percuss and size. (The height should be less than 7cM.)
-
-Have the patient exhale a deep breath, and sandwitch palpate.
-
-### Abdominal aorta
-
-Palpate and size.
-
-(The diameter should be less than 3cM.)
-
-### Kidney
-
-Press costovertebral angle.
-
-Sandwitch palpate.
+Sandwich-palpate the kidneys.
