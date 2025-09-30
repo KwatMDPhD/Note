@@ -1,109 +1,53 @@
-## Practice
+## Move
 
-Review by seeing, hearing, and reading
+Open, smile, and maintain eye contact.
 
-Make it natural by practicing a lot
+Deliver high energy and clear thinking.
 
-## Meeting
+## Speak
 
-Aim to cause 1 action
+Make a melody.
 
-Treat it like a theater with 1 holy smoke moment
+Tell stories.
 
-Hit senses and deliver infotainment and feelings, the only thing remembered
+Speak with excitement and in near hyperbole.
 
-Introduce 1 villain in detail
+Speak headlinely.
 
-Deliver 3 messages
+Speak simply, so they think they can copy.
 
-Repeat the core message
+Speak specifically.
 
-Demo short, simple, sweet, swift, and substantial
+Follow numbers with analogies.
 
-Bring on partners
+Use metaphors.
 
-Prepare for questions
+"Future"
 
-Make evangelists
+"Mission"
 
-## Keynote
+"See it exist"
 
-Make 1 slide = 1 message = 1 picture + 1 arrow + 1 word + spaces
+"I'm excited about this because"
 
-Refer elsewhere for details
+"What that means is"
 
-Refresh in 10 minutes
+"It's like this"
 
-## Body
+"With just one"
 
-Deliver high energy
+"-est"
 
-Maintain eye contact
+"Boom"
 
-Smile
+"It works like magic"
 
-Stay open
+"Isn't that great?"
 
-Deliver thinking
+"For everyone"
 
-## Voice
+"Everybody benefits"
 
-Make melody
+"Partner"
 
-## Message
-
-Think from their perspectives
-
-Create a meaning bucket and then fill it with details
-
-Frame with a road map
-
-Tell benefit early
-
-Speak headlines
-
-Tell stories
-
-Speak simply, so simple that they think that they can copy
-
-Speak specifically
-
-Speak with excitement and in almost hyperbole
-
-Follow up numbers with analogies
-
-Use tangible examples
-
-Use metaphors
-
-Use first name often
-
-## Phrase
-
-It's like this
-
-What that means is
-
--est
-
-Boom
-
-Isn't that great
-
-Future
-
-Mission
-
-I'm excited about this thing because
-
-Partner
-
-See it exist
-
-With just one
-
-For everyone
-
-Everybody benefits
-
-It works like a magic
+Use first names often.

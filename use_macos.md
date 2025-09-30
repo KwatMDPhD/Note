@@ -2,7 +2,7 @@ Tasks ➡ Screenshot ➡ `~/Desktop`
 
 Temporary files ➡ `~/Downloads`
 
-Files ➡ `iCloud Drive` (which has default directories, shared directories, and a personal directory)
+Files ➡ `iCloud Drive` (which has default directories, shared directories, and personal directory)
 
 ```
 iCloud Drive/
