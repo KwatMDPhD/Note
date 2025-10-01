@@ -1,4 +1,4 @@
-Terminal / Settings... / Profiles / Import `setting/terminal/*`
+Terminal / Settings... / Profiles / ... / Import... / `*terminal`
 
 ```bash
 cd ~/cr/we/Note

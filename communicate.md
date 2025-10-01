@@ -1,10 +1,6 @@
-## Move
-
 Open, smile, and maintain eye contact.
 
 Deliver high energy and clear thinking.
-
-## Speak
 
 Make a melody.
 
