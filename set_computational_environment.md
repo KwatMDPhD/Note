@@ -23,7 +23,7 @@ Install [brew](https://brew.sh).
 ```bash
 cd
 
-brew install watch tree rename neovide luarocks ripgrep screen shfmt node yarn exiftool imagemagick
+brew install watch tree rename neovide luarocks ripgrep screen shfmt node yarn imagemagick exiftool
 ```
 
 Install [julia](https://julialang.org/install).
@@ -43,13 +43,15 @@ cd
 
 brew install pyenv-virtualenv
 
-pyenv install 3.13.7
+pyenv install 3.14.0
 
-pyenv global 3.13.7
+pyenv global 3.14.0
 ```
 
+Use 3.14.0 to make a virtual environment and use it in a project
+
 ```bash
-pyenv virtualenv 3.13.7 1
+pyenv virtualenv 3.14.0 1
 
 cd Project
 
