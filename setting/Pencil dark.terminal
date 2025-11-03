@@ -184,7 +184,7 @@
 	<key>FontAntialias</key>
 	<true/>
 	<key>ProfileCurrentVersion</key>
-	<real>2.0699999999999998</real>
+	<real>2.0899999999999999</real>
 	<key>RestoreLines</key>
 	<integer>1000000</integer>
 	<key>ScrollAlternateScreen</key>
@@ -223,9 +223,9 @@
 	<key>VisualBell</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>99</integer>
+	<integer>100</integer>
 	<key>name</key>
-	<string>Pencil Dark</string>
+	<string>Pencil dark</string>
 	<key>noWarnProcesses</key>
 	<array>
 		<dict>
