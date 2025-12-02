@@ -8,12 +8,12 @@ Use one uppercase for matrices.
 
 Uppercase global ones.
 
-Name using the most stable idea from physics, algorithms, or sources.
+Name the most stable.
 
 Name numbers between 0 and 1 `pr`.
 
 Name counts `um`.
 
-Limit function names to `test`, `lo`, `update!`, `get`, `is`, `index`, `make`, `text`, `path`, `read`, or `write`.
+Limit function names to `read`, `log`, `write`, `update!`, and `make`.
 
-Differentiate function names by removing the last character.
+Make `update!` and `make` specific with `is`, `index`, `number`, `text`, `path`, and `map`.
