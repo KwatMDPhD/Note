@@ -28,7 +28,7 @@ alias ne="neovide &!"
 
 alias ju="julia --project"
 
-function clea {
+function k1 {
 
   kata delete
 
@@ -36,7 +36,7 @@ function clea {
 
 }
 
-function syn {
+function k2 {
 
   for di in $(find -E . -type d -regex ".*\.(jl|pr)" -not -regex ".*node_modules.*"); do
 
@@ -60,17 +60,6 @@ PROMPT="%B%~%b "
 
 RPROMPT=" %B%*%b"
 
-export PATH="$HOME/.julia/bin:$HOME/.juliaup/bin:$HOME/.pyenv/bin:$PATH"
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-eval "$(pyenv init -)"
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/kw/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
+export PATH="$HOME/.julia/bin:$HOME/.juliaup/bin:$PATH"
