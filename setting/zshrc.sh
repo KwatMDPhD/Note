@@ -65,3 +65,12 @@ export PATH="$HOME/.julia/bin:$HOME/.juliaup/bin:$HOME/.pyenv/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 eval "$(pyenv init -)"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/kw/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
