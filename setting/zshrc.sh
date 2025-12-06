@@ -28,6 +28,12 @@ alias ne="neovide &!"
 
 alias ju="julia --project"
 
+function ch {
+
+  find . -type d -exec chmod 755 {} + -o -type f -exec chmod 644 {} +
+
+}
+
 function k1 {
 
   kata delete
