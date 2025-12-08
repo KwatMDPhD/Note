@@ -89,19 +89,12 @@ Location Services / System Services / Details... /
 - Alerts & Shortcuts Automations 👎
 
 - Suggestions & Search 👎
-
 - Setting time zone 👍
-
 - System customization 👍
-
 - Significant locations 👎
-
 - Find My Mac 👍
-
 - HomeKit 👎
-
 - Networking and wireless 👍
-
 - Mac Analytics 👎
 
 Location Services / System Services / Details... / Significant locations / Show location icon in menu bar when System Services request your location / 👍
