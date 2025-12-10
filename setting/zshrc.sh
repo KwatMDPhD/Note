@@ -34,7 +34,7 @@ function ch {
 
 }
 
-function k1 {
+function cl {
 
   kata delete
 
@@ -42,7 +42,7 @@ function k1 {
 
 }
 
-function k2 {
+function sy {
 
   for di in $(find -E . -type d -regex ".*\.(jl|pr)" -not -regex ".*node_modules.*"); do
 
