@@ -69,7 +69,7 @@ require("lazy").setup({
 	}, {
 		"rebelot/kanagawa.nvim",
 		config = function()
-			vim.cmd"colorscheme kanagawa"
+			vim.cmd("colorscheme kanagawa")
 		end,
 	}, {
 		"lewis6991/gitsigns.nvim",
@@ -79,18 +79,30 @@ require("lazy").setup({
 	}, {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "julia" },
-				highlight = { enable = true },
-				indent = { enable = true },
-			})
+		opts = {
+			ensure_installed = { "julia" },
+		},
+		config = function(_, opts)
+			require("nvim-treesitter").setup(opts)
 		end,
 	}, {
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	}, {
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = { "julials" },
+			})
+		end,
+	}, { "neovim/nvim-lspconfig" }, {
 		"dominikduda/vim_current_word",
 		config = function()
-			vim.cmd"let g:vim_current_word#highlight_current_word = 0"
-			vim.cmd"highlight CurrentWordTwins guibg=#790505"
+			vim.cmd("let g:vim_current_word#highlight_current_word = 0")
+			vim.cmd("highlight CurrentWordTwins guibg=#790505")
 		end,
 	}, {
 		"brenoprata10/nvim-highlight-colors",
@@ -102,6 +114,7 @@ require("lazy").setup({
 		config = function()
 			vim.g.slime_target = "screen"
 			vim.g.slime_cell_delimiter = "# ---- #"
+			vim.g.slime_bracketed_paste = 1
 			vim.keymap.set("n", "<Space><Space>", "<Plug>SlimeSendCell")
 			vim.keymap.set("x", "<Space><Space>", "<Plug>SlimeRegionSend")
 		end,
