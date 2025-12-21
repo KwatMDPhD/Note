@@ -23,7 +23,7 @@ Install [brew](https://brew.sh).
 ```bash
 cd
 
-brew install watch tree rename neovide luarocks ripgrep screen shfmt node yarn imagemagick exiftool
+brew install watch tree rename neovide luarocks ripgrep shfmt node imagemagick exiftool
 ```
 
 Install [julia](https://julialang.org/install).
