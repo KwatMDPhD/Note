@@ -1,7 +1,7 @@
 Terminal / Settings... / Profiles / ... / Import... / `*terminal`
 
 ```bash
-cd ~/cr/we/Note
+cd ~/cr/md/Note
 
 ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
