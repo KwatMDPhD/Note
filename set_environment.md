@@ -5,8 +5,6 @@ cd ~/cr/md/Note
 
 ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
-ln -s $(pwd)/setting/screenrc ~/.screenrc
-
 mkdir -p ~/.config/nvim
 
 ln -s $(pwd)/setting/init.lua ~/.config/nvim
