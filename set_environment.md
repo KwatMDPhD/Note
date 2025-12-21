@@ -75,10 +75,6 @@ git config --global fetch.prune true
 
 git config --global pull.rebase true
 
-git config --global status.submoduleSummary true
-
-git config --global diff.submodule log
-
 git config --global diff.colorMoved zebra
 ```
 
