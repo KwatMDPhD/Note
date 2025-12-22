@@ -2,6 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
+vim.opt.splitright = true
 vim.opt.number = true
 vim.opt.signcolumn = "number"
 vim.opt.expandtab = true
@@ -80,7 +81,13 @@ require("lazy").setup({
         version = "*",
         opts = {
             open_mapping = "<Leader>s",
-            size = function() return math.floor(vim.o.lines * 0.32) end,
+            persist_size = false,
+            direction = "float",
+            float_opts = {
+                height = function() return math.floor(vim.o.lines * 0.88) end,
+                width = function() return math.floor(vim.o.columns * 0.88) end,
+                winblend = 24,
+            },
         },
     },
 })
