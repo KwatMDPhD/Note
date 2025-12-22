@@ -29,9 +29,9 @@ Install [julia](https://julialang.org/install).
 ```julia
 using Pkg: add
 
-for pa in ("BenchmarkTools", "Revise")
+for st in ("BenchmarkTools", "Revise")
 
-    add(pa)
+    add(st)
 
 end
 ```
