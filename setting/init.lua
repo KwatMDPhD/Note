@@ -9,6 +9,14 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.updatetime = 240
 
+vim.api.nvim_create_autocmd(
+	{ "FocusGained", "BufEnter", "CursorHold" },
+	{
+		pattern = "*",
+		command = "checktime",
+	}
+)
+
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
 
 if vim.g.neovide then
@@ -99,8 +107,8 @@ require("lazy").setup({ {
 	},
 } })
 
-vim.keymap.set(
-	{ "n", "v" },
-	"<Space><Space>",
-	"<Cmd>ToggleTermSendVisualLines<CR>"
-)
+vim.keymap.set("v", "<Space><Space>", function()
+	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
+		args = vim.v.count,
+	})
+end)
