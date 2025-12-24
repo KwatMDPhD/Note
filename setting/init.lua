@@ -70,10 +70,13 @@ require("lazy").setup({ {
 	config = function()
 		vim.cmd.colorscheme("tokyonight")
 	end,
-}, "lewis6991/gitsigns.nvim", {
+}, {
 	"brenoprata10/nvim-highlight-colors",
 	opts = {},
 }, {
+	"tzachar/local-highlight.nvim",
+	opts = { debounce_timeout = 8 },
+}, "lewis6991/gitsigns.nvim", {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	opts = {

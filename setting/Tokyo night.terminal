@@ -230,13 +230,13 @@
 	<key>VisualBell</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>100</integer>
+	<integer>80</integer>
 	<key>name</key>
 	<string>Tokyo night</string>
 	<key>noWarnProcesses</key>
 	<array/>
 	<key>rowCount</key>
-	<integer>128</integer>
+	<integer>160</integer>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>

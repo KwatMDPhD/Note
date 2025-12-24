@@ -1,15 +1,13 @@
-Terminal / Settings... / Profiles / ... / Import... / `*terminal`
+Terminal / Settings... / Profiles / ... / Import... / `setting/Tokyo night.terminal`
 
 ```bash
 cd ~/cr/md/Note
 
+mkdir -p ~/.config/nvim ~/.julia/config
+
 ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
-mkdir -p ~/.config/nvim
-
 ln -s $(pwd)/setting/init.lua ~/.config/nvim
-
-mkdir -p ~/.julia/config
 
 ln -s $(pwd)/setting/startup.jl ~/.julia/config
 
@@ -21,7 +19,7 @@ Install [brew](https://brew.sh).
 ```bash
 cd
 
-brew install tree rename neovide luarocks ripgrep node imagemagick exiftool
+brew install neovide ripgrep rename node exiftool
 ```
 
 Install [julia](https://julialang.org/install).
@@ -63,11 +61,15 @@ cd
 
 brew update
 
-brew upgrade
+brew upgrade --greedy
+
+brew autoremove
+
+brew cleanup --prune=all
 
 brew doctor
 
-brew cleanup
+brew leaves
 
 npm --global upgrade
 
