@@ -16,7 +16,7 @@ General / Software Update / Update
 
 Picture / Set
 
-iCloud / Manage... / All except: Apple Books, iCloud Photos / Delete
+iCloud / Manage... / Unneeded ones / Delete
 
 iCloud / Saved to iCloud / See All / Apps syncing to iCloud / Unneeded ones / 👎
 
@@ -24,11 +24,9 @@ iCloud / Saved to iCloud / Drive / Optimize Mac Storage / 👎
 
 iCloud / Saved to iCloud / Drive / Desktop & Documents Folders / 👎
 
-iCloud / Apps Using iCloud / See All / Unneeded ones / 👎
+iCloud / iCloud+ Features / Private Relay / Turn On...
 
-iCloud / Private Relay / Turn On...
-
-iCloud / Private Relay / IP Address Location / Use country and time zone
+iCloud / iCloud+ Features / Private Relay / IP Address Location / Use country and time zone
 
 iCloud / Advanced Data Protection / Turn On (eventually)
 
@@ -36,7 +34,9 @@ iCloud / Advanced Data Protection / Turn On (eventually)
 
 Name (Me) / Purchases / Share My Purchases / 👍
 
-Name (Me) / Location Sharing / Everyone and Automatically Share Location / 👍
+Name (Me) / Location Sharing / Share Your Location With / Everyone
+
+Name (Me) / Location Sharing / Automatically Share Location / 👍
 
 ### Wi-Fi
 
@@ -46,12 +46,6 @@ Advanced... / Known Networks / Unknown ones / ... / Remove From List
 
 My Devices / Un-needed ones / i / Forget This Device...
 
-### Focus
-
-All except: Do Not Disturb / 👎
-
-Focus status / Share Focus status / 👎
-
 ### General
 
 About / Name / Rename
@@ -60,54 +54,19 @@ Storage / Store in iCloud... / Cancel
 
 Storage / Messages / i / All / Delete
 
+Date & Time / 24-hour time / 👍
+
 Language & Region / Temperature / Celsius (C)
 
 Language & Region / Measurement system / Metric
 
 Language & Region / First day of week / Monday
 
-Language & Region / Date format / 2024 12 27
-
-Date & Time / 24-hour time / 👍
-
-### Control Center
-
-Control Center Modules / All / Show When Active or (if not available) Don’t Show in Menu Bar
-
-Battery / Show Percentage / 👍
-
-Menu Bar Only / All / Don’t Show in Menu Bar
-
-### Privacy & Security
-
-Location Services / System Services / Details... / Significant locations / 👍
-
-Location Services / System Services / Details... / Significant locations / Recent Records / ... / Clear History
-
-Location Services / System Services / Details... /
-
-- Alerts & Shortcuts Automations 👎
-
-- Suggestions & Search 👎
-- Setting time zone 👍
-- System customization 👍
-- Significant locations 👎
-- Find My Mac 👍
-- HomeKit 👎
-- Networking and wireless 👍
-- Mac Analytics 👎
-
-Location Services / System Services / Details... / Significant locations / Show location icon in menu bar when System Services request your location / 👍
-
-Analytics & Improvements / All / 👎
-
-Apple Advertising / Personalized Ads / 👎
-
-Extensions / Sharing / All except: Copy Link / 👎
+Language & Region / Date format / 2025.12.25
 
 ### Desktop & Dock
 
-Position on screen / Left
+Dock position on screen / Left
 
 Automatically hide and show the Dock / 👍
 
@@ -137,9 +96,50 @@ Monitor / Text size / Match Built-in Display
 
 Monitor / Refresh rate / Maximize
 
+### Menu Bar
+
+Menu Bar Controls / All / Show When Active or (if not available) Don’t Show in Menu Bar
+
+Menu Bar Controls / All except Battery / 👎
+
+Menu Bar Controls / Battery / Battery Options.. / Show Percentage / 👍
+
+Menu Bar / Menu Bar Controls / Add Controls... / Add (from top to bottom of left column) Wifi, Bluetooth, AirDrop, Do Not Disturb
+
+### Focus
+
+All except: Do Not Disturb / 👎
+
+Focus status / Share Focus status / 👎
+
+### Privacy & Security
+
+Location Services / System Services / Details... / Significant locations & routes / 👍
+
+Location Services / System Services / Details... / Significant locations & routes/ Recent Records / ... / Clear History
+
+Location Services / System Services / Details... /
+
+- Alerts & Shortcuts Automations 👎
+- Suggestions & Search 👎
+- Setting time zone 👍
+- System customization 👍
+- Significant locations & routes 👎
+- Find My Mac 👍
+- Home 👎
+- Networking and wireless 👍
+- Mac Analytics 👎
+- Show location icon in Control Center when System Services request your location / 👍
+
+Analytics & Improvements / All / 👎
+
+Apple Advertising / Personalized Ads / 👎
+
 ### Internet Accounts
 
 Non-iCloud accounts / All except: Mail / 👎
+
+Caucell account / Calendar / 👍
 
 ### Game Center
 
@@ -179,15 +179,21 @@ General / New Finder windows show: / User
 
 Tags / All / Delete Tags
 
-Sidebar / Favorites / (Select in order) Applications, Recents, User, and Downloads
+Sidebar / Select Recents
 
-Sidebar / iCloud / (Select in order) iCloud Drive and Shared
+Sidebar / Favorites / (Select in order) Desktop, Downloads
+
+Sidebar / Locations / (Select in order) iCloud Drive, User, External disks, CDs, DVDs, and iOS Devices
 
 Advanced / Show all filename extensions / 👍
 
 Advanced / Show warning before removing from iCloud Drive / 👎
 
 Advanced / When performing a search: / Search the Current Folder
+
+### Sidebar
+
+Arrange Favorites (top to bottom): iCloud Drive, Shared Drives, Caucell, TODO, User, Desktop, Downloads
 
 ### Show View Options
 
@@ -219,7 +225,7 @@ Websites / Screen Sharing / When visiting other websites / Deny
 
 Websites / Location / When visiting other websites / Deny
 
-Websites / Notifications / Allow websites to ask for permission to send notification / 👎
+Websites / Notifications / Allow websites to ask for permission to send notifications / 👎
 
 Advanced / Show features for web developers / 👍
 
