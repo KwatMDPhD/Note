@@ -75,7 +75,10 @@ require("lazy").setup({ {
 	opts = {},
 }, {
 	"tzachar/local-highlight.nvim",
-	opts = { debounce_timeout = 8 },
+	opts = {
+		animate = false,
+		debounce_timeout = 8,
+	},
 }, "lewis6991/gitsigns.nvim", {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
