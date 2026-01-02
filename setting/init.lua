@@ -99,6 +99,7 @@ require("lazy").setup({ {
 	version = "*",
 	opts = {
 		open_mapping = "<Leader>a",
+		autochdir = true,
 		persist_size = false,
 		direction = "float",
 		float_opts = {
@@ -118,3 +119,5 @@ vim.keymap.set("v", "<Space><Space>", function()
 		args = vim.v.count,
 	})
 end)
+
+vim.keymap.set("n", "<Leader>s", "<Cmd>TermSelect<CR>")

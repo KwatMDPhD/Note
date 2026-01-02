@@ -5,6 +5,8 @@ cd ~/cr/md/Note
 
 mkdir -p ~/.config/nvim ~/.julia/config
 
+ln -s $(pwd)/setting/zprofile.sh ~/.zprofile
+
 ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
 ln -s $(pwd)/setting/init.lua ~/.config/nvim
@@ -19,7 +21,9 @@ Install [brew](https://brew.sh).
 ```bash
 cd
 
-brew install neovide ripgrep rename node exiftool
+brew install ripgrep rename node exiftool
+
+brew install --cask neovide
 ```
 
 Install [julia](https://julialang.org/install).

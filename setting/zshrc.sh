@@ -24,8 +24,6 @@ alias tree="tree -h"
 
 alias grep="grep --color --ignore-case"
 
-alias ne="neovide &!"
-
 alias ju="julia --project"
 
 function ch {
@@ -65,7 +63,3 @@ function sy {
 PROMPT="%B%~%b "
 
 RPROMPT=" %B%*%b"
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-export PATH="$HOME/.julia/bin:$HOME/.juliaup/bin:$PATH"
