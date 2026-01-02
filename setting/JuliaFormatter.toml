@@ -1,3 +1,5 @@
+margin = 80
+
 always_for_in = true
 
 whitespace_typedefs = true

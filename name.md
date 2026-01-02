@@ -16,4 +16,4 @@ Name counts `um`.
 
 Limit function names to `read`, `log`, `write`, `update!`, and `make`.
 
-Make `update!` and `make` specific with `is`, `index`, `number`, `text`, `path`, and `map`.
+Make `update!` and `make` specific with `is`, `index`, `number`, `text`, `path`, and `pair`.
