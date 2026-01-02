@@ -50,9 +50,7 @@ require("lazy").setup({ {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
 		view = { width = 64 },
-		filters = {
-			custom = { "^\\.git$" },
-		},
+		filters = { dotfiles = true },
 		update_focused_file = { enable = true },
 	},
 	keys = { { "<Leader>t", "<Cmd>NvimTreeToggle<CR>" } },
