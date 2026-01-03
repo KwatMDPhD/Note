@@ -63,3 +63,12 @@ function sy {
 PROMPT="%B%~%b "
 
 RPROMPT=" %B%*%b"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/kw/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

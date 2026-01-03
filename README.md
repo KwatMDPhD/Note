@@ -1,5 +1,3 @@
-# 🥋
-
 Less is more.
 
 Trim continuously, when in doubt, delete.

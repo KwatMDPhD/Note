@@ -1,7 +1,7 @@
 Terminal / Settings... / Profiles / ... / Import... / `setting/Tokyo night.terminal`
 
 ```bash
-cd ~/cr/md/Note
+cd ~/cr/wr/Note
 
 mkdir -p ~/.config/nvim ~/.julia/config
 
