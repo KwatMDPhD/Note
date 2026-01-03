@@ -54,9 +54,9 @@ function sy {
 
   done
 
-  kata festdi
+  kata fsd
 
-  kata adcopu "$1"
+  kata acp "$1"
 
 }
 
