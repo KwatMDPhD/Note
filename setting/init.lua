@@ -49,7 +49,7 @@ require("lazy").setup({ {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
-		view = { width = 64 },
+		view = { width = 48 },
 		update_focused_file = { enable = true },
 	},
 	keys = { { "<Leader>t", "<Cmd>NvimTreeToggle<CR>" } },
