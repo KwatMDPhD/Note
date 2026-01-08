@@ -19,11 +19,10 @@ vim.api.nvim_create_autocmd(
 
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
 
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
 if vim.g.neovide then
 	local sf = "neovide_scale_factor"
-	vim.keymap.set("n", "<Leader>0", function()
-		vim.g[sf] = vim.g[sf] - 0.1
-	end)
 	vim.keymap.set("n", "<Leader>1", function()
 		vim.g[sf] = 1
 	end)
@@ -97,7 +96,6 @@ require("lazy").setup({ {
 	opts = {
 		open_mapping = "<Leader>a",
 		autochdir = true,
-		persist_size = false,
 		direction = "float",
 		float_opts = {
 			height = function()
