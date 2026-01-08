@@ -1,6 +1,6 @@
 Terminal / Settings... / Profiles / ... / Import... / `setting/Tokyo night.terminal`
 
-```bash
+```zsh
 cd ~/cr/Note
 
 mkdir -p ~/.config/nvim ~/.julia/config
@@ -18,7 +18,7 @@ ln -s $(pwd)/setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 
 Install [brew](https://brew.sh).
 
-```bash
+```zsh
 cd
 
 brew install ripgrep rename node exiftool
@@ -34,13 +34,13 @@ using Pkg: add
 add(["BenchmarkTools", "Revise"])
 ```
 
-```bash
+```zsh
 cd
 
 npm install --global prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua
 ```
 
-```bash
+```zsh
 cd
 
 git config --global user.name "KwatMDPhD"
@@ -56,7 +56,7 @@ git config --global pull.rebase true
 git config --global diff.colorMoved zebra
 ```
 
-```bash
+```zsh
 cd
 
 brew update

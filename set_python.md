@@ -1,4 +1,4 @@
-```bash
+```zsh
 cd
 
 brew install pyenv-virtualenv
@@ -10,7 +10,7 @@ pyenv global 3.14.0
 
 Use 3.14.0 to make a virtual environment and use it in a project
 
-```bash
+```zsh
 pyenv virtualenv 3.14.0 1
 
 cd Project

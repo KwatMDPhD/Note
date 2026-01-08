@@ -81,7 +81,7 @@ require("lazy").setup({ {
 	build = ":TSUpdate",
 	opts = {
 		ensure_installed = {
-			"bash",
+			"zsh",
 			"lua",
 			"html",
 			"markdown",
