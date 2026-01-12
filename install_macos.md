@@ -179,8 +179,6 @@ General / New Finder windows show: / User
 
 Tags / All / Delete Tags
 
-Sidebar / Select Recents
-
 Sidebar / Favorites / (Select in order) Desktop, Downloads
 
 Sidebar / Locations / (Select in order) iCloud Drive, User, External disks, CDs, DVDs, and iOS Devices
@@ -228,6 +226,20 @@ Websites / Location / When visiting other websites / Deny
 Websites / Notifications / Allow websites to ask for permission to send notifications / 👎
 
 Advanced / Show features for web developers / 👍
+
+## Mail / Settings ...
+
+General / Follow Up Suggestions / 👎
+
+General / When searching all mailboxes, include results from: / All / 👍
+
+Fonts & Colors / Message font: / Select... / Helvetica 14
+
+Viewing / List preview: / None
+
+Viewing / View conversations: / Show most recent message at the top / 👍
+
+Signatures / Add
 
 ## Messages / Settings...
 
