@@ -227,7 +227,7 @@ Websites / Notifications / Allow websites to ask for permission to send notifica
 
 Advanced / Show features for web developers / 👍
 
-## Mail / Settings ...
+## Mail / Settings...
 
 General / Follow Up Suggestions / 👎
 
