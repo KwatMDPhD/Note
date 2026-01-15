@@ -1,5 +1,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.neovide_hide_mouse_when_typing = true
 
 vim.opt.termguicolors = true
 vim.opt.splitright = true
