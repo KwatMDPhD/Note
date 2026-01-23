@@ -191,15 +191,17 @@ Advanced / When performing a search: / Search the Current Folder
 
 ### Sidebar
 
-Arrange Favorites (top to bottom): iCloud Drive, Shared Drives, Caucell, TODO, User, Desktop, Downloads
+Arrange Favorites (top to bottom): Shared drives, Company, TODO, User, Research, iCloud Drive, Home folder, Desktop, Downloads
 
-### Show View Options
+### Home folder / Show View Options
 
-Icon size / Large
+Icon size: / Large
 
 Show Columns: / (Select in order) Date Modified and Size
 
 Calculate all sizes / 👍
+
+Show Library Folder / 👎
 
 Use as Defaults
 
