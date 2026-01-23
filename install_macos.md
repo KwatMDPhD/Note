@@ -191,7 +191,7 @@ Advanced / When performing a search: / Search the Current Folder
 
 ### Sidebar
 
-Arrange Favorites (top to bottom): Shared drives, Company, TODO, User, Research, iCloud Drive, Home folder, Desktop, Downloads
+Arrange Favorites (top to bottom): Shared drives, Company, TODO, User, Research, iCloud Drive, Home, Desktop, Downloads
 
 ### Home folder / Show View Options
 
