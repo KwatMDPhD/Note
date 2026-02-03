@@ -98,10 +98,16 @@ require("lazy").setup({ {
 	opts = {
 		open_mapping = "<Leader>a",
 		autochdir = true,
-		size = function()
-			return vim.o.lines * 0.24
-		end,
-		persist_size = false,
+		direction = "float",
+		float_opts = {
+			height = function()
+				return math.floor(vim.o.lines * 0.88)
+			end,
+			width = function()
+				return math.floor(vim.o.columns * 0.88)
+			end,
+			winblend = 24,
+		},
 	},
 } })
 
