@@ -3,7 +3,6 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.neovide_hide_mouse_when_typing = true
 
 vim.opt.termguicolors = true
-vim.opt.splitright = true
 vim.opt.number = true
 vim.opt.signcolumn = "number"
 vim.opt.expandtab = true
@@ -99,16 +98,10 @@ require("lazy").setup({ {
 	opts = {
 		open_mapping = "<Leader>a",
 		autochdir = true,
-		direction = "float",
-		float_opts = {
-			height = function()
-				return math.floor(vim.o.lines * 0.88)
-			end,
-			width = function()
-				return math.floor(vim.o.columns * 0.88)
-			end,
-			winblend = 24,
-		},
+		size = function()
+			return vim.o.lines * 0.24
+		end,
+		persist_size = false,
 	},
 } })
 
@@ -117,5 +110,3 @@ vim.keymap.set("v", "<Space><Space>", function()
 		args = vim.v.count,
 	})
 end)
-
-vim.keymap.set("n", "<Leader>s", "<Cmd>TermSelect<CR>")
