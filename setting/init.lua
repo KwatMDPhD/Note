@@ -71,13 +71,7 @@ require("lazy").setup({ {
 }, {
 	"brenoprata10/nvim-highlight-colors",
 	opts = {},
-}, {
-	"tzachar/local-highlight.nvim",
-	opts = {
-		animate = false,
-		debounce_timeout = 8,
-	},
-}, "lewis6991/gitsigns.nvim", {
+}, { "RRethy/vim-illuminate" }, "lewis6991/gitsigns.nvim", {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	opts = {
