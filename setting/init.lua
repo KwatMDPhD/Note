@@ -91,7 +91,6 @@ require("lazy").setup({ {
 	version = "*",
 	opts = {
 		open_mapping = "<Leader>a",
-		autochdir = true,
 		direction = "float",
 		float_opts = {
 			height = function()
