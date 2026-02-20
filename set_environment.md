@@ -37,7 +37,7 @@ add(["BenchmarkTools", "Revise"])
 ```zsh
 cd
 
-npm install --global prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua
+npm install --global prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf
 ```
 
 ```zsh
