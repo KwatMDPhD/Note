@@ -26,6 +26,8 @@ alias grep="grep --color --ignore-case"
 
 alias ju="julia --project"
 
+alias ai="opencode"
+
 function ch {
 
   find . -type d -exec chmod 755 {} + -o -type f -exec chmod 644 {} +

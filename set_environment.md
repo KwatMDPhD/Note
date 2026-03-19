@@ -56,6 +56,8 @@ git config --global pull.rebase true
 git config --global diff.colorMoved zebra
 ```
 
+Install [opencode](https://opencode.ai) and set [xAI](https://opencode.ai/docs/providers/#xai).
+
 ```zsh
 cd
 
