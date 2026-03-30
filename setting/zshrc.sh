@@ -20,13 +20,9 @@ alias la="ls -lhA"
 
 alias lt="ls -lhtr"
 
-alias tree="tree -h"
-
-alias grep="grep --color --ignore-case"
-
 alias ju="julia --project"
 
-alias ai="opencode"
+alias ai="grok"
 
 function ch {
 
