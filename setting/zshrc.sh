@@ -40,7 +40,7 @@ function cl {
 
 function sy {
 
-  for di in $(find -E . -type d -regex ".*\.(jl|pr)" -not -regex ".*node_modules.*"); do
+  for di in $(find -E . -type d -regex ".*\.jl"); do
 
     pushd $di
 

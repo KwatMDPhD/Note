@@ -7,13 +7,13 @@ brew analytics off
 ```
 
 ```zsh
-brew install node oven-sh/bun/bun ripgrep rename exiftool
+brew install node ripgrep rename exiftool oven-sh/bun/bun
 
 brew install --cask neovide
 ```
 
 ```zsh
-bun --global install prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf grok-dev
+npm --global install prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf grok-dev
 ```
 
 Install [julia](https://julialang.org/install).
@@ -38,18 +38,18 @@ git config --global pull.rebase true
 git config --global diff.colorMoved zebra
 ```
 
-Terminal / Settings... / Profiles / ... / Import... / `setting/Tokyo night.terminal`
-
 ```zsh
 cd ~/cr/Note
-
-mkdir -p ~/.config/nvim ~/.julia/config
 
 ln -s $(pwd)/setting/zprofile.sh ~/.zprofile
 
 ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
+mkdir -p ~/.config/nvim
+
 ln -s $(pwd)/setting/init.lua ~/.config/nvim
+
+mkdir -p ~/.julia/config
 
 ln -s $(pwd)/setting/startup.jl ~/.julia/config
 
