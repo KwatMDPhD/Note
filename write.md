@@ -1,6 +1,6 @@
 End a clause with structure or a period.
 
-In a clause, uppercase only the first character.
+In a clause, use sentence case.
 
 Lowercase magnitudes, uppercase units, and have no spaces (8nG/uL).
 

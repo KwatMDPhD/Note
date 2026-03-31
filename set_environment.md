@@ -43,6 +43,8 @@ cd ~/cr/Note
 
 ln -s $(pwd)/setting/zprofile.sh ~/.zprofile
 
+rm -rf ~/.zshrc
+
 ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
 
 mkdir -p ~/.config/nvim

@@ -1,6 +1,6 @@
 if isinteractive()
 
-    using BenchmarkTools: @btime
+    using BenchmarkTools
 
     using Revise
 

@@ -27,7 +27,7 @@ if vim.g.neovide then
 		vim.g[sf] = 1
 	end)
 	vim.keymap.set("n", "<Leader>2", function()
-		vim.g[sf] = vim.g[sf] + 0.1
+		vim.g[sf] = vim.g[sf] + 0.2
 	end)
 end
 
