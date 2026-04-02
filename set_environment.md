@@ -7,13 +7,13 @@ brew analytics off
 ```
 
 ```zsh
-brew install node ripgrep rename exiftool oven-sh/bun/bun
+brew install oven-sh/bun/bun ripgrep rename exiftool
 
 brew install --cask neovide
 ```
 
 ```zsh
-npm --global install prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf grok-dev
+bun --global install prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf grok-dev
 ```
 
 Install [julia](https://julialang.org/install).
@@ -70,8 +70,6 @@ brew cleanup --prune=all
 brew doctor
 
 brew leaves
-
-npm --global upgrade
 
 bun upgrade
 
