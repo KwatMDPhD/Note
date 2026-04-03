@@ -73,6 +73,8 @@ brew doctor
 
 brew leaves
 
+npm --global install npm@latest
+
 npm --global upgrade
 
 julia --eval "using Pkg: update; update()"
