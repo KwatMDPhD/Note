@@ -7,13 +7,13 @@ brew analytics off
 ```
 
 ```zsh
-brew install oven-sh/bun/bun ripgrep rename exiftool
+brew install node ripgrep rename exiftool
 
 brew install --cask neovide
 ```
 
 ```zsh
-bun --global install prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf grok-dev
+npm --global install prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf
 ```
 
 Install [julia](https://julialang.org/install).
@@ -37,6 +37,8 @@ git config --global pull.rebase true
 
 git config --global diff.colorMoved zebra
 ```
+
+Install [grok](https://github.com/superagent-ai/grok-cli).
 
 ```zsh
 cd ~/cr/Note
@@ -71,9 +73,7 @@ brew doctor
 
 brew leaves
 
-bun upgrade
-
-bun --global update
+npm --global upgrade
 
 julia --eval "using Pkg: update; update()"
 
