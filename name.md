@@ -14,6 +14,32 @@ Name numbers between 0 and 1 `pr`.
 
 Name counts `um`.
 
-Limit function names to `check`, `read`, `log`, `write`, `update!`, and `make`.
+Name Symbols `ym`.
 
-Specify `update!` and `make` with `is`, `index`, `number`, `text`, `path`, `pair`, and `table`.
+Name functions with the first matching one
+
+Errors `check`
+
+Reads `read`
+
+Logs `log`
+
+Writes `write`
+
+Returns or updates boolean `is`
+
+Returns or updates index `index`
+
+Returns or updates number `number`
+
+Returns or updates string `text`
+
+Returns or updates path `path`
+
+Returns or updates symbol `symbol`
+
+Returns or updates pair `pair`
+
+Returns something else `make`
+
+Updates something else `update!`
