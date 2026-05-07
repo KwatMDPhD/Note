@@ -12,13 +12,11 @@ alias rm="rm -i"
 
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
-alias ls="ls -G"
+alias ls="ls -lhG"
 
-alias ll="ls -lh"
+alias la="ls -A"
 
-alias la="ls -lhA"
-
-alias lt="ls -lhtr"
+alias lt="ls -tr"
 
 alias ju="julia --project"
 
