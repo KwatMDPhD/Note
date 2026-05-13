@@ -18,28 +18,28 @@ Name Symbols `ym`.
 
 Name functions with the first matching one
 
-Errors `check`
+Errors `check`.
 
-Reads `read`
+Reads `read`.
 
-Logs `log`
+Logs `log`.
 
-Writes `write`
+Writes `write`.
 
-Returns or updates boolean `is`
+Returns or updates boolean `is`.
 
-Returns or updates index `index`
+Returns or updates index `index`.
 
-Returns or updates number `number`
+Returns or updates number `number`.
 
-Returns or updates string `text`
+Returns or updates string `text`.
 
-Returns or updates path `path`
+Returns or updates path `path`.
 
-Returns or updates symbol `symbol`
+Returns or updates symbol `symbol`.
 
-Returns or updates pair `pair`
+Returns or updates pair `pair`.
 
-Returns something else `make`
+Returns something else `make`.
 
-Updates something else `update!`
+Updates something else `update!`.

@@ -18,32 +18,30 @@ Follow numbers with analogies.
 
 Use metaphors.
 
-"Future"
+"Future".
 
-"Mission"
+"Mission".
 
-"See it exist"
+"See it exist".
 
-"I'm excited about this because"
+"I'm excited about this because".
 
-"What that means is"
+"What that means is".
 
-"It's like this"
+"It's like this".
 
-"With just one"
+"With just one".
 
-"-est"
+"-est".
 
-"Boom"
+"Boom".
 
-"It works like magic"
+"It works like magic".
 
-"Isn't that great?"
+"Isn't that great?".
 
-"For everyone"
+"For everyone".
 
-"Everybody benefits"
-
-"Partner"
+"Partner".
 
 Use first names often.

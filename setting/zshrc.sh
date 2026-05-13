@@ -10,8 +10,6 @@ alias mv="mv -i"
 
 alias rm="rm -i"
 
-alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
-
 alias ls="ls -lhG"
 
 alias la="ls -A"
@@ -20,20 +18,28 @@ alias lt="ls -tr"
 
 alias ju="julia --project"
 
-alias ai="grok"
-
 function ch {
 
   find . -type d -exec chmod 755 {} + -o -type f -exec chmod 644 {} +
+
+  runic --extensions=jl,md --inplace .
 
 }
 
 function cl {
 
-  kata delete
+  find . -name .DS_Store -delete
 
-  kata beautify
+  runic --extensions=jl,md --inplace .
 
+  find -E . -type f -regex ".*\.(sh|html|md|lua|json|toml)" ! -regex ".*/(\.git|node_modules|ou)/.*" ! -regex ".*/(package\.json|Manifest\.toml|msigdb.*\.json)" -print0 | xargs -0 prettier --plugin /opt/homebrew/lib/node_modules/prettier-plugin-sh/lib/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --plugin /opt/homebrew/lib/node_modules/@prettier/plugin-lua/src/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-toml/lib/index.js --write
+
+}
+
+function fsd {
+}
+
+function acp {
 }
 
 function sy {
@@ -42,17 +48,13 @@ function sy {
 
     pushd $di
 
-    kata match
+    te match
 
     julia --project --eval "using Pkg; Pkg.update()"
 
     popd
 
   done
-
-  kata fsd
-
-  kata acp "$1"
 
 }
 

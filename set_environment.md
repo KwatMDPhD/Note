@@ -7,21 +7,25 @@ brew analytics off
 ```
 
 ```zsh
-brew install node ripgrep rename exiftool
+brew install node ripgrep rename
 
 brew install --cask neovide
 ```
 
 ```zsh
-npm --global install prettier prettier-plugin-sh prettier-plugin-toml prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf
+npm --global install prettier prettier-plugin-sh prettier-plugin-tailwindcss @prettier/plugin-lua prettier-plugin-toml md-to-pdf
 ```
 
 Install [julia](https://julialang.org/install).
 
 ```julia
-using Pkg: add
+]
 
-add(["BenchmarkTools", "Revise"])
+add BenchmarkTools Revise
+
+app add Runic
+
+app dev ~/cr/He.jl
 ```
 
 ```zsh
@@ -33,15 +37,13 @@ git config --global credential.helper osxkeychain
 
 git config --global fetch.prune true
 
-git config --global pull.rebase true
-
 git config --global diff.colorMoved zebra
 ```
 
 Install [grok](https://github.com/superagent-ai/grok-cli).
 
 ```zsh
-cd ~/cr/Note
+cd ~/cr/Ho
 
 ln -s $(pwd)/setting/zprofile.sh ~/.zprofile
 
@@ -56,8 +58,6 @@ ln -s $(pwd)/setting/init.lua ~/.config/nvim
 mkdir -p ~/.julia/config
 
 ln -s $(pwd)/setting/startup.jl ~/.julia/config
-
-ln -s $(pwd)/setting/JuliaFormatter.toml ~/.JuliaFormatter.toml
 ```
 
 ```zsh
