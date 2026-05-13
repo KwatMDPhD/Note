@@ -1,8 +1,4 @@
-alias ..="cd .."
-
-alias ...="cd ../.."
-
-alias ....="cd ../../.."
+setopt autocd
 
 alias cp="cp -i"
 
@@ -18,15 +14,15 @@ alias lt="ls -tr"
 
 alias ju="julia --project"
 
-function ch {
+ch() {
 
-  find . -type d -exec chmod 755 {} + -o -type f -exec chmod 644 {} +
+  find . -type d -exec chmod 755 {} +
 
-  runic --extensions=jl,md --inplace .
+  find . -type f -exec chmod 644 {} +
 
 }
 
-function cl {
+cl() {
 
   find . -name .DS_Store -delete
 
@@ -36,23 +32,21 @@ function cl {
 
 }
 
-function fsd {
-}
+sy() {
 
-function acp {
-}
+  for di in **/*.jl; do
 
-function sy {
+    [[ -d "$di" ]] || continue
 
-  for di in $(find -E . -type d -regex ".*\.jl"); do
+    (
 
-    pushd $di
+      cd "$di"
 
-    te match
+      he match
 
-    julia --project --eval "using Pkg; Pkg.update()"
+      julia --project --eval 'using Pkg; Pkg.update()'
 
-    popd
+    )
 
   done
 

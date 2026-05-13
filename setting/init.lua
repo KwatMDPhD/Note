@@ -1,48 +1,31 @@
 vim.g.loaded_netrw = 1
-
 vim.g.loaded_netrwPlugin = 1
-
 vim.g.neovide_hide_mouse_when_typing = true
-
 vim.opt.termguicolors = true
-
 vim.opt.number = true
-
 vim.opt.signcolumn = "number"
-
 vim.opt.expandtab = true
-
 vim.opt.shiftwidth = 4
-
 vim.opt.updatetime = 240
-
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold" },
-
 	{
 		pattern = "*",
 		command = "checktime",
 	}
 )
-
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
-
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-
 if vim.g.neovide then
 	local sf = "neovide_scale_factor"
-
 	vim.keymap.set("n", "<Leader>1", function()
 		vim.g[sf] = 1
 	end)
-
 	vim.keymap.set("n", "<Leader>2", function()
 		vim.g[sf] = vim.g[sf] + 0.1
 	end)
 end
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 if not vim.uv.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -53,9 +36,7 @@ if not vim.uv.fs_stat(lazypath) then
 		lazypath,
 	})
 end
-
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({ {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -115,7 +96,6 @@ require("lazy").setup({ {
 		},
 	},
 } })
-
 vim.keymap.set("v", "<Space><Space>", function()
 	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
 		args = vim.v.count,
