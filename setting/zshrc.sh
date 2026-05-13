@@ -86,7 +86,7 @@ g2() {
 
       echo "📍 $(pwd)"
 
-      git add -A
+      git add --all
 
       git commit --message "$1"
 
