@@ -32,7 +32,7 @@ cl() {
 
 }
 
-sy() {
+h1() {
 
   for di in **/*.jl; do
 
@@ -42,9 +42,55 @@ sy() {
 
       cd "$di"
 
+      echo "📍 $(pwd)"
+
       he match
 
       julia --project --eval 'using Pkg; Pkg.update()'
+
+    )
+
+  done
+
+}
+
+g1() {
+
+  for gi in **/.git; do
+
+    (
+
+      cd "${gi:h}"
+
+      echo "📍 $(pwd)"
+
+      git fetch
+
+      git status --short --branch
+
+      git diff
+
+    )
+
+  done
+
+}
+
+g2() {
+
+  for gi in **/.git; do
+
+    (
+
+      cd "${gi:h}"
+
+      echo "📍 $(pwd)"
+
+      git add -A
+
+      git commit --message "$1"
+
+      git push
 
     )
 
