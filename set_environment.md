@@ -17,11 +17,17 @@ npm --global install prettier prettier-plugin-sh prettier-plugin-tailwindcss @pr
 Install [julia](https://julialang.org/install).
 
 ```julia
-using Pkg
+using Pkg: add
 
-Pkg.add(["BenchmarkTools", "Revise"])
+using Pkg.Apps: add as add2
 
-Pkg.Apps.add(["JuliaFormatter", "Runic"])
+add("BenchmarkTools")
+
+add("Revise")
+
+add2("JuliaFormatter")
+
+add2("Runic")
 
 #]app dev ~/cr/He.jl
 ```
