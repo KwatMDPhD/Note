@@ -18,6 +18,8 @@ Follow numbers with analogies.
 
 Use metaphors.
 
+Use first names often.
+
 "Future".
 
 "Mission".
@@ -43,5 +45,3 @@ Use metaphors.
 "For everyone".
 
 "Partner".
-
-Use first names often.

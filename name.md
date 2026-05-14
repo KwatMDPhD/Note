@@ -1,10 +1,10 @@
-Use two characters.
+Use 2 characters.
 
-Pluralize by adding an underscore.
+Pluralize by adding 1 underscore.
 
 Differentiate by numbering (name "string 1" and "string 2" as `s1` and `s2`) and shifting (name "path" and "pair" as `pa` and `ai`).
 
-Use one uppercase for matrices.
+Use 1 uppercase for matrices.
 
 Uppercase global ones.
 
@@ -16,30 +16,30 @@ Name counts `um`.
 
 Name Symbols `ym`.
 
-Name functions with the first matching one
+Name functions with the first matching
 
-Errors `check`.
+errors `check`.
 
-Reads `read`.
+reads `read`.
 
-Logs `log`.
+logs `log`.
 
-Writes `write`.
+writes `write`.
 
-Returns or updates boolean `is`.
+returns or updates boolean `is`.
 
-Returns or updates index `index`.
+returns or updates index `index`.
 
-Returns or updates number `number`.
+returns or updates number `number`.
 
-Returns or updates string `text`.
+returns or updates string `text`.
 
-Returns or updates path `path`.
+returns or updates path `path`.
 
-Returns or updates symbol `symbol`.
+returns or updates Symbol `symbol`.
 
-Returns or updates pair `pair`.
+returns or updates pair `pair`.
 
-Returns something else `make`.
+returns something else `make`.
 
-Updates something else `update!`.
+updates something else `update!`.

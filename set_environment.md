@@ -1,5 +1,3 @@
-Do everything in `~`.
-
 Install [brew](https://brew.sh).
 
 ```zsh
@@ -13,25 +11,25 @@ brew install --cask neovide
 ```
 
 ```zsh
-npm --global install prettier prettier-plugin-sh prettier-plugin-tailwindcss @prettier/plugin-lua prettier-plugin-toml md-to-pdf
+npm --global install prettier prettier-plugin-sh prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf
 ```
 
 Install [julia](https://julialang.org/install).
 
 ```julia
-]
+using Pkg
 
-add BenchmarkTools Revise
+Pkg.add(["BenchmarkTools", "Revise"])
 
-app add Runic
+Pkg.Apps.add(["JuliaFormatter", "Runic"])
 
-app dev ~/cr/He.jl
+#]app dev ~/cr/He.jl
 ```
 
 ```zsh
-git config --global user.name "KwatMDPhD"
+git config --global user.name ""
 
-git config --global user.email "kwat.me@icloud.com"
+git config --global user.email ""
 
 git config --global credential.helper osxkeychain
 
@@ -43,21 +41,17 @@ git config --global diff.colorMoved zebra
 Install [grok](https://github.com/superagent-ai/grok-cli).
 
 ```zsh
-cd ~/cr/Ho
+ln -s ~/cr/Ho/setting/zprofile.sh ~/.zprofile
 
-ln -s $(pwd)/setting/zprofile.sh ~/.zprofile
-
-rm -rf ~/.zshrc
-
-ln -s $(pwd)/setting/zshrc.sh ~/.zshrc
+ln -s ~/cr/Ho/setting/zshrc.sh ~/.zshrc
 
 mkdir -p ~/.config/nvim
 
-ln -s $(pwd)/setting/init.lua ~/.config/nvim
+ln -s ~/cr/Ho/setting/init.lua ~/.config/nvim
 
 mkdir -p ~/.julia/config
 
-ln -s $(pwd)/setting/startup.jl ~/.julia/config
+ln -s ~/cr/Ho/setting/startup.jl ~/.julia/config
 ```
 
 ```zsh

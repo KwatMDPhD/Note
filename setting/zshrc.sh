@@ -6,7 +6,7 @@ alias mv="mv -i"
 
 alias rm="rm -i"
 
-alias ls="ls -lhG"
+alias ls="ls -Glh"
 
 alias la="ls -A"
 
@@ -26,9 +26,11 @@ cl() {
 
   find . -name .DS_Store -delete
 
+  jlfmt --margin=80 --format_markdown --always_for_in --whitespace_typedefs --import_to_using --pipe_to_function_call --short_to_long_function_def --format_docstrings --inplace .
+
   runic --extensions=jl,md --inplace .
 
-  find -E . -type f -regex ".*\.(sh|html|md|lua|json|toml)" ! -regex ".*/(\.git|node_modules|ou)/.*" ! -regex ".*/(package\.json|Manifest\.toml|msigdb.*\.json)" -print0 | xargs -0 prettier --plugin /opt/homebrew/lib/node_modules/prettier-plugin-sh/lib/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --plugin /opt/homebrew/lib/node_modules/@prettier/plugin-lua/src/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-toml/lib/index.js --write
+  find -E . -type f -regex ".*\.(sh|html|md|lua|json)" ! -regex ".*/(\.git/.*|node_modules/.*|ou/.*|package\.json|msigdb.*\.json)" -print0 | xargs -0 prettier --plugin /opt/homebrew/lib/node_modules/prettier-plugin-sh/lib/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --plugin /opt/homebrew/lib/node_modules/@prettier/plugin-lua/src/index.js --write
 
 }
 
@@ -46,7 +48,7 @@ h1() {
 
       he match
 
-      julia --project --eval 'using Pkg; Pkg.update()'
+      julia --project --eval "using Pkg: update; update()"
 
     )
 
@@ -60,7 +62,7 @@ g1() {
 
     (
 
-      cd "${gi:h}"
+      cd "$(dirname "$gi")"
 
       echo "📍 $(pwd)"
 
@@ -82,7 +84,7 @@ g2() {
 
     (
 
-      cd "${gi:h}"
+      cd "$(dirname "$gi")"
 
       echo "📍 $(pwd)"
 
