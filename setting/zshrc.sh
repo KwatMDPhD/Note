@@ -16,6 +16,14 @@ alias ju="julia --project"
 
 ch() {
 
+  if [[ $PWD == $HOME ]]; then
+
+    echo "🚨 ~"
+
+    return
+
+  fi
+
   find . -type d -exec chmod 755 {} +
 
   find . -type f -exec chmod 644 {} +
@@ -25,6 +33,14 @@ ch() {
 cl() {
 
   find . -name .DS_Store -delete
+
+  if [[ $PWD == $HOME ]]; then
+
+    echo "🚨 ~"
+
+    return
+
+  fi
 
   jlfmt --margin=80 --format_markdown --always_for_in --whitespace_typedefs --import_to_using --pipe_to_function_call --short_to_long_function_def --format_docstrings --inplace .
 
@@ -38,7 +54,11 @@ h1() {
 
   for di in **/*.jl; do
 
-    [[ -d "$di" ]] || continue
+    if [[ ! -d "$di" ]]; then
+
+      continue
+
+    fi
 
     (
 
