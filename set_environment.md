@@ -43,7 +43,7 @@ Install [grok](https://github.com/superagent-ai/grok-cli).
 ```zsh
 ln -s ~/cr/Ho/setting/zprofile.sh ~/.zprofile
 
-ln -s ~/cr/Ho/setting/zshrc.sh ~/.zshrc
+ln -sf ~/cr/Ho/setting/zshrc.sh ~/.zshrc
 
 mkdir -p ~/.config/nvim
 
