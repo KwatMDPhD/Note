@@ -88,7 +88,7 @@ g1() {
 
       git fetch
 
-      git status --short --branch
+      git status --short
 
       git diff
 
