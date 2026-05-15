@@ -69,10 +69,7 @@ require("lazy").setup({ {
 }, {
 	"brenoprata10/nvim-highlight-colors",
 	opts = {},
-}, {
-	"RRethy/vim-illuminate",
-	opts = {},
-}, {
+}, "RRethy/vim-illuminate", {
 	"lewis6991/gitsigns.nvim",
 	opts = {},
 }, {
