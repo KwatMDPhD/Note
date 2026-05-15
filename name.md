@@ -16,6 +16,10 @@ Name counts `um`.
 
 Name Symbols `ym`.
 
+Name hex colors `he`.
+
+Name keyword arguments `ke_`.
+
 Name functions with the first matching
 
 errors `check`.
@@ -26,22 +30,22 @@ logs `log`.
 
 writes `write`.
 
-returns or updates boolean `is`.
+returns or updates number `number`.
 
 returns or updates index `index`.
 
-returns or updates number `number`.
+returns or updates boolean `is`.
+
+returns or updates Symbol `symbol`.
 
 returns or updates string `text`.
 
-returns or updates path `path`.
+returns or updates time `time`.
 
-returns or updates Symbol `symbol`.
+returns or updates path `path`.
 
 returns or updates pair `pair`.
 
 returns something else `make`.
 
 updates something else `update!`.
-
-Name keyword arguments `ke_`.
