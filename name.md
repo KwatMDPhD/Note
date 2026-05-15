@@ -1,14 +1,22 @@
-Use 2 characters.
+##
+
+Name with 2 characters.
+
+Name matrices with 1 uppercase.
 
 Pluralize by adding 1 underscore.
 
-Differentiate by numbering (name "string 1" and "string 2" as `s1` and `s2`) and shifting (name "path" and "pair" as `pa` and `ai`).
+Uppercase globals.
 
-Use 1 uppercase for matrices.
+##
 
-Uppercase global ones.
+Name by the concept least likely to change, often the type.
 
-Name by the concept least likely to change (often the type).
+Differentiate similar ones by numbering: "number 1" and "number 2" as `n1` and `n2`.
+
+Differentiate different ones by shifting: "path" and "pair" as `pa` and `ai`.
+
+##
 
 Name numbers between 0 and 1 `pr`.
 
@@ -16,36 +24,34 @@ Name counts `um`.
 
 Name Symbols `ym`.
 
-Name hex colors `he`.
+Name hexadecimal colors `he`.
 
 Name keyword arguments `ke_`.
 
-Name functions with the first matching
+##
 
-errors `check`.
+Name functions that error `check`.
 
-reads `read`.
+Name functions that read `read`.
 
-logs `log`.
+Name functions that log `log`.
 
-writes `write`.
+Name functions that write `write`.
 
-returns or updates number `number`.
+Name functions that return or update numbers `number`.
 
-returns or updates index `index`.
+Name functions that return or update indices `index`.
 
-returns or updates boolean `is`.
+Name functions that return or update booleans `is`.
 
-returns or updates Symbol `symbol`.
+Name functions that return or update Symbols `symbol`.
 
-returns or updates string `text`.
+Name functions that return or update strings `string`.
 
-returns or updates time `time`.
+Name functions that return or update times `time`.
 
-returns or updates path `path`.
+Name functions that return or update paths `path`.
 
-returns or updates pair `pair`.
+Name functions that return or update pairs `pair`.
 
-returns something else `make`.
-
-updates something else `update!`.
+Name functions that return or update something else `make` or `update!`, respectively.
