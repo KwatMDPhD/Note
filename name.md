@@ -52,6 +52,8 @@ Name functions that return or update times `time`.
 
 Name functions that return or update paths `path`.
 
+Name functions that return or update hexadecimal colors `color`.
+
 Name functions that return or update pairs `pair`.
 
 Name functions that return or update something else `make` or `update!`, respectively.
