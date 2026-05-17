@@ -1,4 +1,4 @@
-setopt autocd
+alias ..="cd .."
 
 alias cp="cp -i"
 
