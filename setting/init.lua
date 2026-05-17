@@ -69,7 +69,23 @@ require("lazy").setup({ {
 }, {
 	"brenoprata10/nvim-highlight-colors",
 	opts = {},
-}, "RRethy/vim-illuminate", {
+}, {
+	"RRethy/vim-illuminate",
+	config = function()
+		vim.api.nvim_set_hl(0, "IlluminatedWordText", {
+			bg = "#f3c13a",
+			fg = "#000000",
+		})
+		vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
+			bg = "#f3c13a",
+			fg = "#000000",
+		})
+		vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
+			bg = "#f3c13a",
+			fg = "#000000",
+		})
+	end,
+}, {
 	"lewis6991/gitsigns.nvim",
 	opts = {},
 }, {
