@@ -1,13 +1,11 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.signcolumn = "number"
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.updatetime = 240
-
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold" },
 	{
@@ -15,10 +13,8 @@ vim.api.nvim_create_autocmd(
 		command = "checktime",
 	}
 )
-
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-
 if vim.g.neovide then
 	vim.g.neovide_hide_mouse_when_typing = true
 	vim.keymap.set("n", "<Leader>1", function()
@@ -28,7 +24,6 @@ if vim.g.neovide then
 		vim.g.neovide_scale_factor = (vim.g.neovide_scale_factor or 1) + 0.1
 	end)
 end
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
 	vim.fn.system({
@@ -41,7 +36,6 @@ if not vim.uv.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({ {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -77,13 +71,17 @@ require("lazy").setup({ {
 			fg = "#000000",
 		})
 		vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
-			bg = "#f3c13a",
-			fg = "#000000",
+			link = "IlluminatedWordText",
 		})
 		vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
-			bg = "#f3c13a",
+			link = "IlluminatedWordText",
+		})
+		vim.api.nvim_set_hl(0, "Search", {
+			bg = "#f47983",
 			fg = "#000000",
 		})
+		vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
+		vim.api.nvim_set_hl(0, "CurSearch", { link = "IlluminatedWordText" })
 	end,
 }, {
 	"lewis6991/gitsigns.nvim",
@@ -120,7 +118,6 @@ require("lazy").setup({ {
 		},
 	},
 } })
-
 vim.keymap.set("v", "<Space><Space>", function()
 	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
 		args = vim.v.count,
