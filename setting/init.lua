@@ -106,7 +106,7 @@ require("lazy").setup({ {
 	version = "*",
 	opts = {
 		open_mapping = "<Leader>a",
-		autochdir = false,
+		autochdir = true,
 		direction = "vertical",
 		size = 80,
 	},
