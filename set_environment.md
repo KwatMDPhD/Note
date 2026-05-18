@@ -33,9 +33,9 @@ add2("Runic")
 ```
 
 ```zsh
-git config --global user.name ""
+git config --global user.name ''
 
-git config --global user.email ""
+git config --global user.email ''
 
 git config --global credential.helper osxkeychain
 
@@ -77,7 +77,7 @@ npm --global install npm@latest
 
 npm --global upgrade
 
-julia --eval "using Pkg: update; update()"
+julia --eval 'using Pkg: update; update()'
 
 grok --update
 ```

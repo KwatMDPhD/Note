@@ -12,9 +12,9 @@ Uppercase globals.
 
 Name by the concept least likely to change, often the type.
 
-Differentiate similar ones by numbering: "number 1" and "number 2" as `n1` and `n2`.
+Differentiate similar ones by numbering: number 1 and number 2 as `n1` and `n2`.
 
-Differentiate different ones by shifting: "path" and "pair" as `pa` and `ai`.
+Differentiate different ones by shifting: path and pair as `pa` and `ai`.
 
 ##
 
