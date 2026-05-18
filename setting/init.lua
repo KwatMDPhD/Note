@@ -110,6 +110,7 @@ require("lazy").setup({ {
 		autochdir = true,
 		direction = "vertical",
 		size = 80,
+		persist_size = false,
 	},
 } })
 vim.keymap.set("v", "<Space><Space>", function()
