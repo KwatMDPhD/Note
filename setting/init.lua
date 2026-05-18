@@ -6,6 +6,7 @@ vim.opt.signcolumn = "number"
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.updatetime = 240
+vim.opt.splitright = true
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold" },
 	{
