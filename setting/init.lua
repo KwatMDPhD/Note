@@ -106,16 +106,9 @@ require("lazy").setup({ {
 	version = "*",
 	opts = {
 		open_mapping = "<Leader>a",
-		direction = "float",
-		float_opts = {
-			height = function()
-				return math.floor(vim.o.lines * 0.88)
-			end,
-			width = function()
-				return math.floor(vim.o.columns * 0.88)
-			end,
-			winblend = 24,
-		},
+		autochdir = false,
+		direction = "vertical",
+		size = 80,
 	},
 } })
 vim.keymap.set("v", "<Space><Space>", function()
