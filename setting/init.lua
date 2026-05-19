@@ -67,22 +67,27 @@ require("lazy").setup({ {
 }, {
 	"RRethy/vim-illuminate",
 	config = function()
-		vim.api.nvim_set_hl(0, "IlluminatedWordText", {
-			bg = "#f3c13a",
-			fg = "#000000",
-		})
-		vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
-			link = "IlluminatedWordText",
-		})
-		vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
-			link = "IlluminatedWordText",
-		})
-		vim.api.nvim_set_hl(0, "Search", {
-			bg = "#ffb3a7",
-			fg = "#000000",
-		})
-		vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
-		vim.api.nvim_set_hl(0, "CurSearch", { link = "IlluminatedWordText" })
+		vim.api.nvim_create_autocmd("ColorScheme", { callback = function()
+			vim.api.nvim_set_hl(0, "IlluminatedWordText", {
+				bg = "#f3c13a",
+				fg = "#000000",
+			})
+			vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
+				link = "IlluminatedWordText",
+			})
+			vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
+				link = "IlluminatedWordText",
+			})
+			vim.api.nvim_set_hl(0, "Search", {
+				bg = "#ffb3a7",
+				fg = "#000000",
+			})
+			vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
+			vim.api.nvim_set_hl(0, "CurSearch", {
+				link = "IlluminatedWordText",
+			})
+		end })
+		vim.cmd("doautocmd ColorScheme")
 	end,
 }, {
 	"lewis6991/gitsigns.nvim",
