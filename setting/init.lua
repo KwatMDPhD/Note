@@ -4,8 +4,9 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.signcolumn = "number"
 vim.opt.expandtab = true
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.updatetime = 240
+vim.opt.updatetime = 400
 vim.opt.splitright = true
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold" },
@@ -56,15 +57,7 @@ require("lazy").setup({ {
 		{ "<Leader>f", "<Cmd>Telescope find_files<CR>" },
 		{ "<Leader>r", "<Cmd>Telescope live_grep<CR>" },
 	},
-}, {
-	"folke/tokyonight.nvim",
-	config = function()
-		vim.cmd.colorscheme("tokyonight-night")
-	end,
-}, {
-	"brenoprata10/nvim-highlight-colors",
-	opts = {},
-}, {
+}, "folke/tokyonight.nvim", {
 	"RRethy/vim-illuminate",
 	config = function()
 		vim.api.nvim_create_autocmd("ColorScheme", { callback = function()
@@ -87,8 +80,11 @@ require("lazy").setup({ {
 				link = "IlluminatedWordText",
 			})
 		end })
-		vim.cmd("doautocmd ColorScheme")
+		vim.cmd.colorscheme("tokyonight-night")
 	end,
+}, {
+	"brenoprata10/nvim-highlight-colors",
+	opts = {},
 }, {
 	"lewis6991/gitsigns.nvim",
 	opts = {},
