@@ -66,7 +66,7 @@ h1() {
 
       echo "📍 $(pwd)"
 
-      he match
+      help te
 
       julia --project --eval 'using Pkg: update; update()'
 

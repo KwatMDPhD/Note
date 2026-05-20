@@ -29,7 +29,7 @@ add2("JuliaFormatter")
 
 add2("Runic")
 
-#]app dev ~/cr/He.jl
+#]app dev ~/cr/Help.jl
 ```
 
 ```zsh
@@ -47,17 +47,17 @@ git config --global diff.colorMoved zebra
 Install [grok](https://github.com/superagent-ai/grok-cli).
 
 ```zsh
-ln -s ~/cr/Ho/setting/zprofile.sh ~/.zprofile
+ln -s ~/cr/Note/setting/zprofile.sh ~/.zprofile
 
-ln -sf ~/cr/Ho/setting/zshrc.sh ~/.zshrc
+ln -sf ~/cr/Note/setting/zshrc.sh ~/.zshrc
 
 mkdir -p ~/.config/nvim
 
-ln -s ~/cr/Ho/setting/init.lua ~/.config/nvim
+ln -s ~/cr/Note/setting/init.lua ~/.config/nvim
 
 mkdir -p ~/.julia/config
 
-ln -s ~/cr/Ho/setting/startup.jl ~/.julia/config
+ln -s ~/cr/Note/setting/startup.jl ~/.julia/config
 ```
 
 ```zsh
