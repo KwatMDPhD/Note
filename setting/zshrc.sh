@@ -58,7 +58,7 @@ h1() {
 
       help template
 
-      julia --project --eval 'using Pkg: update; update()'
+      ju --eval 'using Pkg: update; update()'
 
     )
 

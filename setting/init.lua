@@ -15,6 +15,10 @@ vim.api.nvim_create_autocmd(
 		command = "checktime",
 	}
 )
+vim.keymap.set("n", "<M-Down>", "<Cmd>resize -2<CR>")
+vim.keymap.set("n", "<M-Up>", "<Cmd>resize +2<CR>")
+vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -2<CR>")
+vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +2<CR>")
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 if vim.g.neovide then
@@ -106,13 +110,7 @@ require("lazy").setup({ {
 }, {
 	"akinsho/toggleterm.nvim",
 	version = "*",
-	opts = {
-		open_mapping = "<Leader>a",
-		autochdir = true,
-		direction = "vertical",
-		size = 80,
-		persist_size = false,
-	},
+	opts = { open_mapping = "<Leader>a" },
 } })
 vim.keymap.set("v", "<Space><Space>", function()
 	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
