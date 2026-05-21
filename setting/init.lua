@@ -6,7 +6,6 @@ vim.opt.signcolumn = "number"
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.updatetime = 400
 vim.opt.splitright = true
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold" },
@@ -15,10 +14,10 @@ vim.api.nvim_create_autocmd(
 		command = "checktime",
 	}
 )
-vim.keymap.set("n", "<M-Down>", "<Cmd>resize -2<CR>")
-vim.keymap.set("n", "<M-Up>", "<Cmd>resize +2<CR>")
-vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -2<CR>")
-vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +2<CR>")
+vim.keymap.set("n", "<M-Down>", "<Cmd>resize -8<CR>")
+vim.keymap.set("n", "<M-Up>", "<Cmd>resize +8<CR>")
+vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -8<CR>")
+vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +8<CR>")
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 if vim.g.neovide then
@@ -46,7 +45,7 @@ require("lazy").setup({ {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
-		view = { width = 72 },
+		view = { width = 80 },
 		filters = { dotfiles = true },
 		sort = { sorter = "case_sensitive" },
 		update_focused_file = { enable = true },

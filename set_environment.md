@@ -17,17 +17,17 @@ npm --global install prettier prettier-plugin-sh @prettier/plugin-lua prettier-p
 Install [julia](https://julialang.org/install).
 
 ```julia
-using Pkg: add as add1
+using Pkg: add as Pkgadd
 
-using Pkg.Apps: add as add2
+using Pkg.Apps: add as Appsadd
 
-add1("BenchmarkTools")
+Pkgadd("BenchmarkTools")
 
-add1("Revise")
+Pkgadd("Revise")
 
-add2("JuliaFormatter")
+Appsadd("JuliaFormatter")
 
-add2("Runic")
+Appsadd("Runic")
 
 #]app dev ~/cr/Help.jl
 ```
