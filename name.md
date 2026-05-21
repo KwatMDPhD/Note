@@ -48,9 +48,9 @@ Name functions that return or update Symbols `symbol*`.
 
 Name functions that return or update strings `string*`.
 
-Name functions that return or update times `time*`.
-
 Name functions that return or update paths `path*`.
+
+Name functions that return or update times `time*`.
 
 Name functions that return or update colors `color*`.
 

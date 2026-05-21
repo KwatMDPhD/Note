@@ -46,7 +46,7 @@ cl() {
 
   runic --extensions=jl,md --inplace .
 
-  find -E . -type f -regex '.*\.(sh|html|md|lua|json)' ! -regex '.*/(\.git/.*|node_modules/.*|ou/.*|package\.json|msigdb.*\.json)' -print0 | xargs -0 prettier --plugin /opt/homebrew/lib/node_modules/prettier-plugin-sh/lib/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --plugin /opt/homebrew/lib/node_modules/@prettier/plugin-lua/src/index.js --write
+  find -E . -type f -regex '.*\.(sh|lua|html|md|json)' ! -regex '.*/(\.git/.*|node_modules/.*|ou/.*|package\.json|msigdb.*\.json)' -print0 | xargs -0 prettier --plugin /opt/homebrew/lib/node_modules/prettier-plugin-sh/lib/index.js --plugin /opt/homebrew/lib/node_modules/@prettier/plugin-lua/src/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --write
 
 }
 
@@ -66,7 +66,7 @@ h1() {
 
       echo "📍 $(pwd)"
 
-      help te
+      help template
 
       julia --project --eval 'using Pkg: update; update()'
 

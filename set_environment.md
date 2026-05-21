@@ -11,7 +11,7 @@ brew install --cask neovide
 ```
 
 ```zsh
-npm --global install prettier prettier-plugin-sh prettier-plugin-tailwindcss @prettier/plugin-lua md-to-pdf
+npm --global install prettier prettier-plugin-sh @prettier/plugin-lua prettier-plugin-tailwindcss md-to-pdf
 ```
 
 Install [julia](https://julialang.org/install).
