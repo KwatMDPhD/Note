@@ -22,28 +22,28 @@ Name hexadecimal colors `he`.
 
 Name keyword arguments `ke_`.
 
-Name functions that return or update numbers `number*`.
+Name functions that return or update numbers `number`.
 
-Name functions that return or update indices `index*`.
+Name functions that return or update indices `index`.
 
-Name functions that return or update booleans `is*`.
+Name functions that return or update booleans `is`.
 
-Name functions that return or update times `time*`.
+Name functions that return or update times `time`.
 
-Name functions that return or update symbols `symbol*`.
+Name functions that return or update symbols `symbol`.
 
-Name functions that return or update strings `string*`.
+Name functions that return or update strings `string`.
 
-Name functions that return or update paths `path*`.
+Name functions that return or update paths `path`.
 
-Name functions that return or update colors `color*`.
+Name functions that return or update colors `color`.
 
-Name functions that return or update pairs `pair*`.
+Name functions that return or update pairs `pair`.
 
-Name functions that return or update something else `make*` or `update*!`, respectively.
+Name functions that return or update something else `make` or `update!`, respectively.
 
-Name functions that read `read*`.
+Name functions that read `read`.
 
-Name functions that log `log*`.
+Name functions that log `log`.
 
-Name functions that write `write*`.
+Name functions that write `write`.
