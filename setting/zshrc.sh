@@ -68,11 +68,11 @@ h1() {
 
 g1() {
 
-  for gi in **/.git; do
+  for pa in **/.git; do
 
     (
 
-      cd "$(dirname "$gi")"
+      cd "$(dirname "$pa")"
 
       echo "📍 $(pwd)"
 
@@ -90,11 +90,11 @@ g1() {
 
 g2() {
 
-  for gi in **/.git; do
+  for pa in **/.git; do
 
     (
 
-      cd "$(dirname "$gi")"
+      cd "$(dirname "$pa")"
 
       echo "📍 $(pwd)"
 
