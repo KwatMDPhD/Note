@@ -18,8 +18,6 @@ ch() {
 
   if [[ $PWD == $HOME ]]; then
 
-    echo '🚨 ~'
-
     return
 
   fi
@@ -36,8 +34,6 @@ cl() {
 
   if [[ $PWD == $HOME ]]; then
 
-    echo '🚨 ~'
-
     return
 
   fi
@@ -46,23 +42,17 @@ cl() {
 
   runic --extensions=jl,md --inplace .
 
-  find -E . -type f -regex '.*\.(sh|lua|html|md|json)' ! -regex '.*/(\.git/.*|node_modules/.*|ou/.*|package\.json|msigdb.*\.json)' -print0 | xargs -0 prettier --plugin /opt/homebrew/lib/node_modules/prettier-plugin-sh/lib/index.js --plugin /opt/homebrew/lib/node_modules/@prettier/plugin-lua/src/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --write
+  find -E . -type f -regex '.*\.(sh|lua|html|md|json)' ! -regex '.*/(\.git/.*|package\.json|node_modules/.*|ou/.*|msigdb.*\.json)' -print0 | xargs -0 prettier --plugin /opt/homebrew/lib/node_modules/prettier-plugin-sh/lib/index.js --plugin /opt/homebrew/lib/node_modules/@prettier/plugin-lua/src/index.js --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --write
 
 }
 
 h1() {
 
-  for di in **/*.jl; do
-
-    if [[ ! -d "$di" ]]; then
-
-      continue
-
-    fi
+  for pa in **/Project.toml; do
 
     (
 
-      cd "$di"
+      cd "$(dirname "$pa")"
 
       echo "📍 $(pwd)"
 
@@ -88,7 +78,7 @@ g1() {
 
       git fetch
 
-      git status --short
+      git status
 
       git diff
 

@@ -1,14 +1,12 @@
 Aim to inspire 1 action.
 
-Make evangelists.
-
 Refresh every 8 minutes.
 
 Treat it like a theater with 1 holy-smoke moment.
 
 Hit senses, deliver infotainment, and evoke feelings, the only things remembered.
 
-Make demo short, simple, sweet, swift, and substantial.
+Demonstrate short, simple, sweet, swift, and substantial.
 
 Bring on partners.
 

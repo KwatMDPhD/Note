@@ -17,13 +17,13 @@ npm --global install prettier prettier-plugin-sh @prettier/plugin-lua prettier-p
 Install [julia](https://julialang.org/install).
 
 ```julia
-using Pkg: add
+using Pkg: add as add1
 
 using Pkg.Apps: add as add2
 
-add("BenchmarkTools")
+add1("BenchmarkTools")
 
-add("Revise")
+add1("Revise")
 
 add2("JuliaFormatter")
 
@@ -47,15 +47,13 @@ git config --global diff.colorMoved zebra
 Install [grok](https://github.com/superagent-ai/grok-cli).
 
 ```zsh
+mkdir -p ~/.config/nvim ~/.julia/config
+
 ln -s ~/cr/Note/setting/zprofile.sh ~/.zprofile
 
 ln -sf ~/cr/Note/setting/zshrc.sh ~/.zshrc
 
-mkdir -p ~/.config/nvim
-
 ln -s ~/cr/Note/setting/init.lua ~/.config/nvim
-
-mkdir -p ~/.julia/config
 
 ln -s ~/cr/Note/setting/startup.jl ~/.julia/config
 ```
