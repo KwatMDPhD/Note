@@ -44,7 +44,7 @@ git config --global fetch.prune true
 git config --global diff.colorMoved zebra
 ```
 
-Install [grok](https://github.com/superagent-ai/grok-cli).
+Install [grok](https://x.ai/cli).
 
 ```zsh
 mkdir -p ~/.config/nvim ~/.julia/config
@@ -77,5 +77,5 @@ npm --global upgrade
 
 julia --eval 'using Pkg: update; update()'
 
-grok --update
+grok update
 ```
