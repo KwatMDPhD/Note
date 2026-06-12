@@ -79,3 +79,5 @@ julia --eval 'using Pkg: update; update()'
 
 grok update
 ```
+
+Install Signal, Google Drive, Vimari, and Spotify.

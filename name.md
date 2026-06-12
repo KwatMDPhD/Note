@@ -1,3 +1,11 @@
+## Path
+
+Name ones that are not likely to collide with 2 lowercases.
+
+Name ones that may collide with sentence case.
+
+## Variable
+
 Name with 2 characters.
 
 Name matrices with 1 uppercase.
@@ -22,28 +30,30 @@ Name hexadecimal colors `he`.
 
 Name keyword arguments `ke_`.
 
-Name functions that return or update numbers `number`.
+## Function
 
-Name functions that return or update indices `index`.
+Name ones that return or update numbers `number`.
 
-Name functions that return or update booleans `is`.
+Name ones that return or update indices `index`.
 
-Name functions that return or update times `time`.
+Name ones that return or update booleans `is`.
 
-Name functions that return or update symbols `symbol`.
+Name ones that return or update times `time`.
 
-Name functions that return or update strings `string`.
+Name ones that return or update symbols `symbol`.
 
-Name functions that return or update paths `path`.
+Name ones that return or update strings `string`.
 
-Name functions that return or update colors `color`.
+Name ones that return or update paths `path`.
 
-Name functions that return or update pairs `pair`.
+Name ones that return or update colors `color`.
 
-Name functions that return or update something else `make` or `update!`, respectively.
+Name ones that return or update pairs `pair`.
 
-Name functions that read `read`.
+Name ones that return or update something else `make` or `update!`, respectively.
 
-Name functions that log `log`.
+Name ones that read `read`.
 
-Name functions that write `write`.
+Name ones that log `log`.
+
+Name ones that write `write`.
