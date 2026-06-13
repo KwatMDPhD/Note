@@ -1,13 +1,23 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = true
+
+vim.g.loaded_netrwPlugin = true
+
 vim.opt.termguicolors = true
+
 vim.opt.number = true
+
 vim.opt.signcolumn = "number"
-vim.opt.expandtab = true
+
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.splitright = true
+
 vim.opt.updatetime = 80
+
+vim.opt.splitright = true
+
+vim.opt.expandtab = true
+
+vim.opt.shiftwidth = 4
+
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold" },
 	{
@@ -15,6 +25,7 @@ vim.api.nvim_create_autocmd(
 		command = "checktime",
 	}
 )
+
 vim.keymap.set("n", "<M-Down>", "<Cmd>resize -8<CR>")
 vim.keymap.set("n", "<M-Up>", "<Cmd>resize +8<CR>")
 vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -8<CR>")
