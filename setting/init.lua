@@ -19,7 +19,8 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 
 vim.api.nvim_create_autocmd(
-	{ "FocusGained", "BufEnter", "CursorHold" },
+	{ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" },
+
 	{
 		pattern = "*",
 		command = "checktime",
@@ -52,18 +53,21 @@ vim.keymap.set("n", "<M-->", function()
 	update(-0.2)
 end)
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.uv.fs_stat(lazypath) then
+local pa = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not vim.uv.fs_stat(pa) then
 	vim.fn.system({
 		"git",
 		"clone",
 		"--filter=blob:none",
 		"--branch=stable",
-		"https://github.com/folke/lazy.nvim.git",
-		lazypath,
+		"https://github.com/folke/lazy.nvim",
+		pa,
 	})
 end
-vim.opt.rtp:prepend(lazypath)
+
+vim.opt.rtp:prepend(pa)
+
 require("lazy").setup({ {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
