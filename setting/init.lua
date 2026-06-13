@@ -40,15 +40,18 @@ vim.keymap.set("t", "<Escape>", "<C-\\><C-n>")
 
 vim.g.neovide_hide_mouse_when_typing = true
 
-local function update(delta)
-	vim.g.neovide_scale_factor = (vim.g.neovide_scale_factor or 1) + delta
+local function update(pr)
+	vim.g.neovide_scale_factor = (vim.g.neovide_scale_factor or 1) + pr
 end
+
 vim.keymap.set("n", "<M-+>", function()
 	update(0.2)
 end)
+
 vim.keymap.set("n", "<M-->", function()
 	update(-0.2)
 end)
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
 	vim.fn.system({
