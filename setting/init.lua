@@ -87,30 +87,37 @@ require("lazy").setup({ {
 		{ "<Leader>f", "<Cmd>Telescope find_files<Enter>" },
 		{ "<Leader>r", "<Cmd>Telescope live_grep<Enter>" },
 	},
-}, "folke/tokyonight.nvim", {
+}, {
+	"folke/tokyonight.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.cmd.colorscheme("tokyonight-night")
+	end,
+}, {
 	"RRethy/vim-illuminate",
 	config = function()
-		vim.api.nvim_create_autocmd("ColorScheme", { callback = function()
-			vim.api.nvim_set_hl(0, "IlluminatedWordText", {
-				bg = "#f3c13a",
-				fg = "#000000",
-			})
-			vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
-				link = "IlluminatedWordText",
-			})
-			vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
-				link = "IlluminatedWordText",
-			})
-			vim.api.nvim_set_hl(0, "Search", {
-				bg = "#ffb3a7",
-				fg = "#000000",
-			})
-			vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
-			vim.api.nvim_set_hl(0, "CurSearch", {
-				link = "IlluminatedWordText",
-			})
-		end })
-		vim.cmd.colorscheme("tokyonight-night")
+		vim.api.nvim_set_hl(0, "IlluminatedWordText", {
+			bg = "#f3c13a",
+			fg = "#000000",
+		})
+
+		vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
+			link = "IlluminatedWordText",
+		})
+
+		vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
+			link = "IlluminatedWordText",
+		})
+
+		vim.api.nvim_set_hl(0, "Search", {
+			bg = "#ffb3a7",
+			fg = "#000000",
+		})
+
+		vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
+
+		vim.api.nvim_set_hl(0, "CurSearch", { link = "IlluminatedWordText" })
 	end,
 }, {
 	"brenoprata10/nvim-highlight-colors",
@@ -135,11 +142,14 @@ require("lazy").setup({ {
 	},
 }, {
 	"akinsho/toggleterm.nvim",
-	version = "*",
 	opts = { open_mapping = "<Leader>a" },
+	config = function()
+		vim.keymap.set("v", "<Space><Space>", function()
+			require("toggleterm").send_lines_to_terminal(
+				"visual_selection",
+				false,
+				{ args = vim.v.count }
+			)
+		end)
+	end,
 } })
-vim.keymap.set("v", "<Space><Space>", function()
-	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
-		args = vim.v.count,
-	})
-end)
