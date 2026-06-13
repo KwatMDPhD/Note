@@ -6,33 +6,33 @@ alias mv='mv -i'
 
 alias rm='rm -i'
 
-alias ls='ls -Glh'
+alias ls='ls --format=long --human-readable --color=auto'
 
-alias la='ls -A'
+alias la='ls --almost-all'
 
-alias lt='ls -tr'
+alias lt='ls --sort=time --reverse'
 
 alias ju='julia --project'
 
 ch() {
 
-  if [[ $PWD == $HOME ]]; then
+  if [[ ! "$PWD" = "$HOME"* ]]; then
 
     return
 
   fi
 
-  find . -type d -exec chmod 755 {} +
+  find . \( -name .git -prune \) -or -type d -exec chmod 755 {} +
 
-  find . -type f -exec chmod 644 {} +
+  find . \( -name .git -prune \) -or -type f -exec chmod 644 {} +
 
 }
 
 cl() {
 
-  find . -name .DS_Store -delete
+  find . -name '.DS_Store' -delete
 
-  if [[ $PWD == $HOME ]]; then
+  if [[ ! "$PWD" = "$HOME"* ]]; then
 
     return
 

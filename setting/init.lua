@@ -21,15 +21,16 @@ vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -8<CR>")
 vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +8<CR>")
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-if vim.g.neovide then
-	vim.g.neovide_hide_mouse_when_typing = true
-	vim.keymap.set("n", "<Leader>1", function()
-		vim.g.neovide_scale_factor = 1
-	end)
-	vim.keymap.set("n", "<Leader>2", function()
-		vim.g.neovide_scale_factor = (vim.g.neovide_scale_factor or 1) + 0.1
-	end)
+vim.g.neovide_hide_mouse_when_typing = true
+local function update(delta)
+	vim.g.neovide_scale_factor = (vim.g.neovide_scale_factor or 1) + delta
 end
+vim.keymap.set("n", "<M-+>", function()
+	update(0.2)
+end)
+vim.keymap.set("n", "<M-->", function()
+	update(-0.2)
+end)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
 	vim.fn.system({
