@@ -26,13 +26,20 @@ vim.api.nvim_create_autocmd(
 	}
 )
 
-vim.keymap.set("n", "<M-Down>", "<Cmd>resize -8<CR>")
-vim.keymap.set("n", "<M-Up>", "<Cmd>resize +8<CR>")
-vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -8<CR>")
-vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +8<CR>")
-vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<CR>")
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("n", "<M-Down>", "<Cmd>resize -8<Enter>")
+
+vim.keymap.set("n", "<M-Up>", "<Cmd>resize +8<Enter>")
+
+vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -8<Enter>")
+
+vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +8<Enter>")
+
+vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<Enter>")
+
+vim.keymap.set("t", "<Escape>", "<C-\\><C-n>")
+
 vim.g.neovide_hide_mouse_when_typing = true
+
 local function update(delta)
 	vim.g.neovide_scale_factor = (vim.g.neovide_scale_factor or 1) + delta
 end
@@ -63,15 +70,15 @@ require("lazy").setup({ {
 		sort = { sorter = "case_sensitive" },
 		update_focused_file = { enable = true },
 	},
-	keys = { { "<Leader>t", "<Cmd>NvimTreeToggle<CR>" } },
+	keys = { { "<Leader>t", "<Cmd>NvimTreeToggle<Enter>" } },
 }, {
 	"nvim-telescope/telescope.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {},
 	keys = {
-		{ "<Leader>b", "<Cmd>Telescope buffers<CR>" },
-		{ "<Leader>f", "<Cmd>Telescope find_files<CR>" },
-		{ "<Leader>r", "<Cmd>Telescope live_grep<CR>" },
+		{ "<Leader>b", "<Cmd>Telescope buffers<Enter>" },
+		{ "<Leader>f", "<Cmd>Telescope find_files<Enter>" },
+		{ "<Leader>r", "<Cmd>Telescope live_grep<Enter>" },
 	},
 }, "folke/tokyonight.nvim", {
 	"RRethy/vim-illuminate",
