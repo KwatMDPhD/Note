@@ -13,10 +13,10 @@ vim.api.nvim_create_autocmd(
 		command = "checktime",
 	}
 )
-vim.keymap.set("n", "<M-Down>", "<Cmd>resize -8<Enter>")
-vim.keymap.set("n", "<M-Up>", "<Cmd>resize +8<Enter>")
-vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -8<Enter>")
-vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +8<Enter>")
+vim.keymap.set("n", "<D-Down>", "<Cmd>resize -8<Enter>")
+vim.keymap.set("n", "<D-Up>", "<Cmd>resize +8<Enter>")
+vim.keymap.set("n", "<D-Left>", "<Cmd>vertical resize -8<Enter>")
+vim.keymap.set("n", "<D-Right>", "<Cmd>vertical resize +8<Enter>")
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<Enter>")
 vim.keymap.set("t", "<Escape>", "<C-\\><C-n>")
 vim.g.neovide_hide_mouse_when_typing = true
