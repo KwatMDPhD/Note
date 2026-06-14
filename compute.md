@@ -5,12 +5,12 @@ brew analytics off
 ```
 
 ```zsh
-brew install node ripgrep rename
+brew install ripgrep rename shfmt stylua node
 brew install --cask neovide
 ```
 
 ```zsh
-npm --global install md-to-pdf prettier prettier-plugin-sh @prettier/plugin-lua prettier-plugin-tailwindcss
+npm --global install prettier md-to-pdf
 ```
 
 Install [julia](https://julialang.org/install).
