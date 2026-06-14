@@ -1,5 +1,3 @@
-vim.g.loaded_netrw = true
-vim.g.loaded_netrwPlugin = true
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.signcolumn = "number"
@@ -52,16 +50,10 @@ require("lazy").setup({ {
 		sort = { sorter = "case_sensitive" },
 		update_focused_file = { enable = true },
 	},
-	keys = { { "<Leader>t", "<Cmd>NvimTreeToggle<Enter>" } },
 }, {
 	"nvim-telescope/telescope.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {},
-	keys = {
-		{ "<Leader>b", "<Cmd>Telescope buffers<Enter>" },
-		{ "<Leader>f", "<Cmd>Telescope find_files<Enter>" },
-		{ "<Leader>r", "<Cmd>Telescope live_grep<Enter>" },
-	},
 }, {
 	"folke/tokyonight.nvim",
 	lazy = false,
@@ -99,14 +91,7 @@ require("lazy").setup({ {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	opts = {
-		ensure_installed = {
-			"zsh",
-			"lua",
-			"julia",
-			"html",
-			"markdown",
-			"markdown_inline",
-		},
+		ensure_installed = { "julia", "html", "markdown", "markdown_inline" },
 		highlight = { enable = true },
 		indent = { enable = true },
 	},
@@ -114,6 +99,10 @@ require("lazy").setup({ {
 	"akinsho/toggleterm.nvim",
 	opts = { open_mapping = "<Leader>a" },
 } })
+vim.keymap.set("n", "<Leader>t", "<Cmd>NvimTreeToggle<Enter>")
+vim.keymap.set("n", "<Leader>b", "<Cmd>Telescope buffers<Enter>")
+vim.keymap.set("n", "<Leader>f", "<Cmd>Telescope find_files<Enter>")
+vim.keymap.set("n", "<Leader>r", "<Cmd>Telescope live_grep<Enter>")
 vim.keymap.set("v", "<Space><Space>", function()
 	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
 		args = vim.v.count,
