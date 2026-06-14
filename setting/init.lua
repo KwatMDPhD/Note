@@ -1,11 +1,3 @@
-vim.opt.termguicolors = true
-vim.opt.updatetime = 80
-vim.opt.number = true
-vim.opt.signcolumn = "number"
-vim.opt.tabstop = 4
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.splitright = true
 vim.api.nvim_create_autocmd(
     { "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" },
     {
@@ -13,6 +5,14 @@ vim.api.nvim_create_autocmd(
         command = "checktime",
     }
 )
+vim.opt.updatetime = 80
+vim.opt.termguicolors = true
+vim.opt.number = true
+vim.opt.signcolumn = "number"
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.splitright = true
 vim.keymap.set("n", "<D-Down>", "<Cmd>resize -8<Enter>")
 vim.keymap.set("n", "<D-Up>", "<Cmd>resize +8<Enter>")
 vim.keymap.set("n", "<D-Left>", "<Cmd>vertical resize -8<Enter>")
@@ -24,10 +24,10 @@ vim.keymap.set("n", "<D-0>", function()
     vim.g.neovide_scale_factor = 1
 end)
 vim.keymap.set("n", "<D-->", function()
-    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.2
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1
 end)
 vim.keymap.set("n", "<D-=>", function()
-    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.2
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1
 end)
 local pa = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(pa) then
@@ -45,7 +45,6 @@ require("lazy").setup({
     {
         "folke/tokyonight.nvim",
         lazy = false,
-        priority = 1000,
         config = function()
             vim.cmd.colorscheme("tokyonight-night")
         end,
