@@ -6,17 +6,17 @@ alias mv='mv -i'
 
 alias rm='rm -i'
 
-alias ls='ls --format=long --human-readable --color=auto'
+alias ls='ls -ohG'
 
-alias la='ls --almost-all'
+alias la='ls -a'
 
-alias lt='ls --sort=time --reverse'
+alias lt='ls -tr'
 
 alias ju='julia --project'
 
 ch() {
 
-  if [[ ! "$PWD" = "$HOME"* ]]; then
+  if [[ "$PWD" != "$HOME"/* ]]; then
 
     return
 
@@ -32,7 +32,7 @@ cl() {
 
   find . -name '.DS_Store' -delete
 
-  if [[ ! "$PWD" = "$HOME"* ]]; then
+  if [[ "$PWD" != "$HOME"/* ]]; then
 
     return
 

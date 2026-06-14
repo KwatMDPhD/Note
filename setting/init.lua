@@ -1,60 +1,37 @@
 vim.g.loaded_netrw = true
-
 vim.g.loaded_netrwPlugin = true
-
 vim.opt.termguicolors = true
-
 vim.opt.number = true
-
 vim.opt.signcolumn = "number"
-
 vim.opt.tabstop = 4
-
 vim.opt.updatetime = 80
-
 vim.opt.splitright = true
-
 vim.opt.expandtab = true
-
 vim.opt.shiftwidth = 4
-
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" },
-
 	{
 		pattern = "*",
 		command = "checktime",
 	}
 )
-
 vim.keymap.set("n", "<M-Down>", "<Cmd>resize -8<Enter>")
-
 vim.keymap.set("n", "<M-Up>", "<Cmd>resize +8<Enter>")
-
 vim.keymap.set("n", "<M-Left>", "<Cmd>vertical resize -8<Enter>")
-
 vim.keymap.set("n", "<M-Right>", "<Cmd>vertical resize +8<Enter>")
-
 vim.keymap.set("n", "<Leader>h", "<Cmd>nohlsearch<Enter>")
-
 vim.keymap.set("t", "<Escape>", "<C-\\><C-n>")
-
 vim.g.neovide_hide_mouse_when_typing = true
-
-local function update(pr)
-	vim.g.neovide_scale_factor = (vim.g.neovide_scale_factor or 1) + pr
-end
-
-vim.keymap.set("n", "<M-+>", function()
-	update(0.2)
+vim.keymap.set("n", "<D-0>", function()
+	vim.g.neovide_scale_factor = 1
 end)
-
-vim.keymap.set("n", "<M-->", function()
-	update(-0.2)
+vim.keymap.set("n", "<D-->", function()
+	vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.2
 end)
-
+vim.keymap.set("n", "<D-=>", function()
+	vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.2
+end)
 local pa = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
 if not vim.uv.fs_stat(pa) then
 	vim.fn.system({
 		"git",
@@ -65,9 +42,7 @@ if not vim.uv.fs_stat(pa) then
 		pa,
 	})
 end
-
 vim.opt.rtp:prepend(pa)
-
 require("lazy").setup({ {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -101,22 +76,17 @@ require("lazy").setup({ {
 			bg = "#f3c13a",
 			fg = "#000000",
 		})
-
 		vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
 			link = "IlluminatedWordText",
 		})
-
 		vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
 			link = "IlluminatedWordText",
 		})
-
 		vim.api.nvim_set_hl(0, "Search", {
 			bg = "#ffb3a7",
 			fg = "#000000",
 		})
-
 		vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
-
 		vim.api.nvim_set_hl(0, "CurSearch", { link = "IlluminatedWordText" })
 	end,
 }, {
@@ -131,11 +101,11 @@ require("lazy").setup({ {
 	opts = {
 		ensure_installed = {
 			"zsh",
+			"lua",
 			"julia",
 			"html",
 			"markdown",
 			"markdown_inline",
-			"lua",
 		},
 		highlight = { enable = true },
 		indent = { enable = true },
@@ -143,13 +113,9 @@ require("lazy").setup({ {
 }, {
 	"akinsho/toggleterm.nvim",
 	opts = { open_mapping = "<Leader>a" },
-	config = function()
-		vim.keymap.set("v", "<Space><Space>", function()
-			require("toggleterm").send_lines_to_terminal(
-				"visual_selection",
-				false,
-				{ args = vim.v.count }
-			)
-		end)
-	end,
 } })
+vim.keymap.set("v", "<Space><Space>", function()
+	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
+		args = vim.v.count,
+	})
+end)
