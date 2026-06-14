@@ -1,11 +1,11 @@
 vim.opt.termguicolors = true
+vim.opt.updatetime = 80
 vim.opt.number = true
 vim.opt.signcolumn = "number"
 vim.opt.tabstop = 4
-vim.opt.updatetime = 80
-vim.opt.splitright = true
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
+vim.opt.splitright = true
 vim.api.nvim_create_autocmd(
 	{ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" },
 	{
@@ -42,6 +42,39 @@ if not vim.uv.fs_stat(pa) then
 end
 vim.opt.rtp:prepend(pa)
 require("lazy").setup({ {
+	"folke/tokyonight.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.cmd.colorscheme("tokyonight-night")
+	end,
+}, {
+	"brenoprata10/nvim-highlight-colors",
+	opts = {},
+}, {
+	"RRethy/vim-illuminate",
+	config = function()
+		vim.api.nvim_set_hl(0, "IlluminatedWordText", {
+			bg = "#ffb3a7",
+			fg = "#000000",
+		})
+		vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
+			link = "IlluminatedWordText",
+		})
+		vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
+			link = "IlluminatedWordText",
+		})
+		vim.api.nvim_set_hl(0, "Search", {
+			bg = "#f3c13a",
+			fg = "#000000",
+		})
+		vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
+		vim.api.nvim_set_hl(0, "CurSearch", { link = "IlluminatedWordText" })
+	end,
+}, {
+	"akinsho/toggleterm.nvim",
+	opts = { open_mapping = "<Leader>a" },
+}, {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
@@ -55,36 +88,6 @@ require("lazy").setup({ {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {},
 }, {
-	"folke/tokyonight.nvim",
-	lazy = false,
-	priority = 1000,
-	config = function()
-		vim.cmd.colorscheme("tokyonight-night")
-	end,
-}, {
-	"RRethy/vim-illuminate",
-	config = function()
-		vim.api.nvim_set_hl(0, "IlluminatedWordText", {
-			bg = "#f3c13a",
-			fg = "#000000",
-		})
-		vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
-			link = "IlluminatedWordText",
-		})
-		vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
-			link = "IlluminatedWordText",
-		})
-		vim.api.nvim_set_hl(0, "Search", {
-			bg = "#ffb3a7",
-			fg = "#000000",
-		})
-		vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
-		vim.api.nvim_set_hl(0, "CurSearch", { link = "IlluminatedWordText" })
-	end,
-}, {
-	"brenoprata10/nvim-highlight-colors",
-	opts = {},
-}, {
 	"lewis6991/gitsigns.nvim",
 	opts = {},
 }, {
@@ -95,16 +98,13 @@ require("lazy").setup({ {
 		highlight = { enable = true },
 		indent = { enable = true },
 	},
-}, {
-	"akinsho/toggleterm.nvim",
-	opts = { open_mapping = "<Leader>a" },
 } })
-vim.keymap.set("n", "<Leader>t", "<Cmd>NvimTreeToggle<Enter>")
-vim.keymap.set("n", "<Leader>b", "<Cmd>Telescope buffers<Enter>")
-vim.keymap.set("n", "<Leader>f", "<Cmd>Telescope find_files<Enter>")
-vim.keymap.set("n", "<Leader>r", "<Cmd>Telescope live_grep<Enter>")
 vim.keymap.set("v", "<Space><Space>", function()
 	require("toggleterm").send_lines_to_terminal("visual_selection", false, {
 		args = vim.v.count,
 	})
 end)
+vim.keymap.set("n", "<Leader>t", "<Cmd>NvimTreeToggle<Enter>")
+vim.keymap.set("n", "<Leader>b", "<Cmd>Telescope buffers<Enter>")
+vim.keymap.set("n", "<Leader>f", "<Cmd>Telescope find_files<Enter>")
+vim.keymap.set("n", "<Leader>r", "<Cmd>Telescope live_grep<Enter>")
