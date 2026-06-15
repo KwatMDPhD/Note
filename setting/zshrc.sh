@@ -9,12 +9,19 @@ alias ju='julia --project'
 delete() {
     find . -name '.DS_Store' -delete
 }
+name() {
+    if [[ "$PWD" != "$HOME"/* ]]; then
+        return
+    fi
+    find -E . -iregex '.*\.(jpg|jpeg)$' -print0 | xargs -0 rename --verbose 's/\.(jpe?g)$/.jpeg/i'
+    find -E . -iregex '.*\.png$' -print0 | xargs -0 rename --verbose 's/\.png$/.png/i'
+}
 change() {
     if [[ "$PWD" != "$HOME"/* ]]; then
         return
     fi
-    find . \( -name .git -prune \) -or -type d -exec chmod 755 {} +
-    find . \( -name .git -prune \) -or -type f -exec chmod 644 {} +
+    find . \( -name '.git' -prune \) -or -type d -exec chmod 755 {} +
+    find . \( -name '.git' -prune \) -or -type f -exec chmod 644 {} +
 }
 clean() {
     if [[ "$PWD" != "$HOME"/* ]]; then
