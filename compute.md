@@ -1,3 +1,5 @@
+##
+
 Install [brew](https://brew.sh).
 
 ```zsh
@@ -6,9 +8,13 @@ brew install ripgrep rename shfmt stylua node
 brew install --cask neovide
 ```
 
+##
+
 ```zsh
 npm --global install prettier md-to-pdf
 ```
+
+##
 
 Install [julia](https://julialang.org/install).
 
@@ -28,6 +34,12 @@ Appsadd("Runic")
 #]app dev ~/cr/Help.jl
 ```
 
+##
+
+Install [grok](https://x.ai/cli).
+
+##
+
 ```zsh
 git config --global user.name ''
 git config --global user.email ''
@@ -36,7 +48,7 @@ git config --global fetch.prune true
 git config --global diff.colorMoved zebra
 ```
 
-Install [grok](https://x.ai/cli).
+##
 
 ```zsh
 mkdir -p ~/.config/nvim ~/.julia/config
@@ -45,6 +57,8 @@ ln -sf ~/cr/Note/setting/zshrc.sh ~/.zshrc
 ln -s ~/cr/Note/setting/init.lua ~/.config/nvim
 ln -s ~/cr/Note/setting/startup.jl ~/.julia/config
 ```
+
+##
 
 ```zsh
 brew update
@@ -57,5 +71,7 @@ npm --global upgrade
 julia --eval 'using Pkg: update; update()'
 grok update
 ```
+
+##
 
 Install Signal, Vimari, Google Drive, and Spotify.

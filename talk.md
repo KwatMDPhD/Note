@@ -28,6 +28,8 @@ Repeat the messages.
 
 ##
 
+Simplify so listeners think they can copy.
+
 Use metaphors.
 
 Use headlines.
@@ -35,8 +37,6 @@ Use headlines.
 Use stories.
 
 Follow numbers with analogies.
-
-Simplify so listeners think they can copy.
 
 Use first names often.
 
