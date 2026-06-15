@@ -2,9 +2,6 @@ Install [brew](https://brew.sh).
 
 ```zsh
 brew analytics off
-```
-
-```zsh
 brew install ripgrep rename shfmt stylua node
 brew install --cask neovide
 ```
@@ -55,11 +52,10 @@ brew upgrade --greedy
 brew autoremove
 brew cleanup --prune=all
 brew doctor
-brew leaves
 npm --global install npm@latest
 npm --global upgrade
 julia --eval 'using Pkg: update; update()'
 grok update
 ```
 
-Install Signal, Google Drive, Vimari, and Spotify.
+Install Signal, Vimari, Google Drive, and Spotify.
