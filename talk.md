@@ -8,7 +8,7 @@ Smile.
 
 Maintain eye contact.
 
-Think with my body, especially my hands.
+Think with body and hands.
 
 Deliver energy.
 
@@ -16,7 +16,7 @@ Deliver energy.
 
 Tell benefits early.
 
-Frame with a roadmap.
+Frame with roadmap.
 
 Create a meaning bucket and fill it with details.
 

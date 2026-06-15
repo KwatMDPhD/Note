@@ -6,14 +6,14 @@ Avoid abbreviations.
 
 Prefer sentences.
 
-End sentences with a period.
+End sentences with period.
 
 ##
 
-Uppercase units, lowercase magnitudes, and have no spaces: 8nG/uL.
+Uppercase units, lowercase magnitudes, and use no spaces: 8nG/uL.
 
 ##
 
-Make 1 slide deliver 1 message using 1 picture, 1 word, and a lot of space.
+Make 1 slide deliver 1 message using 1 picture, 1 word, and much space.
 
 Refer to other sources for details.

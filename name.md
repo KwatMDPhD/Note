@@ -8,7 +8,7 @@ Pluralize names by adding 1 underscore.
 
 ##
 
-Name things by the concept least likely to change, often the type.
+Name by the concept least likely to change, often the type.
 
 Differentiate similar things by numbering: number 1 and 2 as `n1` and `n2`.
 
@@ -16,7 +16,7 @@ Differentiate different things by shifting: path and pair as `pa` and `ai`.
 
 ##
 
-Name numbers between 0 and 1 `pr`.
+Name numbers in [0, 1] `pr`.
 
 Name counts `um`.
 
