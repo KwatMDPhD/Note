@@ -58,14 +58,8 @@ require("lazy").setup({
         "RRethy/vim-illuminate",
         config = function()
             vim.api.nvim_set_hl(0, "IlluminatedWordText", {
-                bg = "#ffb3a7",
+                bg = "#ffffff",
                 fg = "#000000",
-            })
-            vim.api.nvim_set_hl(0, "IlluminatedWordRead", {
-                link = "IlluminatedWordText",
-            })
-            vim.api.nvim_set_hl(0, "IlluminatedWordWrite", {
-                link = "IlluminatedWordText",
             })
             vim.api.nvim_set_hl(0, "Search", {
                 bg = "#f3c13a",
