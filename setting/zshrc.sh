@@ -1,7 +1,6 @@
 alias ..='cd ..'
 alias ls='ls -ohG'
 alias la='ls -a'
-alias lt='ls -tr'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
@@ -13,8 +12,8 @@ name() {
     if [[ "$PWD" != "$HOME"/* ]]; then
         return
     fi
-    find -E . -iregex '.*\.(jpg|jpeg)$' -print0 | xargs -0 rename --verbose 's/\.(jpe?g)$/.jpeg/i'
-    find -E . -iregex '.*\.png$' -print0 | xargs -0 rename --verbose 's/\.png$/.png/i'
+    find -E . -iregex '.*\.(jpg|jpeg)$' -print0 | xargs -0 rename 's/\.(jpe?g)$/.jpeg/i'
+    find -E . -iregex '.*\.png$' -print0 | xargs -0 rename 's/\.png$/.png/i'
 }
 change() {
     if [[ "$PWD" != "$HOME"/* ]]; then
@@ -27,17 +26,17 @@ clean() {
     if [[ "$PWD" != "$HOME"/* ]]; then
         return
     fi
-    jlfmt --margin=80 --format_markdown --always_for_in --whitespace_typedefs --import_to_using --pipe_to_function_call --short_to_long_function_def --format_docstrings --inplace .
+    #jlfmt --margin=80 --format_markdown --always_for_in --whitespace_typedefs --import_to_using --pipe_to_function_call --short_to_long_function_def --format_docstrings --inplace .
     runic --extensions=jl,md --inplace .
+    prettier --tab-width 4 --write .
     shfmt --indent 4 --binary-next-line --case-indent --space-redirects --write .
     stylua --column-width 80 --indent-type Spaces .
-    prettier --tab-width 4 --write .
 }
 project() {
     for pa in **/Project.toml; do
         (
             cd "$(dirname "$pa")"
-            echo "📍 $(pwd)"
+            echo "📍 $PWD"
             help template
             ju --eval 'using Pkg: update; update()'
         )
@@ -47,7 +46,7 @@ git1() {
     for pa in **/.git; do
         (
             cd "$(dirname "$pa")"
-            echo "📍 $(pwd)"
+            echo "📍 $PWD"
             git fetch
             git status
             git diff
@@ -58,7 +57,7 @@ git2() {
     for pa in **/.git; do
         (
             cd "$(dirname "$pa")"
-            echo "📍 $(pwd)"
+            echo "📍 $PWD"
             git add --all
             git commit --message "$1"
             git push

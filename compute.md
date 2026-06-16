@@ -27,7 +27,7 @@ Pkgadd("BenchmarkTools")
 
 Pkgadd("Revise")
 
-Appsadd("JuliaFormatter")
+#Appsadd("JuliaFormatter")
 
 Appsadd("Runic")
 
