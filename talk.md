@@ -44,7 +44,7 @@ Make melody.
 
 ##
 
-"I am excited about this because..."
+"I'm excited about this because..."
 
 "Future."
 
@@ -56,7 +56,7 @@ Make melody.
 
 "What that means is..."
 
-"It's like...."
+"It's like..."
 
 "With just one..."
 

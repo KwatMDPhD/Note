@@ -18,13 +18,7 @@ Differentiate different things by shifting: path and pair as `pa` and `ai`.
 
 Name numbers in [0, 1] `pr`.
 
-Name counts `um`.
-
 Name symbols `ym`.
-
-Name hexadecimal colors `he`.
-
-Name keyword arguments `ke`.
 
 ##
 

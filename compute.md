@@ -51,14 +51,6 @@ git config --global diff.colorMoved zebra
 ##
 
 ```zsh
-mkdir ~/cr
-cd ~/cr
-git clone https://github.com/KwatMDPhD/Note
-```
-
-##
-
-```zsh
 mkdir -p ~/.config/nvim ~/.julia/config
 ln -s ~/cr/Note/setting/zprofile.sh ~/.zprofile
 ln -sf ~/cr/Note/setting/zshrc.sh ~/.zshrc
