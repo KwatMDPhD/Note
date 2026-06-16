@@ -1,6 +1,6 @@
 ##
 
-Install [brew](https://brew.sh).
+Install brew.
 
 ```zsh
 brew analytics off
@@ -16,7 +16,7 @@ npm --global install prettier md-to-pdf
 
 ##
 
-Install [julia](https://julialang.org/install).
+Install julia.
 
 ```julia
 using Pkg: add as Pkgadd
@@ -36,7 +36,7 @@ Appsadd("Runic")
 
 ##
 
-Install [grok](https://x.ai/cli).
+Install grok.
 
 ##
 
@@ -46,6 +46,14 @@ git config --global user.email ''
 git config --global credential.helper osxkeychain
 git config --global fetch.prune true
 git config --global diff.colorMoved zebra
+```
+
+##
+
+```zsh
+mkdir ~/cr
+cd ~/cr
+git clone https://github.com/KwatMDPhD/Note
 ```
 
 ##
@@ -74,4 +82,4 @@ grok update
 
 ##
 
-Install Signal, Vimari, Google Drive, and Spotify.
+Install Signal, Vimari, Google Drive, Zoom, and Spotify.
