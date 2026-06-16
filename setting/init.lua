@@ -75,7 +75,18 @@ require("lazy").setup({
     },
     {
         "akinsho/toggleterm.nvim",
-        opts = { open_mapping = "<Leader>a" },
+        opts = {
+            open_mapping = "<Leader>a",
+            direction = "float",
+            float_opts = {
+                height = function()
+                    return math.floor(vim.o.lines * 0.88)
+                end,
+                width = function()
+                    return math.floor(vim.o.columns * 0.88)
+                end,
+            },
+        },
     },
     {
         "nvim-tree/nvim-tree.lua",
