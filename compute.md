@@ -11,7 +11,7 @@ brew install --cask neovide
 ##
 
 ```zsh
-npm --global install prettier md-to-pdf
+npm --global install prettier prettier-plugin-tailwindcss md-to-pdf
 ```
 
 ##

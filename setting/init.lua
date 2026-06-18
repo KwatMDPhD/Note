@@ -12,7 +12,6 @@ vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.splitright = true
-vim.opt.autochdir = true
 vim.keymap.set("n", "<D-Down>", "<Cmd>resize -8<Enter>")
 vim.keymap.set("n", "<D-Up>", "<Cmd>resize +8<Enter>")
 vim.keymap.set("n", "<D-Left>", "<Cmd>vertical resize -8<Enter>")
