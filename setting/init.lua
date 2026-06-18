@@ -1,18 +1,18 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.api.nvim_create_autocmd(
     { "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" },
-    {
-        pattern = "*",
-        command = "checktime",
-    }
+    { pattern = "*", command = "checktime" }
 )
-vim.opt.updatetime = 80
 vim.opt.termguicolors = true
+vim.opt.updatetime = 80
 vim.opt.number = true
 vim.opt.signcolumn = "number"
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.splitright = true
+vim.opt.autochdir = true
 vim.keymap.set("n", "<D-Down>", "<Cmd>resize -8<Enter>")
 vim.keymap.set("n", "<D-Up>", "<Cmd>resize +8<Enter>")
 vim.keymap.set("n", "<D-Left>", "<Cmd>vertical resize -8<Enter>")
@@ -50,21 +50,16 @@ require("lazy").setup({
             vim.cmd.colorscheme("tokyonight-night")
         end,
     },
-    {
-        "brenoprata10/nvim-highlight-colors",
-        opts = {},
-    },
+    { "brenoprata10/nvim-highlight-colors", opts = {} },
     {
         "RRethy/vim-illuminate",
         config = function()
-            vim.api.nvim_set_hl(0, "IlluminatedWordText", {
-                bg = "#ffffff",
-                fg = "#000000",
-            })
-            vim.api.nvim_set_hl(0, "Search", {
-                bg = "#f3c13a",
-                fg = "#000000",
-            })
+            vim.api.nvim_set_hl(
+                0,
+                "IlluminatedWordText",
+                { bg = "#ffffff", fg = "#000000" }
+            )
+            vim.api.nvim_set_hl(0, "Search", { bg = "#f3c13a", fg = "#000000" })
             vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
             vim.api.nvim_set_hl(
                 0,
@@ -103,10 +98,7 @@ require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim" },
         opts = {},
     },
-    {
-        "lewis6991/gitsigns.nvim",
-        opts = {},
-    },
+    { "lewis6991/gitsigns.nvim", opts = {} },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -123,9 +115,11 @@ require("lazy").setup({
     },
 })
 vim.keymap.set("v", "<Space><Space>", function()
-    require("toggleterm").send_lines_to_terminal("visual_selection", false, {
-        args = vim.v.count,
-    })
+    require("toggleterm").send_lines_to_terminal(
+        "visual_selection",
+        false,
+        { args = vim.v.count }
+    )
 end)
 vim.keymap.set("n", "<Leader>t", "<Cmd>NvimTreeToggle<Enter>")
 vim.keymap.set("n", "<Leader>b", "<Cmd>Telescope buffers<Enter>")
