@@ -26,7 +26,6 @@ clean() {
     if [[ "$PWD" != "$HOME"/* ]]; then
         return
     fi
-    #jlfmt --margin=80 --format_markdown --always_for_in --whitespace_typedefs --import_to_using --pipe_to_function_call --short_to_long_function_def --format_docstrings --inplace .
     runic --extensions=jl,md --inplace .
     prettier --tab-width 4 --plugin /opt/homebrew/lib/node_modules/prettier-plugin-tailwindcss/dist/index.mjs --write .
     shfmt --indent 4 --binary-next-line --case-indent --space-redirects --write .

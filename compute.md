@@ -23,11 +23,7 @@ using Pkg: add as Pkgadd
 
 using Pkg.Apps: add as Appsadd
 
-Pkgadd("BenchmarkTools")
-
 Pkgadd("Revise")
-
-#Appsadd("JuliaFormatter")
 
 Appsadd("Runic")
 
