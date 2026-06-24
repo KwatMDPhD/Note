@@ -44,26 +44,26 @@ Make melody.
 
 ##
 
-"I am excited about this because..."
+"I am excited about this because"
 
-"Future."
+"Future"
 
-"For everyone."
+"For everyone"
 
-"See it exist."
+"See it exist"
 
-"Mission."
+"Mission"
 
-"What that means is..."
+"What that means is"
 
-"It is like..."
+"It is like"
 
-"With just one..."
+"With just one"
 
-"-est."
+"est"
 
-"Boom."
+"Boom"
 
-"It works like magic."
+"It works like magic"
 
-"Partner."
+"Partner"

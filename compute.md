@@ -72,4 +72,4 @@ grok update
 
 ##
 
-Install Signal, Vimari, Google Drive, Zoom, and Spotify.
+Install Signal, Vimari, Google Drive, and Spotify.
