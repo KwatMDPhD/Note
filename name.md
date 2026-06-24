@@ -16,7 +16,7 @@ Differentiate different things by shifting: path and pair as `pa` and `ai`.
 
 ##
 
-Name numbers in [0, 1] `pr`.
+Name [0, 1] `pr`.
 
 Name symbols `ym`.
 

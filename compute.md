@@ -25,6 +25,8 @@ using Pkg.Apps: add as Appsadd
 
 Pkgadd("Revise")
 
+Appsadd("JuliaFormatter")
+
 Appsadd("Runic")
 
 #]app dev ~/cr/Help.jl
