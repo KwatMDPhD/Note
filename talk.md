@@ -14,6 +14,8 @@ Deliver energy.
 
 ##
 
+First, answer the question.
+
 Tell benefits early.
 
 Frame with roadmap.
@@ -25,6 +27,8 @@ Introduce 1 villain in detail.
 Deliver 3 messages.
 
 Repeat the messages.
+
+Last, ask a question.
 
 ##
 
@@ -46,24 +50,24 @@ Make melody.
 
 "I am excited about this because"
 
-"Future"
+"future"
 
-"For everyone"
+"for everyone"
 
-"See it exist"
+"see it exist"
 
-"Mission"
+"mission"
 
-"What that means is"
+"what that means is"
 
-"It is like"
+"it is like"
 
-"With just one"
+"with just one"
 
 "est"
 
-"Boom"
+"boom"
 
-"It works like magic"
+"it works like magic"
 
-"Partner"
+"partner"
