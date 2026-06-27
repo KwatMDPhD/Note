@@ -66,7 +66,7 @@ require("lazy").setup({
             vim.api.nvim_set_hl(
                 0,
                 "IlluminatedWordText",
-                { bg = "#ffffff", fg = "#000000" }
+                { bg = "#ffddca", fg = "#000000" }
             )
             vim.api.nvim_set_hl(0, "Search", { bg = "#f3c13a", fg = "#000000" })
             vim.api.nvim_set_hl(0, "IncSearch", { link = "Search" })
