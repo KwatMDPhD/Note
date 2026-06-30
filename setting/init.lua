@@ -97,7 +97,6 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             view = { width = 40 },
-            filters = { dotfiles = true },
             sort = { sorter = "case_sensitive" },
             update_focused_file = { enable = true },
         },
